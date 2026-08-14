@@ -420,8 +420,8 @@ window.Quarto = {
 <li>理解 function、domain、range、one-one function、inverse function 和 composite function；</li>
 <li>在简单情形下求 range 和 composition，并检查 composite function 的 domain/range 条件；</li>
 <li>判断函数是否 one-one，并求 one-one function 的 inverse；</li>
-<li>用图像理解 (y=f(x)) 与 (y=f^{-1}(x)) 关于 (y=x) 的镜像关系；</li>
-<li>使用 (y=f(x)+a)、(y=f(x+a))、(y=af(x))、(y=f(ax)) 及其简单组合描述 graph transformations。</li>
+<li>用图像理解 <span class="math inline">y=f(x)</span> 与 <span class="math inline">y=f^{-1}(x)</span> 关于 <span class="math inline">y=x</span> 的镜像关系；</li>
+<li>使用 <span class="math inline">y=f(x)+a</span>、<span class="math inline">y=f(x+a)</span>、<span class="math inline">y=af(x)</span>、<span class="math inline">y=f(ax)</span> 及其简单组合描述 graph transformations。</li>
 </ul>
 <p>下列 20 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干只把 PDF 排版符号整理为 LaTeX，没有改写或编造题目；答案按对应 mark scheme 的得分步骤展开。题目中的图像均从原始 PDF 独立提取为 SVG，不使用整页截图。</p>
 </div>
@@ -431,11 +431,11 @@ window.Quarto = {
 <section id="domain-range-and-notation" class="level3 study-card">
 <h3 class="anchored" data-anchor-id="domain-range-and-notation">Domain, range and notation</h3>
 <p>函数 (f:AB) 的 domain 是允许的输入集合 (A)，range 是实际输出集合 (f(A))，不一定等于给出的 codomain (B)。</p>
-<p>做题时先保留原题的限制，例如 (x&gt;2)、(x-a) 或 (xR)。求 range 时要同时考虑：</p>
+<p>做题时先保留原题的限制，例如 <span class="math inline">x&gt;2</span>、<span class="math inline">x\le -a</span> 或 <span class="math inline">x\in\mathbb R</span>。求 range 时要同时考虑：</p>
 <ul>
 <li>algebraic restriction，例如分母不能为 0、根号内必须非负；</li>
 <li>domain restriction，例如只取抛物线 vertex 的一侧；</li>
-<li>endpoint 是否包含，例如 (x&gt;2) 通常会导致 range 的相应 endpoint 不包含。</li>
+<li>endpoint 是否包含，例如 <span class="math inline">x&gt;2</span> 通常会导致 range 的相应 endpoint 不包含。</li>
 </ul>
 </section>
 <section id="one-one-and-inverse-functions" class="level3 study-card">
@@ -445,8 +445,8 @@ window.Quarto = {
 <p><span class="math display">
 y=f(x)\quad\Longrightarrow\quad x= f^{-1}(y),
 </span></p>
-<p>先交换 (x,y)，再解出 (y)，最后写清楚 (f^{-1}) 的 domain。原函数的 domain 会成为 inverse 的 range，原函数的 range 会成为 inverse 的 domain。</p>
-<p>图像上，(y=f^{-1}(x)) 是 (y=f(x)) 关于镜像线 (y=x) 的反射；但只有 one-one function 才能把 inverse 当成 function。</p>
+<p>先交换 <span class="math inline">(x,y)</span>，再解出 <span class="math inline">y</span>，最后写清楚 <span class="math inline">f^{-1}</span> 的 domain。原函数的 domain 会成为 inverse 的 range，原函数的 range 会成为 inverse 的 domain。</p>
+<p>图像上，<span class="math inline">y=f^{-1}(x)</span> 是 <span class="math inline">y=f(x)</span> 关于镜像线 <span class="math inline">y=x</span> 的反射；但只有 one-one function 才能把 inverse 当成 function。</p>
 </section>
 <div class="worked-example">
 <p><span class="we-tag">Worked example · 原始笔记单卡片</span></p>
@@ -468,7 +468,7 @@ fg(x)=f(g(x)),\qquad gf(x)=g(f(x)).
 </section>
 <section id="transformations" class="level3 study-card">
 <h3 class="anchored" data-anchor-id="transformations">Transformations</h3>
-<p>从 (y=f(x)) 出发：</p>
+<p>从 <span class="math inline">y=f(x)</span> 出发：</p>
 <p><span class="math display">
 y=f(x)+a \Rightarrow \text{vertical translation by }(0,a),
 </span></p>
@@ -489,7 +489,7 @@ y=f(ax) \Rightarrow \text{horizontal stretch by scale factor }\frac1a.
 <div id="p1-fn-q01" class="question-card">
 <section id="question-1-970913mj20-q3ac" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-970913mj20-q3ac">Question 1 · 9709/13/M/J/20 Q3(a–c)</h3>
-<p>In each of parts (a), (b) and (c), the graph shown with solid lines has equation (y=f(x)). The graph shown with broken lines is a transformation of (y=f(x)).</p>
+<p>In each of parts (a), (b) and (c), the graph shown with solid lines has equation <span class="math inline">y=f(x)</span>. The graph shown with broken lines is a transformation of <span class="math inline">y=f(x)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../assets/questions/paper-1/past-paper/2020-mj-9709-13-q3a.svg" class="note-figure img-fluid figure-img" alt="Original extracted Paper 1 graph for 2020 May June Question 3 part a"></p>
@@ -497,7 +497,7 @@ y=f(ax) \Rightarrow \text{horizontal stretch by scale factor }\frac1a.
 </figure>
 </div>
 <ol type="a">
-<li>State, in terms of (f), the equation of the graph shown with broken lines. <strong>[1]</strong></li>
+<li>State, in terms of <span class="math inline">f</span>, the equation of the graph shown with broken lines. <strong>[1]</strong></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -506,7 +506,7 @@ y=f(ax) \Rightarrow \text{horizontal stretch by scale factor }\frac1a.
 </figure>
 </div>
 <ol start="2" type="a">
-<li>State, in terms of (f), the equation of the graph shown with broken lines. <strong>[1]</strong></li>
+<li>State, in terms of <span class="math inline">f</span>, the equation of the graph shown with broken lines. <strong>[1]</strong></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -515,14 +515,14 @@ y=f(ax) \Rightarrow \text{horizontal stretch by scale factor }\frac1a.
 </figure>
 </div>
 <ol start="3" type="a">
-<li>State, in terms of (f), the equation of the graph shown with broken lines. <strong>[2]</strong></li>
+<li>State, in terms of <span class="math inline">f</span>, the equation of the graph shown with broken lines. <strong>[2]</strong></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>The broken graph is the reflection of (y=f(x)) in the (y)-axis, so</li>
+<li>The broken graph is the reflection of <span class="math inline">y=f(x)</span> in the <span class="math inline">y</span>-axis, so</li>
 </ol>
 <p><span class="math display">\boxed{y=f(-x)}.</span></p>
 <ol start="2" type="a">
@@ -551,15 +551,15 @@ g(x)=\frac1{x+1}\quad\text{for }x&gt;-1,
 </span></p>
 <p>where (c) is a constant.</p>
 <ol type="a">
-<li>Express (f(x)) in the form ((x-a)^2+b). <strong>[2]</strong></li>
+<li>Express <span class="math inline">f(x)</span> in the form <span class="math inline">(x-a)^2+b</span>. <strong>[2]</strong></li>
 </ol>
 <p>It is given that (f) is a one-one function.</p>
 <ol start="2" type="a">
 <li>State the smallest possible value of (c). <strong>[1]</strong></li>
 </ol>
-<p>It is now given that (c=5).</p>
+<p>It is now given that <span class="math inline">c=5</span>.</p>
 <ol start="3" type="a">
-<li><p>Find an expression for (f^{-1}(x)) and state the domain of (f^{-1}). <strong>[3]</strong></p></li>
+<li><p>Find an expression for <span class="math inline">f^{-1}(x)</span> and state the domain of <span class="math inline">f^{-1}</span>. <strong>[3]</strong></p></li>
 <li><p>Find an expression for (gf(x)) and state the range of (gf). <strong>[3]</strong></p></li>
 </ol>
 <details class="answer-panel">
@@ -571,13 +571,13 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">f(x)=x^2-4x+3=(x-2)^2-1.</span></p>
 <ol start="2" type="a">
-<li><p>The vertex is at (x=2). To keep only one branch of the parabola, the domain (x&gt;c) must start at (c=2) or to its right. Hence the smallest possible value is (oxed{c=2}).</p></li>
-<li><p>With (c=5), let (y=(x-2)^2-1). Then</p></li>
+<li><p>The vertex is at <span class="math inline">x=2</span>. To keep only one branch of the parabola, the domain <span class="math inline">x&gt;c</span> must start at <span class="math inline">c=2</span> or to its right. Hence the smallest possible value is <span class="math inline">\boxed{c=2}</span>.</p></li>
+<li><p>With <span class="math inline">c=5</span>, let <span class="math inline">y=(x-2)^2-1</span>. Then</p></li>
 </ol>
 <p><span class="math display">x-2=\pm\sqrt{y+1}.</span></p>
 <p>Since the original domain is (x&gt;5), choose the positive branch:</p>
 <p><span class="math display">\boxed{f^{-1}(x)=2+\sqrt{x+1}}.</span></p>
-<p>For (x&gt;5), (f(x)&gt;f(5)=8), so the domain of the inverse is (oxed{x&gt;8}).</p>
+<p>For <span class="math inline">x&gt;5</span>, <span class="math inline">f(x)&gt;f(5)=8</span>, so the domain of the inverse is <span class="math inline">\boxed{x&gt;8}</span>.</p>
 <ol start="4" type="a">
 <li></li>
 </ol>
@@ -585,7 +585,7 @@ Show detailed mark scheme answer
 gf(x)=g(f(x))=\frac1{f(x)+1}
 =\frac1{(x-2)^2}.
 </span></p>
-<p>For (x&gt;5), ((x-2)^2&gt;9), hence</p>
+<p>For <span class="math inline">x&gt;5</span>, <span class="math inline">(x-2)^2&gt;9</span>, hence</p>
 <span class="math display">\boxed{gf(x)=\frac1{(x-2)^2}},
 \qquad
 \boxed{0&lt;gf(x)&lt;\frac19}.
@@ -600,10 +600,10 @@ gf(x)=g(f(x))=\frac1{f(x)+1}
 <div id="p1-fn-q03" class="question-card">
 <section id="question-3-970912mj20-q5ab" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-970912mj20-q5ab">Question 3 · 9709/12/M/J/20 Q5(a–b)</h3>
-<p>The function (f) is defined for (xR) by (f:xa-2x), where (a) is a constant.</p>
+<p>The function <span class="math inline">f</span> is defined for <span class="math inline">x\in\mathbb R</span> by <span class="math inline">f:x\mapsto a-2x</span>, where <span class="math inline">a</span> is a constant.</p>
 <ol type="a">
-<li><p>Express (ff(x)) and (f^{-1}(x)) in terms of (a) and (x). <strong>[4]</strong></p></li>
-<li><p>Given that (ff(x)=f^{-1}(x)), find (x) in terms of (a). <strong>[2]</strong></p></li>
+<li><p>Express <span class="math inline">ff(x)</span> and <span class="math inline">f^{-1}(x)</span> in terms of <span class="math inline">a</span> and <span class="math inline">x</span>. <strong>[4]</strong></p></li>
+<li><p>Given that <span class="math inline">ff(x)=f^{-1}(x)</span>, find <span class="math inline">x</span> in terms of <span class="math inline">a</span>. <strong>[2]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -615,7 +615,7 @@ Show detailed mark scheme answer
 <p><span class="math display">
 ff(x)=f(a-2x)=a-2(a-2x)=4x-a.
 </span></p>
-<p>For the inverse, let (y=a-2x). Then (2x=a-y), so</p>
+<p>For the inverse, let <span class="math inline">y=a-2x</span>. Then <span class="math inline">2x=a-y</span>, so</p>
 <p><span class="math display">\boxed{f^{-1}(x)=\frac{a-x}{2}}.
 </span></p>
 <ol start="2" type="a">
@@ -626,7 +626,7 @@ ff(x)=f(a-2x)=a-2(a-2x)=4x-a.
 \Longrightarrow 8x-2a=a-x
 \Longrightarrow 9x=3a.
 </span></p>
-Therefore (oxed{x=a3}).
+Therefore <span class="math inline">\boxed{x=\frac a3}</span>.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q03"> Completed</label>
 <div class="source-line">
@@ -645,7 +645,7 @@ g(x)=\frac4{x+1}\quad(x\in\mathbb R,\ x\ne-1).
 </span></p>
 <ol type="a">
 <li><p>Find the value of (fg(7)). <strong>[1]</strong></p></li>
-<li><p>Find the values of (x) for which (f<sup>{-1}(x)=g</sup>{-1}(x)). <strong>[5]</strong></p></li>
+<li><p>Find the values of <span class="math inline">x</span> for which <span class="math inline">f^{-1}(x)=g^{-1}(x)</span>. <strong>[5]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -659,11 +659,11 @@ Show detailed mark scheme answer
 fg(7)=f\left(\frac12\right)=2-2=\boxed0.
 </span></p>
 <ol start="2" type="a">
-<li>From (y=4x-2),</li>
+<li>From <span class="math inline">y=4x-2</span>,</li>
 </ol>
 <p><span class="math display">\boxed{f^{-1}(x)=\frac{x+2}{4}}.
 </span></p>
-<p>From (y=4/(x+1)),</p>
+<p>From <span class="math inline">y=4/(x+1)</span>,</p>
 <p><span class="math display">y(x+1)=4\Longrightarrow x=\frac4y-1,
 </span></p>
 <p>so</p>
@@ -679,7 +679,7 @@ fg(7)=f\left(\frac12\right)=2-2=\boxed0.
 <p><span class="math display">
 (x+8)(x-2)=0,
 </span></p>
-and (oxed{x=-8x=2}). Both satisfy the inverse-function domain restrictions.
+and <span class="math inline">\boxed{x=-8\text{ or }x=2}</span>. Both satisfy the inverse-function domain restrictions.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q04"> Completed</label>
 <div class="source-line">
@@ -698,9 +698,9 @@ f:x\mapsto x^2+2x+3\quad\text{for }x\le-1,
 g:x\mapsto 2x+1\quad\text{for }x\ge-1.
 </span></p>
 <ol type="a">
-<li><p>Express (f(x)) in the form ((x+a)^2+b) and state the range of (f). <strong>[3]</strong></p></li>
-<li><p>Find an expression for (f^{-1}(x)). <strong>[2]</strong></p></li>
-<li><p>Solve the equation (gf(x)=13). <strong>[3]</strong></p></li>
+<li><p>Express <span class="math inline">f(x)</span> in the form <span class="math inline">(x+a)^2+b</span> and state the range of <span class="math inline">f</span>. <strong>[3]</strong></p></li>
+<li><p>Find an expression for <span class="math inline">f^{-1}(x)</span>. <strong>[2]</strong></p></li>
+<li><p>Solve the equation <span class="math inline">gf(x)=13</span>. <strong>[3]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -715,7 +715,7 @@ Show detailed mark scheme answer
 <p><span class="math display">\boxed{\text{range of }f=[2,\infty)}.
 </span></p>
 <ol start="2" type="a">
-<li>Let (y=(x+1)^2+2). Since (x+1), choose the negative square-root branch:</li>
+<li>Let <span class="math inline">y=(x+1)^2+2</span>. Since <span class="math inline">x+1\le0</span>, choose the negative square-root branch:</li>
 </ol>
 <p><span class="math display">x+1=-\sqrt{y-2}.
 </span></p>
@@ -732,7 +732,7 @@ gf(x)=2f(x)+1=2\bigl((x+1)^2+2\bigr)+1=2(x+1)^2+5.
 <p><span class="math display">2(x+1)^2+5=13
 \Longrightarrow (x+1)^2=4.
 </span></p>
-The algebraic possibilities are (x=1) and (x=-3), but the original domain is (x). Hence (oxed{x=-3}).
+The algebraic possibilities are <span class="math inline">x=1</span> and <span class="math inline">x=-3</span>, but the original domain is <span class="math inline">x\le-1</span>. Hence <span class="math inline">\boxed{x=-3}</span>.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q05"> Completed</label>
 <div class="source-line">
@@ -762,7 +762,7 @@ f'(x)=\frac13\cdot\frac32(2x-1)^{1/2}\cdot2-2
 \Longleftrightarrow \sqrt{2x-1}\le2
 \Longleftrightarrow x\le\frac52.
 </span></p>
-<p>The interval begins at (x=1/2), so the greatest possible upper endpoint is</p>
+<p>The interval begins at <span class="math inline">x=1/2</span>, so the greatest possible upper endpoint is</p>
 <span class="math display">\boxed{a=\frac52}.</span>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q06"> Completed</label>
@@ -774,13 +774,13 @@ f'(x)=\frac13\cdot\frac32(2x-1)^{1/2}\cdot2-2
 <div id="p1-fn-q07" class="question-card">
 <section id="question-7-970912on21-q2ab" class="level3">
 <h3 class="anchored" data-anchor-id="question-7-970912on21-q2ab">Question 7 · 9709/12/O/N/21 Q2(a–b)</h3>
-<p>The graph of (y=f(x)) is transformed to the graph of (y=f(2x)-3).</p>
+<p>The graph of <span class="math inline">y=f(x)</span> is transformed to the graph of <span class="math inline">y=f(2x)-3</span>.</p>
 <ol type="a">
 <li>Describe fully the two single transformations which have been combined to give the resulting transformation. <strong>[3]</strong></li>
 </ol>
-<p>The point (P(5,6)) lies on the transformed curve (y=f(2x)-3).</p>
+<p>The point <span class="math inline">P=(5,6)</span> lies on the transformed curve <span class="math inline">y=f(2x)-3</span>.</p>
 <ol start="2" type="a">
-<li>State the coordinates of the corresponding point on the original curve (y=f(x)). <strong>[2]</strong></li>
+<li>State the coordinates of the corresponding point on the original curve <span class="math inline">y=f(x)</span>. <strong>[2]</strong></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -791,10 +791,10 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">\boxed{\text{horizontal stretch factor }\frac12\text{, followed by translation }(0,-3)}.</span></p>
 <ol start="2" type="a">
-<li>Since (P(5,6)) lies on (y=f(2x)-3),</li>
+<li>Since <span class="math inline">P=(5,6)</span> lies on <span class="math inline">y=f(2x)-3</span>,</li>
 </ol>
 <p><span class="math display">6=f(2\cdot5)-3\Longrightarrow f(10)=9.</span></p>
-Therefore the corresponding point on (y=f(x)) is (oxed{(10,9)}).
+Therefore the corresponding point on <span class="math inline">y=f(x)</span> is <span class="math inline">\boxed{(10,9)}</span>.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q07"> Completed</label>
 <div class="source-line">
@@ -806,20 +806,20 @@ Therefore the corresponding point on (y=f(x)) is (oxed{(10,9)}).
 <section id="question-8-970911on21-q8ae" class="level3">
 <h3 class="anchored" data-anchor-id="question-8-970911on21-q8ae">Question 8 · 9709/11/O/N/21 Q8(a–e)</h3>
 <ol type="a">
-<li>Express (-3x^2+12x+2) in the form (-3(x-a)^2+b), where (a) and (b) are constants. <strong>[2]</strong></li>
+<li>Express <span class="math inline">-3x^2+12x+2</span> in the form <span class="math inline">-3(x-a)^2+b</span>, where <span class="math inline">a</span> and <span class="math inline">b</span> are constants. <strong>[2]</strong></li>
 </ol>
-<p>The one-one function (f) is defined by (f:x-3x^2+12x+2) for (xk).</p>
+<p>The one-one function <span class="math inline">f</span> is defined by <span class="math inline">f:x\mapsto-3x^2+12x+2</span> for <span class="math inline">x\le k</span>.</p>
 <ol start="2" type="a">
 <li>State the largest possible value of (k). <strong>[1]</strong></li>
 </ol>
-<p>It is now given that (k=-1).</p>
+<p>It is now given that <span class="math inline">k=-1</span>.</p>
 <ol start="3" type="a">
 <li><p>State the range of (f). <strong>[1]</strong></p></li>
 <li><p>Find an expression for (f^{-1}(x)). <strong>[3]</strong></p></li>
 </ol>
-<p>The result of translating the graph of (y=f(x)) by</p>
+<p>The result of translating the graph of <span class="math inline">y=f(x)</span> by</p>
 <p><span class="math display">\begin{pmatrix}-3\\1\end{pmatrix}</span></p>
-<p>is the graph of (y=g(x)).</p>
+<p>is the graph of <span class="math inline">y=g(x)</span>.</p>
 <ol start="5" type="a">
 <li>Express (g(x)) in the form (px^2+qx+r). <strong>[3]</strong></li>
 </ol>
@@ -832,13 +832,13 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">-3x^2+12x+2=-3(x-2)^2+14.</span></p>
 <ol start="2" type="a">
-<li><p>The vertex is at (x=2). For the restricted domain (xk) to stay on one branch, the largest possible value is (oxed{k=2}).</p></li>
-<li><p>With (k=-1),</p></li>
+<li><p>The vertex is at <span class="math inline">x=2</span>. For the restricted domain <span class="math inline">x\le k</span> to stay on one branch, the largest possible value is <span class="math inline">\boxed{k=2}</span>.</p></li>
+<li><p>With <span class="math inline">k=-1</span>,</p></li>
 </ol>
 <p><span class="math display">f(-1)=-3-12+2=-13,</span></p>
-<p>and (f(x)-) as (x-). Hence (oxed{f=(-,-13]}. $$</p>
+<p>and <span class="math inline">f(x)\to-\infty</span> as <span class="math inline">x\to-\infty</span>. Hence <span class="math inline">\boxed{\text{range of }f=(-\infty,-13]}</span>. $$</p>
 <ol start="4" type="a">
-<li>Let (y=-3(x-2)^2+14). Since (x), choose the left branch:</li>
+<li>Let <span class="math inline">y=-3(x-2)^2+14</span>. Since <span class="math inline">x\le-1</span>, choose the left branch:</li>
 </ol>
 <p><span class="math display">x=2-\sqrt{\frac{14-y}{3}}.
 </span></p>
@@ -846,7 +846,7 @@ Show detailed mark scheme answer
 <p><span class="math display">\boxed{f^{-1}(x)=2-\sqrt{\frac{14-x}{3}}},\qquad x\le-13.
 </span></p>
 <ol start="5" type="a">
-<li>A translation by ((-3,1)) gives (g(x)=f(x+3)+1). Thus</li>
+<li>A translation by <span class="math inline">(-3,1)</span> gives <span class="math inline">g(x)=f(x+3)+1</span>. Thus</li>
 </ol>
 <span class="math display">
 \begin{aligned}
@@ -874,17 +874,17 @@ g(x)=mx^2+n\quad(x\ge-2),
 \qquad
 h(x)=\sqrt{x}-2\quad(x\ge0),
 </span></p>
-<p>where (m) and (n) are constants.</p>
+<p>where <span class="math inline">m</span> and <span class="math inline">n</span> are constants.</p>
 <ol type="a">
-<li><p>Solve (f(x)=0), giving your solutions in the form (x=a+bc). <strong>[4]</strong></p></li>
-<li><p>Given that (f(x)=gh(x)), find the values of (m) and (n). <strong>[4]</strong></p></li>
+<li><p>Solve <span class="math inline">f(x)=0</span>, giving your solutions in the form <span class="math inline">x=a+b\sqrt c</span>. <strong>[4]</strong></p></li>
+<li><p>Given that <span class="math inline">f(x)=gh(x)</span>, find the values of <span class="math inline">m</span> and <span class="math inline">n</span>. <strong>[4]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Let (u=), so (u) and (x=u^2). Then</li>
+<li>Let <span class="math inline">u=\sqrt{x}</span>, so <span class="math inline">u\ge0</span> and <span class="math inline">x=u^2</span>. Then</li>
 </ol>
 <p><span class="math display">u^2-4u+1=0,</span></p>
 <p>giving</p>
@@ -893,7 +893,7 @@ Show detailed mark scheme answer
 <p><span class="math display">
 x=(2\pm\sqrt3)^2=7\pm4\sqrt3.
 </span></p>
-<p>Thus (oxed{x=7-4x=7+4}).</p>
+<p>Thus <span class="math inline">\boxed{x=7-4\sqrt3\text{ or }x=7+4\sqrt3}</span>.</p>
 <ol start="2" type="a">
 <li></li>
 </ol>
@@ -903,7 +903,7 @@ gh(x)=g(\sqrt{x}-2)=m(\sqrt{x}-2)^2+n.
 <p>Expanding,</p>
 <p><span class="math display">gh(x)=m(x-4\sqrt{x}+4)+n.
 </span></p>
-<p>Comparing with (f(x)=x-4+1), the coefficient of (x) gives (m=1), and then (4+n=1), so</p>
+<p>Comparing with <span class="math inline">f(x)=x-4\sqrt{x}+1</span>, the coefficient of <span class="math inline">x</span> gives <span class="math inline">m=1</span>, and then <span class="math inline">4+n=1</span>, so</p>
 <span class="math display">\boxed{m=1,\quad n=-3}.</span>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q09"> Completed</label>
@@ -928,7 +928,7 @@ gh(x)=g(\sqrt{x}-2)=m(\sqrt{x}-2)^2+n.
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Let (y=(x<sup>2-4)/(x</sup>2+4)). Then</li>
+<li>Let <span class="math inline">y=(x^2-4)/(x^2+4)</span>. Then</li>
 </ol>
 <p><span class="math display">
 y(x^2+4)=x^2-4
@@ -948,7 +948,7 @@ y(x^2+4)=x^2-4
 <p><span class="math display">\boxed{0&lt;f(x)&lt;1}.
 </span></p>
 <ol start="3" type="a">
-<li>The range of (f) is ((0,1)), but the domain of (f) is (x&gt;2). Since the range of the inner (f) is not contained in the domain of the outer (f), (ff) cannot be formed.</li>
+<li>The range of <span class="math inline">f</span> is <span class="math inline">(0,1)</span>, but the domain of <span class="math inline">f</span> is <span class="math inline">x&gt;2</span>. Since the range of the inner <span class="math inline">f</span> is not contained in the domain of the outer <span class="math inline">f</span>, <span class="math inline">ff</span> cannot be formed.</li>
 </ol>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q10"> Completed</label>
@@ -989,7 +989,7 @@ Show detailed mark scheme answer
 <p>As (x), (f(x)), but (f(x)). Therefore the range of (f), and hence the domain of (f^{-1}), is</p>
 <p><span class="math display">\boxed{x\in\mathbb R,\ x\ne1}.</span></p>
 <ol start="2" type="a">
-<li>Let (y=(2x+1)/(2x-1)). Then</li>
+<li>Let <span class="math inline">y=(2x+1)/(2x-1)</span>. Then</li>
 </ol>
 <p><span class="math display">
 y(2x-1)=2x+1
@@ -1006,7 +1006,7 @@ y(2x-1)=2x+1
 gf^{-1}(3)=g(1)=1^2+4=\boxed5.
 </span></p>
 <ol start="4" type="a">
-<li>(g(x)=x^2+4) is not one-one on (mathbb R), because (g(t)=g(-t)). Therefore (g^{-1}) cannot be a function on the stated domain.</li>
+<li><span class="math inline">g(x)=x^2+4</span> is not one-one on <span class="math inline">\mathbb R</span>, because <span class="math inline">g(t)=g(-t)</span>. Therefore <span class="math inline">g^{-1}</span> cannot be a function on the stated domain.</li>
 </ol>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q11"> Completed</label>
@@ -1018,7 +1018,7 @@ gf^{-1}(3)=g(1)=1^2+4=\boxed5.
 <div id="p1-fn-q12" class="question-card">
 <section id="question-12-970913on22-q2ac" class="level3">
 <h3 class="anchored" data-anchor-id="question-12-970913on22-q2ac">Question 12 · 9709/13/O/N/22 Q2(a–c)</h3>
-<p>The function (f) is defined by (f(x)=-2x^2-8x-13) for (x&lt;-3).</p>
+<p>The function <span class="math inline">f</span> is defined by <span class="math inline">f(x)=-2x^2-8x-13</span> for <span class="math inline">x&lt;-3</span>.</p>
 <ol type="a">
 <li><p>Express (f(x)) in the form (-2(x+a)^2+b), where (a) and (b) are integers. <strong>[2]</strong></p></li>
 <li><p>Find the range of (f). <strong>[1]</strong></p></li>
@@ -1034,12 +1034,12 @@ Show detailed mark scheme answer
 <p><span class="math display">f(x)=-2(x^2+4x+4)-13+8=-2(x+2)^2-5.
 </span></p>
 <ol start="2" type="a">
-<li>On (x&lt;-3), we have (x+2&lt;-1). As (x^{-}), (f(x)), but (x=-3) is excluded; as (x-), (f(x)-). Hence</li>
+<li>On <span class="math inline">x&lt;-3</span>, we have <span class="math inline">x+2&lt;-1</span>. As <span class="math inline">x\to-3^{-}</span>, <span class="math inline">f(x)\to-7</span>, but <span class="math inline">x=-3</span> is excluded; as <span class="math inline">x\to-\infty</span>, <span class="math inline">f(x)\to-\infty</span>. Hence</li>
 </ol>
 <p><span class="math display">\boxed{\text{range of }f=(-\infty,-7)}.
 </span></p>
 <ol start="3" type="a">
-<li>Let (y=-2(x+2)^2-5). Then</li>
+<li>Let <span class="math inline">y=-2(x+2)^2-5</span>. Then</li>
 </ol>
 <p><span class="math display">
 (x+2)^2=-\frac{y+5}{2}.
@@ -1057,7 +1057,7 @@ Show detailed mark scheme answer
 <div id="p1-fn-q13" class="question-card">
 <section id="question-13-970912fm23-q2" class="level3">
 <h3 class="anchored" data-anchor-id="question-13-970912fm23-q2">Question 13 · 9709/12/F/M/23 Q2</h3>
-<p>A function (f) is defined by (f(x)=x^2-2x+5) for (xR). A sequence of transformations is applied in the following order to the graph of (y=f(x)) to give the graph of (y=g(x)):</p>
+<p>A function <span class="math inline">f</span> is defined by <span class="math inline">f(x)=x^2-2x+5</span> for <span class="math inline">x\in\mathbb R</span>. A sequence of transformations is applied in the following order to the graph of <span class="math inline">y=f(x)</span> to give the graph of <span class="math inline">y=g(x)</span>:</p>
 <ul>
 <li>Stretch parallel to the (x)-axis with scale factor (1/2);</li>
 <li>Reflection in the (y)-axis;</li>
@@ -1068,11 +1068,11 @@ Show detailed mark scheme answer
 <summary>
 Show detailed mark scheme answer
 </summary>
-<p>The horizontal stretch factor (1/2) gives (y=f(2x)). Reflecting in the (y)-axis gives (y=f(-2x)). Finally stretch parallel to the (y)-axis by factor 3:</p>
+<p>The horizontal stretch factor <span class="math inline">1/2</span> gives <span class="math inline">y=f(2x)</span>. Reflecting in the <span class="math inline">y</span>-axis gives <span class="math inline">y=f(-2x)</span>. Finally stretch parallel to the <span class="math inline">y</span>-axis by factor 3:</p>
 <p><span class="math display">
 g(x)=3f(-2x).
 </span></p>
-<p>Since (f(t)=t^2-2t+5),</p>
+<p>Since <span class="math inline">f(t)=t^2-2t+5</span>,</p>
 <span class="math display">
 \begin{aligned}
 g(x)&amp;=3\left((-2x)^2-2(-2x)+5\right)\\
@@ -1090,7 +1090,7 @@ g(x)&amp;=3\left((-2x)^2-2(-2x)+5\right)\\
 <div id="p1-fn-q14" class="question-card">
 <section id="question-14-970912mj23-q8ad" class="level3">
 <h3 class="anchored" data-anchor-id="question-14-970912mj23-q8ad">Question 14 · 9709/12/M/J/23 Q8(a–d)</h3>
-<p>The diagram shows the graph of (y=f(x)), where</p>
+<p>The diagram shows the graph of <span class="math inline">y=f(x)</span>, where</p>
 <p><span class="math display">f(x)=3+2\sin\frac14x\quad\text{for }0\le x\le2\pi.
 </span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -1100,7 +1100,7 @@ g(x)&amp;=3\left((-2x)^2-2(-2x)+5\right)\\
 </figure>
 </div>
 <ol type="a">
-<li><p>On the diagram above, sketch the graph of (y=f^{-1}(x)). <strong>[2]</strong></p></li>
+<li><p>On the diagram above, sketch the graph of <span class="math inline">y=f^{-1}(x)</span>. <strong>[2]</strong></p></li>
 <li><p>Find an expression for (f^{-1}(x)). <strong>[2]</strong></p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -1110,15 +1110,15 @@ g(x)&amp;=3\left((-2x)^2-2(-2x)+5\right)\\
 </figure>
 </div>
 <ol start="3" type="a">
-<li><p>The diagram above shows part of the graph of (g(x)=3+214x) for (-2x). Complete the sketch of the graph of (g(x)) on the diagram above and hence explain whether the function (g) has an inverse. <strong>[2]</strong></p></li>
-<li><p>Describe fully a sequence of three transformations which can be combined to transform the graph of (y=x) for (0x) to the graph of (y=f(x)), making clear the order in which the transformations are applied. <strong>[6]</strong></p></li>
+<li><p>The diagram above shows part of the graph of <span class="math inline">g(x)=3+2\sin\frac14x</span> for <span class="math inline">-2\pi\le x\le2\pi</span>. Complete the sketch of the graph of <span class="math inline">g(x)</span> on the diagram above and hence explain whether the function <span class="math inline">g</span> has an inverse. <strong>[2]</strong></p></li>
+<li><p>Describe fully a sequence of three transformations which can be combined to transform the graph of <span class="math inline">y=\sin x</span> for <span class="math inline">0\le x\le\frac12\pi</span> to the graph of <span class="math inline">y=f(x)</span>, making clear the order in which the transformations are applied. <strong>[6]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li><p>The inverse graph is the reflection of the given graph in the line (y=x).</p></li>
+<li><p>The inverse graph is the reflection of the given graph in the line <span class="math inline">y=x</span>.</p></li>
 <li></li>
 </ol>
 <p><span class="math display">y=3+2\sin\frac{x}{4}
@@ -1128,13 +1128,13 @@ Show detailed mark scheme answer
 <p><span class="math display">\boxed{f^{-1}(x)=4\sin^{-1}\left(\frac{x-3}{2}\right)},\qquad 3\le x\le5.
 </span></p>
 <ol start="3" type="a">
-<li><p>On ([-2,2]), the input (x/4) runs from (-/2) to (/2), where sine is increasing. Therefore (g) is one-one and its graph passes through the corresponding reflected/extended points; (oxed{g}).</p></li>
-<li><p>Starting with (y=x):</p></li>
+<li><p>On <span class="math inline">[-2\pi,2\pi]</span>, the input <span class="math inline">x/4</span> runs from <span class="math inline">-\pi/2</span> to <span class="math inline">\pi/2</span>, where sine is increasing. Therefore <span class="math inline">g</span> is one-one and its graph passes through the corresponding reflected/extended points; <span class="math inline">\boxed{g\text{ has an inverse}}</span>.</p></li>
+<li><p>Starting with <span class="math inline">y=\sin x</span>:</p></li>
 </ol>
 <ol type="1">
-<li>stretch parallel to the (x)-axis by scale factor (4), giving (y=(x/4));</li>
-<li>stretch parallel to the (y)-axis by scale factor (2), giving (y=2(x/4));</li>
-<li>translate 3 units upwards, giving (y=3+2(x/4)).</li>
+<li>stretch parallel to the <span class="math inline">x</span>-axis by scale factor <span class="math inline">4</span>, giving <span class="math inline">y=\sin(x/4)</span>;</li>
+<li>stretch parallel to the <span class="math inline">y</span>-axis by scale factor <span class="math inline">2</span>, giving <span class="math inline">y=2\sin(x/4)</span>;</li>
+<li>translate 3 units upwards, giving <span class="math inline">y=3+2\sin(x/4)</span>.</li>
 </ol>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q14"> Completed</label>
@@ -1161,20 +1161,20 @@ f(x)=(x+a)^2-a\quad\text{for }x\le-a,
 </ol>
 <ol start="2" type="i">
 <li><p>State the range of (f^{-1}). <strong>[1]</strong></p></li>
-<li><p>Given that (a=), solve the equation (gf(x)=0). <strong>[3]</strong></p></li>
+<li><p>Given that <span class="math inline">a=\frac72</span>, solve the equation <span class="math inline">gf(x)=0</span>. <strong>[3]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Let (y=(x+a)^2-a). Since (x-a), (x+a), so</li>
+<li>Let <span class="math inline">y=(x+a)^2-a</span>. Since <span class="math inline">x\le-a</span>, <span class="math inline">x+a\le0</span>, so</li>
 </ol>
 <p><span class="math display">x+a=-\sqrt{y+a}.</span></p>
 <p>Therefore</p>
 <p><span class="math display">\boxed{f^{-1}(x)=-a-\sqrt{x+a}}.</span></p>
 <ol start="2" type="a">
-<li>The minimum of (f) occurs at (x=-a), giving (f(-a)=-a). Thus</li>
+<li>The minimum of <span class="math inline">f</span> occurs at <span class="math inline">x=-a</span>, giving <span class="math inline">f(-a)=-a</span>. Thus</li>
 </ol>
 <p><span class="math display">\boxed{\operatorname{dom}(f^{-1})=[-a,\infty)},
 \qquad
@@ -1185,7 +1185,7 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">gf(x)=2f(x)-1=0\Longrightarrow f(x)=\frac12.
 </span></p>
-<p>With (a=7/2),</p>
+<p>With <span class="math inline">a=7/2</span>,</p>
 <p><span class="math display">
 (x+\tfrac72)^2-\tfrac72=\frac12
 \Longrightarrow (x+\tfrac72)^2=\frac92.
@@ -1209,7 +1209,7 @@ Show detailed mark scheme answer
 <li><p>State the range of (f). <strong>[1]</strong></p></li>
 <li><p>Obtain an expression for (f^{-1}(x)) and state the domain of (f^{-1}). <strong>[4]</strong></p></li>
 </ol>
-<p>The function (g) is defined by (g(x)=2x-2) for (x&gt;0).</p>
+<p>The function <span class="math inline">g</span> is defined by <span class="math inline">g(x)=2x-2</span> for <span class="math inline">x&gt;0</span>.</p>
 <ol start="3" type="a">
 <li>Obtain a simplified expression for (gf(x)). <strong>[2]</strong></li>
 </ol>
@@ -1218,8 +1218,8 @@ Show detailed mark scheme answer
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li><p>Since (x-2&gt;0), (3/(x-2)&gt;0), so (oxed{f=(1,)}).</p></li>
-<li><p>Let (y=1+3/(x-2)). Then</p></li>
+<li><p>Since <span class="math inline">x-2&gt;0</span>, <span class="math inline">3/(x-2)&gt;0</span>, so <span class="math inline">\boxed{\text{range of }f=(1,\infty)}</span>.</p></li>
+<li><p>Let <span class="math inline">y=1+3/(x-2)</span>. Then</p></li>
 </ol>
 <p><span class="math display">y-1=\frac3{x-2}\Longrightarrow x=2+\frac3{y-1}.</span></p>
 <p>Therefore</p>
@@ -1251,18 +1251,18 @@ gf(x)=2\left(1+\frac3{x-2}\right)-2
 </figure>
 </div>
 <ol type="a">
-<li><p>On this diagram, sketch the graph of (y=f^{-1}(x)). Show any relevant mirror line. <strong>[2]</strong></p></li>
+<li><p>On this diagram, sketch the graph of <span class="math inline">y=f^{-1}(x)</span>. Show any relevant mirror line. <strong>[2]</strong></p></li>
 <li><p>Find an expression for (f^{-1}(x)). <strong>[3]</strong></p></li>
-<li><p>Solve the equation (f(x)=4.5). <strong>[1]</strong></p></li>
-<li><p>Explain why the equation (f^{-1}(x)=f(x)) has no solution. <strong>[1]</strong></p></li>
+<li><p>Solve the equation <span class="math inline">f(x)=4.5</span>. <strong>[1]</strong></p></li>
+<li><p>Explain why the equation <span class="math inline">f^{-1}(x)=f(x)</span> has no solution. <strong>[1]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li><p>The inverse graph is the reflection of the given graph in (y=x), using the negative branch because the original domain is (x&lt;0).</p></li>
-<li><p>Let (y=2/x^2+4). Then</p></li>
+<li><p>The inverse graph is the reflection of the given graph in <span class="math inline">y=x</span>, using the negative branch because the original domain is <span class="math inline">x&lt;0</span>.</p></li>
+<li><p>Let <span class="math inline">y=2/x^2+4</span>. Then</p></li>
 </ol>
 <p><span class="math display">y-4=\frac2{x^2}\Longrightarrow x^2=\frac2{y-4}.</span></p>
 <p>Since (x&lt;0),</p>
@@ -1275,9 +1275,9 @@ Show detailed mark scheme answer
 \Longrightarrow \frac2{x^2}=\frac12
 \Longrightarrow x^2=4.
 </span></p>
-<p>The domain (x&lt;0) gives (oxed{x=-2}).</p>
+<p>The domain <span class="math inline">x&lt;0</span> gives <span class="math inline">\boxed{x=-2}</span>.</p>
 <ol start="4" type="a">
-<li>(f(x)&gt;4), so every output of (f) is positive. But the domain of (f) is (x&lt;0), whereas (f^{-1}(x)) is defined only for (x&gt;4). There is no common input (x), so (oxed{f^{-1}(x)=f(x)}).</li>
+<li><span class="math inline">f(x)&gt;4</span>, so every output of <span class="math inline">f</span> is positive. But the domain of <span class="math inline">f</span> is <span class="math inline">x&lt;0</span>, whereas <span class="math inline">f^{-1}(x)</span> is defined only for <span class="math inline">x&gt;4</span>. There is no common input <span class="math inline">x</span>, so <span class="math inline">\boxed{f^{-1}(x)=f(x)\text{ has no solution}</span>}.</li>
 </ol>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q17"> Completed</label>
@@ -1295,7 +1295,7 @@ Show detailed mark scheme answer
 <ol type="a">
 <li>Find an expression for (f^{-1}(x)). <strong>[1]</strong></li>
 </ol>
-<p>The diagram shows the graph of (y=g(x)), where</p>
+<p>The diagram shows the graph of <span class="math inline">y=g(x)</span>, where</p>
 <p><span class="math display">g(x)=\frac1{x^2+2}\quad(x\in\mathbb R).
 </span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -1305,18 +1305,18 @@ Show detailed mark scheme answer
 </figure>
 </div>
 <ol start="2" type="a">
-<li>State the range of (g) and explain whether (g^{-1}) exists. <strong>[2]</strong></li>
+<li>State the range of <span class="math inline">g</span> and explain whether <span class="math inline">g^{-1}</span> exists. <strong>[2]</strong></li>
 </ol>
-<p>The function (h) is defined by (h(x)=1/(x^2+2)) for (x).</p>
+<p>The function <span class="math inline">h</span> is defined by <span class="math inline">h(x)=1/(x^2+2)</span> for <span class="math inline">x\ge0</span>.</p>
 <ol start="3" type="a">
-<li>Solve the equation (hf(x)=f(25/16)). Give your answer in the form (a+bc). <strong>[4]</strong></li>
+<li>Solve the equation <span class="math inline">hf(x)=f(25/16)</span>. Give your answer in the form <span class="math inline">a+b\sqrt c</span>. <strong>[4]</strong></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Let (y=-1). Then (sqrt{x}=y+1), so (x=(y+1)^2). Hence</li>
+<li>Let <span class="math inline">y=\sqrt{x}-1</span>. Then <span class="math inline">\sqrt{x}=y+1</span>, so <span class="math inline">x=(y+1)^2</span>. Hence</li>
 </ol>
 <p><span class="math display">\boxed{f^{-1}(x)=(x+1)^2},\qquad x&gt;0.
 </span></p>
@@ -1325,18 +1325,18 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">\boxed{0&lt;g(x)\le\frac12}.
 </span></p>
-<p>The graph is not one-one on (mathbb R), because (g(x)=g(-x)). Therefore (oxed{g^{-1}R}).</p>
+<p>The graph is not one-one on <span class="math inline">\mathbb R</span>, because <span class="math inline">g(x)=g(-x)</span>. Therefore <span class="math inline">\boxed{g^{-1}\text{ does not exist on }\mathbb R}</span>.</p>
 <ol start="3" type="a">
 <li></li>
 </ol>
 <p><span class="math display">f\left(\frac{25}{16}\right)=\frac54-1=\frac14.
 </span></p>
-<p>Let (u=f(x)=-1). Then (h(f(x))=1/(u^2+2)), so</p>
+<p>Let <span class="math inline">u=f(x)=\sqrt{x}-1</span>. Then <span class="math inline">h(f(x))=1/(u^2+2)</span>, so</p>
 <p><span class="math display">
 \frac1{(\sqrt{x}-1)^2+2}=\frac14
 \Longrightarrow (\sqrt{x}-1)^2=2.
 </span></p>
-<p>Since (x&gt;1), (sqrt{x}-1&gt;0), giving (sqrt{x}=1+). Therefore</p>
+<p>Since <span class="math inline">x&gt;1</span>, <span class="math inline">\sqrt{x}-1&gt;0</span>, giving <span class="math inline">\sqrt{x}=1+\sqrt2</span>. Therefore</p>
 <span class="math display">\boxed{x=3+2\sqrt2}.</span>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q18"> Completed</label>
@@ -1353,11 +1353,11 @@ Show detailed mark scheme answer
 </span></p>
 <ol type="a">
 <li><ol type="i">
-<li>State the value of (f(-1)). <strong>[1]</strong></li>
+<li>State the value of <span class="math inline">f(-1)</span>. <strong>[1]</strong></li>
 </ol></li>
 </ol>
 <ol start="2" type="i">
-<li>The diagram shows the graph of (y=f(x)). Sketch the graph of (y=f^{-1}(x)) on this diagram. Show any relevant mirror line. <strong>[2]</strong></li>
+<li>The diagram shows the graph of <span class="math inline">y=f(x)</span>. Sketch the graph of <span class="math inline">y=f^{-1}(x)</span> on this diagram. Show any relevant mirror line. <strong>[2]</strong></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1366,11 +1366,11 @@ Show detailed mark scheme answer
 </figure>
 </div>
 <ol start="3" type="i">
-<li>Find an expression for (f^{-1}(x)) and state the domain of the function (f^{-1}). <strong>[4]</strong></li>
+<li>Find an expression for <span class="math inline">f^{-1}(x)</span> and state the domain of the function <span class="math inline">f^{-1}</span>. <strong>[4]</strong></li>
 </ol>
-<p>The function (g) is defined by (g(x)=3x+2) for (xR).</p>
+<p>The function <span class="math inline">g</span> is defined by <span class="math inline">g(x)=3x+2</span> for <span class="math inline">x\in\mathbb R</span>.</p>
 <ol start="2" type="a">
-<li>Solve the equation (f(x)=gf(1/4)). <strong>[3]</strong></li>
+<li>Solve the equation <span class="math inline">f(x)=gf(1/4)</span>. <strong>[3]</strong></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -1379,8 +1379,8 @@ Show detailed mark scheme answer
 <p>(a)(i)</p>
 <p><span class="math display">f(-1)=\frac{-2+1}{-2-1}=\boxed{\frac13}.
 </span></p>
-<p>(a)(ii) The inverse graph is the reflection of the original graph in (y=x), using the branch corresponding to the restricted domain (x&lt;1/2).</p>
-<p>(a)(iii) Let (y=(2x+1)/(2x-1)). Then</p>
+<p>(a)(ii) The inverse graph is the reflection of the original graph in <span class="math inline">y=x</span>, using the branch corresponding to the restricted domain <span class="math inline">x&lt;1/2</span>.</p>
+<p>(a)(iii) Let <span class="math inline">y=(2x+1)/(2x-1)</span>. Then</p>
 <p><span class="math display">
 y(2x-1)=2x+1
 \Longrightarrow 2x(y-1)=y+1
@@ -1402,7 +1402,7 @@ gf\left(\frac14\right)=g(-3)=-7.
 \Longrightarrow 2x+1=-14x+7
 \Longrightarrow x=\boxed{\frac38}.
 </span></p>
-This satisfies (x&lt;1/2).
+This satisfies <span class="math inline">x&lt;1/2</span>.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-fn-q19"> Completed</label>
 <div class="source-line">
@@ -1414,15 +1414,15 @@ This satisfies (x&lt;1/2).
 <section id="question-20-970913on24-q8ac" class="level3">
 <h3 class="anchored" data-anchor-id="question-20-970913on24-q8ac">Question 20 · 9709/13/O/N/24 Q8(a–c)</h3>
 <ol type="a">
-<li>Express (3x^2-12x+14) in the form (3(x+a)^2+b), where (a) and (b) are constants to be found. <strong>[2]</strong></li>
+<li>Express <span class="math inline">3x^2-12x+14</span> in the form <span class="math inline">3(x+a)^2+b</span>, where <span class="math inline">a</span> and <span class="math inline">b</span> are constants to be found. <strong>[2]</strong></li>
 </ol>
-<p>The function (f(x)=3x^2-12x+14) is defined for (xk), where (k) is a constant.</p>
+<p>The function <span class="math inline">f(x)=3x^2-12x+14</span> is defined for <span class="math inline">x\ge k</span>, where <span class="math inline">k</span> is a constant.</p>
 <ol start="2" type="a">
-<li>Find the least value of (k) for which the function (f^{-1}) exists. <strong>[1]</strong></li>
+<li>Find the least value of <span class="math inline">k</span> for which the function <span class="math inline">f^{-1}</span> exists. <strong>[1]</strong></li>
 </ol>
 <p>For the rest of this question, assume that (k) has the value found in part (b).</p>
 <ol start="3" type="a">
-<li>Find an expression for (f^{-1}(x)). <strong>[3]</strong></li>
+<li>Find an expression for <span class="math inline">f^{-1}(x)</span>. <strong>[3]</strong></li>
 </ol>
 <details class="answer-panel">
 <summary>
@@ -1433,10 +1433,10 @@ Show detailed mark scheme answer
 </ol>
 <p><span class="math display">3x^2-12x+14=3(x^2-4x+4)+2=3(x-2)^2+2.
 </span></p>
-<p>Thus (a=-2), (b=2).</p>
+<p>Thus <span class="math inline">a=-2</span>, <span class="math inline">b=2</span>.</p>
 <ol start="2" type="a">
-<li><p>The vertex is at (x=2). Restricting the domain to (x) leaves one branch of the parabola, so the least possible value is (oxed{k=2}).</p></li>
-<li><p>Let (y=3(x-2)^2+2). On (x), choose the positive branch:</p></li>
+<li><p>The vertex is at <span class="math inline">x=2</span>. Restricting the domain to <span class="math inline">x\ge2</span> leaves one branch of the parabola, so the least possible value is <span class="math inline">\boxed{k=2}</span>.</p></li>
+<li><p>Let <span class="math inline">y=3(x-2)^2+2</span>. On <span class="math inline">x\ge2</span>, choose the positive branch:</p></li>
 </ol>
 <p><span class="math display">x-2=\sqrt{\frac{y-2}{3}}.
 </span></p>
