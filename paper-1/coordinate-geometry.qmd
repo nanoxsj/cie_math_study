@@ -9,9 +9,9 @@ description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.3."
 
 本页依据 9709 Mathematics 2026–2027 syllabus 1.3 Coordinate geometry：
 
-- 使用 (y=mx+c)、(y-y_1=m(x-x_1))、(ax+by+c=0) 等直线形式；
+- 使用 $y=mx+c$、$y-y_1=m(x-x_1)$、$ax+by+c=0$ 等直线形式；
 - 计算 gradient、distance、midpoint，并判断 parallel/perpendicular；
-- 理解 ((x-a)^2+(y-b)^2=r^2) 及 expanded circle equation；
+- 理解 $(x-a)^2+(y-b)^2=r^2$ 及 expanded circle equation；
 - 用 algebraic methods 处理 lines and circles，包括 tangent perpendicular to radius、angle in a semicircle 和 symmetry；
 - 用交点的代数方程理解 graph 与 equation 的关系。
 
@@ -23,7 +23,7 @@ description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.3."
 ::: {.study-card}
 ### Lines and gradients
 
-两点 ((x_1,y_1))、((x_2,y_2)) 的 gradient 是
+两点 $(x_1,y_1)$、$(x_2,y_2)$ 的 gradient 是
 
 $$m=\frac{y_2-y_1}{x_2-x_1}.$$
 
@@ -35,11 +35,11 @@ $$
 \text{perpendicular}\Longleftrightarrow m_1m_2=-1.
 $$
 
-过 ((x_1,y_1)) 且 gradient 为 (m) 的直线写成
+过 $(x_1,y_1)$ 且 gradient 为 $m$ 的直线写成
 
 $$y-y_1=m(x-x_1).$$
 
-Vertical line 要单独写成 (x=a)，不能强行写成 (y=mx+c)。
+Vertical line 要单独写成 $x=a$，不能强行写成 $y=mx+c$。
 :::
 
 ::: {.formula-panel}
@@ -51,38 +51,38 @@ $$
 (x-a)^2+(y-b)^2=r^2
 $$
 
-的 centre 是 ((a,b))，radius 是 (r)。一般式
+的 centre 是 $(a,b)$，radius 是 $r$。一般式
 
 $$x^2+y^2+2gx+2fy+c=0$$
 
-可通过 completing the square 化为标准式。圆上点 (P) 处的 tangent 与 radius (CP) perpendicular；因此先求 centre，再用 perpendicular gradient 或点到直线距离，通常是最稳妥的方法。
+可通过 completing the square 化为标准式。圆上点 $P$ 处的 tangent 与 radius $CP$ perpendicular；因此先求 centre，再用 perpendicular gradient 或点到直线距离，通常是最稳妥的方法。
 :::
 
 ::: {.study-card}
 ### Intersections and tangency
 
-求 line 与 circle 的交点时，把 line equation 代入 circle equation，得到关于 (x) 或 (y) 的 quadratic。两 distinct intersections 对应 two distinct real roots；tangent 对应 repeated root，也就是 discriminant 为 0。
+求 line 与 circle 的交点时，把 line equation 代入 circle equation，得到关于 $x$ 或 $y$ 的 quadratic。两 distinct intersections 对应 two distinct real roots；tangent 对应 repeated root，也就是 discriminant 为 0。
 
-若圆心为 (C)，直线为 (ax+by+c=0)，圆心到直线的距离为
+若圆心为 $C$，直线为 $ax+by+c=0$，圆心到直线的距离为
 
 $$
 d=\frac{|a x_C+b y_C+c|}{\sqrt{a^2+b^2}}.
 $$
 
-当直线是 tangent 时，(d=r)。
+当直线是 tangent 时，$d=r$。
 :::
 
 ::: {.study-card}
 ### Perpendicular bisector and circle geometry
 
-线段 (AB) 的 perpendicular bisector：
+线段 $AB$ 的 perpendicular bisector：
 
-1. 求 midpoint (M)；
-2. 求 (AB) 的 gradient；
+1. 求 midpoint $M$；
+2. 求 $AB$ 的 gradient；
 3. 取 perpendicular gradient；
 4. 写出经过 (M) 的直线。
 
-圆的 diameter 的 midpoint 是 centre；若 (AB) 是 diameter，则 centre 是 (AB) 的 midpoint，radius 是 (AB/2)。
+圆的 diameter 的 midpoint 是 centre；若 $AB$ 是 diameter，则 centre 是 $AB$ 的 midpoint，radius 是 $AB/2$。
 :::
 
 ## 2. Verified Paper 1 past-paper questions
@@ -90,15 +90,15 @@ $$
 ::: {.question-card #p1-cg-q01}
 ### Question 1 · 9709/11/O/N/20 Q5(a–b)
 
-The equation of a line is (y=mx+c), where (m) and (c) are constants, and the equation of a curve is (xy=16).
+The equation of a line is $y=mx+c$, where $m$ and $c$ are constants, and the equation of a curve is $xy=16$.
 
-(a) Given that the line is a tangent to the curve, express (m) in terms of (c). **[3]**
+(a) Given that the line is a tangent to the curve, express $m$ in terms of $c$. **[3]**
 
-(b) Given instead that (m=-4), find the set of values of (c) for which the line intersects the curve at two distinct points. **[3]**
+(b) Given instead that $m=-4$, find the set of values of $c$ for which the line intersects the curve at two distinct points. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-The curve can be written as (y=16/x). At an intersection with (y=mx+c),
+The curve can be written as $y=16/x$. At an intersection with $y=mx+c$,
 
 $$x(mx+c)=16,$$
 
@@ -116,11 +116,11 @@ Hence
 $$\boxed{m=-\frac{c^2}{64}}.
 $$
 
-(b) With (m=-4),
+(b) With $m=-4$,
 
 $$-4x^2+cx-16=0,$$
 
-or equivalently (4x^2-cx+16=0). For two distinct points,
+or equivalently $4x^2-cx+16=0$. For two distinct points,
 
 $$c^2-4(4)(16)>0\Longrightarrow c^2>256.$$
 
@@ -135,13 +135,13 @@ $$\boxed{c<-16\text{ or }c>16}.$$
 ::: {.question-card #p1-cg-q02}
 ### Question 2 · 9709/11/O/N/20 Q10(a–c)
 
-The coordinates of the points (A) and (B) are ((-1,-2)) and ((7,4)) respectively.
+The coordinates of the points $A$ and $B$ are $(-1,-2)$ and $(7,4)$ respectively.
 
-(a) Find the equation of the circle (C), for which (AB) is a diameter. **[4]**
+(a) Find the equation of the circle $C$, for which $AB$ is a diameter. **[4]**
 
-(b) Find the equation of the tangent (T) to circle (C) at the point (B). **[4]**
+(b) Find the equation of the tangent $T$ to circle $C$ at the point $B$. **[4]**
 
-(c) Find the equation of the circle which is the reflection of circle (C) in the line (T). **[3]**
+(c) Find the equation of the circle which is the reflection of circle $C$ in the line $T$. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -158,7 +158,7 @@ so the radius is (5). Therefore
 $$\boxed{(x-3)^2+(y-1)^2=25}.
 $$
 
-(b) The radius (CB) has gradient (6/8=3/4). The tangent gradient is (-4/3), so
+(b) The radius $CB$ has gradient $\frac68=\frac34$. The tangent gradient is $-\frac43$, so
 
 $$y-4=-\frac43(x-7).$$
 
@@ -167,7 +167,7 @@ Hence
 $$\boxed{4x+3y=40}.
 $$
 
-(c) Reflect the centre (C=(3,1)) in (4x+3y-40=0). The perpendicular distance calculation gives the reflected centre
+(c) Reflect the centre $C=(3,1)$ in $4x+3y-40=0$. The perpendicular distance calculation gives the reflected centre
 
 $$C'=(11,7).$$
 
@@ -191,7 +191,7 @@ $$x^2+y^2-8x+4y-5=0.$$
 
 The point (P(1,2)) lies on the circle.
 
-(b) Show that the equation of the tangent to the circle at (P) is (4y=3x+5). **[3]**
+(b) Show that the equation of the tangent to the circle at $P$ is $4y=3x+5$. **[3]**
 
 The point (Q) also lies on the circle and (PQ) is parallel to the (x)-axis.
 
@@ -209,32 +209,32 @@ $$x^2-8x+y^2+4y-5=0
 \Longrightarrow (x-4)^2+(y+2)^2=25.
 $$
 
-Thus (\boxed{C=(4,-2)}) and (\boxed{r=5}).
+Thus $\boxed{C=(4,-2)}$ and $\boxed{r=5}$.
 
-(b) The radius (CP) has vector ((-3,4)), so its gradient is (-4/3). The tangent gradient is (3/4). Through (P=(1,2)),
+(b) The radius $CP$ has vector $(-3,4)$, so its gradient is $-\frac43$. The tangent gradient is $\frac34$. Through $P=(1,2)$,
 
 $$y-2=\frac34(x-1)\Longrightarrow \boxed{4y=3x+5}.
 $$
 
-(c) Since (PQ) is horizontal, (y_Q=2). Substitution into the circle gives
+(c) Since $PQ$ is horizontal, $y_Q=2$. Substitution into the circle gives
 
 $$
 (x-4)^2+16=25\Longrightarrow x-4=\pm3.
 $$
 
-The point different from (P) is (\boxed{Q=(7,2)}).
+The point different from $P$ is $\boxed{Q=(7,2)}$.
 
 (d) The tangent at (Q) has gradient (-3/4), so
 
 $$y-2=-\frac34(x-7)\Longrightarrow 3x+4y=29.
 $$
 
-Together with (4y=3x+5),
+Together with $4y=3x+5$,
 
 $$6x=34\Longrightarrow x=\frac{17}{3},\qquad y=\frac{11}{2}.
 $$
 
-Therefore (\boxed{T=(17/3,11/2)}).
+Therefore $\boxed{T=(17/3,11/2)}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q03"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2020/2020/9709-s20-qp-12.pdf`, Q11(a–d), and matching `9709-s20-ms-12.pdf`.</div>
@@ -243,11 +243,11 @@ Therefore (\boxed{T=(17/3,11/2)}).
 ::: {.question-card #p1-cg-q04}
 ### Question 4 · 9709/13/M/J/20 Q10(a–b)
 
-The coordinates of two points (A) and (B) are ((-7,3)) and ((5,11)) respectively.
+The coordinates of two points $A$ and $B$ are $(-7,3)$ and $(5,11)$ respectively.
 
-(a) Show that the equation of the perpendicular bisector of (AB) is (3x+2y=11). **[4]**
+(a) Show that the equation of the perpendicular bisector of $AB$ is $3x+2y=11$. **[4]**
 
-(b) A circle passes through (A) and (B) and its centre lies on the line (12x-5y=70). Find an equation of the circle. **[5]**
+(b) A circle passes through $A$ and $B$ and its centre lies on the line $12x-5y=70$. Find an equation of the circle. **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -255,12 +255,12 @@ The coordinates of two points (A) and (B) are ((-7,3)) and ((5,11)) respectively
 
 $$M=\left(\frac{-7+5}{2},\frac{3+11}{2}\right)=(-1,7).$$
 
-The gradient of (AB) is (8/12=2/3), so the perpendicular gradient is (-3/2). Hence
+The gradient of $AB$ is $\frac8{12}=\frac23$, so the perpendicular gradient is $-\frac32$. Hence
 
 $$y-7=-\frac32(x+1)\Longrightarrow \boxed{3x+2y=11}.
 $$
 
-(b) The centre lies on both (3x+2y=11) and (12x-5y=70). Solving,
+(b) The centre lies on both $3x+2y=11$ and $12x-5y=70$. Solving,
 
 $$\boxed{C=(5,-2)}.
 $$
@@ -281,7 +281,7 @@ $$
 ::: {.question-card #p1-cg-q05}
 ### Question 5 · 9709/12/F/M/21 Q8(a–b)
 
-The points (A(7,1)), (B(7,9)) and (C(1,9)) are on the circumference of a circle.
+The points $A=(7,1)$, $B=(7,9)$ and $C=(1,9)$ are on the circumference of a circle.
 
 (a) Find an equation of the circle. **[5]**
 
@@ -289,7 +289,7 @@ The points (A(7,1)), (B(7,9)) and (C(1,9)) are on the circumference of a circle.
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-Since (AB) is vertical, its perpendicular bisector is (y=5). Since (BC) is horizontal, its perpendicular bisector is (x=4). Thus the centre is (O=(4,5)).
+Since $AB$ is vertical, its perpendicular bisector is $y=5$. Since $BC$ is horizontal, its perpendicular bisector is $x=4$. Thus the centre is $O=(4,5)$.
 
 The radius squared is
 
@@ -320,18 +320,18 @@ The equation of a circle is
 
 $$x^2+y^2-4x+6y-77=0.$$
 
-(a) Find the (x)-coordinates of the points (A) and (B) where the circle intersects the (x)-axis. **[2]**
+(a) Find the $x$-coordinates of the points $A$ and $B$ where the circle intersects the $x$-axis. **[2]**
 
 (b) Find the point of intersection of the tangents to the circle at (A) and (B). **[6]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-(a) On the (x)-axis, (y=0):
+(a) On the $x$-axis, $y=0$:
 
 $$x^2-4x-77=0=(x-11)(x+7).
 $$
 
-Thus the points are ((-7,0)) and ((11,0)), so the (x)-coordinates are (\boxed{-7,11}).
+Thus the points are $(-7,0)$ and $(11,0)$, so the $x$-coordinates are $\boxed{-7,11}$.
 
 (b) Complete the square:
 
@@ -339,14 +339,14 @@ $$
 (x-2)^2+(y+3)^2=90,
 $$
 
-so the centre is ((2,-3)). At ((-7,0)), the radius gradient is (-1/3), so the tangent is (y=3x+21). At ((11,0)), the radius gradient is (1/3), so the tangent is (y=-3x+33).
+so the centre is $(2,-3)$. At $(-7,0)$, the radius gradient is $-1/3$, so the tangent is $y=3x+21$. At $(11,0)$, the radius gradient is $1/3$, so the tangent is $y=-3x+33$.
 
 Solving,
 
 $$3x+21=-3x+33\Longrightarrow x=2,qquad y=27.
 $$
 
-Therefore the tangents meet at (\boxed{(2,27)}).
+Therefore the tangents meet at $\boxed{(2,27)}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q06"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2021/2021/9709_s21_qp_11.pdf`, Q10(a–b), and matching `9709_s21_ms_11.pdf`.</div>
@@ -355,27 +355,27 @@ Therefore the tangents meet at (\boxed{(2,27)}).
 ::: {.question-card #p1-cg-q07}
 ### Question 7 · 9709/12/O/N/21 Q6
 
-Points (A) and (B) have coordinates ((8,3)) and ((p,q)) respectively. The equation of the perpendicular bisector of (AB) is (y=-2x+4).
+Points $A$ and $B$ have coordinates $(8,3)$ and $(p,q)$ respectively. The equation of the perpendicular bisector of $AB$ is $y=-2x+4$.
 
 Find the values of (p) and (q). **[4]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-The perpendicular bisector has gradient (-2), so (AB) has gradient (1/2):
+The perpendicular bisector has gradient $-2$, so $AB$ has gradient $1/2$:
 
 $$\frac{q-3}{p-8}=\frac12\Longrightarrow p=2q+2.$$
 
-The midpoint (((8+p)/2,(3+q)/2)) lies on (y=-2x+4):
+The midpoint $\left(\frac{8+p}{2},\frac{3+q}{2}\right)$ lies on $y=-2x+4$:
 
 $$\frac{3+q}{2}=-2\left(\frac{8+p}{2}\right)+4=-4-p.
 $$
 
-Hence (2p+q=-11). Combining with (p=2q+2),
+Hence $2p+q=-11$. Combining with $p=2q+2$,
 
 $$q=-3,qquad p=-4.
 $$
 
-Therefore (\boxed{p=-4,\ q=-3}).
+Therefore $\boxed{p=-4,\ q=-3}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q07"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2021/2021/9709_s21_qp_12.pdf`, Q6, and matching `9709_s21_ms_12.pdf`.</div>
@@ -384,13 +384,13 @@ Therefore (\boxed{p=-4,\ q=-3}).
 ::: {.question-card #p1-cg-q08}
 ### Question 8 · 9709/11/O/N/21 Q7(a–b)
 
-A circle with centre ((5,2)) passes through the point ((7,5)).
+A circle with centre $(5,2)$ passes through the point $(7,5)$.
 
 (a) Find an equation of the circle. **[2]**
 
-The line (y=5x-10) intersects the circle at (A) and (B).
+The line $y=5x-10$ intersects the circle at $A$ and $B$.
 
-(b) Find the exact length of the chord (AB). **[7]**
+(b) Find the exact length of the chord $AB$. **[7]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -403,7 +403,7 @@ so
 $$\boxed{(x-5)^2+(y-2)^2=13}.
 $$
 
-(b) Substitute (y=5x-10):
+(b) Substitute $y=5x-10$:
 
 $$
 (x-5)^2+(5x-12)^2=13.
@@ -415,7 +415,7 @@ $$26x^2-130x+156=0
 \Longrightarrow (x-2)(x-3)=0.
 $$
 
-The intersection points are ((2,0)) and ((3,5)). Thus
+The intersection points are $(2,0)$ and $(3,5)$. Thus
 
 $$AB=\sqrt{(3-2)^2+(5-0)^2}=\boxed{\sqrt{26}}.$$
 </details>
@@ -428,15 +428,15 @@ $$AB=\sqrt{(3-2)^2+(5-0)^2}=\boxed{\sqrt{26}}.$$
 
 ![Original extracted diagram for Question 9](../assets/questions/paper-1/past-paper/2022-fm-9709-12-q6-diagram.svg){.note-figure fig-alt="Original extracted diagram of a circle and line for 2022 February March Paper 1 Question 6"}
 
-The circle with equation ((x+1)^2+(y-2)^2=85) and the straight line with equation (y=3x-20) are shown in the diagram. The line intersects the circle at (A) and (B), and the centre of the circle is at (C).
+The circle with equation $(x+1)^2+(y-2)^2=85$ and the straight line with equation $y=3x-20$ are shown in the diagram. The line intersects the circle at $A$ and $B$, and the centre of the circle is at $C$.
 
-(a) Find, by calculation, the coordinates of (A) and (B). **[4]**
+(a) Find, by calculation, the coordinates of $A$ and $B$. **[4]**
 
-(b) Find an equation of the circle which has its centre at (C) and for which the line with equation (y=3x-20) is a tangent to the circle. **[4]**
+(b) Find an equation of the circle which has its centre at $C$ and for which the line with equation $y=3x-20$ is a tangent to the circle. **[4]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-(a) Substitute (y=3x-20):
+(a) Substitute $y=3x-20$:
 
 $$
 (x+1)^2+(3x-22)^2=85
@@ -448,12 +448,12 @@ Thus
 $$x^2-13x+40=0=(x-5)(x-8).
 $$
 
-The corresponding (y)-coordinates are (-5) and (4). Hence the two points are
+The corresponding $y$-coordinates are $-5$ and $4$. Hence the two points are
 
 $$\boxed{(5,-5)\text{ and }(8,4)}.
 $$
 
-(b) The centre is (C=(-1,2)). The distance from (C) to (3x-y-20=0) is
+(b) The centre is $C=(-1,2)$. The distance from $C$ to $3x-y-20=0$ is
 
 $$
 r=\frac{|3(-1)-2-20|}{\sqrt{3^2+(-1)^2}}=\frac{25}{\sqrt{10}}.
@@ -473,23 +473,23 @@ $$
 
 ![Original extracted diagram for Question 10](../assets/questions/paper-1/past-paper/2022-fm-9709-12-q8-diagram.svg){.note-figure fig-alt="Original extracted diagram of a circle and horizontal chord for 2022 February March Paper 1 Question 8"}
 
-The diagram shows the circle with equation ((x-2)^2+y^2=8). The chord (AB) of the circle intersects the positive (y)-axis at (A) and is parallel to the (x)-axis.
+The diagram shows the circle with equation $(x-2)^2+y^2=8$. The chord $AB$ of the circle intersects the positive $y$-axis at $A$ and is parallel to the $x$-axis.
 
-(a) Find, by calculation, the coordinates of (A) and (B). **[3]**
+(a) Find, by calculation, the coordinates of $A$ and $B$. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-Since (A) is on the positive (y)-axis, (x=0). Hence
+Since $A$ is on the positive $y$-axis, $x=0$. Hence
 
 $$(-2)^2+y^2=8\Longrightarrow y^2=4,$$
 
-so (A=(0,2)). Because (AB) is parallel to the (x)-axis, (y_B=2). Then
+so $A=(0,2)$. Because $AB$ is parallel to the $x$-axis, $y_B=2$. Then
 
 $$
 (x_B-2)^2+2^2=8\Longrightarrow (x_B-2)^2=4.
 $$
 
-The point other than (A) has (x_B=4), so
+The point other than $A$ has $x_B=4$, so
 
 $$\boxed{A=(0,2),\quad B=(4,2)}.
 $$
@@ -507,7 +507,7 @@ $$x^2+y^2+6x-2y-26=0.$$
 
 (a) Find the coordinates of the centre of the circle and the radius. Hence find the coordinates of the lowest point on the circle. **[4]**
 
-(b) Find the set of values of the constant (k) for which the line (y=kx-5) intersects the circle at two distinct points. **[6]**
+(b) Find the set of values of the constant $k$ for which the line $y=kx-5$ intersects the circle at two distinct points. **[6]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -517,12 +517,12 @@ $$
 (x+3)^2+(y-1)^2=36.
 $$
 
-Thus the centre is ((-3,1)), radius (6), and the lowest point is
+Thus the centre is $(-3,1)$, radius $6$, and the lowest point is
 
 $$\boxed{(-3,-5)}.
 $$
 
-(b) Substitute (y=kx-5):
+(b) Substitute $y=kx-5$:
 
 $$
 (1+k^2)x^2+(6-12k)x+9=0.
@@ -551,11 +551,11 @@ $$\boxed{k<0\text{ or }k>\frac43}.$$
 
 ![Original extracted diagram for Question 12](../assets/questions/paper-1/past-paper/2022-on-9709-11-q11-diagram.svg){.note-figure fig-alt="Original extracted diagram of tangents from a point to a circle for 2022 October November Paper 1 Question 11"}
 
-The diagram shows the circle with equation (x^2+y^2=20). Tangents touching the circle at points (B) and (C) pass through (A(0,10)).
+The diagram shows the circle with equation $x^2+y^2=20$. Tangents touching the circle at points $B$ and $C$ pass through $A=(0,10)$.
 
-(a) By letting the equation of a tangent be (y=mx+10), find the two possible values of (m). **[4]**
+(a) By letting the equation of a tangent be $y=mx+10$, find the two possible values of $m$. **[4]**
 
-(b) Find the coordinates of (B) and (C). **[3]**
+(b) Find the coordinates of $B$ and $C$. **[3]**
 
 The point (D) is where the circle crosses the positive (x)-axis.
 
@@ -563,7 +563,7 @@ The point (D) is where the circle crosses the positive (x)-axis.
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-(a) Substitute (y=mx+10) into (x^2+y^2=20):
+(a) Substitute $y=mx+10$ into $x^2+y^2=20$:
 
 $$
 (1+m^2)x^2+20mx+80=0.
@@ -576,15 +576,15 @@ $$
 \Longrightarrow m^2=4.
 $$
 
-Thus (\boxed{m=2\text{ or }m=-2}).
+Thus $\boxed{m=2\text{ or }m=-2}$.
 
-(b) The repeated root is (x=-20m/[2(1+m^2)]=-2m). Therefore the points of contact are
+(b) The repeated root is $x=-20m/[2(1+m^2)]=-2m$. Therefore the points of contact are
 
 $$\boxed{B=(-4,2),\quad C=(4,2)}$$
 
 in either order.
 
-(c) (D=(2\sqrt5,0)). Using vectors (overrightarrow{DB}) and (overrightarrow{DC}),
+(c) $D=(2\sqrt5,0)$. Using vectors $\overrightarrow{DB}$ and $\overrightarrow{DC}$,
 
 $$\cos\angle BDC=\frac{\overrightarrow{DB}\cdot\overrightarrow{DC}}{|DB||DC|}=\frac1{\sqrt5}.
 $$
@@ -602,7 +602,7 @@ to 1 decimal place.
 ::: {.question-card #p1-cg-q13}
 ### Question 13 · 9709/12/F/M/23 Q5
 
-Points (A(7,12)) and (B) lie on a circle with centre ((-2,5)). The line (AB) has equation (y=-2x+26).
+Points $A=(7,12)$ and $B$ lie on a circle with centre $(-2,5)$. The line $AB$ has equation $y=-2x+26$.
 
 Find the coordinates of (B). **[6]**
 
@@ -612,7 +612,7 @@ The radius through (A) has squared length
 
 $$r^2=(7+2)^2+(12-5)^2=9^2+7^2=130.$$
 
-Any point (B=(x,-2x+26)) on the circle satisfies
+Any point $B=(x,-2x+26)$ on the circle satisfies
 
 $$
 (x+2)^2+(-2x+21)^2=130.
@@ -624,12 +624,12 @@ $$5x^2-80x+315=0
 \Longrightarrow (x-7)(x-9)=0.
 $$
 
-The root (x=7) gives the known point (A). Thus (x_B=9), and
+The root $x=7$ gives the known point $A$. Thus $x_B=9$, and
 
 $$y_B=-2(9)+26=8.
 $$
 
-Therefore (\boxed{B=(9,8)}).
+Therefore $\boxed{B=(9,8)}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q13"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2023/2023/9709_m23_qp_12.pdf`, Q5, and matching `9709_m23_ms_12.pdf`.</div>
@@ -638,21 +638,21 @@ Therefore (\boxed{B=(9,8)}).
 ::: {.question-card #p1-cg-q14}
 ### Question 14 · 9709/13/O/N/23 Q2(a–b)
 
-The circle with equation ((x-3)^2+(y-5)^2=40) intersects the (y)-axis at points (A) and (B).
+The circle with equation $(x-3)^2+(y-5)^2=40$ intersects the $y$-axis at points $A$ and $B$.
 
-(a) Find the (y)-coordinates of (A) and (B), expressing your answers in terms of surds. **[2]**
+(a) Find the $y$-coordinates of $A$ and $B$, expressing your answers in terms of surds. **[2]**
 
-(b) Find the equation of the circle which has (AB) as its diameter. **[2]**
+(b) Find the equation of the circle which has $AB$ as its diameter. **[2]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-On the (y)-axis, (x=0):
+On the $y$-axis, $x=0$:
 
 $$9+(y-5)^2=40\Longrightarrow (y-5)^2=31.$$
 
-Thus the (y)-coordinates are (\boxed{5+\sqrt{31}\text{ and }5-\sqrt{31}}).
+Thus the $y$-coordinates are $\boxed{5+\sqrt{31}\text{ and }5-\sqrt{31}$}.
 
-The midpoint of (A) and (B) is ((0,5)), and their distance is (2\sqrt{31}), so the circle with (AB) as diameter has centre ((0,5)) and radius (sqrt{31}):
+The midpoint of $A$ and $B$ is $(0,5)$, and their distance is $2\sqrt{31}$, so the circle with $AB$ as diameter has centre $(0,5)$ and radius $\sqrt{31}$:
 
 $$\boxed{x^2+(y-5)^2=31}.
 $$
@@ -666,27 +666,27 @@ $$
 
 ![Original extracted diagram for Question 15](../assets/questions/paper-1/past-paper/2023-on-9709-11-q11-diagram.svg){.note-figure fig-alt="Original extracted diagram of parallel tangents to a circle for 2023 October November Paper 1 Question 11"}
 
-The diagram shows the circle ((x-4)^2+(y+1)^2=40). Parallel tangents, each with gradient 1, touch the circle at points (A) and (B).
+The diagram shows the circle $(x-4)^2+(y+1)^2=40$. Parallel tangents, each with gradient 1, touch the circle at points $A$ and $B$.
 
-(a) Find the equation of the line (AB), giving the answer in the form (y=mx+c). **[3]**
+(a) Find the equation of the line $AB$, giving the answer in the form $y=mx+c$. **[3]**
 
 (b) Find the coordinates of (A), giving each coordinate in surd form. **[4]**
 
-(c) Find the equation of the tangent at (A), giving the answer in the form (y=mx+c), where (c) is in surd form. **[2]**
+(c) Find the equation of the tangent at $A$, giving the answer in the form $y=mx+c$, where $c$ is in surd form. **[2]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-(a) The centre is ((4,-1)). A line of gradient 1 has form (y=x+c). The distance from the centre to (x-y+c=0) must be (2\sqrt{10}):
+(a) The centre is $(4,-1)$. A line of gradient 1 has form $y=x+c$. The distance from the centre to $x-y+c=0$ must be $2\sqrt{10}$:
 
 $$\frac{|4-(-1)+c|}{\sqrt2}=2\sqrt{10}\Longrightarrow |5+c|=2\sqrt5.
 $$
 
-The line joining the two contact points is perpendicular to the parallel tangents, so it has gradient \(-1\) and passes through the centre \((4,-1)). Hence
+The line joining the two contact points is perpendicular to the parallel tangents, so it has gradient $-1$ and passes through the centre $(4,-1)$. Hence
 
 $$\boxed{AB:y=-x+3}.
 $$
 
-(b) The radius (CA) is perpendicular to (AB), so its gradient is (-1). The perpendicular through (C) is (y=-x+3). Intersecting with the upper tangent,
+(b) The radius $CA$ is perpendicular to $AB$, so its gradient is $-1$. The perpendicular through $C$ is $y=-x+3$. Intersecting with the upper tangent,
 
 $$-x+3=x-5+2\sqrt5
 \Longrightarrow x=4-\sqrt5,
@@ -697,7 +697,7 @@ and
 $$y=\sqrt5-1.
 $$
 
-Therefore (\boxed{A=(4-\sqrt5,\sqrt5-1)}).
+Therefore $\boxed{A=(4-\sqrt5,\sqrt5-1)}$.
 
 (c) The radius gradient is (-1), so the tangent gradient is (1). Thus the tangent at (A) is the upper parallel tangent:
 
@@ -711,15 +711,15 @@ $$
 ::: {.question-card #p1-cg-q16}
 ### Question 16 · 9709/12/O/N/23 Q11(a–c)
 
-The coordinates of points (A), (B) and (C) are ((6,4)), ((p,7)) and ((14,18)) respectively, where (p) is a constant. The line (AB) is perpendicular to the line (BC).
+The coordinates of points $A$, $B$ and $C$ are $(6,4)$, $(p,7)$ and $(14,18)$ respectively, where $p$ is a constant. The line $AB$ is perpendicular to the line $BC$.
 
-(a) Given that (p<10), find the value of (p). **[4]**
+(a) Given that $p<10$, find the value of $p$. **[4]**
 
 A circle passes through the points (A), (B) and (C).
 
 (b) Find the equation of the circle. **[3]**
 
-(c) Find the equation of the tangent to the circle at (C), giving the answer in the form (dx+ey+f=0). **[3]**
+(c) Find the equation of the tangent to the circle at $C$, giving the answer in the form $dx+ey+f=0$. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -735,9 +735,9 @@ $$
 \Longrightarrow p^2-20p+51=0.
 $$
 
-So (p=3) or (17). Since (p<10), (\boxed{p=3}), hence (B=(3,7)).
+So $p=3$ or $17$. Since $p<10$, $\boxed{p=3}$, hence $B=(3,7)$.
 
-(b) Let the circle be (x^2+y^2+Dx+Ey+F=0). Substitution of (A), (B), (C) gives
+(b) Let the circle be $x^2+y^2+Dx+Ey+F=0$. Substitution of $A$, $B$, $C$ gives
 
 $$
 6D+4E+F=-52,
@@ -749,12 +749,12 @@ $$
 14D+18E+F=-520.
 $$
 
-Solving gives (D=-20), (E=-22), (F=156). Hence
+Solving gives $D=-20$, $E=-22$, $F=156$. Hence
 
 $$\boxed{x^2+y^2-20x-22y+156=0}.
 $$
 
-(c) The centre is ((10,11)), so the radius (C(14,18)) has gradient (7/4). The tangent gradient is (-4/7). Thus
+(c) The centre is $(10,11)$, so the radius $C=(14,18)$ has gradient $7/4$. The tangent gradient is $-4/7$. Thus
 
 $$y-18=-\frac47(x-14),$$
 
@@ -770,13 +770,13 @@ $$
 ::: {.question-card #p1-cg-q17}
 ### Question 17 · 9709/11/M/J/24 Q10
 
-The equation of a circle is ((x-3)^2+y^2=18). The line with equation (y=mx+c) passes through the point ((0,-9)) and is a tangent to the circle.
+The equation of a circle is $(x-3)^2+y^2=18$. The line with equation $y=mx+c$ passes through the point $(0,-9)$ and is a tangent to the circle.
 
-Find the two possible values of (m) and, for each value of (m), find the coordinates of the point at which the tangent touches the circle. **[8]**
+Find the two possible values of $m$ and, for each value of $m$, find the coordinates of the point at which the tangent touches the circle. **[8]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-Since the line passes through ((0,-9)), it is (y=mx-9), or (mx-y-9=0). The centre is ((3,0)) and the radius is (3\sqrt2). Tangency gives
+Since the line passes through $(0,-9)$, it is $y=mx-9$, or $mx-y-9=0$. The centre is $(3,0)$ and the radius is $3\sqrt2$. Tangency gives
 
 $$
 \frac{|3m-9|}{\sqrt{m^2+1}}=3\sqrt2.
@@ -789,13 +789,13 @@ $$
 \Longrightarrow m^2+6m-7=0.
 $$
 
-Thus (\boxed{m=1\text{ or }m=-7}).
+Thus $\boxed{m=1\text{ or }m=-7}$.
 
-For (m=1), the line is (x-y-9=0). The perpendicular foot from ((3,0)) is (\boxed{(6,-3)}).
+For $m=1$, the line is $x-y-9=0$. The perpendicular foot from $(3,0)$ is $\boxed{(6,-3)}$.
 
-For (m=-7), the line is (7x+y+9=0). The perpendicular foot from ((3,0)) is (\boxed{(-6/5,-3/5)}).
+For $m=-7$, the line is $7x+y+9=0$. The perpendicular foot from $(3,0)$ is $\boxed{\left(-\frac65,-\frac35\right)}$.
 
-Both points lie on ((x-3)^2+y^2=18), confirming the tangent points.
+Both points lie on $(x-3)^2+y^2=18$, confirming the tangent points.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q17"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p11.pdf`, Q10, and matching `ms-202406-mathematics-p11.pdf`.</div>
@@ -804,32 +804,32 @@ Both points lie on ((x-3)^2+y^2=18), confirming the tangent points.
 ::: {.question-card #p1-cg-q18}
 ### Question 18 · 9709/12/M/J/24 Q7(a–b)
 
-The equation of a circle is ((x-6)^2+(y+a)^2=18). The line with equation (y=2a-x) is a tangent to the circle.
+The equation of a circle is $(x-6)^2+(y+a)^2=18$. The line with equation $y=2a-x$ is a tangent to the circle.
 
-(a) Find the two possible values of the constant (a). **[5]**
+(a) Find the two possible values of the constant $a$. **[5]**
 
-(b) For the greater value of (a), find the equation of the diameter which is perpendicular to the given tangent. **[3]**
+(b) For the greater value of $a$, find the equation of the diameter which is perpendicular to the given tangent. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
-The centre is (C=(6,-a)), radius (3\sqrt2). The line is (x+y-2a=0). The distance from (C) to the line is
+The centre is $C=(6,-a)$, radius $3\sqrt2$. The line is $x+y-2a=0$. The distance from $C$ to the line is
 
 $$
 \frac{|6-a-2a|}{\sqrt2}=\frac{|6-3a|}{\sqrt2}.
 $$
 
-Tangency requires this to equal (3\sqrt2):
+Tangency requires this to equal $3\sqrt2$:
 
 $$|6-3a|=6\Longrightarrow |a-2|=2.
 $$
 
-Thus (\boxed{a=0\text{ or }a=4}).
+Thus $\boxed{a=0\text{ or }a=4}$.
 
-For the greater value (a=4), the centre is ((6,-4)). The given tangent has gradient (-1), so the perpendicular diameter has gradient (1) and passes through the centre:
+For the greater value $a=4$, the centre is $(6,-4)$. The given tangent has gradient $-1$, so the perpendicular diameter has gradient $1$ and passes through the centre:
 
 $$y+4=x-6.$$
 
-Therefore (\boxed{y=x-10}).
+Therefore $\boxed{y=x-10}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q18"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p12.pdf`, Q7(a–b), and matching `ms-202406-mathematics-p12.pdf`.</div>
@@ -842,7 +842,7 @@ A circle with equation
 
 $$x^2+y^2-6x+2y-15=0$$
 
-meets the (y)-axis at the points (A) and (B). The tangents to the circle at (A) and (B) meet at the point (P).
+meets the $y$-axis at the points $A$ and $B$. The tangents to the circle at $A$ and $B$ meet at the point $P$.
 
 Find the coordinates of (P). **[8]**
 
@@ -854,18 +854,18 @@ $$
 (x-3)^2+(y+1)^2=25.
 $$
 
-On the (y)-axis (x=0):
+On the $y$-axis, $x=0$:
 
 $$y^2+2y-15=0=(y-3)(y+5).
 $$
 
-Thus (A=(0,3)), (B=(0,-5)).
+Thus $A=(0,3)$, $B=(0,-5)$.
 
-The centre is ((3,-1)). At (A), the radius gradient is (-4/3), so the tangent gradient is (3/4):
+The centre is $(3,-1)$. At $A$, the radius gradient is $-4/3$, so the tangent gradient is $3/4$:
 
 $$y-3=\frac34x.$$
 
-At (B), the radius gradient is (4/3), so the tangent gradient is (-3/4):
+At $B$, the radius gradient is $4/3$, so the tangent gradient is $-3/4$:
 
 $$y+5=-\frac34x.$$
 
@@ -875,7 +875,7 @@ $$3+\frac34x=-5-\frac34x
 \Longrightarrow x=-\frac{16}{3},qquad y=-1.
 $$
 
-Therefore (\boxed{P=(-16/3,-1)}).
+Therefore $\boxed{P=(-16/3,-1)}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q19"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p13.pdf`, Q8, and matching `ms-202406-mathematics-p13.pdf`.</div>
@@ -888,15 +888,15 @@ The equation of a circle is
 
 $$x^2+y^2+px+2y+q=0,$$
 
-where (p) and (q) are constants.
+where $p$ and $q$ are constants.
 
-(a) Express the equation in the form ((x-a)^2+(y-b)^2=r^2), where (a) is to be given in terms of (p) and (r^2) is to be given in terms of (p) and (q). **[2]**
+(a) Express the equation in the form $(x-a)^2+(y-b)^2=r^2$, where $a$ is to be given in terms of $p$ and $r^2$ is to be given in terms of $p$ and $q$. **[2]**
 
-The line (x+2y=10) is the tangent to the circle at (A(4,3)).
+The line $x+2y=10$ is the tangent to the circle at $A(4,3)$.
 
-(b) (i) Find the equation of the normal to the circle at (A). **[3]**
+(b) (i) Find the equation of the normal to the circle at $A$. **[3]**
 
-(ii) Find the values of (p) and (q). **[5]**
+(ii) Find the values of $p$ and $q$. **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -912,24 +912,24 @@ $$
 \boxed{\left(x+\frac p2\right)^2+(y+1)^2=\frac{p^2}{4}-q+1}.
 $$
 
-Thus the centre is ((-p/2,-1)).
+Thus the centre is $\left(-\frac p2,-1\right)$.
 
-(b)(i) The tangent (x+2y=10) has gradient (-1/2), so the normal has gradient (2). Through (A=(4,3)),
+(b)(i) The tangent $x+2y=10$ has gradient $-\frac12$, so the normal has gradient $2$. Through $A=(4,3)$,
 
 $$y-3=2(x-4),$$
 
-so (\boxed{y=2x-5}).
+so $\boxed{y=2x-5}$.
 
-(b)(ii) The centre lies on the normal. Since its (y)-coordinate is (-1),
+(b)(ii) The centre lies on the normal. Since its $y$-coordinate is $-1$,
 
 $$-1=2x-5\Longrightarrow x=2.$$
 
-Therefore (-p/2=2), so (p=-4). Substituting (A=(4,3)) into the original equation,
+Therefore $-\frac p2=2$, so $p=-4$. Substituting $A=(4,3)$ into the original equation,
 
 $$16+9-16+6+q=0\Longrightarrow q=-15.
 $$
 
-Hence (\boxed{p=-4,\quad q=-15}).
+Hence $\boxed{p=-4,\quad q=-15}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q20"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202410-mathematics-p12.pdf`, Q8(a–b), and matching `ms-202410-mathematics-p12.pdf`.</div>
