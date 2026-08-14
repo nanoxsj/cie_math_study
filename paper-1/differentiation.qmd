@@ -1,0 +1,478 @@
+---
+title: "1.7 Differentiation"
+subtitle: "Derivatives · tangents and normals · stationary points · rates of change"
+description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.7."
+---
+
+::: {.callout-important}
+## 本节考纲要求
+
+本页依据 9709 Mathematics 2026–2027 syllabus 1.7 Differentiation：
+
+- 理解 gradient、first derivative 和 second derivative；
+- 对 rational powers 使用 power rule、constant multiples、sums、differences 和 chain rule；
+- 应用 differentiation 求 gradients、tangents、normals、increasing/decreasing intervals 和 rates of change；
+- 找 stationary points，并用 second derivative 判断 maximum 或 minimum。
+
+下列 15 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干只把 PDF 排版符号整理为 LaTeX，没有改写或编造题目；答案按对应 mark scheme 的得分步骤展开。
+:::
+
+## 1. Core knowledge
+
+::: {.formula-panel}
+### Basic rules
+
+$$\frac{d}{dx}(x^n)=nx^{n-1},\qquad\frac{d}{dx}(cf)=c\frac{df}{dx},\qquad\frac{d}{dx}(f\pm g)=f'\pm g'.$$
+
+若 $y=f(g(x))$，chain rule 为
+
+$$\frac{dy}{dx}=f'(g(x))g'(x).$$
+
+Stationary point 满足 $dy/dx=0$。若 $d^2y/dx^2>0$ 是 minimum，若 $d^2y/dx^2<0$ 是 maximum。
+:::
+
+::: {.study-card}
+### Tangent, normal and rates
+
+点 $(x_0,y_0)$ 处 tangent 的 gradient 是 $f'(x_0)$：
+
+$$y-y_0=f'(x_0)(x-x_0).$$
+
+若 tangent gradient 为 $m$，normal gradient 为 $-1/m$。Connected rates of change 使用 chain rule：
+
+$$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}.$$
+
+做 rates 题时先在指定点求 $dy/dx$，再代入已知 rate；单位要跟题目保持一致。
+:::
+
+## 2. Verified Paper 1 past-paper questions
+
+::: {.question-card #p1-diff-q01}
+### Question 1 · 9709/11/M/J/20 Q5(a–b)
+
+The line $y=mx+c$ is tangent to the curve $xy=16$. (a) Express $m$ in terms of $c$. (b) Given $m=-4$, find the set of values of $c$ for which the line intersects the curve at two distinct points.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Write the curve as $y=16/x$. Its gradient is
+
+$$\frac{dy}{dx}=-\frac{16}{x^2}.$$
+
+At the contact point $x=t$, tangent gradient $m=-16/t^2$, while the tangent intercept is
+
+$$c=\frac{16}{t}-mt=\frac{16}{t}+\frac{16}{t}=\frac{32}{t}.$$
+
+Thus $t=32/c$ and
+
+$$\boxed{m=-\frac{c^2}{64}}.$$
+
+For $m=-4$, intersections satisfy
+
+$$-4x+\!c=\frac{16}{x}\Longrightarrow4x^2-cx+16=0.$$
+
+Two distinct real roots require $c^2-256>0$, hence
+
+$$\boxed{c<-16\text{ or }c>16}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q01"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q5(a–b), and matching 9709-s20-ms-11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q02}
+### Question 2 · 9709/11/M/J/20 Q8(a)
+
+The curve is $y=\frac8{x+2}$ and the line is $2y+x=8$. They intersect at $A$ and $B$. Point $C$ lies on the curve and the tangent at $C$ is parallel to $AB$. Find the coordinates of $A,B,C$. **[6]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The line is $y=4-\frac x2$. Equating with the curve:
+
+$$\frac8{x+2}=4-\frac x2\Longrightarrow x(x-6)=0.$$
+
+Thus $A=(0,4)$ and $B=(6,1)$. The gradient of $AB$ is $-1/2$. Since
+
+$$\frac{dy}{dx}=-\frac8{(x+2)^2},
+$$
+
+the tangent at $C$ is parallel to $AB$ when
+
+$$-\frac8{(x+2)^2}=-\frac12\Longrightarrow(x+2)^2=16.$$
+
+The point shown on the relevant branch is $x=2$, giving $y=2$. Hence
+
+$$\boxed{A=(0,4),\quad B=(6,1),\quad C=(2,2)}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q02"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q8(a), and matching 9709-s20-ms-11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q03}
+### Question 3 · 9709/12/M/J/20 Q3(a–b)
+
+A spherical weather balloon is inflated at a constant volume rate of $600$ cm$^3$ per second. (a) Find its radius after 30 seconds. (b) Find the rate of increase of the radius after 30 seconds.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+After 30 seconds, $V=18000$. Since $V=\frac43\pi r^3$,
+
+$$r^3=\frac{3(18000)}{4\pi}=\frac{13500}{\pi},\qquad\boxed{r=16.3\text{ cm (3 s.f.)}}.$$
+
+Differentiate with respect to time:
+
+$$\frac{dV}{dt}=4\pi r^2\frac{dr}{dt}.$$
+
+At 30 seconds,
+
+$$\frac{dr}{dt}=\frac{600}{4\pi r^2}=0.1806\ldots.$$
+
+Therefore
+
+$$\boxed{\frac{dr}{dt}=0.181\text{ cm s}^{-1}\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q03"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q3(a–b), and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q04}
+### Question 4 · 9709/12/M/J/20 Q6(a–b)
+
+The curve is $y=2x^2+kx+k-1$. (a) Given that $y=2x+3$ is tangent to the curve, find $k$. (b) Given $k=2$, express the curve in completed-square form and state the vertex.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) At an intersection,
+
+$$2x^2+kx+k-1=2x+3\Longrightarrow2x^2+(k-2)x+k-4=0.$$
+
+Tangency means discriminant zero:
+
+$$
+(k-2)^2-8(k-4)=0
+\Longrightarrow k^2-12k+36=0
+\Longrightarrow\boxed{k=6}.
+$$
+
+(b) With $k=2$,
+
+$$y=2x^2+2x+1=2\left(x+\frac12\right)^2+\frac12.$$
+
+Therefore
+
+$$\boxed{\text{vertex}=\left(-\frac12,\frac12\right)}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q04"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q6(a–b), and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q05}
+### Question 5 · 9709/13/M/J/20 Q6(a)
+
+A point moves along $y=(5x-1)^{1/2}$ with $dx/dt=1/2$ units per minute. Find the rate at which $y$ is increasing when $x=1$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$y=(5x-1)^{1/2}\Longrightarrow\frac{dy}{dx}=\frac5{2(5x-1)^{1/2}}.$$
+
+At $x=1$,
+
+$$\frac{dy}{dx}=\frac54.$$
+
+Using $\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}$,
+
+$$\boxed{\frac{dy}{dt}=\frac54\cdot\frac12=\frac58\text{ units per minute}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q05"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-13.pdf, Q6(a), and matching 9709-s20-ms-13.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q06}
+### Question 6 · 9709/12/F/M/21 Q6
+
+A curve has $\frac{dy}{dx}=\frac6{(3x-2)^3}$ and passes through $A(1,-3)$. At $A$, the $y$-coordinate is increasing at 3 units per second. Find the rate of increase of the $x$-coordinate. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+At $x=1$,
+
+$$\frac{dy}{dx}=\frac6{(3-2)^3}=6.$$
+
+Therefore
+
+$$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}
+\Longrightarrow3=6\frac{dx}{dt}.$$
+
+Hence
+
+$$\boxed{\frac{dx}{dt}=\frac12\text{ units per second}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q06"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_m21_qp_12.pdf, Q6, and matching 9709_m21_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q07}
+### Question 7 · 9709/12/F/M/22 Q11(a)
+
+A curve has equation $y=\frac{k}{3x-k}+3x$, where $k$ is a constant. Find, in terms of $k$, the values of $x$ at which there is a stationary point. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{dy}{dx}=-\frac{3k}{(3x-k)^2}+3.$$
+
+Set this equal to zero:
+
+$$-\frac{3k}{(3x-k)^2}+3=0
+\Longrightarrow(3x-k)^2=k.$$
+
+Thus
+
+$$3x-k=\pm\sqrt{k}
+\Longrightarrow\boxed{x=\frac{k+\sqrt{k}}3\text{ or }x=\frac{k-\sqrt{k}}3}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q07"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_m22_qp_12.pdf, Q11(a), and matching 9709_m22_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q08}
+### Question 8 · 9709/13/O/N/22 Q4
+
+The water volume is $V=243-\frac13(9-x)^3$ m$^3$, where $x$ is depth in metres. Water is pumped in at $3.6$ m$^3$ per hour. Find the rate of increase of depth when $x=4$, in cm per minute.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Differentiate:
+
+$$\frac{dV}{dx}=(9-x)^2.$$
+
+At $x=4$, $dV/dx=25$. Thus
+
+$$\frac{dV}{dt}=\frac{dV}{dx}\frac{dx}{dt}
+\Longrightarrow3.6=25\frac{dx}{dt}.$$
+
+So $dx/dt=0.144$ m h$^{-1}$. Convert units:
+
+$$0.144\text{ m h}^{-1}=\frac{14.4}{60}\text{ cm min}^{-1}.$$
+
+Therefore
+
+$$\boxed{\frac{dx}{dt}=0.24\text{ cm min}^{-1}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q08"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_13.pdf, Q4, and matching 9709_w22_ms_13.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q09}
+### Question 9 · 9709/12/F/M/23 Q10(a–b)
+
+At $(4,-1)$, the gradient is $-3/2$. It is given that $\frac{dy}{dx}=x^{-1/2}+k$. (a) Show $k=-2$. (b) Find the equation of the curve.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+At $x=4$,
+
+$$-\frac32=4^{-1/2}+k=\frac12+k\Longrightarrow\boxed{k=-2}.$$
+
+Integrate:
+
+$$y=\int(x^{-1/2}-2)\,dx=2x^{1/2}-2x+C.$$
+
+Use $(4,-1)$:
+
+$$-1=2(2)-8+C\Longrightarrow C=3.$$
+
+Hence
+
+$$\boxed{y=2\sqrt{x}-2x+3}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q09"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q10(a–b), and matching 9709_m23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q10}
+### Question 10 · 9709/11/O/N/23 Q10(a)
+
+A curve has a stationary point at $(2,-10)$ and $\frac{d^2y}{dx^2}=6x$. Find $dy/dx$. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Integrate the second derivative:
+
+$$\frac{dy}{dx}=3x^2+C.$$
+
+At the stationary point $x=2$, $dy/dx=0$:
+
+$$0=3(2)^2+C\Longrightarrow C=-12.$$
+
+Therefore
+
+$$\boxed{\frac{dy}{dx}=3x^2-12}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q10"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_11.pdf, Q10(a), and matching 9709_w23_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q11}
+### Question 11 · 9709/11/O/N/23 Q10(c)
+
+Using the same curve as Question 10, find the coordinates of the other stationary point and determine its nature. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+From Question 10,
+
+$$3x^2-12=0\Longrightarrow x=\pm2.$$
+
+The given point is $(2,-10)$. Integrate:
+
+$$y=x^3-12x+C.$$
+
+Substitution of $(2,-10)$ gives $C=6$. At $x=-2$,
+
+$$y=-8+24+6=22.$$
+
+Since $d^2y/dx^2=6x$, it is negative at $x=-2$, so the point is a maximum:
+
+$$\boxed{(-2,22)\text{, a maximum point}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q11"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_11.pdf, Q10(c), and matching 9709_w23_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q12}
+### Question 12 · 9709/12/M/J/24 Q6(a)
+
+The curve is $y=2x-8x^{1/2}$. It has a minimum point $A$ and intersects the positive $x$-axis at $B$. Find the coordinates of $A$ and $B$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{dy}{dx}=2-4x^{-1/2}.$$
+
+At a stationary point,
+
+$$2-\frac4{\sqrt{x}}=0\Longrightarrow\sqrt{x}=2\Longrightarrow x=4.$$
+
+Then $y=8-16=-8$, so $A=(4,-8)$. For the positive intercept,
+
+$$2x-8\sqrt{x}=0\Longrightarrow\sqrt{x}(2\sqrt{x}-8)=0,$$
+
+giving $x=16$. Therefore
+
+$$\boxed{A=(4,-8),\qquad B=(16,0)}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q12"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q6(a), and matching ms-202406-mathematics-p12.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q13}
+### Question 13 · 9709/13/M/J/24 Q5(a–c)
+
+The curve is $y=2x^2-\frac5{2x}+3$. (a) Find the stationary point. (b) Determine its nature. (c) For positive $x$, determine whether the curve is increasing, decreasing or neither.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{dy}{dx}=4x+\frac5{2x^2}.$$
+
+Set equal to zero:
+
+$$8x^3+5=0\Longrightarrow x=-\frac{\sqrt[3]{5}}2.$$
+
+At this value, with $x^3=-5/8$, the $y$-coordinate is
+
+$$2x^2-\frac5{2x}+3=3+\frac32\sqrt[3]{25}.$$
+
+Also
+
+$$\frac{d^2y}{dx^2}=4-\frac5{x^3}=12>0$$
+
+at the stationary point. Hence
+
+$$\boxed{\left(-\frac{\sqrt[3]{5}}2,\ 3+\frac32\sqrt[3]{25}\right)\text{ is a minimum}}.$$
+
+For $x>0$, both terms in $dy/dx=4x+5/(2x^2)$ are positive, so the curve is
+
+$$\boxed{\text{increasing for all }x>0}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q13"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q5(a–c), and matching ms-202406-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q14}
+### Question 14 · 9709/11/O/N/24 Q2
+
+The curve $y=x^2-\frac ax$ has a stationary point at $(-3,b)$. Find $a$ and $b$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{dy}{dx}=2x+\frac a{x^2}.$$
+
+At $x=-3$,
+
+$$0=-6+\frac a9\Longrightarrow a=54.$$
+
+Then
+
+$$b=(-3)^2-\frac{54}{-3}=9+18=27.$$
+
+Therefore
+
+$$\boxed{a=54,\qquad b=27}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q14"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q2, and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q15}
+### Question 15 · 9709/11/O/N/24 Q5(a)
+
+The derivative of a curve is $\frac{dy}{dx}=4x-3\sqrt{x}+1$. Find the $x$-coordinate where the gradient is $11/2$. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Set the derivative equal to the required gradient:
+
+$$4x-3\sqrt{x}+1=\frac{11}{2}.$$
+
+Let $u=\sqrt{x}$. Then $x=u^2$ and
+
+$$8u^2-6u-9=0=(4u+3)(2u-3).$$
+
+Since $u\ge0$, $u=3/2$. Hence
+
+$$\boxed{x=\left(\frac32\right)^2=\frac94}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q15"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q5(a), and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-diff-q16}
+### Question 16 · 9709/12/O/N/24 Q3(a–b)
+
+The curve is $y=2x^2-3$. Points $A$ and $B$ have $x$-coordinates $2$ and $2+h$. (a) Find the gradient of chord $AB$ in terms of $h$. (b) Explain how the gradient at $A$ follows from your answer.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$y_A=2(2)^2-3=5,\qquad y_B=2(2+h)^2-3.$$
+
+The chord gradient is
+
+$$
+\frac{y_B-y_A}{(2+h)-2}
+=\frac{2(2+h)^2-3-5}{h}
+=\boxed{8+2h}.
+$$
+
+As $h\to0$, the second point approaches $A$, so the chord gradient tends to the tangent gradient:
+
+$$\boxed{\frac{dy}{dx}\bigg|_{x=2}=8}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q16"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q3(a–b), and matching ms-202410-mathematics-p12.pdf.</div>
+:::
+
+## 3. Quick checklist
+
+- [ ] power rule and rational powers
+- [ ] chain rule
+- [ ] tangent and normal gradients
+- [ ] stationary points and second derivative
+- [ ] increasing/decreasing intervals
+- [ ] connected rates of change and units

@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "diagrams": [
+    {
+      "id": "2020-mj-9709-32-q1",
+      "chapter": "integration",
+      "year": 2020,
+      "session": "mj",
+      "session_name": "May/June",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "1",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2020/2020/9709-s20-qp-32.pdf",
+      "source_page": 8,
+      "box": [
+        145.0,
+        105.0,
+        330.0,
+        95.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2020-mj-9709-32-q1.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2020-mj-9709-32-q6",
+      "chapter": "integration",
+      "year": 2020,
+      "session": "mj",
+      "session_name": "May/June",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "6",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2020/2020/9709-s20-qp-32.pdf",
+      "source_page": 8,
+      "box": [
+        145.0,
+        105.0,
+        330.0,
+        78.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2020-mj-9709-32-q6.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2020-on-9709-31-q10",
+      "chapter": "integration",
+      "year": 2020,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "31",
+      "question": "10",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2020/2020/9709_w20_qp_31.pdf",
+      "source_page": 16,
+      "box": [
+        135.0,
+        105.0,
+        350.0,
+        95.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2020-on-9709-31-q10.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2020-on-9709-31-q3",
+      "chapter": "integration",
+      "year": 2020,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "31",
+      "question": "3",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2020/2020/9709_w20_qp_31.pdf",
+      "source_page": 16,
+      "box": [
+        135.0,
+        105.0,
+        350.0,
+        95.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2020-on-9709-31-q3.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2021-mj-9709-32-q10",
+      "chapter": "integration",
+      "year": 2021,
+      "session": "mj",
+      "session_name": "May/June",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "10",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2021/2021/9709_m21_qp_32.pdf",
+      "source_page": 18,
+      "box": [
+        135.0,
+        100.0,
+        350.0,
+        95.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2021-mj-9709-32-q10.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2021-mj-9709-32-q5",
+      "chapter": "integration",
+      "year": 2021,
+      "session": "mj",
+      "session_name": "May/June",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "5",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2021/2021/9709_m21_qp_32.pdf",
+      "source_page": 18,
+      "box": [
+        135.0,
+        100.0,
+        350.0,
+        95.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2021-mj-9709-32-q5.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2022-on-9709-32-q11",
+      "chapter": "integration",
+      "year": 2022,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "11",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2022/2022/9709_w22_qp_32.pdf",
+      "source_page": 12,
+      "box": [
+        125.0,
+        95.0,
+        360.0,
+        105.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2022-on-9709-32-q11.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2022-on-9709-32-q8",
+      "chapter": "integration",
+      "year": 2022,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "32",
+      "question": "8",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2022/2022/9709_w22_qp_32.pdf",
+      "source_page": 12,
+      "box": [
+        125.0,
+        95.0,
+        360.0,
+        105.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2022-on-9709-32-q8.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2023-on-9709-31-q13",
+      "chapter": "integration",
+      "year": 2023,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "31",
+      "question": "13",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2023/2023/9709_w23_qp_31.pdf",
+      "source_page": 12,
+      "box": [
+        125.0,
+        95.0,
+        360.0,
+        100.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2023-on-9709-31-q13.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2023-on-9709-31-q9",
+      "chapter": "integration",
+      "year": 2023,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "31",
+      "question": "9",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2023/2023/9709_w23_qp_31.pdf",
+      "source_page": 12,
+      "box": [
+        125.0,
+        95.0,
+        360.0,
+        100.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2023-on-9709-31-q9.svg",
+      "preview_png": null
+    },
+    {
+      "id": "2024-on-9709-31-q6",
+      "chapter": "integration",
+      "year": 2024,
+      "session": "on",
+      "session_name": "October/November",
+      "syllabus": "9709",
+      "paper": "31",
+      "question": "6",
+      "kind": "question",
+      "figure": null,
+      "source_pdf": "../../CIE_Mathematics/PastPaper/2024/2024/A-Level-CAIE数学QP-202410-Mathematics-P31-A-Level题库大全小程序.pdf",
+      "source_page": 10,
+      "box": [
+        140.0,
+        75.0,
+        330.0,
+        145.0
+      ],
+      "svg": "../../CIE_Mathematics/Mathematics_Study/assets/questions/integration/past-paper/2024-on-9709-31-q6.svg",
+      "preview_png": null
+    }
+  ]
+}

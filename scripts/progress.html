@@ -1,0 +1,10 @@
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>

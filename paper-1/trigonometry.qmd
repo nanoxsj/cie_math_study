@@ -1,0 +1,380 @@
+---
+title: "1.5 Trigonometry"
+subtitle: "Identities · equations · exact values · graphs and transformations"
+description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.5."
+---
+
+::: {.callout-important}
+## 本节考纲要求
+
+本页依据 9709 Mathematics 2026–2027 syllabus 1.5 Trigonometry：
+
+- sketch and use sine、cosine、tangent graphs，角度可用 degrees 或 radians；
+- 使用 $30^\circ$、$45^\circ$、$60^\circ$ 及相关角的 exact values；
+- 使用 $\sin^{-1}x$、$\cos^{-1}x$、$\tan^{-1}x$ 的 principal values；
+- 使用基本 trigonometric identities，解给定 interval 内的 equations；
+- 识别 $y=a\sin(bx)+c$、$y=a\cos(bx)+c$ 的 amplitude、period、midline 与 transformations。
+
+下列 16 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干只把 PDF 排版符号整理为 LaTeX，没有改写或编造题目；答案按对应 mark scheme 的得分步骤展开。
+:::
+
+## 1. Core knowledge
+
+::: {.study-card}
+### Exact values and identities
+
+$$\sin\frac{\pi}{6}=\frac12,\quad\cos\frac{\pi}{3}=\frac12,\quad\sin\frac{\pi}{4}=\cos\frac{\pi}{4}=\frac{\sqrt2}{2},\quad\sin\frac{\pi}{3}=\cos\frac{\pi}{6}=\frac{\sqrt3}{2}.$$
+
+$$\sin^2x+\cos^2x=1,\qquad\tan x=\frac{\sin x}{\cos x}.$$
+
+做 identity proof 时先统一分母，再使用 $\sin^2x+\cos^2x=1$；解 equation 时最后必须按题目 interval 补齐所有 quadrant solutions。
+:::
+
+::: {.formula-panel}
+### Equations and graphs
+
+若 $0\le x\le2\pi$，则
+
+$$\sin x=a\Rightarrow x=\alpha,\pi-\alpha;\quad\cos x=a\Rightarrow x=\alpha,2\pi-\alpha;\quad\tan x=a\Rightarrow x=\alpha,\pi+\alpha.$$
+
+对 $y=a\sin(bx)+c$ 或 $y=a\cos(bx)+c$：
+
+$$\text{amplitude}=|a|,\qquad\text{period}=\frac{2\pi}{|b|},\qquad\text{midline }y=c.$$
+:::
+
+## 2. Verified Paper 1 past-paper questions
+
+::: {.question-card #p1-trig-q01}
+### Question 1 · 9709/11/M/J/20 Q7(a–b)
+
+(a) Prove $\frac{1+\sin\theta}{\cos\theta}+\frac{\cos\theta}{1+\sin\theta}=\frac2{\cos\theta}$.
+
+(b) Hence solve the equation when the right-hand side is $3/\sin\theta$, for $0\le\theta\le2\pi$. **[3+3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{(1+\sin\theta)^2+\cos^2\theta}{\cos\theta(1+\sin\theta)}=\frac{2+2\sin\theta}{\cos\theta(1+\sin\theta)}=\boxed{\frac2{\cos\theta}}.$$
+
+Then $2/\cos\theta=3/\sin\theta$, so $\tan\theta=3/2$. Therefore
+
+$$\boxed{\theta=\tan^{-1}\frac32,\ \pi+\tan^{-1}\frac32=0.983,\ 4.12\text{ rad}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q01"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q7(a–b), and matching 9709-s20-ms-11.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q02}
+### Question 2 · 9709/12/M/J/20 Q2(a–b)
+
+Express $3\cos\theta=8\tan\theta$ as a quadratic in $\sin\theta$. Hence find the acute angle in degrees. **[3+2]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Multiplying by $\cos\theta$ and using $\cos^2\theta=1-\sin^2\theta$:
+
+$$3(1-\sin^2\theta)=8\sin\theta\Longrightarrow\boxed{3\sin^2\theta+8\sin\theta-3=0}.$$
+
+Thus $(3\sin\theta-1)(\sin\theta+3)=0$. Only $\sin\theta=1/3$ is possible, so
+
+$$\boxed{\theta=\sin^{-1}\frac13=19.5^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q02"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q2(a–b), and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q03}
+### Question 3 · 9709/12/M/J/20 Q9(a)
+
+$$f(x)=2-3\sin2x,\qquad g(x)=-2f(x),\qquad0\le x\le\pi.$$
+
+State the ranges of $f$ and $g$. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Because $2x$ covers a complete cycle, $-1\le\sin2x\le1$. Hence
+
+$$\boxed{-1\le f(x)\le5}.$$
+
+Multiplying the range by $-2$ reverses the endpoints:
+
+$$\boxed{-10\le g(x)\le2}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q03"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q9(a), and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q04}
+### Question 4 · 9709/11/O/N/20 Q7(a–b)
+
+(a) Show $\frac{\sin\theta}{1-\sin\theta}-\frac{\sin\theta}{1+\sin\theta}=2\tan^2\theta$.
+
+(b) Hence solve the equation when the left-hand side is $8$, for $0<\theta<\pi$. **[3+3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{2\sin^2\theta}{1-\sin^2\theta}=\frac{2\sin^2\theta}{\cos^2\theta}=\boxed{2\tan^2\theta}.$$
+
+So $2\tan^2\theta=8$, giving $\tan\theta=\pm2$. The two solutions in $(0,\pi)$ are
+
+$$\boxed{\theta=\tan^{-1}2,\ \pi-\tan^{-1}2=1.107,\ 2.034\text{ rad}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q04"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_11.pdf, Q7(a–b), and matching 9709_w20_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q05}
+### Question 5 · 9709/13/M/J/21 Q4(a–b)
+
+Show $\frac{\tan x+\sin x}{\tan x-\sin x}=k$ may be expressed as $\frac{1+\cos x}{1-\cos x}=k$. Hence express $\cos x$ in terms of $k$. **[2+2]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Using $\tan x=\sin x/\cos x$,
+
+$$\frac{\tan x+\sin x}{\tan x-\sin x}=\frac{\sin x(1+\cos x)}{\sin x(1-\cos x)}=\boxed{\frac{1+\cos x}{1-\cos x}}.$$
+
+Rearrange:
+
+$$1+\cos x=k(1-\cos x)\Longrightarrow\boxed{\cos x=\frac{k-1}{k+1}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q05"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_13.pdf, Q4(a–b), and matching 9709_s21_ms_13.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q06}
+### Question 6 · 9709/11/O/N/21 Q3
+
+Solve by factorising:
+
+$$6\cos\theta\tan\theta-3\cos\theta+4\tan\theta-2=0,\qquad0^\circ\le\theta\le180^\circ.$$
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$3\cos\theta(2\tan\theta-1)+2(2\tan\theta-1)=0,$$
+
+so $(2\tan\theta-1)(3\cos\theta+2)=0$. Therefore $\tan\theta=1/2$ or $\cos\theta=-2/3$:
+
+$$\boxed{\theta=26.6^\circ\text{ or }131.8^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q06"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q3, and matching 9709_w21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q07}
+### Question 7 · 9709/12/O/N/21 Q1
+
+Solve $2\cos\theta=7-\frac3{\cos\theta}$ for $-90^\circ<\theta<90^\circ$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Multiplying by $\cos\theta$:
+
+$$2\cos^2\theta-7\cos\theta+3=0=(2\cos\theta-1)(\cos\theta-3).$$
+
+The root $\cos\theta=3$ is impossible. Thus $\cos\theta=1/2$, and the symmetric interval gives
+
+$$\boxed{\theta=-60^\circ\text{ or }60^\circ}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q07"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_12.pdf, Q1, and matching 9709_w21_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q08}
+### Question 8 · 9709/13/O/N/21 Q7(a–b)
+
+Show that $\frac{\tan x+\cos x}{\tan x-\cos x}=k$ becomes $(k+1)\sin^2x+(k-1)\sin x-(k+1)=0$. Hence solve the original equation for $k=4$, $0^\circ\le x\le360^\circ$. **[4+4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Multiplying by $\cos x$ and using $\cos^2x=1-\sin^2x$ gives
+
+$$\boxed{(k+1)\sin^2x+(k-1)\sin x-(k+1)=0}.$$
+
+For $k=4$:
+
+$$5\sin^2x+3\sin x-5=0,\qquad\sin x=\frac{-3\pm\sqrt{109}}{10}.$$
+
+Only the positive root is admissible, so
+
+$$\boxed{x=48.1^\circ\text{ or }131.9^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q08"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_13.pdf, Q7(a–b), and matching 9709_w21_ms_13.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q09}
+### Question 9 · 9709/12/M/J/23 Q1
+
+Solve $4\sin\theta+\tan\theta=0$ for $0^\circ<\theta<180^\circ$. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\sin\theta\left(4+\frac1{\cos\theta}\right)=0.$$
+
+The endpoints are excluded, so $\sin\theta\ne0$. Therefore $\cos\theta=-1/4$, and the second-quadrant solution is
+
+$$\boxed{\theta=\cos^{-1}\left(-\frac14\right)=104.5^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q09"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_12.pdf, Q1, and matching 9709_s23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q10}
+### Question 10 · 9709/12/M/J/23 Q7(a)(i–ii)
+
+(i) By expanding $(\cos\theta+\sin\theta)^2$, find the three solutions of $(\cos\theta+\sin\theta)^2=1$ for $0\le\theta\le\pi$.
+
+(ii) Hence verify that the only solutions of $\cos\theta+\sin\theta=1$ are $0$ and $\frac12\pi$. **[3+2]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$
+(\cos\theta+\sin\theta)^2=1+\sin2\theta.
+$$
+
+Thus $\sin2\theta=0$, giving
+
+$$\boxed{\theta=0,\frac{\pi}{2},\pi}.$$
+
+Substitution into the unsquared equation gives $1,1,-1$ respectively, so
+
+$$\boxed{\theta=0\text{ and }\frac{\pi}{2}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q10"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_12.pdf, Q7(a)(i–ii), and matching 9709_s23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q11}
+### Question 11 · 9709/12/O/N/23 Q5(a)
+
+The first, second and third terms of a geometric progression are $\sin\theta$, $\cos\theta$ and $2-\sin\theta$, where $\theta$ radians is acute. Find $\theta$. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The GP condition is $\cos^2\theta=\sin\theta(2-\sin\theta)$. Since $\cos^2\theta=1-\sin^2\theta$,
+
+$$1-\sin^2\theta=2\sin\theta-\sin^2\theta\Longrightarrow\sin\theta=\frac12.$$
+
+Acuteness selects
+
+$$\boxed{\theta=\frac{\pi}{6}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q11"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_12.pdf, Q5(a), and matching 9709_w23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q12}
+### Question 12 · 9709/12/M/J/24 Q5(a–b)
+
+(a) Prove $\frac{\sin^2x-\cos x-1}{1+\cos x}=-\cos x$.
+
+(b) Hence solve $\frac{\sin^2x-\cos x-1}{2+2\cos x}=\frac14$ for $0^\circ\le x\le360^\circ$. **[3+3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\sin^2x-\cos x-1=1-\cos^2x-\cos x-1=-\cos x(1+\cos x),$$
+
+which proves (a). In (b), the denominator is doubled, so the left side is $-\frac12\cos x$. Hence $\cos x=-1/2$ and
+
+$$\boxed{x=120^\circ\text{ or }240^\circ}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q12"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q5(a–b), and matching ms-202406-mathematics-p12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q13}
+### Question 13 · 9709/12/M/J/24 Q3(a–b)
+
+(a) Show that $\frac{7\tan\theta}{\cos\theta}+12=0$ becomes $12\sin^2\theta-7\sin\theta-12=0$.
+
+(b) Hence solve the original equation for $0^\circ\le\theta\le360^\circ$. **[3+3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Multiplying by $\cos^2\theta$ gives $7\sin\theta+12\cos^2\theta=0$. Replacing $\cos^2\theta$ by $1-\sin^2\theta$ gives
+
+$$\boxed{12\sin^2\theta-7\sin\theta-12=0}.$$
+
+The factors are $(3\sin\theta+4)(4\sin\theta-3)$, so $\sin\theta=3/4$. Therefore
+
+$$\boxed{\theta=48.6^\circ\text{ or }131.4^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q13"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q3(a–b), and matching ms-202406-mathematics-p12.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q14}
+### Question 14 · 9709/13/M/J/24 Q4(a–b)
+
+(a) Show that $\cos x(7\tan x-5\cos x)=1$ can be written as $a\sin^2x+b\sin x+c=0$.
+
+(b) Hence solve it for $0^\circ<x<180^\circ$. **[3+3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$7\sin x-5\cos^2x=1\Longrightarrow7\sin x-5(1-\sin^2x)=1,$$
+
+so
+
+$$5\sin^2x+7\sin x-6=0=(5\sin x-3)(\sin x+2).$$
+
+Only $\sin x=3/5$ is valid. Hence
+
+$$\boxed{x=\sin^{-1}\frac35=36.9^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q14"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q4(a–b), and matching ms-202406-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q15}
+### Question 15 · 9709/11/O/N/24 Q8(a–b)
+
+(a) $\beta$ is between $90^\circ$ and $180^\circ$ and $\sin\beta=a$. Express $\tan^2\beta-3\sin\beta\cos\beta$ in terms of $a$.
+
+(b) Solve $\sin^2\theta+2\cos^2\theta=4\sin\theta+3$ for $0^\circ<\theta<360^\circ$. **[3+5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+In quadrant II, $\cos\beta=-\sqrt{1-a^2}$. Thus
+
+$$\boxed{\tan^2\beta-3\sin\beta\cos\beta=\frac{a^2}{1-a^2}+3a\sqrt{1-a^2}}.$$
+
+For (b), use $\cos^2\theta=1-\sin^2\theta$:
+
+$$\sin^2\theta+2(1-\sin^2\theta)=4\sin\theta+3\Longrightarrow\sin^2\theta+4\sin\theta+1=0.$$
+
+The valid root is $\sin\theta=-2+\sqrt3$, giving
+
+$$\boxed{\theta=195.6^\circ\text{ or }344.4^\circ\text{ (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q15"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q8(a–b), and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-trig-q16}
+### Question 16 · 9709/13/O/N/24 Q4
+
+Solve $4\sin^4\theta+12\sin^2\theta-7=0$ for $0^\circ\le\theta\le360^\circ$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Let $u=\sin^2\theta$. Then $4u^2+12u-7=0$, so
+
+$$u=\frac{-12\pm16}{8}=1/2\text{ or }-3.$$
+
+Reject $u=-3$. Hence $\sin^2\theta=1/2$, and
+
+$$\boxed{\theta=45^\circ,\ 135^\circ,\ 225^\circ,\ 315^\circ}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q16"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p13.pdf, Q4, and matching ms-202410-mathematics-p13.pdf.</div>
+:::
+
+## 3. Quick checklist
+
+- [ ] exact values and quadrant signs
+- [ ] $\sin^2x+\cos^2x=1$
+- [ ] $\tan x=\sin x/\cos x$
+- [ ] identities before numerical substitution
+- [ ] all solutions in the stated interval
+- [ ] amplitude, period and midline

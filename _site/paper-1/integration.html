@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.8.">
+
+<title>1.8 Integration – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-2/algebra.html" rel="next">
+<link href="../paper-1/differentiation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">Paper 1 · Pure Mathematics 1</a></li><li class="breadcrumb-item"><a href="../paper-1/integration.html">1.8 Integration</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link active" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#reverse-differentiation" id="toc-reverse-differentiation" class="nav-link" data-scroll-target="#reverse-differentiation">Reverse differentiation</a></li>
+  <li><a href="#definite-integral-area-and-volume" id="toc-definite-integral-area-and-volume" class="nav-link" data-scroll-target="#definite-integral-area-and-volume">Definite integral, area and volume</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-1-past-paper-questions" id="toc-verified-paper-1-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-1-past-paper-questions">2. Verified Paper 1 past-paper questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970911on20-q2" id="toc-question-1-970911on20-q2" class="nav-link" data-scroll-target="#question-1-970911on20-q2">Question 1 · 9709/11/O/N/20 Q2</a></li>
+  <li><a href="#question-2-970911mj21-q1" id="toc-question-2-970911mj21-q1" class="nav-link" data-scroll-target="#question-2-970911mj21-q1">Question 2 · 9709/11/M/J/21 Q1</a></li>
+  <li><a href="#question-3-970912on21-q4" id="toc-question-3-970912on21-q4" class="nav-link" data-scroll-target="#question-3-970912on21-q4">Question 3 · 9709/12/O/N/21 Q4</a></li>
+  <li><a href="#question-4-970912on22-q8a" id="toc-question-4-970912on22-q8a" class="nav-link" data-scroll-target="#question-4-970912on22-q8a">Question 4 · 9709/12/O/N/22 Q8(a)</a></li>
+  <li><a href="#question-5-970912fm23-q10ab" id="toc-question-5-970912fm23-q10ab" class="nav-link" data-scroll-target="#question-5-970912fm23-q10ab">Question 5 · 9709/12/F/M/23 Q10(a–b)</a></li>
+  <li><a href="#question-6-970911mj21-q11d" id="toc-question-6-970911mj21-q11d" class="nav-link" data-scroll-target="#question-6-970911mj21-q11d">Question 6 · 9709/11/M/J/21 Q11(d)</a></li>
+  <li><a href="#question-7-970912mj20-q8a" id="toc-question-7-970912mj20-q8a" class="nav-link" data-scroll-target="#question-7-970912mj20-q8a">Question 7 · 9709/12/M/J/20 Q8(a)</a></li>
+  <li><a href="#question-8-970911mj20-q11b" id="toc-question-8-970911mj20-q11b" class="nav-link" data-scroll-target="#question-8-970911mj20-q11b">Question 8 · 9709/11/M/J/20 Q11(b)</a></li>
+  <li><a href="#question-9-970912mj21-q9" id="toc-question-9-970912mj21-q9" class="nav-link" data-scroll-target="#question-9-970912mj21-q9">Question 9 · 9709/12/M/J/21 Q9</a></li>
+  <li><a href="#question-10-970911on21-q10a" id="toc-question-10-970911on21-q10a" class="nav-link" data-scroll-target="#question-10-970911on21-q10a">Question 10 · 9709/11/O/N/21 Q10(a)</a></li>
+  <li><a href="#question-11-970911on21-q10b" id="toc-question-11-970911on21-q10b" class="nav-link" data-scroll-target="#question-11-970911on21-q10b">Question 11 · 9709/11/O/N/21 Q10(b)</a></li>
+  <li><a href="#question-12-970911mj22-q7b" id="toc-question-12-970911mj22-q7b" class="nav-link" data-scroll-target="#question-12-970911mj22-q7b">Question 12 · 9709/11/M/J/22 Q7(b)</a></li>
+  <li><a href="#question-13-970911mj23-q10a" id="toc-question-13-970911mj23-q10a" class="nav-link" data-scroll-target="#question-13-970911mj23-q10a">Question 13 · 9709/11/M/J/23 Q10(a)</a></li>
+  <li><a href="#question-14-970912fm23-q11b" id="toc-question-14-970912fm23-q11b" class="nav-link" data-scroll-target="#question-14-970912fm23-q11b">Question 14 · 9709/12/F/M/23 Q11(b)</a></li>
+  <li><a href="#question-15-970911mj24-q9" id="toc-question-15-970911mj24-q9" class="nav-link" data-scroll-target="#question-15-970911mj24-q9">Question 15 · 9709/11/M/J/24 Q9</a></li>
+  <li><a href="#question-16-970913mj24-q9b" id="toc-question-16-970913mj24-q9b" class="nav-link" data-scroll-target="#question-16-970913mj24-q9b">Question 16 · 9709/13/M/J/24 Q9(b)</a></li>
+  <li><a href="#question-17-970911on24-q5b" id="toc-question-17-970911on24-q5b" class="nav-link" data-scroll-target="#question-17-970911on24-q5b">Question 17 · 9709/11/O/N/24 Q5(b)</a></li>
+  <li><a href="#question-18-970911on24-q7b" id="toc-question-18-970911on24-q7b" class="nav-link" data-scroll-target="#question-18-970911on24-q7b">Question 18 · 9709/11/O/N/24 Q7(b)</a></li>
+  <li><a href="#question-19-970912on24-q7b" id="toc-question-19-970912on24-q7b" class="nav-link" data-scroll-target="#question-19-970912on24-q7b">Question 19 · 9709/12/O/N/24 Q7(b)</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">3. Checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">Paper 1 · Pure Mathematics 1</a></li><li class="breadcrumb-item"><a href="../paper-1/integration.html">1.8 Integration</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">1.8 Integration</h1>
+<p class="subtitle lead">Reverse differentiation · definite integrals · area · volume of revolution</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.8.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 1.8 Integration：</p>
+<ul>
+<li>把 integration 理解为 reverse differentiation，并积分 <span class="math inline">(ax+b)^n</span>、constant multiples、sums 和 differences；</li>
+<li>处理 constant of integration；</li>
+<li>计算 definite integrals，包括简单的 improper integrals；</li>
+<li>用 definite integration 求由曲线、坐标轴平行直线、直线或两条曲线围成的面积，以及绕坐标轴旋转所得的体积。</li>
+</ul>
+<p>下列 19 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干保留原题，只把 PDF 的排版符号整理为 LaTeX；没有改写或编造题目。答案按对应 mark scheme 的得分步骤展开。</p>
+</div>
+</div>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
+<section id="reverse-differentiation" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="reverse-differentiation">Reverse differentiation</h3>
+<p>若 <span class="math inline">n\ne -1</span>，则</p>
+<p><span class="math display">\int (ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+c.</span></p>
+<p>特别地，先把每一项写成幂，再逐项积分：</p>
+<p><span class="math display">\int x^n\,dx=\frac{x^{n+1}}{n+1}+c,\qquad
+\int kf(x)\,dx=k\int f(x)\,dx.</span></p>
+</section>
+<section id="definite-integral-area-and-volume" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="definite-integral-area-and-volume">Definite integral, area and volume</h3>
+<p><span class="math display">\int_a^b f(x)\,dx=F(b)-F(a).</span></p>
+<p>若区域在 <span class="math inline">x</span> 轴上方，面积为 <span class="math inline">\int_a^b y\,dx</span>；若曲线和直线之间有上下边界，则积分 “upper − lower”。绕 <span class="math inline">x</span> 轴旋转时使用</p>
+<p><span class="math display">V=\pi\int_a^b y^2\,dx,</span></p>
+<p>若区域不是直接从 <span class="math inline">x</span> 轴开始，要用外半径平方减内半径平方。绕 <span class="math inline">y</span> 轴时，可使用</p>
+<p><span class="math display">V=\pi\int (x_{\rm outer}^2-x_{\rm inner}^2)\,dy.</span></p>
+</section>
+</section>
+<section id="verified-paper-1-past-paper-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-1-past-paper-questions">2. Verified Paper 1 past-paper questions</h2>
+<div id="p1-int-q01" class="question-card">
+<section id="question-1-970911on20-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970911on20-q2">Question 1 · 9709/11/O/N/20 Q2</h3>
+<p>The equation of a curve is such that <span class="math inline">\dfrac{dy}{dx}=\dfrac{1}{(x-3)^2}+x</span>. It is given that the curve passes through the point <span class="math inline">(2,7)</span>. Find the equation of the curve. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Rewrite the derivative as <span class="math inline">(x-3)^{-2}+x</span> and integrate:</p>
+<p><span class="math display">y=-\frac{1}{x-3}+\frac{x^2}{2}+c.</span></p>
+<p>Use <span class="math inline">(2,7)</span>:</p>
+<p><span class="math display">7=-\frac1{2-3}+\frac{2^2}{2}+c=1+2+c,</span></p>
+<p>so <span class="math inline">c=4</span>. Therefore</p>
+<span class="math display">\boxed{y=-\frac1{x-3}+\frac{x^2}{2}+4}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q01"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_11.pdf, Q2, and matching 9709_w20_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q02" class="question-card">
+<section id="question-2-970911mj21-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970911mj21-q1">Question 2 · 9709/11/M/J/21 Q1</h3>
+<p>The equation of a curve is such that <span class="math inline">\dfrac{dy}{dx}=\dfrac{3}{x^4}+32x^3</span>. It is given that the curve passes through the point <span class="math inline">\left(\frac12,4\right)</span>. Find the equation of the curve. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Integrate both terms:</p>
+<p><span class="math display">y=\int\left(3x^{-4}+32x^3\right)\,dx
+=-x^{-3}+8x^4+c.</span></p>
+<p>Substitute <span class="math inline">x=\frac12</span>, <span class="math inline">y=4</span>:</p>
+<p><span class="math display">4=-\left(\frac12\right)^{-3}+8\left(\frac12\right)^4+c
+=-8+\frac12+c.</span></p>
+<p>Thus <span class="math inline">c=\frac{23}{2}</span>, hence</p>
+<span class="math display">\boxed{y=-\frac1{x^3}+8x^4+\frac{23}{2}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q02"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q1, and matching 9709_s21_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q03" class="question-card">
+<section id="question-3-970912on21-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970912on21-q4">Question 3 · 9709/12/O/N/21 Q4</h3>
+<p>A curve is such that <span class="math inline">\dfrac{dy}{dx}=\dfrac{8}{(3x+2)^2}</span>. The curve passes through the point <span class="math inline">\left(2,5\frac23\right)</span>. Find the equation of the curve. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">\frac{dy}{dx}=8(3x+2)^{-2}.</span></p>
+<p>Integrating, with <span class="math inline">u=3x+2</span> and <span class="math inline">du=3\,dx</span>,</p>
+<p><span class="math display">y=-\frac{8}{3(3x+2)}+c.</span></p>
+<p>Use <span class="math inline">\left(2,5\frac23\right)</span>:</p>
+<p><span class="math display">5\frac23=-\frac{8}{3(8)}+c=-\frac13+c,</span></p>
+<p>so <span class="math inline">c=6</span>. Thus</p>
+<span class="math display">\boxed{y=-\frac{8}{3(3x+2)}+6}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q03"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_12.pdf, Q4, and matching 9709_w21_ms_12.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q04" class="question-card">
+<section id="question-4-970912on22-q8a" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970912on22-q8a">Question 4 · 9709/12/O/N/22 Q8(a)</h3>
+<p>The equation of a curve is such that <span class="math inline">\dfrac{dy}{dx}=3x^{1/2}-3x^{-1/2}</span>. The curve passes through the point <span class="math inline">(3,5)</span>. Find the equation of the curve. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">y=\int\left(3x^{1/2}-3x^{-1/2}\right)\,dx
+=2x^{3/2}-6x^{1/2}+c.</span></p>
+<p>Substitute <span class="math inline">(3,5)</span>:</p>
+<p><span class="math display">5=2(3)^{3/2}-6(3)^{1/2}+c=6\sqrt3-6\sqrt3+c,</span></p>
+<p>so <span class="math inline">c=5</span>. Therefore</p>
+<span class="math display">\boxed{y=2x^{3/2}-6x^{1/2}+5}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q04"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_12.pdf, Q8(a), and matching 9709_w22_ms_12.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q05" class="question-card">
+<section id="question-5-970912fm23-q10ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970912fm23-q10ab">Question 5 · 9709/12/F/M/23 Q10(a–b)</h3>
+<p>At the point <span class="math inline">(4,-1)</span> on a curve, the gradient of the curve is <span class="math inline">-\frac32</span>. It is given that <span class="math inline">\dfrac{dy}{dx}=x^{-1/2}+k</span>, where <span class="math inline">k</span> is a constant. (a) Show that <span class="math inline">k=-2</span>. (b) Find the equation of the curve. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>At <span class="math inline">x=4</span>,</li>
+</ol>
+<p><span class="math display">-\frac32=4^{-1/2}+k=\frac12+k,</span></p>
+<p>so</p>
+<p><span class="math display">\boxed{k=-2}.</span></p>
+<ol start="2" type="a">
+<li>Now <span class="math inline">\dfrac{dy}{dx}=x^{-1/2}-2</span>. Integrate:</li>
+</ol>
+<p><span class="math display">y=2x^{1/2}-2x+c.</span></p>
+<p>Use <span class="math inline">(4,-1)</span>:</p>
+<p><span class="math display">-1=2(4)^{1/2}-2(4)+c=4-8+c,</span></p>
+<p>so <span class="math inline">c=3</span>. Hence</p>
+<span class="math display">\boxed{y=2\sqrt{x}-2x+3}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q05"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q10(a–b), and matching 9709_m23_ms_12.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q06" class="question-card">
+<section id="question-6-970911mj21-q11d" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970911mj21-q11d">Question 6 · 9709/11/M/J/21 Q11(d)</h3>
+<p>The equation of a curve is <span class="math inline">y=2(3x+4)^{1/2}-x</span>. Find the exact area of the region bounded by the curve, the <span class="math inline">x</span>-axis and the lines <span class="math inline">x=0</span> and <span class="math inline">x=4</span>. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The required area is</p>
+<p><span class="math display">A=\int_0^4\left[2(3x+4)^{1/2}-x\right]\,dx.</span></p>
+<p>Integrating term by term:</p>
+<p><span class="math display">A=\left[\frac49(3x+4)^{3/2}-\frac{x^2}{2}\right]_0^4.</span></p>
+<p>Therefore</p>
+<span class="math display">A=\left(\frac49\cdot16^{3/2}-8\right)-\frac49\cdot4^{3/2}
+=\left(\frac{256}{9}-8\right)-\frac{32}{9}
+=\boxed{\frac{152}{9}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q06"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q11(d), and matching 9709_s21_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q07" class="question-card">
+<section id="question-7-970912mj20-q8a" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970912mj20-q8a">Question 7 · 9709/12/M/J/20 Q8(a)</h3>
+<p>The diagram shows part of the curve <span class="math inline">y=\dfrac6x</span>. The points <span class="math inline">(1,6)</span> and <span class="math inline">(3,2)</span> lie on the curve. The shaded region is bounded by the curve and the lines <span class="math inline">y=2</span> and <span class="math inline">x=1</span>. Find the volume generated when the shaded region is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">y</span>-axis. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Use horizontal washers. For <span class="math inline">2\le y\le6</span>, the outer radius is <span class="math inline">x=6/y</span> and the inner radius is <span class="math inline">x=1</span>:</p>
+<p><span class="math display">V=\pi\int_2^6\left[\left(\frac6y\right)^2-1^2\right]\,dy.</span></p>
+<span class="math display">V=\pi\left[-\frac{36}{y}-y\right]_2^6
+=\pi\left[(-6-6)-(-18-2)\right]
+=\boxed{8\pi}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q07"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q8(a), and matching 9709-s20-ms-12.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q08" class="question-card">
+<section id="question-8-970911mj20-q11b" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970911mj20-q11b">Question 8 · 9709/11/M/J/20 Q11(b)</h3>
+<p>The diagram shows part of the curve <span class="math inline">y=\dfrac8{x+2}</span> and the line <span class="math inline">2y+x=8</span>, intersecting at <span class="math inline">A</span> and <span class="math inline">B</span>. Find the volume generated when the shaded region, bounded by the curve and the line, is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>From the intersections, the limits are <span class="math inline">x=0</span> and <span class="math inline">x=6</span>. The line is</p>
+<p><span class="math display">y=4-\frac{x}{2}.</span></p>
+<p>Volume under the line:</p>
+<p><span class="math display">V_{\rm line}=\pi\int_0^6\left(4-\frac{x}{2}\right)^2dx
+=\pi\left[-\frac{x^3}{12}+2x^2-16x\right]_0^6
+=42\pi.</span></p>
+<p>Volume under the curve:</p>
+<p><span class="math display">V_{\rm curve}=\pi\int_0^6\left(\frac8{x+2}\right)^2dx
+=\pi\left[-\frac{64}{x+2}\right]_0^6
+=24\pi.</span></p>
+<p>The required volume is their difference:</p>
+<span class="math display">\boxed{V=42\pi-24\pi=18\pi}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q08"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q11(b), and matching 9709-s20-ms-11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q09" class="question-card">
+<section id="question-9-970912mj21-q9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970912mj21-q9">Question 9 · 9709/12/M/J/21 Q9</h3>
+<p>The diagram shows part of the curve with equation <span class="math inline">y^2=x-2</span> and the lines <span class="math inline">x=5</span> and <span class="math inline">y=1</span>. The shaded region enclosed by the curve and the lines is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. Find the volume obtained. <strong>[6]</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../Users/xiesj/Documents/ALevel_Course/CIE_Mathematics/Mathematics_Study/assets/questions/extracted/paper1-integration/9709_s21_p12_q9.svg" class="img-fluid figure-img"></p>
+<figcaption>Independent vector extraction from the original PDF</figcaption>
+</figure>
+</div>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The curve meets <span class="math inline">y=1</span> at <span class="math inline">x=3</span>, because <span class="math inline">1^2=x-2</span>. The volume under the curve from <span class="math inline">x=3</span> to <span class="math inline">x=5</span> is</p>
+<p><span class="math display">\pi\int_3^5 y^2\,dx=\pi\int_3^5(x-2)\,dx
+=\pi\left[\frac{x^2}{2}-2x\right]_3^5=4\pi.</span></p>
+<p>The part below <span class="math inline">y=1</span> is a cylinder of volume</p>
+<p><span class="math display">\pi(1)^2(5-3)=2\pi.</span></p>
+<p>Hence the shaded volume is</p>
+<span class="math display">\boxed{4\pi-2\pi=2\pi}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q09"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_12.pdf, Q9, and matching 9709_s21_ms_12.pdf. Diagram independently extracted as vector SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p1-int-q10" class="question-card">
+<section id="question-10-970911on21-q10a" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970911on21-q10a">Question 10 · 9709/11/O/N/21 Q10(a)</h3>
+<p>Find <span class="math inline">\displaystyle\int_1^\infty\dfrac{1}{(3x-2)^{3/2}}\,dx</span>. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Write the integrand as <span class="math inline">(3x-2)^{-3/2}</span>:</p>
+<p><span class="math display">\int(3x-2)^{-3/2}\,dx
+=-\frac23(3x-2)^{-1/2}.</span></p>
+<p>Apply the improper limit:</p>
+<span class="math display">\int_1^\infty\frac{dx}{(3x-2)^{3/2}}
+=\left[-\frac{2}{3\sqrt{3x-2}}\right]_1^\infty
+=0-\left(-\frac23\right)
+=\boxed{\frac23}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q10"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(a), and matching 9709_w21_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q11" class="question-card">
+<section id="question-11-970911on21-q10b" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970911on21-q10b">Question 11 · 9709/11/O/N/21 Q10(b)</h3>
+<p>The diagram shows the curve with equation <span class="math inline">y=\dfrac{1}{(3x-2)^{3/2}}</span>. The shaded region is bounded by the curve, the <span class="math inline">x</span>-axis and the lines <span class="math inline">x=1</span> and <span class="math inline">x=2</span>. The shaded region is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. Find the volume of revolution. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Since <span class="math inline">y^2=(3x-2)^{-3}</span>,</p>
+<p><span class="math display">V=\pi\int_1^2(3x-2)^{-3}\,dx.</span></p>
+<p>Integrate:</p>
+<span class="math display">V=\pi\left[-\frac{1}{6}(3x-2)^{-2}\right]_1^2
+=\pi\left(-\frac1{96}+\frac16\right)
+=\boxed{\frac{5\pi}{32}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q11"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(b), and matching 9709_w21_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q12" class="question-card">
+<section id="question-12-970911mj22-q7b" class="level3">
+<h3 class="anchored" data-anchor-id="question-12-970911mj22-q7b">Question 12 · 9709/11/M/J/22 Q7(b)</h3>
+<p>The diagram shows the curve <span class="math inline">y=(3x-2)^{1/2}</span> and the line <span class="math inline">y=\frac12x+1</span>. The curve and the line intersect at points <span class="math inline">A</span> and <span class="math inline">B</span>. Hence find the area of the region enclosed between the curve and the line. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The intersections satisfy</p>
+<p><span class="math display">\sqrt{3x-2}=\frac{x}{2}+1.</span></p>
+<p>The two intersection <span class="math inline">x</span>-coordinates are <span class="math inline">x=2</span> and <span class="math inline">x=6</span>. On this interval the curve is above the line, so</p>
+<p><span class="math display">A=\int_2^6\left[(3x-2)^{1/2}-\left(\frac{x}{2}+1\right)\right]dx.</span></p>
+<p>Thus</p>
+<p><span class="math display">A=\left[\frac29(3x-2)^{3/2}-\frac{x^2}{4}-x\right]_2^6
+=\frac49.</span></p>
+<p>Therefore</p>
+<span class="math display">\boxed{A=\frac49}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q12"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2022/2022/9709_s22_qp_11.pdf, Q7(b), and matching 9709_s22_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q13" class="question-card">
+<section id="question-13-970911mj23-q10a" class="level3">
+<h3 class="anchored" data-anchor-id="question-13-970911mj23-q10a">Question 13 · 9709/11/M/J/23 Q10(a)</h3>
+<p>The diagram shows part of the curve with equation <span class="math inline">y=\dfrac{4}{(2x-1)^2}</span> and parts of the lines <span class="math inline">x=1</span> and <span class="math inline">y=1</span>. The curve passes through the points <span class="math inline">A(1,4)</span> and <span class="math inline">B\left(\frac32,1\right)</span>. Find the exact volume generated when the shaded region is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>For <span class="math inline">1\le x\le\frac32</span>, the volume under the curve is</p>
+<p><span class="math display">V_{\rm curve}=\pi\int_1^{3/2}\frac{16}{(2x-1)^4}\,dx
+=\pi\left[-\frac{8}{3(2x-1)^3}\right]_1^{3/2}
+=\frac{7\pi}{3}.</span></p>
+<p>The region below <span class="math inline">y=1</span> is a cylinder of volume</p>
+<p><span class="math display">V_{\rm cylinder}=\pi\cdot1^2\cdot\left(\frac32-1\right)=\frac{\pi}{2}.</span></p>
+<p>Therefore</p>
+<span class="math display">\boxed{V=\frac{7\pi}{3}-\frac{\pi}{2}=\frac{11\pi}{6}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q13"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_11.pdf, Q10(a), and matching 9709_s23_ms_11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q14" class="question-card">
+<section id="question-14-970912fm23-q11b" class="level3">
+<h3 class="anchored" data-anchor-id="question-14-970912fm23-q11b">Question 14 · 9709/12/F/M/23 Q11(b)</h3>
+<p>The diagram shows the curve with equation <span class="math inline">x=y^2+1</span>. The points <span class="math inline">A(5,2)</span> and <span class="math inline">B(2,-1)</span> lie on the curve. Find the volume of revolution when the region between the curve and the line <span class="math inline">AB</span> is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">y</span>-axis. <strong>[9]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The gradient of <span class="math inline">AB</span> is <span class="math inline">1</span>, so its equation is</p>
+<p><span class="math display">y=x-3,\qquad\text{or}\qquad x=y+3.</span></p>
+<p>Using horizontal washers about the <span class="math inline">y</span>-axis:</p>
+<p>For the curve, <span class="math inline">x=y^2+1</span>, so</p>
+<p><span class="math display">V_{\rm curve}=\pi\int_{-1}^2(y^2+1)^2\,dy
+=\pi\left[\frac{y^5}{5}+\frac{2y^3}{3}+y\right]_{-1}^2
+=\frac{78\pi}{5}.</span></p>
+<p>For the line, <span class="math inline">x=y+3</span>, so</p>
+<p><span class="math display">V_{\rm line}=\pi\int_{-1}^2(y+3)^2\,dy=39\pi.</span></p>
+<p>Subtracting gives</p>
+<span class="math display">\boxed{V=39\pi-\frac{78\pi}{5}=\frac{117\pi}{5}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q14"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q11(b), and matching 9709_m23_ms_12.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q15" class="question-card">
+<section id="question-15-970911mj24-q9" class="level3">
+<h3 class="anchored" data-anchor-id="question-15-970911mj24-q9">Question 15 · 9709/11/M/J/24 Q9</h3>
+<p>The diagram shows part of the curve with equation <span class="math inline">y=\dfrac{1}{(5x-4)^{1/3}}</span> and the lines <span class="math inline">x=2.4</span> and <span class="math inline">y=1</span>. The curve intersects the line <span class="math inline">y=1</span> at the point <span class="math inline">(1,1)</span>. Find the exact volume of the solid generated when the shaded region is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The curve meets <span class="math inline">y=1</span> at <span class="math inline">x=1</span>, and <span class="math inline">2.4=\frac{12}{5}</span>. Since <span class="math inline">y^2=(5x-4)^{-2/3}</span>,</p>
+<p><span class="math display">V_{\rm curve}=\pi\int_1^{12/5}(5x-4)^{-2/3}\,dx
+=\pi\left[\frac{3}{5}(5x-4)^{1/3}\right]_1^{12/5}
+=\frac{3\pi}{5}.</span></p>
+<p>The cylinder below <span class="math inline">y=1</span> has volume</p>
+<p><span class="math display">V_{\rm cylinder}=\pi\cdot1^2\left(\frac{12}{5}-1\right)=\frac{7\pi}{5}.</span></p>
+<p>The shaded region is between the line <span class="math inline">y=1</span> and the curve, so</p>
+<span class="math display">\boxed{V=V_{\rm cylinder}-V_{\rm curve}
+=\frac{7\pi}{5}-\frac{3\pi}{5}
+=\frac{4\pi}{5}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q15"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p11.pdf, Q9, and matching ms-202406-mathematics-p11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q16" class="question-card">
+<section id="question-16-970913mj24-q9b" class="level3">
+<h3 class="anchored" data-anchor-id="question-16-970913mj24-q9b">Question 16 · 9709/13/M/J/24 Q9(b)</h3>
+<p>The diagram shows the curve with equation <span class="math inline">y=(2x^3+10)^{1/2}</span>. The region shaded in the diagram is enclosed by the curve and the straight lines <span class="math inline">x=1</span>, <span class="math inline">x=3</span> and <span class="math inline">y=0</span>. Find the volume of the solid obtained when the shaded region is rotated through <span class="math inline">360^\circ</span> about the <span class="math inline">x</span>-axis. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Because <span class="math inline">y^2=2x^3+10</span>,</p>
+<p><span class="math display">V=\pi\int_1^3 y^2\,dx
+=\pi\int_1^3(2x^3+10)\,dx.</span></p>
+<p>Therefore</p>
+<span class="math display">V=\pi\left[\frac{x^4}{2}+10x\right]_1^3
+=\pi\left(\frac{81}{2}+30-\frac12-10\right)
+=\boxed{60\pi}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q16"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q9(b), and matching ms-202406-mathematics-p13.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q17" class="question-card">
+<section id="question-17-970911on24-q5b" class="level3">
+<h3 class="anchored" data-anchor-id="question-17-970911on24-q5b">Question 17 · 9709/11/O/N/24 Q5(b)</h3>
+<p>The equation of a curve is such that <span class="math inline">\dfrac{dy}{dx}=4x-3x^{1/2}+1</span>. Given that the curve passes through the point <span class="math inline">(4,11)</span>, find the equation of the curve. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Integrate:</p>
+<p><span class="math display">y=\int(4x-3x^{1/2}+1)\,dx
+=2x^2-2x^{3/2}+x+c.</span></p>
+<p>Use <span class="math inline">(4,11)</span>:</p>
+<p><span class="math display">11=2(4)^2-2(4)^{3/2}+4+c=32-16+4+c=20+c.</span></p>
+<p>Hence <span class="math inline">c=-9</span>, and</p>
+<span class="math display">\boxed{y=2x^2-2x^{3/2}+x-9}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q17"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q5(b), and matching ms-202410-mathematics-p11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q18" class="question-card">
+<section id="question-18-970911on24-q7b" class="level3">
+<h3 class="anchored" data-anchor-id="question-18-970911on24-q7b">Question 18 · 9709/11/O/N/24 Q7(b)</h3>
+<p>The diagram shows part of the curve with equation <span class="math inline">y=\dfrac{12}{(2x+1)^{1/3}}</span>. The point <span class="math inline">A</span> on the curve has coordinates <span class="math inline">\left(\frac72,6\right)</span>. Find the area of the region bounded by the curve and the lines <span class="math inline">x=0</span>, <span class="math inline">x=\frac72</span> and <span class="math inline">y=0</span>. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The required area is</p>
+<p><span class="math display">A=\int_0^{7/2}12(2x+1)^{-1/3}\,dx.</span></p>
+<p>An antiderivative is <span class="math inline">9(2x+1)^{2/3}</span>, so</p>
+<span class="math display">A=\left[9(2x+1)^{2/3}\right]_0^{7/2}
+=9\left(8^{2/3}-1\right)
+=9(4-1)
+=\boxed{27}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q18"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q7(b), and matching ms-202410-mathematics-p11.pdf.
+</div>
+</section>
+</div>
+<div id="p1-int-q19" class="question-card">
+<section id="question-19-970912on24-q7b" class="level3">
+<h3 class="anchored" data-anchor-id="question-19-970912on24-q7b">Question 19 · 9709/12/O/N/24 Q7(b)</h3>
+<p>The diagram shows part of the curve with equation <span class="math inline">y=-2x^2+8x+11</span> and the line with equation <span class="math inline">y=8x+9</span>. Find the area of the shaded region. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Find the intersections:</p>
+<p><span class="math display">-2x^2+8x+11=8x+9
+\Longrightarrow -2x^2+2=0
+\Longrightarrow x=\pm1.</span></p>
+<p>The curve is above the line between <span class="math inline">x=-1</span> and <span class="math inline">x=1</span>. Therefore</p>
+<p><span class="math display">A=\int_{-1}^{1}\left[(-2x^2+8x+11)-(8x+9)\right]dx
+=\int_{-1}^{1}(2-2x^2)\,dx.</span></p>
+<p>Hence</p>
+<span class="math display">A=\left[2x-\frac23x^3\right]_{-1}^{1}
+=\boxed{\frac83}\approx2.67.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q19"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q7(b), and matching ms-202410-mathematics-p12.pdf.
+</div>
+</section>
+</div>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">3. Checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">能逐项 reverse differentiate，并正确保留 <span class="math inline">+c</span>。</label></li>
+<li><label><input type="checkbox">能使用给定点求 constant of integration。</label></li>
+<li><label><input type="checkbox">能处理上下限、improper integral 和无限上限。</label></li>
+<li><label><input type="checkbox">能区分 area between curves、washers、shell-style horizontal slices。</label></li>
+<li><label><input type="checkbox">绕坐标轴旋转时能先确定外半径、内半径，再写 <span class="math inline">\pi\int(R^2-r^2)\,dx</span> 或 <span class="math inline">\pi\int(R^2-r^2)\,dy</span>。</label></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-1/differentiation.html" class="pagination-link" aria-label="1.7 Differentiation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1.7 Differentiation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-2/algebra.html" class="pagination-link" aria-label="2.1 Algebra">
+        <span class="nav-page-text">2.1 Algebra</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,492 @@
+---
+title: "1.6 Series"
+subtitle: "Binomial expansion · arithmetic progressions · geometric progressions · sums"
+description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.6."
+---
+
+::: {.callout-important}
+## 本节考纲要求
+
+本页依据 9709 Mathematics 2026–2027 syllabus 1.6 Series：
+
+- 使用 $(a+b)^n$ 的 expansion；
+- 识别 arithmetic progression 与 geometric progression；
+- 使用 nth-term 与 first-$n$-terms sum formula；
+- 使用 geometric progression convergence condition 和 sum to infinity；
+- 判断 numbers 是否构成 AP 或 GP，并解决含有多个 progression 的问题。
+
+下列 19 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干只把 PDF 排版符号整理为 LaTeX，没有改写或编造题目；答案按对应 mark scheme 的得分步骤展开。
+:::
+
+## 1. Core knowledge
+
+::: {.study-card}
+### Binomial expansion
+
+$$
+(a+b)^n=a^n+{}^nC_1a^{n-1}b+{}^nC_2a^{n-2}b^2+\cdots+b^n.
+$$
+
+找 $x^r$ 的 coefficient 时，只保留会产生该幂次的 terms；乘积 expansion 则把各项的幂次相加后收集同次幂。
+:::
+
+::: {.formula-panel}
+### Arithmetic progression
+
+第一项为 $a$、common difference 为 $d$ 的 AP：
+
+$$u_n=a+(n-1)d,\qquad S_n=\frac n2\bigl(2a+(n-1)d\bigr).$$
+
+三个连续 numbers 为 AP 的等价条件是 $2b=a+c$。已知两个 sums 时，分别写出 $S_m$ 与 $S_n$，再联立求 $a,d$。
+:::
+
+::: {.formula-panel}
+### Geometric progression
+
+第一项为 $a$、common ratio 为 $r$ 的 GP：
+
+$$u_n=ar^{n-1},\qquad S_n=a\frac{1-r^n}{1-r}\quad(r\ne1).$$
+
+当 $|r|<1$ 时收敛，并且
+
+$$S_\infty=\frac a{1-r}.$$
+
+三个连续 numbers 为 GP 的等价条件是 $b^2=ac$。处理题目时保留正负 root，最后根据 positive terms、convergence 或题目条件筛选。
+:::
+
+## 2. Verified Paper 1 past-paper questions
+
+::: {.question-card #p1-series-q01}
+### Question 1 · 9709/11/M/J/20 Q1
+
+The sum of the first nine terms of an arithmetic progression is $117$. The sum of the next four terms is $91$. Find the first term and the common difference. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Let the first term be $a$ and the common difference be $d$.
+
+$$S_9=9a+36d=117\Longrightarrow a+4d=13.$$
+
+The next four terms are terms 10 to 13:
+
+$$4a+42d=91.$$
+
+Multiplying the first simplified equation by $4$ and subtracting gives $26d=39$, so $d=3/2$. Hence
+
+$$\boxed{a=7,\qquad d=\frac32}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q01"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q1, and matching 9709-s20-ms-11.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q02}
+### Question 2 · 9709/12/M/J/20 Q4
+
+The $n$th term of an arithmetic progression is $\frac12(3n-15)$. Find the value of $n$ for which the sum of the first $n$ terms is $84$. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The first term is $u_1=-6$ and the common difference is $d=3/2$. Therefore
+
+$$
+S_n=\frac n2\left(2(-6)+(n-1)\frac32\right)=84.
+$$
+
+Multiplying by $4$:
+
+$$3n^2-27n-336=0
+\Longrightarrow n^2-9n-112=0
+\Longrightarrow(n-16)(n+7)=0.
+$$
+
+Since $n$ is positive,
+
+$$\boxed{n=16}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q02"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q4, and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q03}
+### Question 3 · 9709/13/M/J/20 Q8
+
+The first term of a progression is $\sin^2\theta$ and the second term is $\sin^2\theta\cos^2\theta$, where $0<\theta<\frac12\pi$. Given that the progression is geometric, find the sum to infinity. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The first term and ratio are
+
+$$a=\sin^2\theta,\qquad r=\frac{\sin^2\theta\cos^2\theta}{\sin^2\theta}=\cos^2\theta.$$
+
+Because $0<\theta<\pi/2$, $0<r<1$. Therefore
+
+$$S_\infty=\frac{\sin^2\theta}{1-\cos^2\theta}
+=\boxed{1}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q03"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-13.pdf, Q8, and matching 9709-s20-ms-13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q04}
+### Question 4 · 9709/11/M/J/21 Q2
+
+The sum of the first 20 terms of an arithmetic progression is $405$ and the sum of the first 40 terms is $1410$. Find the 60th term. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$S_{20}=10(2a+19d)=405\Longrightarrow2a+19d=40.5,$$
+
+$$S_{40}=20(2a+39d)=1410\Longrightarrow2a+39d=70.5.$$
+
+Subtracting gives $20d=30$, so $d=1.5$. Then $2a+28.5=40.5$, hence $a=6$. Therefore
+
+$$\boxed{u_{60}=a+59d=6+59(1.5)=94.5}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q04"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q2, and matching 9709_s21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q05}
+### Question 5 · 9709/11/M/J/21 Q5
+
+The fifth, sixth and seventh terms of a geometric progression are $8k$, $-12$ and $2k$ respectively. Given that $k$ is negative, find the sum to infinity. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+For consecutive GP terms,
+
+$$(-12)^2=(8k)(2k)\Longrightarrow144=16k^2.$$
+
+Thus $k=\pm3$, and the condition $k<0$ gives $k=-3$. The terms are $-24,-12,-6,\ldots$, so $r=1/2$. The first term is
+
+$$a=\frac{-24}{(1/2)^4}=-384.$$
+
+Therefore
+
+$$\boxed{S_\infty=\frac{-384}{1-\frac12}=-768}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q05"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q5, and matching 9709_s21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q06}
+### Question 6 · 9709/12/M/J/21 Q8(a–b)
+
+The first three terms of an AP are $a,\frac32a,b$. The first three terms of a GP are $a,18,b+3$. Find $a,b$ and the sum of the first 20 terms of the AP.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+For the AP,
+
+$$b=2\left(\frac32a\right)-a=2a.$$
+
+For the GP,
+
+$$18^2=a(b+3)=a(2a+3).$$
+
+Thus $2a^2+3a-324=0$, giving $a=12$ or $a=-27/2$. Positivity selects $a=12$, so $b=24$. The AP difference is $d=18-12=6$. Therefore
+
+$$\boxed{S_{20}=\frac{20}{2}\bigl(2(12)+19(6)\bigr)=1380}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q06"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_12.pdf, Q8(a–b), and matching 9709_s21_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q07}
+### Question 7 · 9709/13/M/J/21 Q9(a)
+
+A geometric progression has second term equal to $24\%$ of its sum to infinity. Find the possible values of the common ratio. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Let the first term be $a$ and common ratio be $r$. Then
+
+$$ar=0.24\frac a{1-r}.$$
+
+Cancel $a$ and rearrange:
+
+$$r(1-r)=0.24\Longrightarrow r^2-r+0.24=0.$$
+
+Thus $(r-0.4)(r-0.6)=0$, so
+
+$$\boxed{r=\frac25\text{ or }\frac35}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q07"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_13.pdf, Q9(a), and matching 9709_s21_ms_13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q08}
+### Question 8 · 9709/12/F/M/21 Q9(a–b)
+
+The first term of a progression is $\cos\theta$, where $0<\theta<\frac12\pi$. For the GP case, the sum to infinity is $1/\cos\theta$. (i) Show that the second term is $\cos\theta\sin^2\theta$. (ii) Find the sum of the first 12 terms when $\theta=\frac13\pi$, correct to 4 significant figures.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+For a GP,
+
+$$\frac{\cos\theta}{1-r}=\frac1{\cos\theta}
+\Longrightarrow1-r=\cos^2\theta
+\Longrightarrow r=\sin^2\theta.$$
+
+Hence the second term is
+
+$$\boxed{ar=\cos\theta\sin^2\theta}.$$
+
+When $\theta=\pi/3$, $a=1/2$ and $r=3/4$. Therefore
+
+$$S_{12}=\frac12\frac{1-(3/4)^{12}}{1-3/4}
+=2\left(1-\left(\frac34\right)^{12}\right)
+=\boxed{1.937\text{ (4 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q08"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_m21_qp_12.pdf, Q9(a)(i–ii), and matching 9709_m21_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q09}
+### Question 9 · 9709/12/F/M/22 Q4
+
+The first term of a GP and the first term of an AP are both $a$. The third GP term equals the second AP term, and the fifth GP term equals the sixth AP term. All terms are positive and not all equal. Find the sum of the first 20 AP terms in terms of $a$. **[6]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Let the GP ratio be $r$ and the AP difference be $d$. Then
+
+$$ar^2=a+d,\qquad ar^4=a+5d.$$
+
+From the first equation, $d=a(r^2-1)$. Substitution into the second gives
+
+$$ar^4=a+5a(r^2-1)\Longrightarrow r^4-5r^2+4=0.$$
+
+Thus $r^2=1$ or $4$. Not all terms equal rejects $r^2=1$; positivity selects $r=2$. Hence $d=3a$, and
+
+$$\boxed{S_{20}=\frac{20}{2}\bigl(2a+19(3a)\bigr)=590a}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q09"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_m22_qp_12.pdf, Q4, and matching 9709_m22_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q10}
+### Question 10 · 9709/12/F/M/23 Q4(a–b)
+
+The circumference of a tree is $5.00$ m. After one year it is $5.02$ m. (a) Given that the circumferences at yearly intervals form an AP, find the circumference 20 years after the first measurement. (b) Given instead that they form a GP, find the circumference 20 years after the first measurement.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) The AP has $a=5.00$ and $d=0.02$. Twenty years after the first measurement is the 21st term:
+
+$$\boxed{u_{21}=5+20(0.02)=5.40\text{ m}}.$$
+
+(b) The GP ratio is $r=5.02/5=1.004$. Therefore
+
+$$\boxed{u_{21}=5(1.004)^{20}=5.42\text{ m (3 s.f.)}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q10"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q4(a–b), and matching 9709_m23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q11}
+### Question 11 · 9709/11/M/J/24 Q8(a–b)
+
+(a) The first three AP terms are $25$, $4p-1$, $13-p$. Find the tenth term. (b) The first three GP terms are $25$, $4q-1$, $13-q$, where $q$ is positive. Find the sum to infinity.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) AP condition:
+
+$$2(4p-1)=25+(13-p)\Longrightarrow9p=40.$$
+
+Thus $p=40/9$, $d=(4p-1)-25=-74/9$, and
+
+$$\boxed{u_{10}=25+9\left(-\frac{74}{9}\right)=-49}.$$
+
+(b) GP condition:
+
+$$ (4q-1)^2=25(13-q)
+\Longrightarrow16q^2+17q-324=0.$$
+
+The roots are $q=4$ and $q=-81/16$; positivity selects $q=4$. The GP is $25,15,9,\ldots$, so $r=3/5$:
+
+$$\boxed{S_\infty=\frac{25}{1-\frac35}=\frac{125}{2}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q11"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p11.pdf, Q8(a–b), and matching ms-202406-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q12}
+### Question 12 · 9709/12/M/J/24 Q5(a–b)
+
+The first and second AP terms are $\tan\theta$ and $\sin\theta$, where $0<\theta<\frac12\pi$. (a) Given $\theta=\frac14\pi$, find the exact sum of the first 40 terms. (b) Find the sum to infinity of the GP with the same first two terms, in terms of $\theta$.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+For $\theta=\pi/4$, the first term is $a=1$ and the second is $\sqrt2/2$, so
+
+$$d=\frac{\sqrt2}{2}-1.$$
+
+Therefore
+
+$$\boxed{S_{40}=20\left(2+39\left(\frac{\sqrt2}{2}-1\right)\right)=10(39\sqrt2-35)}.$$
+
+For the GP, $a=\tan\theta$ and $r=\sin\theta/\tan\theta=\cos\theta$. Hence
+
+$$\boxed{S_\infty=\frac{\tan\theta}{1-\cos\theta}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q12"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q5(a) and Q9(b)(i), and matching ms-202406-mathematics-p12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q13}
+### Question 13 · 9709/13/M/J/24 Q7(a–b)
+
+The first term of an AP is $1.5$ and the sum of the first ten terms is $127.5$. (a) Find the common difference. (b) Find the sum of all terms whose values are between $25$ and $100$.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$127.5=\frac{10}{2}\bigl(2(1.5)+9d\bigr)
+\Longrightarrow25.5=3+9d
+\Longrightarrow\boxed{d=2.5}.$$
+
+The nth term is $u_n=1.5+2.5(n-1)=2.5n-1$. The terms strictly between $25$ and $100$ are $u_{11}=26.5$ through $u_{40}=99$. Thus
+
+$$\boxed{S=\frac{30}{2}(26.5+99)=1882.5}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q13"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q7(a–b), and matching ms-202406-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q14}
+### Question 14 · 9709/13/M/J/24 Q10(a–c)
+
+The GP $a_1,a_2,a_3,\ldots$ has first term $2$ and common ratio $r$, where $r\ne0$. It is given that $\frac92a_5+7a_3=8$. (a) Find $r$. (b) Find the sum of the first 20 terms. (c) Find the sum to infinity of $a_2,a_5,a_8,\ldots$.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Since $a_3=2r^2$ and $a_5=2r^4$,
+
+$$\frac92(2r^4)+7(2r^2)=8\Longrightarrow9r^4+14r^2-8=0.$$
+
+Factorising:
+
+$$ (9r^2-4)(r^2+1)=0.$$
+
+The real positive ratio is $r=2/3$. Hence
+
+$$\boxed{S_{20}=2\frac{1-(2/3)^{20}}{1-2/3}=5.998\text{ (4 s.f.)}}.$$
+
+The sequence $a_2,a_5,a_8,\ldots$ has first term $a_2=4/3$ and ratio $r^3=8/27$, so
+
+$$\boxed{S_\infty=\frac{4/3}{1-8/27}=\frac{36}{19}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q14"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q10(a–c), and matching ms-202406-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q15}
+### Question 15 · 9709/11/O/N/24 Q10(a–b)
+
+An AP has first term $5$ and common difference $d>0$. The second, fifth and eleventh AP terms are the first three terms of a GP. (a) Find $d$. (b) If $S_{77}$ is the AP sum and $G_{10}$ is the sum of the first 10 GP terms, find $S_{77}-G_{10}$.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The three GP terms are $5+d$, $5+4d$, $5+10d$. Hence
+
+$$ (5+4d)^2=(5+d)(5+10d).$$
+
+Expanding gives $6d^2-15d=0$. Since $d>0$, $d=5/2$. The GP is $15/2,15,30,\ldots$, with ratio $2$. Therefore
+
+$$S_{77}=\frac{77}{2}\left(10+76\cdot\frac52\right)=7700,$$
+
+$$G_{10}=\frac{15}{2}(2^{10}-1)=7672.5.$$
+
+Thus
+
+$$\boxed{S_{77}-G_{10}=27.5}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q15"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q10(a–b), and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q16}
+### Question 16 · 9709/12/O/N/24 Q2(a)
+
+The first term of an AP is $-20$ and the common difference is $5$. Find the sum of the first 20 terms. **[2]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$S_{20}=\frac{20}{2}\bigl(2(-20)+19(5)\bigr)
+=10(55)
+=\boxed{550}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q16"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q2(a), and matching ms-202410-mathematics-p12.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q17}
+### Question 17 · 9709/13/O/N/24 Q1
+
+An AP has fourth term $15$ and eighth term $25$. Find the 30th term. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$a+3d=15,\qquad a+7d=25.$$
+
+Subtracting gives $4d=10$, so $d=5/2$ and $a=15-3(5/2)=15/2$. Hence
+
+$$\boxed{u_{30}=\frac{15}{2}+29\left(\frac52\right)=80}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q17"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p13.pdf, Q1, and matching ms-202410-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q18}
+### Question 18 · 9709/13/O/N/24 Q6
+
+The first term of a convergent GP is $10$. The sum of the first four terms is $p$ and the sum of the first eight terms is $q$. It is given that $q=\frac{17}{16}p$. Find the two possible values of the sum to infinity. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Using $S_n=10(1-r^n)/(1-r)$,
+
+$$\frac{S_8}{S_4}=\frac{1-r^8}{1-r^4}=1+r^4=\frac{17}{16}.$$
+
+Thus $r^4=1/16$, or equivalently
+
+$$16r^8-17r^4+1=0=(16r^4-1)(r^4-1).$$
+
+The convergent real ratios are $r=\frac12$ and $r=-\frac12$. Therefore
+
+$$\boxed{S_\infty=20\text{ or }\frac{20}{3}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q18"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p13.pdf, Q6, and matching ms-202410-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-series-q19}
+### Question 19 · 9709/11/M/J/21 Q3(a–b)
+
+(a) Find the first three terms in ascending powers of $x$ of $(3-2x)^5$. (b) Hence find the coefficient of $x^2$ in $(4+x)^2(3-2x)^5$.
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Using the binomial theorem,
+
+$$
+(3-2x)^5=3^5+5(3^4)(-2x)+10(3^3)(-2x)^2+\cdots
+=243-810x+1080x^2+\cdots.
+$$
+
+Since $(4+x)^2=16+8x+x^2$, the coefficient of $x^2$ is
+
+$$16(1080)+8(-810)+243=\boxed{11043}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-series-q19"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q3(a–b), and matching 9709_s21_ms_11.pdf.</div>
+:::
+
+## 3. Quick checklist
+
+- [ ] binomial coefficients and required powers
+- [ ] AP nth term and finite sum
+- [ ] GP nth term and finite sum
+- [ ] convergence and sum to infinity
+- [ ] positive/negative roots and progression conditions

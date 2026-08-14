@@ -1,0 +1,74 @@
+{
+  "index.qmd": {
+    "index.html": "68a8366f"
+  },
+  "paper-3/algebra-functions.qmd": {
+    "algebra-functions.html": "94f5d7e5"
+  },
+  "paper-3/logarithmic-and-exponential-functions.qmd": {
+    "logarithmic-and-exponential-functions.html": "4a2afd95"
+  },
+  "paper-3/trigonometry.qmd": {
+    "trigonometry.html": "954078c1"
+  },
+  "paper-3/differentiation.qmd": {
+    "differentiation.html": "07d5a1a6"
+  },
+  "paper-3/integration.qmd": {
+    "integration.html": "328c46ee"
+  },
+  "paper-3/numerical-solution-of-equations.qmd": {
+    "numerical-solution-of-equations.html": "e5928b57"
+  },
+  "paper-3/vectors.qmd": {
+    "vectors.html": "93a9d0e9"
+  },
+  "paper-3/differential-equations.qmd": {
+    "differential-equations.html": "8fac156a"
+  },
+  "paper-3/complex-numbers.qmd": {
+    "complex-numbers.html": "895a2d72"
+  },
+  "paper-2/algebra.qmd": {
+    "algebra.html": "34140a9c"
+  },
+  "paper-2/logarithmic-and-exponential-functions.qmd": {
+    "logarithmic-and-exponential-functions.html": "021ddc96"
+  },
+  "paper-2/trigonometry.qmd": {
+    "trigonometry.html": "860baee0"
+  },
+  "paper-2/differentiation.qmd": {
+    "differentiation.html": "14d3e42a"
+  },
+  "paper-2/integration.qmd": {
+    "integration.html": "134b93c8"
+  },
+  "paper-2/numerical-solution-of-equations.qmd": {
+    "numerical-solution-of-equations.html": "100aaf04"
+  },
+  "paper-1/quadratics.qmd": {
+    "quadratics.html": "7d874b35"
+  },
+  "paper-1/functions.qmd": {
+    "functions.html": "4a892461"
+  },
+  "paper-1/coordinate-geometry.qmd": {
+    "coordinate-geometry.html": "9f175e35"
+  },
+  "paper-1/circular-measure.qmd": {
+    "circular-measure.html": "7fb72d2b"
+  },
+  "paper-1/trigonometry.qmd": {
+    "trigonometry.html": "b8cfed60"
+  },
+  "paper-1/series.qmd": {
+    "series.html": "7831b012"
+  },
+  "paper-1/differentiation.qmd": {
+    "differentiation.html": "3df457eb"
+  },
+  "paper-1/integration.qmd": {
+    "integration.html": "00d8ebeb"
+  }
+}

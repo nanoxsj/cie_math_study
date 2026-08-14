@@ -1,0 +1,535 @@
+---
+title: "1.8 Integration"
+subtitle: "Reverse differentiation · definite integrals · area · volume of revolution"
+description: "CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.8."
+---
+
+::: {.callout-important}
+## 本节考纲要求
+
+本页依据 9709 Mathematics 2026–2027 syllabus 1.8 Integration：
+
+- 把 integration 理解为 reverse differentiation，并积分 $(ax+b)^n$、constant multiples、sums 和 differences；
+- 处理 constant of integration；
+- 计算 definite integrals，包括简单的 improper integrals；
+- 用 definite integration 求由曲线、坐标轴平行直线、直线或两条曲线围成的面积，以及绕坐标轴旋转所得的体积。
+
+下列 19 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干保留原题，只把 PDF 的排版符号整理为 LaTeX；没有改写或编造题目。答案按对应 mark scheme 的得分步骤展开。
+:::
+
+## 1. Core knowledge
+
+::: {.formula-panel}
+### Reverse differentiation
+
+若 $n\ne -1$，则
+
+$$\int (ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+c.$$
+
+特别地，先把每一项写成幂，再逐项积分：
+
+$$\int x^n\,dx=\frac{x^{n+1}}{n+1}+c,\qquad
+\int kf(x)\,dx=k\int f(x)\,dx.$$
+:::
+
+::: {.study-card}
+### Definite integral, area and volume
+
+$$\int_a^b f(x)\,dx=F(b)-F(a).$$
+
+若区域在 $x$ 轴上方，面积为 $\int_a^b y\,dx$；若曲线和直线之间有上下边界，则积分
+“upper − lower”。绕 $x$ 轴旋转时使用
+
+$$V=\pi\int_a^b y^2\,dx,$$
+
+若区域不是直接从 $x$ 轴开始，要用外半径平方减内半径平方。绕 $y$ 轴时，可使用
+
+$$V=\pi\int (x_{\rm outer}^2-x_{\rm inner}^2)\,dy.$$
+:::
+
+## 2. Verified Paper 1 past-paper questions
+
+::: {.question-card #p1-int-q01}
+### Question 1 · 9709/11/O/N/20 Q2
+
+The equation of a curve is such that $\dfrac{dy}{dx}=\dfrac{1}{(x-3)^2}+x$. It is given that the curve passes through the point $(2,7)$. Find the equation of the curve. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Rewrite the derivative as $(x-3)^{-2}+x$ and integrate:
+
+$$y=-\frac{1}{x-3}+\frac{x^2}{2}+c.$$
+
+Use $(2,7)$:
+
+$$7=-\frac1{2-3}+\frac{2^2}{2}+c=1+2+c,$$
+
+so $c=4$. Therefore
+
+$$\boxed{y=-\frac1{x-3}+\frac{x^2}{2}+4}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q01"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_11.pdf, Q2, and matching 9709_w20_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q02}
+### Question 2 · 9709/11/M/J/21 Q1
+
+The equation of a curve is such that $\dfrac{dy}{dx}=\dfrac{3}{x^4}+32x^3$. It is given that the curve passes through the point $\left(\frac12,4\right)$. Find the equation of the curve. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Integrate both terms:
+
+$$y=\int\left(3x^{-4}+32x^3\right)\,dx
+=-x^{-3}+8x^4+c.$$
+
+Substitute $x=\frac12$, $y=4$:
+
+$$4=-\left(\frac12\right)^{-3}+8\left(\frac12\right)^4+c
+=-8+\frac12+c.$$
+
+Thus $c=\frac{23}{2}$, hence
+
+$$\boxed{y=-\frac1{x^3}+8x^4+\frac{23}{2}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q02"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q1, and matching 9709_s21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q03}
+### Question 3 · 9709/12/O/N/21 Q4
+
+A curve is such that $\dfrac{dy}{dx}=\dfrac{8}{(3x+2)^2}$. The curve passes through the point $\left(2,5\frac23\right)$. Find the equation of the curve. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$\frac{dy}{dx}=8(3x+2)^{-2}.$$
+
+Integrating, with $u=3x+2$ and $du=3\,dx$,
+
+$$y=-\frac{8}{3(3x+2)}+c.$$
+
+Use $\left(2,5\frac23\right)$:
+
+$$5\frac23=-\frac{8}{3(8)}+c=-\frac13+c,$$
+
+so $c=6$. Thus
+
+$$\boxed{y=-\frac{8}{3(3x+2)}+6}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q03"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_12.pdf, Q4, and matching 9709_w21_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q04}
+### Question 4 · 9709/12/O/N/22 Q8(a)
+
+The equation of a curve is such that $\dfrac{dy}{dx}=3x^{1/2}-3x^{-1/2}$. The curve passes through the point $(3,5)$. Find the equation of the curve. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+$$y=\int\left(3x^{1/2}-3x^{-1/2}\right)\,dx
+=2x^{3/2}-6x^{1/2}+c.$$
+
+Substitute $(3,5)$:
+
+$$5=2(3)^{3/2}-6(3)^{1/2}+c=6\sqrt3-6\sqrt3+c,$$
+
+so $c=5$. Therefore
+
+$$\boxed{y=2x^{3/2}-6x^{1/2}+5}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q04"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_12.pdf, Q8(a), and matching 9709_w22_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q05}
+### Question 5 · 9709/12/F/M/23 Q10(a–b)
+
+At the point $(4,-1)$ on a curve, the gradient of the curve is $-\frac32$. It is given that $\dfrac{dy}{dx}=x^{-1/2}+k$, where $k$ is a constant. (a) Show that $k=-2$. (b) Find the equation of the curve. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) At $x=4$,
+
+$$-\frac32=4^{-1/2}+k=\frac12+k,$$
+
+so
+
+$$\boxed{k=-2}.$$
+
+(b) Now $\dfrac{dy}{dx}=x^{-1/2}-2$. Integrate:
+
+$$y=2x^{1/2}-2x+c.$$
+
+Use $(4,-1)$:
+
+$$-1=2(4)^{1/2}-2(4)+c=4-8+c,$$
+
+so $c=3$. Hence
+
+$$\boxed{y=2\sqrt{x}-2x+3}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q05"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q10(a–b), and matching 9709_m23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q06}
+### Question 6 · 9709/11/M/J/21 Q11(d)
+
+The equation of a curve is $y=2(3x+4)^{1/2}-x$. Find the exact area of the region bounded by the curve, the $x$-axis and the lines $x=0$ and $x=4$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The required area is
+
+$$A=\int_0^4\left[2(3x+4)^{1/2}-x\right]\,dx.$$
+
+Integrating term by term:
+
+$$A=\left[\frac49(3x+4)^{3/2}-\frac{x^2}{2}\right]_0^4.$$
+
+Therefore
+
+$$A=\left(\frac49\cdot16^{3/2}-8\right)-\frac49\cdot4^{3/2}
+=\left(\frac{256}{9}-8\right)-\frac{32}{9}
+=\boxed{\frac{152}{9}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q06"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_11.pdf, Q11(d), and matching 9709_s21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q07}
+### Question 7 · 9709/12/M/J/20 Q8(a)
+
+The diagram shows part of the curve $y=\dfrac6x$. The points $(1,6)$ and $(3,2)$ lie on the curve. The shaded region is bounded by the curve and the lines $y=2$ and $x=1$. Find the volume generated when the shaded region is rotated through $360^\circ$ about the $y$-axis. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Use horizontal washers. For $2\le y\le6$, the outer radius is $x=6/y$ and the inner radius is $x=1$:
+
+$$V=\pi\int_2^6\left[\left(\frac6y\right)^2-1^2\right]\,dy.$$
+
+$$V=\pi\left[-\frac{36}{y}-y\right]_2^6
+=\pi\left[(-6-6)-(-18-2)\right]
+=\boxed{8\pi}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q07"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q8(a), and matching 9709-s20-ms-12.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q08}
+### Question 8 · 9709/11/M/J/20 Q11(b)
+
+The diagram shows part of the curve $y=\dfrac8{x+2}$ and the line $2y+x=8$, intersecting at $A$ and $B$. Find the volume generated when the shaded region, bounded by the curve and the line, is rotated through $360^\circ$ about the $x$-axis. **[6]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+From the intersections, the limits are $x=0$ and $x=6$. The line is
+
+$$y=4-\frac{x}{2}.$$
+
+Volume under the line:
+
+$$V_{\rm line}=\pi\int_0^6\left(4-\frac{x}{2}\right)^2dx
+=\pi\left[-\frac{x^3}{12}+2x^2-16x\right]_0^6
+=42\pi.$$
+
+Volume under the curve:
+
+$$V_{\rm curve}=\pi\int_0^6\left(\frac8{x+2}\right)^2dx
+=\pi\left[-\frac{64}{x+2}\right]_0^6
+=24\pi.$$
+
+The required volume is their difference:
+
+$$\boxed{V=42\pi-24\pi=18\pi}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q08"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-11.pdf, Q11(b), and matching 9709-s20-ms-11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q09}
+### Question 9 · 9709/12/M/J/21 Q9
+
+The diagram shows part of the curve with equation $y^2=x-2$ and the lines $x=5$ and $y=1$. The shaded region enclosed by the curve and the lines is rotated through $360^\circ$ about the $x$-axis. Find the volume obtained. **[6]**
+
+![Independent vector extraction from the original PDF](/Users/xiesj/Documents/ALevel_Course/CIE_Mathematics/Mathematics_Study/assets/questions/extracted/paper1-integration/9709_s21_p12_q9.svg)
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The curve meets $y=1$ at $x=3$, because $1^2=x-2$. The volume under the curve from $x=3$ to $x=5$ is
+
+$$\pi\int_3^5 y^2\,dx=\pi\int_3^5(x-2)\,dx
+=\pi\left[\frac{x^2}{2}-2x\right]_3^5=4\pi.$$
+
+The part below $y=1$ is a cylinder of volume
+
+$$\pi(1)^2(5-3)=2\pi.$$
+
+Hence the shaded volume is
+
+$$\boxed{4\pi-2\pi=2\pi}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q09"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_12.pdf, Q9, and matching 9709_s21_ms_12.pdf. Diagram independently extracted as vector SVG; it is not a screenshot.</div>
+:::
+
+::: {.question-card #p1-int-q10}
+### Question 10 · 9709/11/O/N/21 Q10(a)
+
+Find $\displaystyle\int_1^\infty\dfrac{1}{(3x-2)^{3/2}}\,dx$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Write the integrand as $(3x-2)^{-3/2}$:
+
+$$\int(3x-2)^{-3/2}\,dx
+=-\frac23(3x-2)^{-1/2}.$$
+
+Apply the improper limit:
+
+$$\int_1^\infty\frac{dx}{(3x-2)^{3/2}}
+=\left[-\frac{2}{3\sqrt{3x-2}}\right]_1^\infty
+=0-\left(-\frac23\right)
+=\boxed{\frac23}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q10"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(a), and matching 9709_w21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q11}
+### Question 11 · 9709/11/O/N/21 Q10(b)
+
+The diagram shows the curve with equation $y=\dfrac{1}{(3x-2)^{3/2}}$. The shaded region is bounded by the curve, the $x$-axis and the lines $x=1$ and $x=2$. The shaded region is rotated through $360^\circ$ about the $x$-axis. Find the volume of revolution. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Since $y^2=(3x-2)^{-3}$,
+
+$$V=\pi\int_1^2(3x-2)^{-3}\,dx.$$
+
+Integrate:
+
+$$V=\pi\left[-\frac{1}{6}(3x-2)^{-2}\right]_1^2
+=\pi\left(-\frac1{96}+\frac16\right)
+=\boxed{\frac{5\pi}{32}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q11"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(b), and matching 9709_w21_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q12}
+### Question 12 · 9709/11/M/J/22 Q7(b)
+
+The diagram shows the curve $y=(3x-2)^{1/2}$ and the line $y=\frac12x+1$. The curve and the line intersect at points $A$ and $B$. Hence find the area of the region enclosed between the curve and the line. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The intersections satisfy
+
+$$\sqrt{3x-2}=\frac{x}{2}+1.$$
+
+The two intersection $x$-coordinates are $x=2$ and $x=6$. On this interval the curve is above the line, so
+
+$$A=\int_2^6\left[(3x-2)^{1/2}-\left(\frac{x}{2}+1\right)\right]dx.$$
+
+Thus
+
+$$A=\left[\frac29(3x-2)^{3/2}-\frac{x^2}{4}-x\right]_2^6
+=\frac49.$$
+
+Therefore
+
+$$\boxed{A=\frac49}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q12"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_s22_qp_11.pdf, Q7(b), and matching 9709_s22_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q13}
+### Question 13 · 9709/11/M/J/23 Q10(a)
+
+The diagram shows part of the curve with equation $y=\dfrac{4}{(2x-1)^2}$ and parts of the lines $x=1$ and $y=1$. The curve passes through the points $A(1,4)$ and $B\left(\frac32,1\right)$. Find the exact volume generated when the shaded region is rotated through $360^\circ$ about the $x$-axis. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+For $1\le x\le\frac32$, the volume under the curve is
+
+$$V_{\rm curve}=\pi\int_1^{3/2}\frac{16}{(2x-1)^4}\,dx
+=\pi\left[-\frac{8}{3(2x-1)^3}\right]_1^{3/2}
+=\frac{7\pi}{3}.$$
+
+The region below $y=1$ is a cylinder of volume
+
+$$V_{\rm cylinder}=\pi\cdot1^2\cdot\left(\frac32-1\right)=\frac{\pi}{2}.$$
+
+Therefore
+
+$$\boxed{V=\frac{7\pi}{3}-\frac{\pi}{2}=\frac{11\pi}{6}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q13"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_11.pdf, Q10(a), and matching 9709_s23_ms_11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q14}
+### Question 14 · 9709/12/F/M/23 Q11(b)
+
+The diagram shows the curve with equation $x=y^2+1$. The points $A(5,2)$ and $B(2,-1)$ lie on the curve. Find the volume of revolution when the region between the curve and the line $AB$ is rotated through $360^\circ$ about the $y$-axis. **[9]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The gradient of $AB$ is $1$, so its equation is
+
+$$y=x-3,\qquad\text{or}\qquad x=y+3.$$
+
+Using horizontal washers about the $y$-axis:
+
+For the curve, $x=y^2+1$, so
+
+$$V_{\rm curve}=\pi\int_{-1}^2(y^2+1)^2\,dy
+=\pi\left[\frac{y^5}{5}+\frac{2y^3}{3}+y\right]_{-1}^2
+=\frac{78\pi}{5}.$$
+
+For the line, $x=y+3$, so
+
+$$V_{\rm line}=\pi\int_{-1}^2(y+3)^2\,dy=39\pi.$$
+
+Subtracting gives
+
+$$\boxed{V=39\pi-\frac{78\pi}{5}=\frac{117\pi}{5}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q14"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_12.pdf, Q11(b), and matching 9709_m23_ms_12.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q15}
+### Question 15 · 9709/11/M/J/24 Q9
+
+The diagram shows part of the curve with equation $y=\dfrac{1}{(5x-4)^{1/3}}$ and the lines $x=2.4$ and $y=1$. The curve intersects the line $y=1$ at the point $(1,1)$. Find the exact volume of the solid generated when the shaded region is rotated through $360^\circ$ about the $x$-axis. **[6]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The curve meets $y=1$ at $x=1$, and $2.4=\frac{12}{5}$. Since $y^2=(5x-4)^{-2/3}$,
+
+$$V_{\rm curve}=\pi\int_1^{12/5}(5x-4)^{-2/3}\,dx
+=\pi\left[\frac{3}{5}(5x-4)^{1/3}\right]_1^{12/5}
+=\frac{3\pi}{5}.$$
+
+The cylinder below $y=1$ has volume
+
+$$V_{\rm cylinder}=\pi\cdot1^2\left(\frac{12}{5}-1\right)=\frac{7\pi}{5}.$$
+
+The shaded region is between the line $y=1$ and the curve, so
+
+$$\boxed{V=V_{\rm cylinder}-V_{\rm curve}
+=\frac{7\pi}{5}-\frac{3\pi}{5}
+=\frac{4\pi}{5}}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q15"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p11.pdf, Q9, and matching ms-202406-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q16}
+### Question 16 · 9709/13/M/J/24 Q9(b)
+
+The diagram shows the curve with equation $y=(2x^3+10)^{1/2}$. The region shaded in the diagram is enclosed by the curve and the straight lines $x=1$, $x=3$ and $y=0$. Find the volume of the solid obtained when the shaded region is rotated through $360^\circ$ about the $x$-axis. **[3]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Because $y^2=2x^3+10$,
+
+$$V=\pi\int_1^3 y^2\,dx
+=\pi\int_1^3(2x^3+10)\,dx.$$
+
+Therefore
+
+$$V=\pi\left[\frac{x^4}{2}+10x\right]_1^3
+=\pi\left(\frac{81}{2}+30-\frac12-10\right)
+=\boxed{60\pi}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q16"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p13.pdf, Q9(b), and matching ms-202406-mathematics-p13.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q17}
+### Question 17 · 9709/11/O/N/24 Q5(b)
+
+The equation of a curve is such that $\dfrac{dy}{dx}=4x-3x^{1/2}+1$. Given that the curve passes through the point $(4,11)$, find the equation of the curve. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Integrate:
+
+$$y=\int(4x-3x^{1/2}+1)\,dx
+=2x^2-2x^{3/2}+x+c.$$
+
+Use $(4,11)$:
+
+$$11=2(4)^2-2(4)^{3/2}+4+c=32-16+4+c=20+c.$$
+
+Hence $c=-9$, and
+
+$$\boxed{y=2x^2-2x^{3/2}+x-9}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q17"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q5(b), and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q18}
+### Question 18 · 9709/11/O/N/24 Q7(b)
+
+The diagram shows part of the curve with equation $y=\dfrac{12}{(2x+1)^{1/3}}$. The point $A$ on the curve has coordinates $\left(\frac72,6\right)$. Find the area of the region bounded by the curve and the lines $x=0$, $x=\frac72$ and $y=0$. **[4]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+The required area is
+
+$$A=\int_0^{7/2}12(2x+1)^{-1/3}\,dx.$$
+
+An antiderivative is $9(2x+1)^{2/3}$, so
+
+$$A=\left[9(2x+1)^{2/3}\right]_0^{7/2}
+=9\left(8^{2/3}-1\right)
+=9(4-1)
+=\boxed{27}.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q18"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q7(b), and matching ms-202410-mathematics-p11.pdf.</div>
+:::
+
+::: {.question-card #p1-int-q19}
+### Question 19 · 9709/12/O/N/24 Q7(b)
+
+The diagram shows part of the curve with equation $y=-2x^2+8x+11$ and the line with equation $y=8x+9$. Find the area of the shaded region. **[5]**
+
+<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+Find the intersections:
+
+$$-2x^2+8x+11=8x+9
+\Longrightarrow -2x^2+2=0
+\Longrightarrow x=\pm1.$$
+
+The curve is above the line between $x=-1$ and $x=1$. Therefore
+
+$$A=\int_{-1}^{1}\left[(-2x^2+8x+11)-(8x+9)\right]dx
+=\int_{-1}^{1}(2-2x^2)\,dx.$$
+
+Hence
+
+$$A=\left[2x-\frac23x^3\right]_{-1}^{1}
+=\boxed{\frac83}\approx2.67.$$
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q19"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q7(b), and matching ms-202410-mathematics-p12.pdf.</div>
+:::
+
+## 3. Checklist
+
+- [ ] 能逐项 reverse differentiate，并正确保留 $+c$。
+- [ ] 能使用给定点求 constant of integration。
+- [ ] 能处理上下限、improper integral 和无限上限。
+- [ ] 能区分 area between curves、washers、shell-style horizontal slices。
+- [ ] 绕坐标轴旋转时能先确定外半径、内半径，再写 $\pi\int(R^2-r^2)\,dx$ 或 $\pi\int(R^2-r^2)\,dy$。
