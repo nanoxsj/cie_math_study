@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 3 Pure Mathematics 3, syllabus 3.6.">
+
+<title>6. Numerical solution of equations – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-3/vectors.html" rel="next">
+<link href="../paper-3/integration.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-3/algebra-functions.html">Paper 3 · Pure Mathematics 3</a></li><li class="breadcrumb-item"><a href="../paper-3/numerical-solution-of-equations.html">6. Numerical solution of equations</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#locating-a-root" id="toc-locating-a-root" class="nav-link" data-scroll-target="#locating-a-root">1. Locating a root</a>
+  <ul class="collapse">
+  <li><a href="#graphical-method" id="toc-graphical-method" class="nav-link" data-scroll-target="#graphical-method">Graphical method</a></li>
+  </ul></li>
+  <li><a href="#iteration-and-fixed-points" id="toc-iteration-and-fixed-points" class="nav-link" data-scroll-target="#iteration-and-fixed-points">2. Iteration and fixed points</a>
+  <ul class="collapse">
+  <li><a href="#accuracy-rule" id="toc-accuracy-rule" class="nav-link" data-scroll-target="#accuracy-rule">Accuracy rule</a></li>
+  </ul></li>
+  <li><a href="#selected-paper-3-questions" id="toc-selected-paper-3-questions" class="nav-link" data-scroll-target="#selected-paper-3-questions">3. Selected Paper 3 questions</a>
+  <ul class="collapse">
+  <li><a href="#root-location-and-iteration" id="toc-root-location-and-iteration" class="nav-link" data-scroll-target="#root-location-and-iteration">Root location and iteration</a></li>
+  <li><a href="#question-1-970931mj20-q6bc" id="toc-question-1-970931mj20-q6bc" class="nav-link" data-scroll-target="#question-1-970931mj20-q6bc">Question 1 · 9709/31/M/J/20 Q6(b–c)</a></li>
+  <li><a href="#question-2-970932mj20-q9b" id="toc-question-2-970932mj20-q9b" class="nav-link" data-scroll-target="#question-2-970932mj20-q9b">Question 2 · 9709/32/M/J/20 Q9(b)</a></li>
+  <li><a href="#question-3-970933mj20-q6ac" id="toc-question-3-970933mj20-q6ac" class="nav-link" data-scroll-target="#question-3-970933mj20-q6ac">Question 3 · 9709/33/M/J/20 Q6(a–c)</a></li>
+  <li><a href="#question-4-970931on20-q5b" id="toc-question-4-970931on20-q5b" class="nav-link" data-scroll-target="#question-4-970931on20-q5b">Question 4 · 9709/31/O/N/20 Q5(b)</a></li>
+  <li><a href="#question-5-970932on20-q10b" id="toc-question-5-970932on20-q10b" class="nav-link" data-scroll-target="#question-5-970932on20-q10b">Question 5 · 9709/32/O/N/20 Q10(b)</a></li>
+  <li><a href="#question-6-970933on20-q5b" id="toc-question-6-970933on20-q5b" class="nav-link" data-scroll-target="#question-6-970933on20-q5b">Question 6 · 9709/33/O/N/20 Q5(b)</a></li>
+  <li><a href="#question-7-970932mj21-q6cd" id="toc-question-7-970932mj21-q6cd" class="nav-link" data-scroll-target="#question-7-970932mj21-q6cd">Question 7 · 9709/32/M/J/21 Q6(c–d)</a></li>
+  <li><a href="#question-8-970933mj21-q6bc" id="toc-question-8-970933mj21-q6bc" class="nav-link" data-scroll-target="#question-8-970933mj21-q6bc">Question 8 · 9709/33/M/J/21 Q6(b–c)</a></li>
+  <li><a href="#rearrangement-and-prescribed-accuracy" id="toc-rearrangement-and-prescribed-accuracy" class="nav-link" data-scroll-target="#rearrangement-and-prescribed-accuracy">Rearrangement and prescribed accuracy</a></li>
+  <li><a href="#question-9-970922on21-q6bd" id="toc-question-9-970922on21-q6bd" class="nav-link" data-scroll-target="#question-9-970922on21-q6bd">Question 9 · 9709/22/O/N/21 Q6(b–d)</a></li>
+  <li><a href="#question-10-970921mj22-q5bd" id="toc-question-10-970921mj22-q5bd" class="nav-link" data-scroll-target="#question-10-970921mj22-q5bd">Question 10 · 9709/21/M/J/22 Q5(b–d)</a></li>
+  <li><a href="#question-11-970922fm22-q5cd" id="toc-question-11-970922fm22-q5cd" class="nav-link" data-scroll-target="#question-11-970922fm22-q5cd">Question 11 · 9709/22/F/M/22 Q5(c–d)</a></li>
+  <li><a href="#question-12-970932mj22-q5ac" id="toc-question-12-970932mj22-q5ac" class="nav-link" data-scroll-target="#question-12-970932mj22-q5ac">Question 12 · 9709/32/M/J/22 Q5(a–c)</a></li>
+  <li><a href="#question-13-970931mj22-q10bd" id="toc-question-13-970931mj22-q10bd" class="nav-link" data-scroll-target="#question-13-970931mj22-q10bd">Question 13 · 9709/31/M/J/22 Q10(b–d)</a></li>
+  <li><a href="#question-14-970921on22-q4b" id="toc-question-14-970921on22-q4b" class="nav-link" data-scroll-target="#question-14-970921on22-q4b">Question 14 · 9709/21/O/N/22 Q4(b)</a></li>
+  <li><a href="#trigonometric-and-mixed-function-equations" id="toc-trigonometric-and-mixed-function-equations" class="nav-link" data-scroll-target="#trigonometric-and-mixed-function-equations">Trigonometric and mixed-function equations</a></li>
+  <li><a href="#question-15-970932fm23-q7bc" id="toc-question-15-970932fm23-q7bc" class="nav-link" data-scroll-target="#question-15-970932fm23-q7bc">Question 15 · 9709/32/F/M/23 Q7(b–c)</a></li>
+  <li><a href="#question-16-970932mj23-q6ac" id="toc-question-16-970932mj23-q6ac" class="nav-link" data-scroll-target="#question-16-970932mj23-q6ac">Question 16 · 9709/32/M/J/23 Q6(a–c)</a></li>
+  <li><a href="#question-17-970931on23-q8ad" id="toc-question-17-970931on23-q8ad" class="nav-link" data-scroll-target="#question-17-970931on23-q8ad">Question 17 · 9709/31/O/N/23 Q8(a–d)</a></li>
+  <li><a href="#question-18-970932on23-q6bc" id="toc-question-18-970932on23-q6bc" class="nav-link" data-scroll-target="#question-18-970932on23-q6bc">Question 18 · 9709/32/O/N/23 Q6(b–c)</a></li>
+  <li><a href="#question-19-970931mj23-q9bc" id="toc-question-19-970931mj23-q9bc" class="nav-link" data-scroll-target="#question-19-970931mj23-q9bc">Question 19 · 9709/31/M/J/23 Q9(b–c)</a></li>
+  <li><a href="#question-20-970932mj24-q5ac" id="toc-question-20-970932mj24-q5ac" class="nav-link" data-scroll-target="#question-20-970932mj24-q5ac">Question 20 · 9709/32/M/J/24 Q5(a–c)</a></li>
+  </ul></li>
+  <li><a href="#exam-checklist" id="toc-exam-checklist" class="nav-link" data-scroll-target="#exam-checklist">Exam checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-3/algebra-functions.html">Paper 3 · Pure Mathematics 3</a></li><li class="breadcrumb-item"><a href="../paper-3/numerical-solution-of-equations.html">6. Numerical solution of equations</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">6. Numerical solution of equations</h1>
+<p class="subtitle lead">Root location · iteration · accuracy · convergence</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 3 Pure Mathematics 3, syllabus 3.6.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 3.6，覆盖：</p>
+<ul>
+<li>用 graphical considerations 和/或 sign change approximately locate a root，例如找出根所在的两个 consecutive integers；</li>
+<li>理解表示一列逼近根的 sequence notation；</li>
+<li>理解给定的 simple iteration <span class="math inline">x_{n+1}=F(x_n)</span> 与原方程的关系，并使用给定 iteration 或由 rearrangement 得到的 iteration 求 prescribed accuracy 的 root；</li>
+<li>不要求掌握 convergence condition，但要能理解某个 iteration 可能 fail to converge。</li>
+</ul>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">能把 <span class="math inline">f(a)</span>、<span class="math inline">f(b)</span> 的 sign change 与 continuous function 的 root 联系起来</label></li>
+<li><label><input type="checkbox">能从图像判断根的数量，并避免把不在指定 interval 内的交点算进去</label></li>
+<li><label><input type="checkbox">能把方程整理为 <span class="math inline">x=F(x)</span>，并用 fixed-point 关系解释 iteration</label></li>
+<li><label><input type="checkbox">能按题目要求写出 <span class="math inline">x_1,x_2,ldots</span> 的位数，并用足够多的项确认 rounding</label></li>
+<li><label><input type="checkbox">能识别 iteration 发散、振荡或收敛到错误 root 的风险</label></li>
+<li><label><input type="checkbox">能从 mark scheme 要求的 bounds、sign change 和 iteration table 得到完整 method marks</label></li>
+</ul>
+</div>
+</section>
+<section id="locating-a-root" class="level2">
+<h2 class="anchored" data-anchor-id="locating-a-root">1. Locating a root</h2>
+<div class="formula-panel">
+<p>若 <span class="math inline">f</span> 在 <span class="math inline">[a,b]</span> 上连续，且</p>
+<p><span class="math display">
+f(a)f(b)&lt;0,
+</span></p>
+<p>则至少有一个 root <span class="math inline">alpha</span> 满足 <span class="math inline">a&lt;alpha&lt;b</span>。考试中通常要明确写出两端的数值和 sign change，而不是只写“由图可知”。</p>
+<p>若题目要求 correct to <span class="math inline">n</span> decimal places，找到的 bounds 应至少能保证所有可能的值都 round 到同一个答案。例如要证明 <span class="math inline">alpha=1.39</span> correct to 2 d.p.，可证明</p>
+<p><span class="math display">
+1.385&lt;alpha&lt;1.395.
+</span></p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 3 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-01.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing sign changes and bounds"></p>
+<figcaption>Numerical methods sign change and bounds</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 4 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-02.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing a graphical root"></p>
+<figcaption>Numerical methods graphical root</figcaption>
+</figure>
+</div>
+</div>
+<section id="graphical-method" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="graphical-method">Graphical method</h3>
+<p>把方程改写为 <span class="math inline">y=g(x)</span> 和 <span class="math inline">y=h(x)</span>，在同一坐标系中画两条曲线。它们的 intersections 对应原方程的 roots。答案必须结合题目给出的 interval；例如一个 pair of graphs 可能在全体实数有多个交点，但指定 interval 内只有一个。</p>
+</section>
+</section>
+<section id="iteration-and-fixed-points" class="level2">
+<h2 class="anchored" data-anchor-id="iteration-and-fixed-points">2. Iteration and fixed points</h2>
+<div class="formula-panel">
+<p>给定</p>
+<p><span class="math display">
+x_{n+1}=F(x_n),
+</span></p>
+<p>从 initial value <span class="math inline">x_1</span> 出发，依次计算</p>
+<p><span class="math display">
+x_2=F(x_1),qquad x_3=F(x_2),qquad ldots
+</span></p>
+<p>如果 sequence 收敛到 <span class="math inline">alpha</span>，则取 limit 得到</p>
+<p><span class="math display">
+alpha=F(alpha).
+</span></p>
+<p>这只能说明 limit 是 fixed point；题目若已经说明该 interval 内只有一个 root，才能进一步断定它就是要求的 root。不能把“代入 fixed-point equation”误写成“已经证明 iteration 一定收敛”。</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 5 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-03.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note introducing iteration notation"></p>
+<figcaption>Numerical methods notation</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 7 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-04.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing rearrangement to an iterative formula"></p>
+<figcaption>Numerical methods rearrangement</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 8 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-05.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing repeated iteration"></p>
+<figcaption>Numerical methods iteration</figcaption>
+</figure>
+</div>
+</div>
+<section id="accuracy-rule" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="accuracy-rule">Accuracy rule</h3>
+<p>按题目要求保留 intermediate values。若最终答案要求 2 d.p.，不要在每一步都先 round 到 2 d.p.；应保留更多位数，直到 consecutive values 已经稳定地 round 到同一个 2 d.p. 答案。若题目要求“each iteration to 4 d.p.”，表格中就按 4 d.p. 显示，但计算器内部保留 full precision。</p>
+</section>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 10 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-06.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing accuracy and stopping rule"></p>
+<figcaption>Numerical methods accuracy</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 11 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-07.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing an iteration table"></p>
+<figcaption>Numerical methods iteration table</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 12 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-08.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing convergence"></p>
+<figcaption>Numerical methods convergence</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 13 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-09.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing a numerical solution"></p>
+<figcaption>Numerical methods numerical solution</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 14 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-10.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing further iteration"></p>
+<figcaption>Numerical methods further iteration</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Numerical Methods 笔记第 15 页</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/numerical-methods/worked-example-11.webp" class="note-figure img-fluid figure-img" alt="Original extracted Numerical Methods note showing a final numerical-methods example"></p>
+<figcaption>Numerical methods final example</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="selected-paper-3-questions" class="level2">
+<h2 class="anchored" data-anchor-id="selected-paper-3-questions">3. Selected Paper 3 questions</h2>
+<p>以下 20 题保留原 past-paper 题目的英文主文；答案按对应 mark scheme 的得分路径展开。题目中的 $ an<sup>{-1}<span class="math inline">、</span>cos</sup>{-1}$ 等均按 radians 计算。</p>
+<section id="root-location-and-iteration" class="level3">
+<h3 class="anchored" data-anchor-id="root-location-and-iteration">Root location and iteration</h3>
+</section>
+<div id="num-q01" class="question-card">
+<section id="question-1-970931mj20-q6bc" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970931mj20-q6bc">Question 1 · 9709/31/M/J/20 Q6(b–c)</h3>
+<p><span class="tag">sign change</span><span class="tag">iteration</span></p>
+<p>This equation has one root in the interval <span class="math inline">0&lt;x&lt;\frac12\pi</span>. Verify by calculation that this root lies between <span class="math inline">1</span> and <span class="math inline">1.4</span>.</p>
+<p>Use the iterative formula</p>
+<p><span class="math display">
+x_{n+1}=\tan^{-1}(\pi+x_n)
+</span></p>
+<p>to determine the root correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=\tan x-\pi-x</span>。按题目给出的 interval，计算端点：<span class="math inline">f(1)&gt;0</span>、<span class="math inline">f(1.4)&lt;0</span>，因此有 sign change，root 在 <span class="math inline">(1,1.4)</span> 内。</p>
+<p>题目已经给出 iteration；用 radians 计算：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\ \hline
+1&amp;1.0000\ \text{(可取区间内初值)}\\
+2&amp;1.3339\\
+3&amp;1.3510\\
+4&amp;1.3518\\
+5&amp;1.3518
+\end{array}
+</span></p>
+连续项 round 到 2 d.p. 都是 <span class="math inline">1.35</span>，所以 root <span class="math inline">\boxed{1.35}</span>。对应得分点是 sign change、至少一次正确 iteration，以及足够的 iterations 支持 rounding。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q01"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-31.pdf</code>, Q6(b–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q02" class="question-card">
+<section id="question-2-970932mj20-q9b" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970932mj20-q9b">Question 2 · 9709/32/M/J/20 Q9(b)</h3>
+<p><span class="tag">fixed point</span><span class="tag">accuracy</span></p>
+<p>Use the iterative formula</p>
+<p><span class="math display">
+p_{n+1}=\tan^{-1}\left(\frac{1}{1+p_n}\right)
+</span></p>
+<p>to determine the value of <span class="math inline">p</span> correct to 3 decimal places. Give the result of each iteration to 5 decimal places. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>从题目给出的 iteration 直接重复代入。取 interval 中的初值 <span class="math inline">p_1=0.50000</span>，并保留内部精度：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;p_n\\ \hline
+1&amp;0.50000\\
+2&amp;0.58800\\
+3&amp;0.56199\\
+4&amp;0.56946\\
+5&amp;0.56730\\
+6&amp;0.56792\\
+7&amp;0.56774\\
+8&amp;0.56779\\
+9&amp;0.56778
+\end{array}
+</span></p>
+因此连续值都 round 到 3 d.p. 的 <span class="math inline">0.568</span>，故 <span class="math inline">\boxed{p=0.568}</span>。mark scheme 的 M1 是正确使用 formula；A1 需要足够多项支持 3 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q02"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-32.pdf</code>, Q9(b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q03" class="question-card">
+<section id="question-3-970933mj20-q6ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970933mj20-q6ac">Question 3 · 9709/33/M/J/20 Q6(a–c)</h3>
+<p><span class="tag">Newton iteration</span><span class="tag">unique root</span></p>
+<p>By sketching a suitable pair of graphs, show that the equation <span class="math inline">x^5=2+x</span> has exactly one real root.</p>
+<p>Show that if a sequence of values given by</p>
+<p><span class="math display">
+x_{n+1}=\frac{4x_n^5+2}{5x_n^4-1}
+</span></p>
+<p>converges, then it converges to the root. Use the iterative formula with initial value <span class="math inline">x_1=1.5</span> to calculate the root correct to 3 decimal places. Give the result of each iteration to 5 decimal places. <strong>[2+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>画 <span class="math inline">y=x^5</span> 与 <span class="math inline">y=x+2</span>。在负半轴上 <span class="math inline">x^5&lt;0</span> 而 <span class="math inline">x+2</span> 只在 <span class="math inline">x&lt;-2</span> 才为负，且左侧五次曲线增长更快；在正半轴上两曲线只有一个交点。因此按题目 interval 可确认 exactly one real root。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\frac{4\alpha^5+2}{5\alpha^4-1}
+\iff 5\alpha^5-\alpha=4\alpha^5+2
+\iff \alpha^5=\alpha+2.
+</span></p>
+<p>从 <span class="math inline">x_1=1.5</span> 开始：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\ \hline
+1&amp;1.50000\\
+2&amp;1.33162\\
+3&amp;1.27352\\
+4&amp;1.26724\\
+5&amp;1.26717\\
+6&amp;1.26717
+\end{array}
+</span></p>
+所以 <span class="math inline">\boxed{x=1.267}</span>。fixed-point algebra 给 2 marks 的核心，iteration 至少正确两次并以稳定值结尾。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q03"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-33.pdf</code>, Q6(a–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q04" class="question-card">
+<section id="question-4-970931on20-q5b" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970931on20-q5b">Question 4 · 9709/31/O/N/20 Q5(b)</h3>
+<p><span class="tag">iteration</span><span class="tag">root selection</span></p>
+<p>The sequence of values given by the iterative formula</p>
+<p><span class="math display">
+x_{n+1}=\pi-\sin^{-1}\left(\frac{1}{1+e^{-x_n/2}}\right),
+</span></p>
+<p>with initial value <span class="math inline">x_1=2</span>, converges to one of these roots. Use the formula to determine this root correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>逐项代入，所有 inverse trigonometric functions 用 radians：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\ \hline
+1&amp;2.0000\\
+2&amp;2.3217\\
+3&amp;2.2760\\
+4&amp;2.2824\\
+5&amp;2.2815\\
+6&amp;2.2816\\
+7&amp;2.2816
+\end{array}
+</span></p>
+后续值稳定在 <span class="math inline">2.2816\ldots</span>，因此 correct to 2 d.p. 是 <span class="math inline">\boxed{2.28}</span>。这里不能把另一个 root 当作答案，因为题目已说明 initial value <span class="math inline">x_1=2</span> 所在的 iteration 收敛到其中一个特定 root。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q04"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_31.pdf</code>, Q5(b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q05" class="question-card">
+<section id="question-5-970932on20-q10b" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970932on20-q10b">Question 5 · 9709/32/O/N/20 Q10(b)</h3>
+<p><span class="tag">rearrangement</span><span class="tag">iteration</span></p>
+<p>The sequence of values given by the iterative formula</p>
+<p><span class="math display">
+a_{n+1}=\pi+\tan^{-1}\left(\frac{1}{2a_n}\right),\qquad a_1=3,
+</span></p>
+<p>converges to <span class="math inline">a</span>. Use this formula to determine <span class="math inline">a</span> correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;a_n\\ \hline
+1&amp;3.0000\\
+2&amp;3.3067\\
+3&amp;3.2917\\
+4&amp;3.2923\\
+5&amp;3.2923
+\end{array}
+</span></p>
+例如 <span class="math inline">a_2=\pi+\tan^{-1}(1/6)=3.306741\ldots</span>。连续值 round 到 2 d.p. 都是 <span class="math inline">3.29</span>，故 <span class="math inline">\boxed{a=3.29}</span>。mark scheme 要求至少正确使用 formula，并显示足够 terms。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q05"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_32.pdf</code>, Q10(b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q06" class="question-card">
+<section id="question-6-970933on20-q5b" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970933on20-q5b">Question 6 · 9709/33/O/N/20 Q5(b)</h3>
+<p><span class="tag">iteration</span><span class="tag">trigonometry</span></p>
+<p>The sequence given by</p>
+<p><span class="math display">
+x_{n+1}=\pi-\sin^{-1}\left(\frac{1}{1+e^{-x_n/2}}\right),
+</span></p>
+<p>with initial value <span class="math inline">x_1=2</span>, converges to one of these roots. Use the formula to determine this root correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>这题的 calculation 与 Question 4 相同：</p>
+<p><span class="math display">
+2.0000\to2.3217\to2.2760\to2.2824\to2.2815\to2.2816\to2.2816.
+</span></p>
+因此 <span class="math inline">x_n\to2.281615\ldots</span>，所以 <span class="math inline">\boxed{x=2.28}</span> correct to 2 d.p.。每一项必须把上一项完整代入，而不是把初值 <span class="math inline">2</span> 重复代入。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q06"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_33.pdf</code>, Q5(b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q07" class="question-card">
+<section id="question-7-970932mj21-q6cd" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970932mj21-q6cd">Question 7 · 9709/32/M/J/21 Q6(c–d)</h3>
+<p><span class="tag">fixed point</span><span class="tag">convergence</span></p>
+<p>Show that if a sequence of values in the interval <span class="math inline">0&lt;x&lt;\frac12\pi</span> given by</p>
+<p><span class="math display">
+x_{n+1}=\cos^{-1}\left(2-\frac{x_n}{0.9\sin x_n}\right)
+</span></p>
+<p>converges, then it converges to the root of the equation in part (a). Use this iterative formula to determine <span class="math inline">x</span> correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>若 <span class="math inline">x_n\to x</span>，则 fixed-point equation 给出</p>
+<p><span class="math display">
+x=\cos^{-1}\left(2-\frac{x}{0.9\sin x}\right).
+</span></p>
+<p>两边取 cosine：</p>
+<p><span class="math display">
+\cos x=2-\frac{x}{0.9\sin x},
+</span></p>
+<p>这正是 part (a) 的 equation，因此 limit 是该 root。注意这里证明的是“若 converges，则 limit 是 root”，不是证明 convergence condition。</p>
+<p>取 interval 中的 <span class="math inline">x_1=0.6000</span>：</p>
+<p><span class="math display">
+0.6000\to0.6106\to0.6151\to0.6170\to0.6179\to0.6182\to0.6184\to0.6185.
+</span></p>
+所以 <span class="math inline">\boxed{x=0.62}</span> correct to 2 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q07"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_32.pdf</code>, Q6(c–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q08" class="question-card">
+<section id="question-8-970933mj21-q6bc" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970933mj21-q6bc">Question 8 · 9709/33/M/J/21 Q6(b–c)</h3>
+<p><span class="tag">bounds</span><span class="tag">iteration</span></p>
+<p>Verify by calculation that the root of <span class="math inline">\cot\frac{x}{2}=1+e^{-x}</span> lies between <span class="math inline">1</span> and <span class="math inline">1.5</span>. Use</p>
+<p><span class="math display">
+x_{n+1}=2\tan^{-1}\left(\frac{1}{1+e^{-x_n}}\right)
+</span></p>
+<p>to determine the root correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=\cot(x/2)-1-e^{-x}</span>。计算得到 <span class="math inline">f(1)</span> 与 <span class="math inline">f(1.5)</span> signs 相反，所以 root 在 <span class="math inline">(1,1.5)</span>。</p>
+<p>从 <span class="math inline">x_1=1</span> 开始：</p>
+<p><span class="math display">
+1.0000\to1.2625\to1.3242\to1.3371\to1.3397\to1.3402\to1.3403\to1.3404.
+</span></p>
+因此 <span class="math inline">x_n\to1.34036\ldots</span>，答案为 <span class="math inline">\boxed{1.34}</span>。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q08"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_33.pdf</code>, Q6(b–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<section id="rearrangement-and-prescribed-accuracy" class="level3">
+<h3 class="anchored" data-anchor-id="rearrangement-and-prescribed-accuracy">Rearrangement and prescribed accuracy</h3>
+</section>
+<div id="num-q09" class="question-card">
+<section id="question-9-970922on21-q6bd" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970922on21-q6bd">Question 9 · 9709/22/O/N/21 Q6(b–d)</h3>
+<p><span class="tag">logarithm</span><span class="tag">iteration</span></p>
+<p>Verify that the root of <span class="math inline">\ln x=2e^{-x}</span> lies between <span class="math inline">1.5</span> and <span class="math inline">1.6</span>. Show that the given iteration</p>
+<p><span class="math display">
+x_{n+1}=e^{2e^{-x_n}}
+</span></p>
+<p>converges, if it converges, to the root, and determine the root correct to 3 significant figures. Give each iteration to 5 significant figures. <strong>[2+1+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=\ln x-2e^{-x}</span>。代入 <span class="math inline">1.5</span> 与 <span class="math inline">1.6</span> 得 opposite signs，因此 root 在该 interval。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=e^{2e^{-\alpha}}\iff\ln\alpha=2e^{-\alpha},
+</span></p>
+<p>正好回到原方程。</p>
+<p>取 <span class="math inline">x_1=1.50000</span>：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\ \hline
+1&amp;1.50000\\
+2&amp;1.56246\\
+3&amp;1.52081\\
+4&amp;1.54817\\
+5&amp;1.53001\\
+6&amp;1.54198\\
+7&amp;1.53406\\
+8&amp;1.53929
+\end{array}
+</span></p>
+sequence oscillates while converging to <span class="math inline">1.535\ldots</span>，所以 root <span class="math inline">\boxed{1.54}</span> correct to 3 s.f.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q09"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_w21_qp_22.pdf</code>, Q6(b–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q10" class="question-card">
+<section id="question-10-970921mj22-q5bd" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970921mj22-q5bd">Question 10 · 9709/21/M/J/22 Q5(b–d)</h3>
+<p><span class="tag">two roots</span><span class="tag">sign change</span></p>
+<p>Show that the larger root of <span class="math inline">|5-2x|=3\ln x</span> satisfies</p>
+<p><span class="math display">
+x=2.5+1.5\ln x.
+</span></p>
+<p>Show that the larger root lies between <span class="math inline">4.5</span> and <span class="math inline">5.0</span>. Use an iterative formula based on this equation to find the larger root correct to 3 significant figures. Give each iteration to 5 significant figures. <strong>[1+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>对于 larger root，<span class="math inline">x&gt;2.5</span>，所以 <span class="math inline">|5-2x|=2x-5</span>。于是</p>
+<p><span class="math display">
+2x-5=3\ln x\iff x=2.5+1.5\ln x.
+</span></p>
+<p>令 <span class="math inline">f(x)=2.5+1.5\ln x-x</span>，代入 <span class="math inline">4.5</span> 与 <span class="math inline">5.0</span> 得 opposite signs，故 root 在 <span class="math inline">(4.5,5.0)</span>。</p>
+<p>用 <span class="math inline">x_{n+1}=2.5+1.5\ln x_n</span>，取 <span class="math inline">x_1=4.5</span>：</p>
+<p><span class="math display">
+4.50000\to4.75612\to4.83915\to4.86511\to4.87313\to4.87561\to4.87637\to4.87660.
+</span></p>
+所以 larger root <span class="math inline">\boxed{4.88}</span> correct to 3 s.f.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q10"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_s22_qp_21.pdf</code>, Q5(b–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q11" class="question-card">
+<section id="question-11-970922fm22-q5cd" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970922fm22-q5cd">Question 11 · 9709/22/F/M/22 Q5(c–d)</h3>
+<p><span class="tag">rearrangement</span><span class="tag">sign change</span></p>
+<p>Show that the <span class="math inline">x</span>-coordinate of <span class="math inline">P</span> satisfies</p>
+<p><span class="math display">
+x=\ln10-\frac12\ln(2x-1).
+</span></p>
+<p>Use an iterative formula based on this equation to find the <span class="math inline">x</span>-coordinate of <span class="math inline">P</span> correct to 3 significant figures. Use an initial value of <span class="math inline">2</span> and give each iteration to 5 significant figures. <strong>[4+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>直接使用题目要求的 rearrangement：</p>
+<p><span class="math display">
+x_{n+1}=\ln10-\frac12\ln(2x_n-1),\qquad x_1=2.
+</span></p>
+<p>迭代为</p>
+<p><span class="math display">
+2.00000\to1.75328\to1.84313\to1.80851\to1.82157\to1.81660\to1.81848\to1.81777\to1.81804.
+</span></p>
+后续值为 <span class="math inline">1.8179\ldots</span>，故 <span class="math inline">x</span>-coordinate <span class="math inline">\boxed{1.82}</span> correct to 3 s.f.。注意 <span class="math inline">2x_n-1</span> 必须保持为正，且每一步用上一项而不是初值。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q11"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_22.pdf</code>, Q5(c–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q12" class="question-card">
+<section id="question-12-970932mj22-q5ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-12-970932mj22-q5ac">Question 12 · 9709/32/M/J/22 Q5(a–c)</h3>
+<p><span class="tag">graphical root</span><span class="tag">iteration</span></p>
+<p>By sketching a suitable pair of graphs, show that the equation</p>
+<p><span class="math display">
+\ln x=3x-x^2
+</span></p>
+<p>has one real root. Verify that the root lies between <span class="math inline">2</span> and <span class="math inline">2.8</span>. Use the iterative formula</p>
+<p><span class="math display">
+x_{n+1}=\sqrt{3x_n-\ln x_n}
+</span></p>
+<p>to determine the root correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[2+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>画 <span class="math inline">y=\ln x</span> 与 <span class="math inline">y=3x-x^2</span>，在 <span class="math inline">x&gt;0</span> 上只出现一个 intersection。令 <span class="math inline">f(x)=3x-x^2-\ln x</span>，则 <span class="math inline">f(2)</span> 与 <span class="math inline">f(2.8)</span> signs 相反，故 root 在 <span class="math inline">(2,2.8)</span>。</p>
+<p>若 sequence 收敛到 <span class="math inline">\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\sqrt{3\alpha-\ln\alpha}
+\iff \alpha^2=3\alpha-\ln\alpha
+\iff \ln\alpha=3\alpha-\alpha^2.
+</span></p>
+<p>取 <span class="math inline">x_1=2.6000</span>：</p>
+<p><span class="math display">
+2.6000\to2.6162\to2.6243\to2.6283\to2.6303\to2.6313\to2.6318\to2.6321.
+</span></p>
+故 root <span class="math inline">\boxed{2.63}</span> correct to 2 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q12"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_s22_qp_32.pdf</code>, Q5(a–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q13" class="question-card">
+<section id="question-13-970931mj22-q10bd" class="level3">
+<h3 class="anchored" data-anchor-id="question-13-970931mj22-q10bd">Question 13 · 9709/31/M/J/22 Q10(b–d)</h3>
+<p><span class="tag">convergence statement</span><span class="tag">iteration</span></p>
+<p>The curve <span class="math inline">y=x\sin x</span> has one stationary point in the interval <span class="math inline">0&lt;x&lt;\pi</span>, where <span class="math inline">x=a</span>.</p>
+<p>Verify by calculation that <span class="math inline">a</span> lies between <span class="math inline">2</span> and <span class="math inline">2.5</span>. Show that if a sequence of values in <span class="math inline">0&lt;x&lt;\pi</span> given by</p>
+<p><span class="math display">
+x_{n+1}=\pi-\tan^{-1}\left(\frac{x_n}{2}\right)
+</span></p>
+<p>converges, then it converges to <span class="math inline">a</span>, the root of the equation in part (a). Use the iterative formula given in part (c) to determine <span class="math inline">a</span> correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[2+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>端点代入题目 part (a) 的 equation 得 opposite signs，所以 <span class="math inline">2&lt;a&lt;2.5</span>。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\pi-\tan^{-1}(\alpha/2)
+\iff\tan(\pi-\alpha)=\alpha/2,
+</span></p>
+<p>这正是 part (a) 的 root equation，因此 limit 是 <span class="math inline">a</span>。</p>
+<p>从 <span class="math inline">x_1=2.2000</span> 开始：</p>
+<p><span class="math display">
+2.2000\to2.3086\to2.2847\to2.2898\to2.2887\to2.2890\to2.2889.
+</span></p>
+所以 <span class="math inline">\boxed{a=2.29}</span>。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q13"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_s22_qp_31.pdf</code>, Q10(b–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q14" class="question-card">
+<section id="question-14-970921on22-q4b" class="level3">
+<h3 class="anchored" data-anchor-id="question-14-970921on22-q4b">Question 14 · 9709/21/O/N/22 Q4(b)</h3>
+<p><span class="tag">exponential</span><span class="tag">iteration</span></p>
+<p>The equation <span class="math inline">e^{-x/2}=x^5</span> has exactly one real root. Use the iterative formula</p>
+<p><span class="math display">
+x_{n+1}=e^{-x_n/10}
+</span></p>
+<p>to determine the root correct to 4 significant figures. Give the result of each iteration to 6 significant figures. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>由 <span class="math inline">e^{-x/2}=x^5</span> 取 fifth root 得 <span class="math inline">x=e^{-x/10}</span>，所以 formula 是与 equation 等价的 fixed-point rearrangement。</p>
+<p>取正 root 区间内的 <span class="math inline">x_1=0.500000</span>：</p>
+<p><span class="math display">
+0.500000\to0.951229\to0.909261\to0.913085\to0.912736\to0.912768\to0.912765.
+</span></p>
+因此 root <span class="math inline">=0.912765\ldots</span>，答案为 <span class="math inline">\boxed{0.9128}</span> correct to 4 s.f.。iteration 结果至少显示到 6 s.f. 才能支持最后的 rounding。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q14"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_w22_qp_21.pdf</code>, Q4(b), and matching mark scheme.
+</div>
+</section>
+</div>
+<section id="trigonometric-and-mixed-function-equations" class="level3">
+<h3 class="anchored" data-anchor-id="trigonometric-and-mixed-function-equations">Trigonometric and mixed-function equations</h3>
+</section>
+<div id="num-q15" class="question-card">
+<section id="question-15-970932fm23-q7bc" class="level3">
+<h3 class="anchored" data-anchor-id="question-15-970932fm23-q7bc">Question 15 · 9709/32/F/M/23 Q7(b–c)</h3>
+<p><span class="tag">bounds</span><span class="tag">sine iteration</span></p>
+<p>Show by calculation that the root of the equation in (a), <span class="math inline">x=\frac34\sin x+\frac12\pi</span>, lies between <span class="math inline">2</span> and <span class="math inline">2.5</span>. Use an iterative formula based on the equation in (a) to calculate this root correct to 2 decimal places. Give the result of each iteration to 4 decimal places. <strong>[2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=x-\frac34\sin x-\frac12\pi</span>。计算 <span class="math inline">f(2)</span> 与 <span class="math inline">f(2.5)</span>，两者 signs 相反，所以 root 在 <span class="math inline">(2,2.5)</span>。</p>
+<p>用</p>
+<p><span class="math display">
+x_{n+1}=\frac34\sin x_n+\frac12\pi,
+</span></p>
+<p>取 <span class="math inline">x_1=2.2000</span>：</p>
+<p><span class="math display">
+2.2000\to2.1772\to2.1871\to2.1828\to2.1847\to2.1839\to2.1842\to2.1841.
+</span></p>
+故 root <span class="math inline">\boxed{2.18}</span> correct to 2 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q15"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_m23_qp_32.pdf</code>, Q7(b–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q16" class="question-card">
+<section id="question-16-970932mj23-q6ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-16-970932mj23-q6ac">Question 16 · 9709/32/M/J/23 Q6(a–c)</h3>
+<p><span class="tag">inverse trigonometric</span><span class="tag">fixed point</span></p>
+<p>The equation <span class="math inline">\cot\frac{x}{2}=3x</span> has one root in <span class="math inline">0&lt;x&lt;\pi</span>. Show that the root lies between <span class="math inline">0.5</span> and <span class="math inline">1</span>. Show that, if positive values given by</p>
+<p><span class="math display">
+x_{n+1}=\frac13\left(x_n+4\tan^{-1}\left(\frac{1}{3x_n}\right)\right)
+</span></p>
+<p>converge, then they converge to the root. Use this formula to calculate the root correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[2+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>端点代入 <span class="math inline">f(x)=\cot(x/2)-3x</span> 得 <span class="math inline">f(0.5)</span> 与 <span class="math inline">f(1)</span> signs 相反，故 root 在 <span class="math inline">(0.5,1)</span>。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\frac13\left(\alpha+4\tan^{-1}\left(\frac1{3\alpha}\right)\right)
+\iff \frac{\alpha}{2}=\tan^{-1}\left(\frac1{3\alpha}\right).
+</span></p>
+<p>两边取 tangent 即得到 <span class="math inline">\cot(\alpha/2)=3\alpha</span> 的等价 fixed-point form（在题目指定 interval 内取对应 branch）。</p>
+<p>取 <span class="math inline">x_1=1</span>：</p>
+<p><span class="math display">
+1.0000\to0.7623\to0.8037\to0.7921\to0.7951\to0.7943\to0.7945.
+</span></p>
+所以 root <span class="math inline">\boxed{0.79}</span>。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q16"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_s23_qp_32.pdf</code>, Q6(a–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q17" class="question-card">
+<section id="question-17-970931on23-q8ad" class="level3">
+<h3 class="anchored" data-anchor-id="question-17-970931on23-q8ad">Question 17 · 9709/31/O/N/23 Q8(a–d)</h3>
+<p><span class="tag">graphical method</span><span class="tag">logarithmic iteration</span></p>
+<p>By sketching a suitable pair of graphs, show that the equation <span class="math inline">x=e^x-3</span> has only one root. Show by calculation that this root lies between <span class="math inline">1</span> and <span class="math inline">2</span>. Show that, if a sequence given by</p>
+<p><span class="math display">
+x_{n+1}=\ln(3+x_n)
+</span></p>
+<p>converges, then it converges to the root. Use the iterative formula to calculate the root correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[2+2+1+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>画 <span class="math inline">y=x</span> 与 <span class="math inline">y=e^x-3</span>，在题目范围内只有一个 intersection。令 <span class="math inline">f(x)=e^x-3-x</span>，则 <span class="math inline">f(1)</span> 与 <span class="math inline">f(2)</span> signs 相反，所以 root 在 <span class="math inline">(1,2)</span>。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\ln(3+\alpha)\iff e^\alpha=3+\alpha,
+</span></p>
+<p>即回到原 equation。</p>
+<p>从 <span class="math inline">x_1=1.5000</span> 开始：</p>
+<p><span class="math display">
+1.5000\to1.5041\to1.5050\to1.5052\to1.5052.
+</span></p>
+因此 root <span class="math inline">\boxed{1.51}</span> correct to 2 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q17"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_w23_qp_31.pdf</code>, Q8(a–d), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q18" class="question-card">
+<section id="question-18-970932on23-q6bc" class="level3">
+<h3 class="anchored" data-anchor-id="question-18-970932on23-q6bc">Question 18 · 9709/32/O/N/23 Q6(b–c)</h3>
+<p><span class="tag">trigonometric equation</span><span class="tag">iteration</span></p>
+<p>Show by calculation that the root of <span class="math inline">\cot x=2-\cos x</span> lies between <span class="math inline">0.6</span> and <span class="math inline">0.8</span>. Use</p>
+<p><span class="math display">
+x_{n+1}=\tan^{-1}\left(\frac{1}{2-\cos x_n}\right)
+</span></p>
+<p>to determine the root correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=\cot x-2+\cos x</span>。<span class="math inline">f(0.6)</span> 与 <span class="math inline">f(0.8)</span> signs 相反，故 root 在 <span class="math inline">(0.6,0.8)</span>。</p>
+<p>从 <span class="math inline">x_1=0.7000</span> 开始：</p>
+<p><span class="math display">
+0.7000\to0.6806\to0.6855\to0.6843\to0.6846\to0.6845\to0.6845.
+</span></p>
+故 root <span class="math inline">\boxed{0.68}</span> correct to 2 d.p.。因为题目在 interval 内只有 one root，fixed point 的极限不会与另一个 branch 混淆。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q18"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_w23_qp_32.pdf</code>, Q6(b–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q19" class="question-card">
+<section id="question-19-970931mj23-q9bc" class="level3">
+<h3 class="anchored" data-anchor-id="question-19-970931mj23-q9bc">Question 19 · 9709/31/M/J/23 Q9(b–c)</h3>
+<p><span class="tag">logarithmic rearrangement</span><span class="tag">iteration</span></p>
+<p>The constant <span class="math inline">a</span> is such that</p>
+<p><span class="math display">
+\int_0^a xe^{-2x}\,dx=18.
+</span></p>
+<p>Show that <span class="math inline">a=\frac12\ln(4a+2)</span>. Verify that <span class="math inline">a</span> lies between <span class="math inline">0.5</span> and <span class="math inline">1</span>, and use an iterative formula based on this equation to determine <span class="math inline">a</span> correct to 2 decimal places. Give each iteration to 4 decimal places. <strong>[5+2+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>积分并代入上下限：</p>
+<p><span class="math display">
+\int xe^{-2x}dx=-\frac12xe^{-2x}-\frac14e^{-2x}+C.
+</span></p>
+<p>把 <span class="math inline">0</span> 与 <span class="math inline">a</span> 代入题目给出的 condition，整理后得到</p>
+<p><span class="math display">
+e^{2a}=4a+2\iff a=\frac12\ln(4a+2).
+</span></p>
+<p>用 <span class="math inline">f(a)=\frac12\ln(4a+2)-a</span> 检查 <span class="math inline">0.5</span> 与 <span class="math inline">1</span>，得 sign change；然后用</p>
+<p><span class="math display">
+a_{n+1}=\frac12\ln(4a_n+2),\qquad a_1=0.7000:
+</span></p>
+<p><span class="math display">
+0.7000\to0.7843\to0.8183\to0.8313\to0.8362\to0.8381\to0.8388\to0.8390.
+</span></p>
+因此 <span class="math inline">\boxed{a=0.84}</span> correct to 2 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q19"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_s23_qp_31.pdf</code>, Q9(b–c), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="num-q20" class="question-card">
+<section id="question-20-970932mj24-q5ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-20-970932mj24-q5ac">Question 20 · 9709/32/M/J/24 Q5(a–c)</h3>
+<p><span class="tag">exponential-logarithmic</span><span class="tag">iteration</span></p>
+<p>It is given that the equation</p>
+<p><span class="math display">
+e^{2x}=5+\cos3x
+</span></p>
+<p>has only one root. Show by calculation that this root lies in the interval <span class="math inline">0.7&lt;x&lt;0.8</span>. Show that if a sequence in this interval given by</p>
+<p><span class="math display">
+x_{n+1}=\frac12\ln(5+\cos3x_n)
+</span></p>
+<p>converges then it converges to the root. Use this iterative formula to determine the root correct to 3 decimal places. Give the result of each iteration to 5 decimal places. <strong>[2+1+3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>令 <span class="math inline">f(x)=e^{2x}-5-\cos3x</span>。代入 <span class="math inline">0.7</span> 与 <span class="math inline">0.8</span> 得 opposite signs，所以 root 在 <span class="math inline">(0.7,0.8)</span>。</p>
+<p>若 <span class="math inline">x_n\to\alpha</span>，则</p>
+<p><span class="math display">
+\alpha=\frac12\ln(5+\cos3\alpha)
+\iff e^{2\alpha}=5+\cos3\alpha,
+</span></p>
+<p>所以 limit 是原方程的 root。</p>
+<p>取区间中点 <span class="math inline">x_1=0.75000</span>：</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\ \hline
+1&amp;0.75000\\
+2&amp;0.73759\\
+3&amp;0.74094\\
+4&amp;0.74003\\
+5&amp;0.74028\\
+6&amp;0.74021\\
+7&amp;0.74023\\
+8&amp;0.74022
+\end{array}
+</span></p>
+因此 root <span class="math inline">\boxed{0.740}</span> correct to 3 d.p.。这里选 <span class="math inline">0.75</span> 作为 interval 内初值；每项应按题目要求显示 5 d.p.。
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="num-q20"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/9709/9709/32/M/J/24</code>, Q5(a–c), and matching mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="exam-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="exam-checklist">Exam checklist</h2>
+<div class="study-card">
+<ol type="1">
+<li>先定义 <span class="math inline">f(x)</span>，再写两端的数值和 sign change。</li>
+<li>写 fixed-point proof 时先设 <span class="math inline">x_n\to\alpha</span>，再取 limit；不要声称这一步证明了 convergence。</li>
+<li>题目给出的 iteration 优先照用；自己 rearrange 时检查是否会选择错误 root。</li>
+<li>每次用上一项代入，保持 radians，并按题目要求输出 iteration 的位数。</li>
+<li>最后用 consecutive values 或 bounds 说明 rounding，而不是只写最后一项。</li>
+</ol>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-3/integration.html" class="pagination-link" aria-label="5. Integration">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5. Integration</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-3/vectors.html" class="pagination-link" aria-label="7. Vectors">
+        <span class="nav-page-text">7. Vectors</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

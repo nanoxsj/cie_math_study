@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.2.">
+
+<title>2.2 Logarithmic and exponential functions – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-2/trigonometry.html" rel="next">
+<link href="../paper-2/algebra.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-2/algebra.html">Paper 2 · Pure Mathematics 2</a></li><li class="breadcrumb-item"><a href="../paper-2/logarithmic-and-exponential-functions.html">2.2 Logarithmic and exponential functions</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link active" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#logarithm-laws-and-domain" id="toc-logarithm-laws-and-domain" class="nav-link" data-scroll-target="#logarithm-laws-and-domain">Logarithm laws and domain</a></li>
+  <li><a href="#exponential-equations-and-linearisation" id="toc-exponential-equations-and-linearisation" class="nav-link" data-scroll-target="#exponential-equations-and-linearisation">Exponential equations and linearisation</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-2-past-paper-questions" id="toc-verified-paper-2-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970921mj20-q1" id="toc-question-1-970921mj20-q1" class="nav-link" data-scroll-target="#question-1-970921mj20-q1">Question 1 · 9709/21/M/J/20 Q1</a></li>
+  <li><a href="#question-2-970922mj20-q1" id="toc-question-2-970922mj20-q1" class="nav-link" data-scroll-target="#question-2-970922mj20-q1">Question 2 · 9709/22/M/J/20 Q1</a></li>
+  <li><a href="#question-3-970922mj20-q4" id="toc-question-3-970922mj20-q4" class="nav-link" data-scroll-target="#question-3-970922mj20-q4">Question 3 · 9709/22/M/J/20 Q4</a></li>
+  <li><a href="#question-4-970922fm21-q5a" id="toc-question-4-970922fm21-q5a" class="nav-link" data-scroll-target="#question-4-970922fm21-q5a">Question 4 · 9709/22/F/M/21 Q5(a)</a></li>
+  <li><a href="#question-5-970922mj21-q1ab" id="toc-question-5-970922mj21-q1ab" class="nav-link" data-scroll-target="#question-5-970922mj21-q1ab">Question 5 · 9709/22/M/J/21 Q1(a–b)</a></li>
+  <li><a href="#question-6-970921on20-q1" id="toc-question-6-970921on20-q1" class="nav-link" data-scroll-target="#question-6-970921on20-q1">Question 6 · 9709/21/O/N/20 Q1</a></li>
+  <li><a href="#question-7-970922on20-q2" id="toc-question-7-970922on20-q2" class="nav-link" data-scroll-target="#question-7-970922on20-q2">Question 7 · 9709/22/O/N/20 Q2</a></li>
+  <li><a href="#question-8-970921on22-q2" id="toc-question-8-970921on22-q2" class="nav-link" data-scroll-target="#question-8-970921on22-q2">Question 8 · 9709/21/O/N/22 Q2</a></li>
+  </ul></li>
+  <li><a href="#additional-verified-paper-2-questions" id="toc-additional-verified-paper-2-questions" class="nav-link" data-scroll-target="#additional-verified-paper-2-questions">3. Additional verified Paper 2 questions</a>
+  <ul class="collapse">
+  <li><a href="#question-9-970922mj24-q2" id="toc-question-9-970922mj24-q2" class="nav-link" data-scroll-target="#question-9-970922mj24-q2">Question 9 · 9709/22/M/J/24 Q2</a></li>
+  <li><a href="#question-10-970921on24-q1ab" id="toc-question-10-970921on24-q1ab" class="nav-link" data-scroll-target="#question-10-970921on24-q1ab">Question 10 · 9709/21/O/N/24 Q1(a–b)</a></li>
+  <li><a href="#question-11-970921on21-q4a" id="toc-question-11-970921on21-q4a" class="nav-link" data-scroll-target="#question-11-970921on21-q4a">Question 11 · 9709/21/O/N/21 Q4(a)</a></li>
+  </ul></li>
+  <li><a href="#exam-checklist" id="toc-exam-checklist" class="nav-link" data-scroll-target="#exam-checklist">Exam checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-2/algebra.html">Paper 2 · Pure Mathematics 2</a></li><li class="breadcrumb-item"><a href="../paper-2/logarithmic-and-exponential-functions.html">2.2 Logarithmic and exponential functions</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2.2 Logarithmic and exponential functions</h1>
+<p class="subtitle lead">Log laws · exponential equations · linearisation</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.2.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 2.2：使用 laws of logarithms；理解 <span class="math inline">e^x</span> 与 <span class="math inline">\ln x</span> 的 inverse relationship 和图像；用 logarithms 解指数 equations；把 given relationship transform to linear form，并由 gradient/intercept 求未知常数。</p>
+<p>工作区没有独立的 Paper 2 note PDF，因此 worked examples 使用同一套 Logarithmic and exponential note PDF 中的原始图片；真题全部来自本地 Paper 2 原始 PDF，数量不足时不补造题目。</p>
+</div>
+</div>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
+<section id="logarithm-laws-and-domain" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="logarithm-laws-and-domain">Logarithm laws and domain</h3>
+<p><span class="math display">
+\log_a(xy)=\log_a x+\log_a y,
+\quad
+\log_a\left(\frac{x}{y}\right)=\log_a x-\log_a y,
+\quad
+\log_a(x^n)=n\log_a x.
+</span></p>
+<p>每个 logarithm 的 argument 必须为正；解完方程后要检查原式定义域。</p>
+</section>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · shared Logarithmic and exponential note p.26</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/logarithmic-exponential/worked-example-26.webp" class="note-figure img-fluid figure-img" alt="Original extracted logarithmic note worked example on combining logarithms and checking domains"></p>
+<figcaption>Logarithmic laws worked example</figcaption>
+</figure>
+</div>
+</div>
+<section id="exponential-equations-and-linearisation" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="exponential-equations-and-linearisation">Exponential equations and linearisation</h3>
+<p>若 <span class="math inline">a^{f(x)}=b</span>，则</p>
+<p><span class="math display">
+f(x)\ln a=\ln b.
+</span></p>
+<p>若 <span class="math inline">y=kx^n</span>，取 logarithms 得</p>
+<p><span class="math display">
+\ln y=\ln k+n\ln x.
+</span></p>
+<p>所以在 graph of <span class="math inline">\ln y</span> against <span class="math inline">\ln x</span> 中，gradient 是 <span class="math inline">n</span>，intercept 是 <span class="math inline">\ln k</span>。</p>
+</section>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · shared Logarithmic and exponential note p.5</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/logarithmic-exponential/worked-example-05.webp" class="note-figure img-fluid figure-img" alt="Original extracted exponential note worked example on exponential graphs"></p>
+<figcaption>Exponential graph worked example</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · shared Logarithmic and exponential note p.10</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/logarithmic-exponential/worked-example-10.webp" class="note-figure img-fluid figure-img" alt="Original extracted exponential note worked example on a hidden quadratic"></p>
+<figcaption>Hidden quadratic worked example</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · shared Logarithmic and exponential note p.31</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/logarithmic-exponential/worked-example-31.webp" class="note-figure img-fluid figure-img" alt="Original extracted exponential note worked example using logarithms"></p>
+<figcaption>Exponential equation worked example</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · shared Logarithmic and exponential note p.53</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/logarithmic-exponential/worked-example-53.webp" class="note-figure img-fluid figure-img" alt="Original extracted logarithmic note worked example on linearisation"></p>
+<figcaption>Linearisation worked example</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="verified-paper-2-past-paper-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</h2>
+<p>以下题目均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题干只把 PDF 排版规范为 LaTeX，没有改写或编造题目。</p>
+<div id="p2-log-q01" class="question-card">
+<section id="question-1-970921mj20-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970921mj20-q1">Question 1 · 9709/21/M/J/20 Q1</h3>
+<p>Solve the equation</p>
+<p><span class="math display">
+\ln(x+1)-\ln x=2\ln2.
+</span></p>
+<p><strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The domain is <span class="math inline">x&gt;0</span>. Combine the logarithms:</p>
+<p><span class="math display">
+\ln\left(\frac{x+1}{x}\right)=\ln4
+\Longrightarrow
+\frac{x+1}{x}=4.
+</span></p>
+<p>Thus <span class="math inline">x+1=4x</span>, so</p>
+<p><span class="math display">
+\boxed{x=\frac13}.
+</span></p>
+This satisfies <span class="math inline">x&gt;0</span>.
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q01"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-21.pdf</code>, Q1, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q02" class="question-card">
+<section id="question-2-970922mj20-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970922mj20-q1">Question 2 · 9709/22/M/J/20 Q1</h3>
+<p>Given that</p>
+<p><span class="math display">
+2^y=9^{3x},
+</span></p>
+<p>use logarithms to show that <span class="math inline">y=kx</span> and find the value of <span class="math inline">k</span> correct to 3 significant figures. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Take logarithms:</p>
+<p><span class="math display">
+y\ln2=3x\ln9.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+y=\frac{3\ln9}{\ln2}x=kx,
+</span></p>
+<p>and</p>
+<span class="math display">
+\boxed{k=\frac{3\ln9}{\ln2}\approx9.51}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q02"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-22.pdf</code>, Q1, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q03" class="question-card">
+<section id="question-3-970922mj20-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970922mj20-q4">Question 3 · 9709/22/M/J/20 Q4</h3>
+<p>The variables <span class="math inline">x</span> and <span class="math inline">y</span> satisfy the equation <span class="math inline">y=Ax^{-2p}</span>, where <span class="math inline">A</span> and <span class="math inline">p</span> are constants. The graph of <span class="math inline">\ln y</span> against <span class="math inline">\ln x</span> is a straight line passing through the points <span class="math inline">(-0.68,3.02)</span> and <span class="math inline">(1.07,-1.53)</span>, as shown in the diagram.</p>
+<p>Find the values of <span class="math inline">A</span> and <span class="math inline">p</span>. <strong>[5]</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-2/past-paper/2020-mj-9709-22-q4.svg" class="note-figure img-fluid figure-img" alt="Independently extracted vector diagram for 9709/22/M/J/20 Q4"></p>
+<figcaption>9709/22/M/J/20 Q4 linearisation diagram</figcaption>
+</figure>
+</div>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Taking logarithms gives</p>
+<p><span class="math display">
+\ln y=\ln A-2p\ln x.
+</span></p>
+<p>The gradient is</p>
+<p><span class="math display">
+m=\frac{-1.53-3.02}{1.07-(-0.68)}=-\frac{4.55}{1.75}=-2.6.
+</span></p>
+<p>Thus <span class="math inline">-2p=-2.6</span>, so <span class="math inline">p=1.3</span>. Using <span class="math inline">(-0.68,3.02)</span>,</p>
+<p><span class="math display">
+3.02=\ln A+(-2.6)(-0.68)=\ln A+1.768.
+</span></p>
+<p>Hence <span class="math inline">\ln A=1.252</span> and</p>
+<span class="math display">
+\boxed{p=1.30,\qquad A=e^{1.252}\approx3.50}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q03"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-22.pdf</code>, Q4, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q04" class="question-card">
+<section id="question-4-970922fm21-q5a" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970922fm21-q5a">Question 4 · 9709/22/F/M/21 Q5(a)</h3>
+<p>Given that</p>
+<p><span class="math display">
+2\ln(x+1)+\ln x=\ln(x+9),
+</span></p>
+<p>show that</p>
+<p><span class="math display">
+x=\frac9{x+2}.
+</span></p>
+<p><strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The logarithm arguments require <span class="math inline">x&gt;0</span>. Combine the left-hand side:</p>
+<p><span class="math display">
+\ln\left(x(x+1)^2\right)=\ln(x+9)
+\Longrightarrow x(x+1)^2=x+9.
+</span></p>
+<p>Expanding and cancelling <span class="math inline">x</span> gives</p>
+<p><span class="math display">
+x^3+2x^2=9
+\Longrightarrow x^2(x+2)=9.
+</span></p>
+<p>Since <span class="math inline">x&gt;0</span>, divide by <span class="math inline">x^2</span>:</p>
+<span class="math display">
+\boxed{x=\frac9{x+2}}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q04"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_m21_qp_22.pdf</code>, Q5(a), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q05" class="question-card">
+<section id="question-5-970922mj21-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970922mj21-q1ab">Question 5 · 9709/22/M/J/21 Q1(a–b)</h3>
+<ol type="a">
+<li>Solve the equation</li>
+</ol>
+<p><span class="math display">
+\ln(2+x)-\ln x=2\ln3.
+</span></p>
+<ol start="2" type="a">
+<li>Hence solve the equation</li>
+</ol>
+<p><span class="math display">
+\ln(2+\cot y)-\ln(\cot y)=2\ln3
+</span></p>
+<p>for <span class="math inline">0&lt;y&lt;\frac12\pi</span>. Give your answer correct to 4 significant figures. <strong>[3+2]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>The domain is <span class="math inline">x&gt;0</span> and</li>
+</ol>
+<p><span class="math display">
+\frac{x+2}{x}=9
+\Longrightarrow 2=8x
+\Longrightarrow \boxed{x=\frac14}.
+</span></p>
+<ol start="2" type="a">
+<li>Replace <span class="math inline">x</span> by <span class="math inline">\cot y</span>:</li>
+</ol>
+<p><span class="math display">
+\frac{\cot y+2}{\cot y}=9
+\Longrightarrow \cot y=\frac14.
+</span></p>
+<p>In the specified interval,</p>
+<span class="math display">
+\boxed{y=\tan^{-1}4\approx1.326\text{ radians}}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q05"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_22.pdf</code>, Q1(a–b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q06" class="question-card">
+<section id="question-6-970921on20-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970921on20-q1">Question 6 · 9709/21/O/N/20 Q1</h3>
+<p>Given that</p>
+<p><span class="math display">
+\ln(2x+1)-\ln(x-3)=2,
+</span></p>
+<p>find <span class="math inline">x</span> in terms of <span class="math inline">e</span>. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The domain is <span class="math inline">x&gt;3</span>. Combine and exponentiate:</p>
+<p><span class="math display">
+\frac{2x+1}{x-3}=e^2.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+2x+1=e^2x-3e^2
+\Longrightarrow
+x(e^2-2)=1+3e^2.
+</span></p>
+<p>Hence</p>
+<span class="math display">
+\boxed{x=\frac{1+3e^2}{e^2-2}}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q06"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_21.pdf</code>, Q1, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q07" class="question-card">
+<section id="question-7-970922on20-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970922on20-q2">Question 7 · 9709/22/O/N/20 Q2</h3>
+<p>Given that</p>
+<p><span class="math display">
+\frac{2^{3x+2}+8}{2^{3x}-7}=5,
+</span></p>
+<p>find the value of <span class="math inline">2^{3x}</span> and hence, using logarithms, find the value of <span class="math inline">x</span> correct to 4 significant figures. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Let <span class="math inline">t=2^{3x}</span>. Then</p>
+<p><span class="math display">
+\frac{4t+8}{t-7}=5
+\Longrightarrow 4t+8=5t-35
+\Longrightarrow t=43.
+</span></p>
+<p>Thus</p>
+<span class="math display">
+2^{3x}=43
+\Longrightarrow
+x=\frac{\ln43}{3\ln2}
+\approx\boxed{1.808}\quad\text{(4 s.f.)}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q07"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_22.pdf</code>, Q2, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q08" class="question-card">
+<section id="question-8-970921on22-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970921on22-q2">Question 8 · 9709/21/O/N/22 Q2</h3>
+<p>Use logarithms to solve the equation</p>
+<p><span class="math display">
+14e^{-2x}=5^{x+1},
+</span></p>
+<p>giving your answer correct to 3 significant figures. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Taking natural logarithms,</p>
+<p><span class="math display">
+\ln14-2x=(x+1)\ln5.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+x(2+\ln5)=\ln14-\ln5=\ln\frac{14}{5},
+</span></p>
+<p>so</p>
+<span class="math display">
+x=\frac{\ln(14/5)}{2+\ln5}\approx\boxed{0.285}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q08"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_w22_qp_21.pdf</code>, Q2, and matching mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="additional-verified-paper-2-questions" class="level2">
+<h2 class="anchored" data-anchor-id="additional-verified-paper-2-questions">3. Additional verified Paper 2 questions</h2>
+<p>以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。</p>
+<div id="p2-log-q10" class="question-card">
+<section id="question-9-970922mj24-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970922mj24-q2">Question 9 · 9709/22/M/J/24 Q2</h3>
+<p>Use logarithms to solve the equation</p>
+<p><span class="math display">
+6^{2x-1}=5e^{3x+2}.
+</span></p>
+<p>Give your answer correct to 4 significant figures. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Take natural logarithms:</p>
+<p><span class="math display">
+(2x-1)\ln6=\ln5+3x+2.
+</span></p>
+<p>Rearrange as a linear equation in <span class="math inline">x</span>:</p>
+<p><span class="math display">
+x(2\ln6-3)=\ln5+\ln6+2.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+x=\frac{\ln5+\ln6+2}{2\ln6-3}=9.256250\ldots,
+</span></p>
+<p>and hence</p>
+<span class="math display">
+\boxed{x=9.256}\qquad\text{(4 s.f.)}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q10"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202406-mathematics-p22.pdf</code>, Q2, and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q11" class="question-card">
+<section id="question-10-970921on24-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970921on24-q1ab">Question 10 · 9709/21/O/N/24 Q1(a–b)</h3>
+<p>The variables <span class="math inline">x</span> and <span class="math inline">y</span> satisfy the equation</p>
+<p><span class="math display">
+a^{2y}=e^{3x+k},
+</span></p>
+<p>where <span class="math inline">a</span> and <span class="math inline">k</span> are constants. The graph of <span class="math inline">y</span> against <span class="math inline">x</span> is a straight line.</p>
+<ol type="a">
+<li><p>Use logarithms to show that the gradient of the straight line is <span class="math inline">\dfrac{3}{2\ln a}</span>.</p></li>
+<li><p>Given that the straight line passes through the points <span class="math inline">(0.4,0.95)</span> and <span class="math inline">(3.3,3.80)</span>, find the values of <span class="math inline">a</span> and <span class="math inline">k</span>. <strong>[1+4]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>Take logarithms:</li>
+</ol>
+<p><span class="math display">
+2y\ln a=3x+k
+\quad\Longrightarrow\quad
+y=\frac{3}{2\ln a}x+\frac{k}{2\ln a}.
+</span></p>
+<p>Therefore the gradient is</p>
+<p><span class="math display">
+\boxed{\frac{3}{2\ln a}}.
+</span></p>
+<ol start="2" type="a">
+<li>The gradient from the two points is</li>
+</ol>
+<p><span class="math display">
+m=\frac{3.80-0.95}{3.3-0.4}=\frac{2.85}{2.9}.
+</span></p>
+<p>Equating this to the result in part (a),</p>
+<p><span class="math display">
+\frac3{2\ln a}=\frac{2.85}{2.9}
+\quad\Longrightarrow\quad
+\ln a=\frac{29}{19}.
+</span></p>
+<p>Thus <span class="math inline">a=e^{29/19}=4.60119\ldots\approx4.60</span>. Using <span class="math inline">(0.4,0.95)</span>,</p>
+<p><span class="math display">
+0.95=\frac{2.85}{2.9}(0.4)+\frac{k}{2\ln a},
+</span></p>
+<p>which gives <span class="math inline">k=1.70</span>. Hence</p>
+<span class="math display">
+\boxed{a=4.60,\qquad k=1.70}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q11"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202410-mathematics-p21.pdf</code>, Q1(a–b), and matching mark scheme.
+</div>
+</section>
+</div>
+<div id="p2-log-q09" class="question-card">
+<section id="question-11-970921on21-q4a" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970921on21-q4a">Question 11 · 9709/21/O/N/21 Q4(a)</h3>
+<p>The curve with equation</p>
+<p><span class="math display">
+y=xe^{2x}+5e^{-x}
+</span></p>
+<p>has a minimum point <span class="math inline">M</span>.</p>
+<ol type="a">
+<li>Show that the <span class="math inline">x</span>-coordinate of <span class="math inline">M</span> satisfies the equation</li>
+</ol>
+<p><span class="math display">
+x=\frac13\ln5-\frac13\ln(1+2x).
+</span></p>
+<p><strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At a stationary point,</p>
+<p><span class="math display">
+\frac{dy}{dx}=e^{2x}(1+2x)-5e^{-x}=0.
+</span></p>
+<p>Hence</p>
+<p><span class="math display">
+e^{3x}(1+2x)=5.
+</span></p>
+<p>Taking logarithms,</p>
+<p><span class="math display">
+3x+\ln(1+2x)=\ln5,
+</span></p>
+<p>which rearranges to</p>
+<span class="math display">
+\boxed{x=\frac13\ln5-\frac13\ln(1+2x)}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p2-log-q09"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_w21_qp_21.pdf</code>, Q4(a), and matching mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="exam-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="exam-checklist">Exam checklist</h2>
+<div class="study-card">
+<ol type="1">
+<li>先写 logarithm 的 domain，再合并 logarithms。</li>
+<li>指数方程取 logarithm 后，要把未知数的项完整收集。</li>
+<li>Linearisation 中 gradient 对应指数，intercept 对应常数的 logarithm。</li>
+<li>解完后代回原式，排除 logarithm argument 非正的解。</li>
+</ol>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-2/algebra.html" class="pagination-link" aria-label="2.1 Algebra">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.1 Algebra</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-2/trigonometry.html" class="pagination-link" aria-label="2.3 Trigonometry">
+        <span class="nav-page-text">2.3 Trigonometry</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

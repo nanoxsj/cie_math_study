@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.1.">
+
+<title>1.1 Quadratics – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-1/functions.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">Paper 1 · Pure Mathematics 1</a></li><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">1.1 Quadratics</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link active" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#completing-the-square" id="toc-completing-the-square" class="nav-link" data-scroll-target="#completing-the-square">Completing the square</a></li>
+  <li><a href="#discriminant" id="toc-discriminant" class="nav-link" data-scroll-target="#discriminant">Discriminant</a></li>
+  <li><a href="#solving-equations-and-inequalities" id="toc-solving-equations-and-inequalities" class="nav-link" data-scroll-target="#solving-equations-and-inequalities">Solving equations and inequalities</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-1-past-paper-questions" id="toc-verified-paper-1-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-1-past-paper-questions">2. Verified Paper 1 past-paper questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970913mj20-q1" id="toc-question-1-970913mj20-q1" class="nav-link" data-scroll-target="#question-1-970913mj20-q1">Question 1 · 9709/13/M/J/20 Q1</a></li>
+  <li><a href="#question-2-970912mj20-q6ab" id="toc-question-2-970912mj20-q6ab" class="nav-link" data-scroll-target="#question-2-970912mj20-q6ab">Question 2 · 9709/12/M/J/20 Q6(a–b)</a></li>
+  <li><a href="#question-3-970913on20-q1ab" id="toc-question-3-970913on20-q1ab" class="nav-link" data-scroll-target="#question-3-970913on20-q1ab">Question 3 · 9709/13/O/N/20 Q1(a–b)</a></li>
+  <li><a href="#question-4-970912on20-q3" id="toc-question-4-970912on20-q3" class="nav-link" data-scroll-target="#question-4-970912on20-q3">Question 4 · 9709/12/O/N/20 Q3</a></li>
+  <li><a href="#question-5-970912fm21-q2" id="toc-question-5-970912fm21-q2" class="nav-link" data-scroll-target="#question-5-970912fm21-q2">Question 5 · 9709/12/F/M/21 Q2</a></li>
+  <li><a href="#question-6-970912fm21-q4" id="toc-question-6-970912fm21-q4" class="nav-link" data-scroll-target="#question-6-970912fm21-q4">Question 6 · 9709/12/F/M/21 Q4</a></li>
+  <li><a href="#question-7-970913mj21-q3" id="toc-question-7-970913mj21-q3" class="nav-link" data-scroll-target="#question-7-970913mj21-q3">Question 7 · 9709/13/M/J/21 Q3</a></li>
+  <li><a href="#question-8-970911mj21-q6" id="toc-question-8-970911mj21-q6" class="nav-link" data-scroll-target="#question-8-970911mj21-q6">Question 8 · 9709/11/M/J/21 Q6</a></li>
+  <li><a href="#question-9-970912fm22-q2" id="toc-question-9-970912fm22-q2" class="nav-link" data-scroll-target="#question-9-970912fm22-q2">Question 9 · 9709/12/F/M/22 Q2</a></li>
+  <li><a href="#question-10-970912fm22-q5ab" id="toc-question-10-970912fm22-q5ab" class="nav-link" data-scroll-target="#question-10-970912fm22-q5ab">Question 10 · 9709/12/F/M/22 Q5(a–b)</a></li>
+  <li><a href="#question-11-970912on22-q3ab" id="toc-question-11-970912on22-q3ab" class="nav-link" data-scroll-target="#question-11-970912on22-q3ab">Question 11 · 9709/12/O/N/22 Q3(a–b)</a></li>
+  <li><a href="#question-12-970911mj22-q1ab" id="toc-question-12-970911mj22-q1ab" class="nav-link" data-scroll-target="#question-12-970911mj22-q1ab">Question 12 · 9709/11/M/J/22 Q1(a–b)</a></li>
+  <li><a href="#question-13-970912fm23-q1" id="toc-question-13-970912fm23-q1" class="nav-link" data-scroll-target="#question-13-970912fm23-q1">Question 13 · 9709/12/F/M/23 Q1</a></li>
+  <li><a href="#question-14-970912fm23-q4" id="toc-question-14-970912fm23-q4" class="nav-link" data-scroll-target="#question-14-970912fm23-q4">Question 14 · 9709/12/F/M/23 Q4</a></li>
+  <li><a href="#question-15-970912mj23-q3ab" id="toc-question-15-970912mj23-q3ab" class="nav-link" data-scroll-target="#question-15-970912mj23-q3ab">Question 15 · 9709/12/M/J/23 Q3(a–b)</a></li>
+  <li><a href="#question-16-970912on23-q6ac" id="toc-question-16-970912on23-q6ac" class="nav-link" data-scroll-target="#question-16-970912on23-q6ac">Question 16 · 9709/12/O/N/23 Q6(a–c)</a></li>
+  <li><a href="#question-17-970911mj24-q1ab" id="toc-question-17-970911mj24-q1ab" class="nav-link" data-scroll-target="#question-17-970911mj24-q1ab">Question 17 · 9709/11/M/J/24 Q1(a–b)</a></li>
+  <li><a href="#question-18-970913mj24-q11" id="toc-question-18-970913mj24-q11" class="nav-link" data-scroll-target="#question-18-970913mj24-q11">Question 18 · 9709/13/M/J/24 Q11</a></li>
+  <li><a href="#question-19-970911on24-q11a" id="toc-question-19-970911on24-q11a" class="nav-link" data-scroll-target="#question-19-970911on24-q11a">Question 19 · 9709/11/O/N/24 Q11(a)</a></li>
+  <li><a href="#question-20-970912on24-q7a" id="toc-question-20-970912on24-q7a" class="nav-link" data-scroll-target="#question-20-970912on24-q7a">Question 20 · 9709/12/O/N/24 Q7(a)</a></li>
+  </ul></li>
+  <li><a href="#quick-checklist" id="toc-quick-checklist" class="nav-link" data-scroll-target="#quick-checklist">3. Quick checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">Paper 1 · Pure Mathematics 1</a></li><li class="breadcrumb-item"><a href="../paper-1/quadratics.html">1.1 Quadratics</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">1.1 Quadratics</h1>
+<p class="subtitle lead">Completing the square · discriminant · equations and inequalities · simultaneous equations</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 1 Pure Mathematics 1, syllabus 1.1.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 1.1 Quadratics：</p>
+<ul>
+<li>对 (ax^2+bx+c) completing the square，并使用 completed-square form；</li>
+<li>求 quadratic polynomial 的 discriminant，并判断 real roots、distinct roots 或 repeated root；</li>
+<li>解 quadratic equations 与 quadratic inequalities；</li>
+<li>用 substitution 解一个 linear equation 与一个 quadratic equation 组成的 simultaneous equations；</li>
+<li>识别并解在某个 function of (x) 中为 quadratic 的方程。</li>
+</ul>
+<p>下列 20 组题目均来自工作区保存的 Paper 1 原始 past-paper PDF。题干只把 PDF 排版符号整理为 LaTeX，没有改写题目或补造题目；答案按对应 mark scheme 的得分步骤展开。</p>
+</div>
+</div>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
+<section id="completing-the-square" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="completing-the-square">Completing the square</h3>
+<p>对 (ax^2+bx+c)，先提出 (a)：</p>
+<p><span class="math display">
+ax^2+bx+c=a\left(x^2+\frac ba x\right)+c
+=a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}.
+</span></p>
+<p>因此顶点为</p>
+<p><span class="math display">
+\left(-\frac{b}{2a},\ c-\frac{b^2}{4a}\right).
+</span></p>
+<p>当 (a&gt;0) 时是 minimum；当 (a&lt;0) 时是 maximum。写出平方形式后，最值和 range 通常可以直接读出。</p>
+</section>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · 原始笔记单卡片</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/algebra-functions/worked-example-47.webp" class="note-figure img-fluid figure-img" alt="Original extracted worked example showing completing the square for a quadratic model"></p>
+<figcaption>Completing the square in a quadratic model</figcaption>
+</figure>
+</div>
+<p>这张笔记例题连接本节的 completing the square、vertex 和 maximum value：先把二次式写成 (-a(x-b)^2+c)，再由平方项的符号判断最大值。</p>
+</div>
+<section id="discriminant" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="discriminant">Discriminant</h3>
+<p>对</p>
+<p><span class="math display">ax^2+bx+c=0,</span></p>
+<p>定义</p>
+<p><span class="math display">\Delta=b^2-4ac.</span></p>
+<p>当 (a,b,cR) 时：</p>
+<p><span class="math display">
+\Delta&gt;0\Rightarrow\text{two distinct real roots},\qquad
+\Delta=0\Rightarrow\text{one repeated real root},\qquad
+\Delta&lt;0\Rightarrow\text{no real roots}.
+</span></p>
+<p>若题目问 line 与 quadratic curve 有 two distinct intersections，先令两条曲线的 (y) 相等，整理成关于 (x) 的 quadratic，再使用 (Delta&gt;0)。问 tangent 则使用 (Delta=0)。</p>
+</section>
+<section id="solving-equations-and-inequalities" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="solving-equations-and-inequalities">Solving equations and inequalities</h3>
+<p>Quadratic equation 可以 factorise、complete the square 或使用 quadratic formula。Quadratic inequality 要先找 roots，再用 leading coefficient 判断区间符号；如果题目给出 parameter，边界通常来自 (Delta=0)。</p>
+<p>对于 simultaneous equations，若一个方程是 linear，先将它写成 (y=) 或 (x=)，代入另一个 equation，得到一个 quadratic；解出后必须代回 linear equation 求另一变量。</p>
+<p>若方程在 (x<sup>3)、(x</sup>2)、((2x-3)^2) 等整体中呈二次形式，令该整体为 (u)，先解 (u) 的 quadratic，再回代并检查原变量的定义域。</p>
+</section>
+</section>
+<section id="verified-paper-1-past-paper-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-1-past-paper-questions">2. Verified Paper 1 past-paper questions</h2>
+<div id="p1-quad-q01" class="question-card">
+<section id="question-1-970913mj20-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970913mj20-q1">Question 1 · 9709/13/M/J/20 Q1</h3>
+<p>Find the set of values of (m) for which the line with equation (y=mx+1) and the curve with equation</p>
+<p><span class="math display">y=3x^2+2x+4</span></p>
+<p>intersect at two distinct points. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At an intersection,</p>
+<p><span class="math display">3x^2+2x+4=mx+1,</span></p>
+<p>so</p>
+<p><span class="math display">3x^2+(2-m)x+3=0.</span></p>
+<p>For two distinct intersection points, this quadratic must have two distinct real roots:</p>
+<p><span class="math display">
+(2-m)^2-4(3)(3)&gt;0.
+</span></p>
+<p>Hence</p>
+<p><span class="math display">
+(2-m)^2&gt;36
+\Longleftrightarrow |2-m|&gt;6.
+</span></p>
+<p>Therefore</p>
+<span class="math display">\boxed{m&lt;-4\text{ or }m&gt;8}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q01"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-13.pdf</code>, Q1, and matching <code>9709-s20-ms-13.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q02" class="question-card">
+<section id="question-2-970912mj20-q6ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970912mj20-q6ab">Question 2 · 9709/12/M/J/20 Q6(a–b)</h3>
+<p>The equation of a curve is (y=2x^2+kx+k-1), where (k) is a constant.</p>
+<ol type="a">
+<li>Given that the line (y=2x+3) is a tangent to the curve, find the value of (k). <strong>[3]</strong></li>
+</ol>
+<p>It is now given that (k=2).</p>
+<ol start="2" type="a">
+<li>Express the equation of the curve in the form (y=2(x+a)^2+b), where (a) and (b) are constants, and hence state the coordinates of the vertex of the curve. <strong>[3]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>At an intersection,</li>
+</ol>
+<p><span class="math display">2x^2+kx+k-1=2x+3,</span></p>
+<p>so</p>
+<p><span class="math display">2x^2+(k-2)x+(k-4)=0.
+</span></p>
+<p>Tangency means a repeated root, so the discriminant is zero:</p>
+<p><span class="math display">
+(k-2)^2-4(2)(k-4)=0.
+</span></p>
+<p>Thus</p>
+<p><span class="math display">k^2-12k+36=(k-6)^2=0,
+</span></p>
+<p>and (oxed{k=6}).</p>
+<ol start="2" type="a">
+<li>When (k=2),</li>
+</ol>
+<p><span class="math display">y=2x^2+2x+1=2\left(x^2+x+\frac14\right)=2\left(x+\frac12\right)^2.</span></p>
+<p>Therefore (a=), (b=0), and the vertex is</p>
+<span class="math display">\boxed{\left(-\frac12,0\right)}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q02"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-12.pdf</code>, Q6(a–b), and matching <code>9709-s20-ms-12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q03" class="question-card">
+<section id="question-3-970913on20-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970913on20-q1ab">Question 3 · 9709/13/O/N/20 Q1(a–b)</h3>
+<ol type="a">
+<li><p>Express (x^2+6x+5) in the form ((x+a)^2+b), where (a) and (b) are constants. <strong>[2]</strong></p></li>
+<li><p>The curve with equation (y=x^2) is transformed to the curve with equation (y=x^2+6x+5). Describe fully the transformation(s) involved. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+x^2+6x+5=x^2+6x+9-4=(x+3)^2-4.
+</span></p>
+<p>So (a=3), (b=-4). The graph of (y=x^2) is translated 3 units to the left and 4 units down:</p>
+<span class="math display">\boxed{\text{translation by }\begin{pmatrix}-3\\-4\end{pmatrix}}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q03"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_13.pdf</code>, Q1(a–b), and matching <code>9709_w20_ms_13.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q04" class="question-card">
+<section id="question-4-970912on20-q3" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970912on20-q3">Question 4 · 9709/12/O/N/20 Q3</h3>
+<p>The equation of a curve is (y=2x^2+m(2x+1)), where (m) is a constant, and the equation of a line is (y=6x+4).</p>
+<p>Show that, for all values of (m), the line intersects the curve at two distinct points. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Equating the two expressions for (y),</p>
+<p><span class="math display">2x^2+m(2x+1)=6x+4,</span></p>
+<p>which gives</p>
+<p><span class="math display">2x^2+(2m-6)x+(m-4)=0.</span></p>
+<p>Its discriminant is</p>
+<p><span class="math display">
+\begin{aligned}
+\Delta&amp;=(2m-6)^2-4(2)(m-4)\\
+&amp;=4m^2-32m+68\\
+&amp;=4\bigl((m-4)^2+1\bigr).
+\end{aligned}
+</span></p>
+Since ((m-4)^2+1&gt;0) for every real (m), (Delta&gt;0) for every real (m). Hence the quadratic has two distinct real roots, so the line intersects the curve at two distinct points for all (m).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q04"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_12.pdf</code>, Q3, and matching <code>9709_w20_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q05" class="question-card">
+<section id="question-5-970912fm21-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970912fm21-q2">Question 5 · 9709/12/F/M/21 Q2</h3>
+<p>By using a suitable substitution, solve the equation</p>
+<p><span class="math display">
+(2x-3)^2-\frac{4}{(2x-3)^2}-3=0.
+</span></p>
+<p><strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Let</p>
+<p><span class="math display">u=(2x-3)^2.</span></p>
+<p>Then (u&gt;0), and the equation becomes</p>
+<p><span class="math display">u-\frac4u-3=0.</span></p>
+<p>Multiplying by (u),</p>
+<p><span class="math display">u^2-3u-4=0=(u-4)(u+1).</span></p>
+<p>Because (u&gt;0), reject (u=-1), so (u=4). Therefore</p>
+<p><span class="math display">
+(2x-3)^2=4
+\Longrightarrow 2x-3=\pm2.
+</span></p>
+<p>Hence</p>
+<span class="math display">\boxed{x=\frac12\text{ or }x=\frac52}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q05"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_m21_qp_12.pdf</code>, Q2, and matching <code>9709_m21_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q06" class="question-card">
+<section id="question-6-970912fm21-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970912fm21-q4">Question 6 · 9709/12/F/M/21 Q4</h3>
+<p>A line has equation (y=3x+k) and a curve has equation (y=x^2+kx+6), where (k) is a constant.</p>
+<p>Find the set of values of (k) for which the line and curve have two distinct points of intersection. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At an intersection,</p>
+<p><span class="math display">x^2+kx+6=3x+k,</span></p>
+<p>so</p>
+<p><span class="math display">x^2+(k-3)x+(6-k)=0.</span></p>
+<p>For two distinct intersections,</p>
+<p><span class="math display">
+\begin{aligned}
+\Delta&amp;=(k-3)^2-4(6-k)&gt;0\\
+&amp;=k^2-2k-15&gt;0\\
+&amp;=(k-5)(k+3)&gt;0.
+\end{aligned}
+</span></p>
+<p>Therefore</p>
+<span class="math display">\boxed{k&lt;-3\text{ or }k&gt;5}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q06"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_m21_qp_12.pdf</code>, Q4, and matching <code>9709_m21_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q07" class="question-card">
+<section id="question-7-970913mj21-q3" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970913mj21-q3">Question 7 · 9709/13/M/J/21 Q3</h3>
+<p>A line with equation (y=mx-6) is a tangent to the curve with equation (y=x^2-4x+3).</p>
+<p>Find the possible values of the constant (m), and the corresponding coordinates of the points at which the line touches the curve. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At a point of contact,</p>
+<p><span class="math display">x^2-4x+3=mx-6,</span></p>
+<p>so</p>
+<p><span class="math display">x^2-(m+4)x+9=0.</span></p>
+<p>For tangency,</p>
+<p><span class="math display">
+(m+4)^2-4(1)(9)=0.
+</span></p>
+<p>Thus (m+4=), giving</p>
+<p><span class="math display">m=2\quad\text{or}\quad m=-10.
+</span></p>
+<p>The repeated root is (x=(m+4)/2). For (m=2), (x=3) and (y=2(3)-6=0), giving ((3,0)). For (m=-10), (x=-3) and (y=-10(-3)-6=24), giving ((-3,24)).</p>
+<span class="math display">\boxed{(m,x,y)=(2,3,0)\text{ or }(-10,-3,24)}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q07"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_13.pdf</code>, Q3, and matching <code>9709_s21_ms_13.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q08" class="question-card">
+<section id="question-8-970911mj21-q6" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970911mj21-q6">Question 8 · 9709/11/M/J/21 Q6</h3>
+<p>The equation of a curve is (y=(2k-3)x^2-kx-(k-2)), where (k) is a constant. The line (y=3x-4) is a tangent to the curve.</p>
+<p>Find the value of (k). <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Equating the curve and the line,</p>
+<p><span class="math display">
+(2k-3)x^2-kx-(k-2)=3x-4,
+</span></p>
+<p>so</p>
+<p><span class="math display">
+(2k-3)x^2-(k+3)x-(k-6)=0.
+</span></p>
+<p>Tangency requires the discriminant to be zero:</p>
+<p><span class="math display">
+(k+3)^2+4(2k-3)(k-6)=0.
+</span></p>
+<p>Expanding,</p>
+<p><span class="math display">k^2+6k+9+8k^2-60k+72=0,</span></p>
+<p>so</p>
+<p><span class="math display">9k^2-54k+81=9(k-3)^2=0.
+</span></p>
+Therefore (oxed{k=3}).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q08"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_11.pdf</code>, Q6, and matching <code>9709_s21_ms_11.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q09" class="question-card">
+<section id="question-9-970912fm22-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970912fm22-q2">Question 9 · 9709/12/F/M/22 Q2</h3>
+<p>A curve has equation (y=x^2+2cx+4) and a straight line has equation (y=4x+c), where (c) is a constant.</p>
+<p>Find the set of values of (c) for which the curve and line intersect at two distinct points. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Equating the two equations,</p>
+<p><span class="math display">x^2+2cx+4=4x+c,</span></p>
+<p>so</p>
+<p><span class="math display">x^2+(2c-4)x+(4-c)=0.</span></p>
+<p>For two distinct intersections,</p>
+<p><span class="math display">
+\begin{aligned}
+\Delta&amp;=(2c-4)^2-4(4-c)&gt;0\\
+&amp;=4c^2-12c\\
+&amp;=4c(c-3)&gt;0.
+\end{aligned}
+</span></p>
+<p>Hence</p>
+<span class="math display">\boxed{c&lt;0\text{ or }c&gt;3}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q09"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_12.pdf</code>, Q2, and matching <code>9709_m22_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q10" class="question-card">
+<section id="question-10-970912fm22-q5ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970912fm22-q5ab">Question 10 · 9709/12/F/M/22 Q5(a–b)</h3>
+<ol type="a">
+<li>Express (2x^2-8x+14) in the form (2(x-a)^2+b). <strong>[2]</strong></li>
+</ol>
+<p>The functions (f) and (g) are defined by (f(x)=x^2) and (g(x)=2x^2-8x+14), for (xR).</p>
+<ol start="2" type="a">
+<li>Describe fully a sequence of transformations that maps the graph of (y=f(x)) onto the graph of (y=g(x)), making clear the order in which the transformations are applied. <strong>[4]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+2x^2-8x+14=2(x^2-4x+4)+6=2(x-2)^2+6.
+</span></p>
+<p>So (a=2), (b=6).</p>
+<ol start="2" type="a">
+<li>Starting from (y=x^2), first apply a stretch parallel to the (y)-axis with scale factor 2:</li>
+</ol>
+<p><span class="math display">y=2x^2.
+</span></p>
+<p>Then translate 2 units to the right and 6 units upwards:</p>
+<p><span class="math display">y=2(x-2)^2+6.
+</span></p>
+Thus the required sequence is (oxed{2,(2,6)}).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q10"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_12.pdf</code>, Q5(a–b), and matching <code>9709_m22_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q11" class="question-card">
+<section id="question-11-970912on22-q3ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970912on22-q3ab">Question 11 · 9709/12/O/N/22 Q3(a–b)</h3>
+<ol type="a">
+<li><p>Find the set of values of (k) for which the equation (8x^2+kx+2=0) has no real roots. <strong>[2]</strong></p></li>
+<li><p>Solve the equation (8^2+2=0) for (0<sup></sup>). <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>No real roots means (Delta&lt;0):</li>
+</ol>
+<p><span class="math display">k^2-4(8)(2)&lt;0\Longleftrightarrow k^2-64&lt;0.</span></p>
+<p>Therefore (oxed{-8&lt;k&lt;8}).</p>
+<ol start="2" type="a">
+<li>Let (u=). Then</li>
+</ol>
+<p><span class="math display">8u^2-10u+2=0\Longleftrightarrow 4u^2-5u+1=0,</span></p>
+<p>so</p>
+<p><span class="math display">
+(4u-1)(u-1)=0.
+</span></p>
+<p>Hence (=) or (). In the stated interval,</p>
+<p><span class="math display">\theta=\cos^{-1}\left(\frac14\right)=75.5^\circ\quad\text{or}\quad\theta=0^\circ.
+</span></p>
+Thus (oxed{<sup>,&nbsp;75.5</sup>}) (to 1 decimal place for the non-exact angle).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q11"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_w22_qp_12.pdf</code>, Q3(a–b), and matching <code>9709_w22_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q12" class="question-card">
+<section id="question-12-970911mj22-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-12-970911mj22-q1ab">Question 12 · 9709/11/M/J/22 Q1(a–b)</h3>
+<ol type="a">
+<li><p>Express (x^2-8x+11) in the form ((x+p)^2+q), where (p) and (q) are constants. <strong>[2]</strong></p></li>
+<li><p>Hence find the exact solutions of the equation (x^2-8x+11=1). <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">x^2-8x+11=x^2-8x+16-5=(x-4)^2-5.</span></p>
+<p>Thus (p=-4), (q=-5).</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+(x-4)^2-5=1
+\Longrightarrow (x-4)^2=6.
+</span></p>
+<p>Therefore</p>
+<span class="math display">\boxed{x=4\pm\sqrt6}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q12"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_s22_qp_11.pdf</code>, Q1(a–b), and matching <code>9709_s22_ms_11.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q13" class="question-card">
+<section id="question-13-970912fm23-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-13-970912fm23-q1">Question 13 · 9709/12/F/M/23 Q1</h3>
+<p>A line has equation (y=3x-2k) and a curve has equation (y=x^2-kx+2), where (k) is a constant.</p>
+<p>Show that the line and the curve meet for all values of (k). <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At an intersection,</p>
+<p><span class="math display">x^2-kx+2=3x-2k,</span></p>
+<p>so</p>
+<p><span class="math display">x^2-(k+3)x+(2+2k)=0.</span></p>
+<p>Its discriminant is</p>
+<p><span class="math display">
+\begin{aligned}
+\Delta&amp;=(k+3)^2-4(2+2k)\\
+&amp;=k^2-2k+1\\
+&amp;=(k-1)^2\ge0.
+\end{aligned}
+</span></p>
+Thus there are real values of (x) for every real (k), so the line and curve meet for all values of (k). When (k=1), (Delta=0) and the intersection is a repeated point; for all other (k), (Delta&gt;0).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q13"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_m23_qp_12.pdf</code>, Q1, and matching <code>9709_m23_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q14" class="question-card">
+<section id="question-14-970912fm23-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-14-970912fm23-q4">Question 14 · 9709/12/F/M/23 Q4</h3>
+<p>Solve the equation</p>
+<p><span class="math display">8x^6+215x^3-27=0.</span></p>
+<p><strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Let (u=x^3). Then</p>
+<p><span class="math display">8u^2+215u-27=0.</span></p>
+<p>The discriminant is (215<sup>2+4(8)(27)=217</sup>2), so</p>
+<p><span class="math display">
+u=\frac{-215\pm217}{16}.
+</span></p>
+<p>Hence (u=) or (u=-27). Returning to (x),</p>
+<p><span class="math display">x^3=\frac18\Longrightarrow x=\frac12,
+\qquad x^3=-27\Longrightarrow x=-3.
+</span></p>
+Therefore (oxed{x=x=-3}).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q14"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_m23_qp_12.pdf</code>, Q4, and matching <code>9709_m23_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q15" class="question-card">
+<section id="question-15-970912mj23-q3ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-15-970912mj23-q3ab">Question 15 · 9709/12/M/J/23 Q3(a–b)</h3>
+<ol type="a">
+<li><p>Express (4x^2-24x+p) in the form (a(x+b)^2+c), where (a) and (b) are integers and (c) is to be given in terms of the constant (p). <strong>[2]</strong></p></li>
+<li><p>Hence or otherwise find the set of values of (p) for which the equation (4x^2-24x+p=0) has no real roots. <strong>[1]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+4x^2-24x+p=4(x^2-6x+9)+p-36=4(x-3)^2+p-36.
+</span></p>
+<p>Thus (a=4), (b=-3), (c=p-36).</p>
+<ol start="2" type="a">
+<li>Since (4(x-3)^2), the minimum value of the quadratic is (p-36). For no real roots, this minimum must be positive:</li>
+</ol>
+<p><span class="math display">p-36&gt;0.
+</span></p>
+Therefore (oxed{p&gt;36}).
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q15"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_s23_qp_12.pdf</code>, Q3(a–b), and matching <code>9709_s23_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q16" class="question-card">
+<section id="question-16-970912on23-q6ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-16-970912on23-q6ac">Question 16 · 9709/12/O/N/23 Q6(a–c)</h3>
+<p>The equation of a curve is (y=x^2-8x+5).</p>
+<ol type="a">
+<li>Find the coordinates of the minimum point of the curve. <strong>[2]</strong></li>
+</ol>
+<p>The curve is stretched by a factor of 2 parallel to the (y)-axis and then translated by</p>
+<p><span class="math display">\begin{pmatrix}4\\1\end{pmatrix}.</span></p>
+<ol start="2" type="a">
+<li><p>Find the coordinates of the minimum point of the transformed curve. <strong>[2]</strong></p></li>
+<li><p>Find the equation of the transformed curve. Give the answer in the form (y=ax^2+bx+c), where (a), (b) and (c) are integers to be found. <strong>[4]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">y=x^2-8x+5=(x-4)^2-11,</span></p>
+<p>so the minimum point is (oxed{(4,-11)}).</p>
+<ol start="2" type="a">
+<li>A vertical stretch by factor 2 sends the minimum value (-11) to (-22). The subsequent translation by ((4,1)) sends the vertex ((4,-22)) to</li>
+</ol>
+<p><span class="math display">\boxed{(8,-21)}.</span></p>
+<ol start="3" type="a">
+<li>After the vertical stretch,</li>
+</ol>
+<p><span class="math display">y=2(x-4)^2-22.
+</span></p>
+<p>Translating by ((4,1)) replaces (x) by (x-4) and adds 1 to (y):</p>
+<p><span class="math display">
+y=2((x-4)-4)^2-22+1=2(x-8)^2-21.
+</span></p>
+<p>Expanding,</p>
+<span class="math display">\boxed{y=2x^2-32x+107}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q16"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2023/2023/9709_w23_qp_12.pdf</code>, Q6(a–c), and matching <code>9709_w23_ms_12.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q17" class="question-card">
+<section id="question-17-970911mj24-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-17-970911mj24-q1ab">Question 17 · 9709/11/M/J/24 Q1(a–b)</h3>
+<ol type="a">
+<li><p>Express (3y^2-12y-15) in the form (3(y+a)^2+b), where (a) and (b) are constants. <strong>[2]</strong></p></li>
+<li><p>Hence find the exact solutions of the equation (3x<sup>4-12x</sup>2-15=0). <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+3y^2-12y-15=3(y^2-4y-5)=3\bigl((y-2)^2-9\bigr),
+</span></p>
+<p>so</p>
+<p><span class="math display">\boxed{3y^2-12y-15=3(y-2)^2-27}.
+</span></p>
+<p>Thus (a=-2), (b=-27).</p>
+<ol start="2" type="a">
+<li>Put (y=x^2) in the completed-square result:</li>
+</ol>
+<p><span class="math display">
+3(x^2-2)^2-27=0
+\Longrightarrow (x^2-2)^2=9.
+</span></p>
+<p>Therefore (x^2-2=). This gives (x^2=5) or (x^2=-1). Only the first gives real solutions, so</p>
+<span class="math display">\boxed{x=\pm\sqrt5}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q17"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202406-mathematics-p11.pdf</code>, Q1(a–b), and matching <code>ms-202406-mathematics-p11.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q18" class="question-card">
+<section id="question-18-970913mj24-q11" class="level3">
+<h3 class="anchored" data-anchor-id="question-18-970913mj24-q11">Question 18 · 9709/13/M/J/24 Q11</h3>
+<p>The function (f) is defined by</p>
+<p><span class="math display">f(x)=10+6x-x^2\quad\text{for }x\in\mathbb R.</span></p>
+<p>By completing the square, find the range of (f). <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+f(x)=10+6x-x^2=-(x^2-6x-10)
+=-(x-3)^2+19.
+</span></p>
+<p>Since (-(x-3)^2), the greatest value of (f) is 19, attained at (x=3). As (x), (f(x)-). Hence</p>
+<span class="math display">\boxed{\text{range of }f=(-\infty,19]}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q18"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202406-mathematics-p13.pdf</code>, Q11, and matching <code>ms-202406-mathematics-p13.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q19" class="question-card">
+<section id="question-19-970911on24-q11a" class="level3">
+<h3 class="anchored" data-anchor-id="question-19-970911on24-q11a">Question 19 · 9709/11/O/N/24 Q11(a)</h3>
+<p>The function (f) is defined by</p>
+<p><span class="math display">f(x)=3+6x-2x^2\quad\text{for }x\in\mathbb R.</span></p>
+<p>Express (f(x)) in the form (a-b(x-c)^2), where (a), (b) and (c) are constants, and state the range of (f). <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+f(x)=3+6x-2x^2=-2(x^2-3x)+3
+</span></p>
+<p><span class="math display">
+=-2\left((x-\tfrac32)^2-\tfrac94\right)+3
+=-2\left(x-\tfrac32\right)^2+\frac{15}{2}.
+</span></p>
+<p>Thus (a=), (b=2), (c=). The maximum value is (), and the quadratic decreases without bound, so</p>
+<span class="math display">\boxed{\text{range of }f=(-\infty,\tfrac{15}{2}]}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q19"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202410-mathematics-p11.pdf</code>, Q11(a), and matching <code>ms-202410-mathematics-p11.pdf</code>.
+</div>
+</section>
+</div>
+<div id="p1-quad-q20" class="question-card">
+<section id="question-20-970912on24-q7a" class="level3">
+<h3 class="anchored" data-anchor-id="question-20-970912on24-q7a">Question 20 · 9709/12/O/N/24 Q7(a)</h3>
+<p>By expressing (-2x^2+8x+11) in the form (-a(x-b)^2+c), where (a), (b) and (c) are positive integers, find the coordinates of the vertex of the graph with equation (y=-2x^2+8x+11). <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+\begin{aligned}
+y&amp;=-2(x^2-4x)+11\\
+&amp;=-2\bigl((x-2)^2-4\bigr)+11\\
+&amp;=-2(x-2)^2+19.
+\end{aligned}
+</span></p>
+<p>Thus (a=2), (b=2), (c=19). Since the coefficient of the square is negative, the graph has a maximum (its vertex) at</p>
+<span class="math display">\boxed{(2,19)}.</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q20"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202410-mathematics-p12.pdf</code>, Q7(a), and matching <code>ms-202410-mathematics-p12.pdf</code>.
+</div>
+</section>
+</div>
+</section>
+<section id="quick-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="quick-checklist">3. Quick checklist</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">能从 quadratic curve 与 line 的交点方程写出 (a,b,c)</label></li>
+<li><label><input type="checkbox">能根据题目要求选用 (Delta&gt;0)、(Delta=0) 或 (Delta&lt;0)</label></li>
+<li><label><input type="checkbox">能把二次式写成 completed-square form，并读出 vertex、maximum/minimum 与 range</label></li>
+<li><label><input type="checkbox">能解 quadratic inequality 并正确写出 interval notation</label></li>
+<li><label><input type="checkbox">能用 (u=x<sup>2)、(u=x</sup>3) 或 (u=(2x-3)^2) 降次，再回代原变量</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="学习首页">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">学习首页</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-1/functions.html" class="pagination-link" aria-label="1.2 Functions">
+        <span class="nav-page-text">1.2 Functions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
