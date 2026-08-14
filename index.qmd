@@ -10,25 +10,6 @@ body-class: home-page
 
 # CIE Mathematics Study Hub
 
-按考纲组织的学习页面，结合笔记 worked examples 与 Paper 2 / Paper 3 past-paper 题目。
-
-<div class="home-actions">
-<a class="home-action primary" href="paper-3/algebra-functions.html">Explore Paper 3</a>
-<a class="home-action" href="paper-1/quadratics.html">Explore Paper 1 · 1.1 Quadratics</a>
-<a class="home-action" href="paper-2/algebra.html">Explore Paper 2 · 2.1 Algebra</a>
-<a class="home-action" href="paper-2/trigonometry.html">Explore Paper 2 · 2.3 Trigonometry</a>
-<a class="home-action" href="paper-2/differentiation.html">Explore Paper 2 · 2.4 Differentiation</a>
-<a class="home-action" href="paper-2/integration.html">Explore Paper 2 · 2.5 Integration</a>
-<a class="home-action" href="paper-2/numerical-solution-of-equations.html">Explore Paper 2 · 2.6 Numerical solution of equations</a>
-<a class="home-action" href="paper-3/logarithmic-and-exponential-functions.html">Explore Chapter 3.2</a>
-<a class="home-action" href="paper-3/trigonometry.html">Explore Chapter 3.3</a>
-<a class="home-action" href="paper-3/differentiation.html">Explore Chapter 3.4</a>
-<a class="home-action" href="paper-3/integration.html">Explore Chapter 3.5</a>
-<a class="home-action" href="paper-3/numerical-solution-of-equations.html">Explore Chapter 3.6</a>
-<a class="home-action" href="paper-3/vectors.html">Explore Chapter 3.7</a>
-<a class="home-action" href="paper-3/differential-equations.html">Explore Chapter 3.8</a>
-<a class="home-action" href="paper-3/complex-numbers.html">Explore Chapter 3.9</a>
-</div>
 :::
 
 ## Paper 1 · Pure Mathematics 1
@@ -41,7 +22,6 @@ body-class: home-page
 - Completing the square and quadratic graphs
 - Discriminant, repeated roots and tangency
 - Quadratic equations, inequalities and substitution
-- 20 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -50,7 +30,6 @@ body-class: home-page
 - Domain, range, one-one and inverse functions
 - Composite functions and compatibility of domains and ranges
 - Function graph transformations and inverse graphs
-- 20 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -59,7 +38,6 @@ body-class: home-page
 - Straight lines, gradients, midpoints and perpendicular bisectors
 - Circle equations, centres, radii, chords and tangents
 - Line-circle intersections and distance-to-line methods
-- 20 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -68,7 +46,6 @@ body-class: home-page
 - Radians and degrees
 - Arc length and sector area
 - Chords, segments and composite regions
-- 20 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -77,7 +54,6 @@ body-class: home-page
 - Exact values and trigonometric identities
 - Equations in degrees and radians
 - Sine, cosine and tangent graphs
-- 16 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -87,7 +63,6 @@ body-class: home-page
 - Arithmetic and geometric progressions
 - Finite sums and nth terms
 - Convergence and sums to infinity
-- 19 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -97,7 +72,6 @@ body-class: home-page
 - Tangents, normals and gradients
 - Stationary points and second derivative
 - Connected rates of change
-- 16 verified Paper 1 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -107,8 +81,6 @@ body-class: home-page
 - Definite and improper integrals
 - Area between curves
 - Volume of revolution
-
-19 verified Paper 1 question groups with mark-scheme steps
 :::
 
 :::
@@ -122,7 +94,6 @@ body-class: home-page
 - Modulus equations, inequalities and graphs
 - Polynomial division, quotient and remainder
 - Factor theorem and remainder theorem
-- 19 verified Paper 2 questions from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -131,7 +102,6 @@ body-class: home-page
 - Laws of logarithms and exponential equations
 - $e^x$, $\ln x$ and inverse relationships
 - Linearisation using gradients and intercepts
-- 11 verified Paper 2 questions from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -139,7 +109,7 @@ body-class: home-page
 
 - Six trigonometric functions and graphs
 - Identities, compound angles and double angles
-- $R$-form and 11 verified Paper 2 question groups from 2020–2024
+- $R$-form
 :::
 
 ::: {.topic-card}
@@ -147,7 +117,6 @@ body-class: home-page
 
 - Standard, product and quotient rules
 - Tangents, normals, stationary points and parametric differentiation
-- 13 verified Paper 2 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -155,7 +124,6 @@ body-class: home-page
 
 - Reverse differentiation and trigonometric integration
 - Definite integrals and trapezium rule
-- 5 verified Paper 2 question groups from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -163,7 +131,6 @@ body-class: home-page
 
 - Sign changes, root bounds and graphical considerations
 - Fixed-point iteration, iteration tables and accuracy
-- 5 verified Paper 2 question groups from 2020–2024
 :::
 
 :::
@@ -179,7 +146,6 @@ body-class: home-page
 - Polynomial division, factor and remainder theorems
 - Partial fractions
 - General binomial expansion and validity
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -197,7 +163,6 @@ body-class: home-page
 - Six trigonometric functions and graphs
 - Reciprocal, compound-angle and double-angle identities
 - R-form conversion and trigonometric equations
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -206,7 +171,6 @@ body-class: home-page
 - Derivative rules, product and quotient rules
 - Tangents, normals and stationary points
 - Implicit and parametric differentiation
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -215,7 +179,7 @@ body-class: home-page
 - Standard integrals and reverse chain rule
 - Substitution and trigonometric identities
 - Integration by parts and partial fractions
-- Areas and 20 selected Paper 3 problems from 2020–2024
+- Areas
 :::
 
 ::: {.topic-card}
@@ -224,7 +188,6 @@ body-class: home-page
 - Locating roots by graphs and sign changes
 - Iterative formulae and fixed points
 - Convergence, divergence and accuracy
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -233,7 +196,6 @@ body-class: home-page
 - Position vectors, displacement vectors and ratios
 - Vector equations of lines and 3D intersections
 - Scalar products, angles and perpendicular feet
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -242,7 +204,6 @@ body-class: home-page
 - Separation of variables and first-order differential equations
 - Particular solutions from initial conditions
 - Rate-of-change models and interpretation
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 ::: {.topic-card}
@@ -251,7 +212,6 @@ body-class: home-page
 - Cartesian form, conjugates, modulus and argument
 - Polar form, square roots and polynomial roots
 - Argand diagrams and complex-number loci
-- 20 selected Paper 3 problems from 2020–2024
 :::
 
 :::
