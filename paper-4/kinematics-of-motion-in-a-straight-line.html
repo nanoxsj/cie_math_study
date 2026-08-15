@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 4 Mechanics, syllabus 4.2.">
+
+<title>2. Kinematics of motion in a straight line – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-4/momentum.html" rel="next">
+<link href="../paper-4/forces-and-equilibrium.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/kinematics-of-motion-in-a-straight-line.html">2. Kinematics of motion in a straight line</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/kinematics-of-motion-in-a-straight-line.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2. Kinematics of motion in a straight line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Momentum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/newtons-laws-of-motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Newton’s laws of motion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/energy-work-and-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Energy, work and power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 5 · Probability and Statistics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/representation-of-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 Representation of data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/permutations-and-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 Permutations and combinations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Probability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/discrete-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Discrete random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/normal-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 The normal distribution</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 6 · Probability and Statistics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/poisson-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 The Poisson distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/linear-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 Linear combinations of random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/continuous-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Continuous random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/sampling-and-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Sampling and estimation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/hypothesis-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 Hypothesis tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#scalars-vectors-and-the-three-motion-functions" id="toc-scalars-vectors-and-the-three-motion-functions" class="nav-link" data-scroll-target="#scalars-vectors-and-the-three-motion-functions">Scalars, vectors and the three motion functions</a></li>
+  <li><a href="#displacement-time-and-velocity-time-graphs" id="toc-displacement-time-and-velocity-time-graphs" class="nav-link" data-scroll-target="#displacement-time-and-velocity-time-graphs">Displacement-time and velocity-time graphs</a></li>
+  <li><a href="#differentiation-and-integration-with-respect-to-time" id="toc-differentiation-and-integration-with-respect-to-time" class="nav-link" data-scroll-target="#differentiation-and-integration-with-respect-to-time">Differentiation and integration with respect to time</a></li>
+  <li><a href="#constant-acceleration" id="toc-constant-acceleration" class="nav-link" data-scroll-target="#constant-acceleration">Constant acceleration</a></li>
+  <li><a href="#vertical-motion-and-gravity" id="toc-vertical-motion-and-gravity" class="nav-link" data-scroll-target="#vertical-motion-and-gravity">Vertical motion and gravity</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-4-questions" id="toc-verified-paper-4-questions" class="nav-link" data-scroll-target="#verified-paper-4-questions">2. Verified Paper 4 questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970941mj24-q1ab" id="toc-question-1-970941mj24-q1ab" class="nav-link" data-scroll-target="#question-1-970941mj24-q1ab">Question 1 · 9709/41/M/J/24 Q1(a–b)</a></li>
+  <li><a href="#question-2-970941mj24-q6ab" id="toc-question-2-970941mj24-q6ab" class="nav-link" data-scroll-target="#question-2-970941mj24-q6ab">Question 2 · 9709/41/M/J/24 Q6(a–b)</a></li>
+  <li><a href="#question-3-970941on24-q4ac" id="toc-question-3-970941on24-q4ac" class="nav-link" data-scroll-target="#question-3-970941on24-q4ac">Question 3 · 9709/41/O/N/24 Q4(a–c)</a></li>
+  <li><a href="#question-4-970942on24-q1ab" id="toc-question-4-970942on24-q1ab" class="nav-link" data-scroll-target="#question-4-970942on24-q1ab">Question 4 · 9709/42/O/N/24 Q1(a–b)</a></li>
+  <li><a href="#question-5-970943on24-q6ad" id="toc-question-5-970943on24-q6ad" class="nav-link" data-scroll-target="#question-5-970943on24-q6ad">Question 5 · 9709/43/O/N/24 Q6(a–d)</a></li>
+  <li><a href="#question-6-970943on23-q6a" id="toc-question-6-970943on23-q6a" class="nav-link" data-scroll-target="#question-6-970943on23-q6a">Question 6 · 9709/43/O/N/23 Q6(a)</a></li>
+  <li><a href="#question-7-970941mj23-q3" id="toc-question-7-970941mj23-q3" class="nav-link" data-scroll-target="#question-7-970941mj23-q3">Question 7 · 9709/41/M/J/23 Q3</a></li>
+  <li><a href="#question-8-970942mj22-q4ac" id="toc-question-8-970942mj22-q4ac" class="nav-link" data-scroll-target="#question-8-970942mj22-q4ac">Question 8 · 9709/42/M/J/22 Q4(a–c)</a></li>
+  <li><a href="#question-9-970941mj21-q4ab" id="toc-question-9-970941mj21-q4ab" class="nav-link" data-scroll-target="#question-9-970941mj21-q4ab">Question 9 · 9709/41/M/J/21 Q4(a–b)</a></li>
+  <li><a href="#question-10-970942mj20-q1ac" id="toc-question-10-970942mj20-q1ac" class="nav-link" data-scroll-target="#question-10-970942mj20-q1ac">Question 10 · 9709/42/M/J/20 Q1(a–c)</a></li>
+  <li><a href="#question-11-970941on20-q4" id="toc-question-11-970941on20-q4" class="nav-link" data-scroll-target="#question-11-970941on20-q4">Question 11 · 9709/41/O/N/20 Q4</a></li>
+  <li><a href="#question-12-970943on20-q5ac" id="toc-question-12-970943on20-q5ac" class="nav-link" data-scroll-target="#question-12-970943on20-q5ac">Question 12 · 9709/43/O/N/20 Q5(a–c)</a></li>
+  </ul></li>
+  <li><a href="#quick-checklist" id="toc-quick-checklist" class="nav-link" data-scroll-target="#quick-checklist">3. Quick checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/kinematics-of-motion-in-a-straight-line.html">2. Kinematics of motion in a straight line</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2. Kinematics of motion in a straight line</h1>
+<p class="subtitle lead">Graphs · calculus with time · constant acceleration · vertical motion</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 4 Mechanics, syllabus 4.2.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 4.2，覆盖：</p>
+<ul>
+<li>distance、speed、displacement、velocity、acceleration 的 scalar/vector nature；</li>
+<li>sketch and interpret displacement-time graphs and velocity-time graphs；</li>
+<li>displacement-time graph 的 gradient 是 velocity，velocity-time graph 的 gradient 是 acceleration；</li>
+<li>velocity-time graph 下的 area 是 displacement；</li>
+<li>对 time 使用 differentiation 和 integration；</li>
+<li>使用 constant-acceleration formulae 处理一维直线运动；</li>
+<li>只讨论 motion in one dimension，所有数值题默认 <span class="math inline">g=10\,\mathrm{m\,s^{-2}}</span>，除非题目另有说明。</li>
+</ul>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">能区分 distance/speed 与 displacement/velocity</label></li>
+<li><label><input type="checkbox">能从 displacement-time graph 读出 velocity，从 velocity-time graph 读出 acceleration 和 displacement</label></li>
+<li><label><input type="checkbox">能用 <span class="math inline">v=ds/dt</span>、<span class="math inline">a=dv/dt</span>、<span class="math inline">v=\int a\,dt</span>、<span class="math inline">s=\int v\,dt</span></label></li>
+<li><label><input type="checkbox">能正确使用五个 constant-acceleration formulae，并先确定 positive direction</label></li>
+<li><label><input type="checkbox">能处理分段运动、instantaneous rest、distance travelled 与 displacement 的区别</label></li>
+<li><label><input type="checkbox">能处理竖直投射、gravity、maximum height 和 return to the ground</label></li>
+</ul>
+</div>
+</section>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
+<section id="scalars-vectors-and-the-three-motion-functions" class="level3">
+<h3 class="anchored" data-anchor-id="scalars-vectors-and-the-three-motion-functions">Scalars, vectors and the three motion functions</h3>
+<p>Distance and speed are scalar quantities. Displacement, velocity and acceleration are vector quantities; in one-dimensional questions this means their signs depend on the chosen positive direction.</p>
+<p><span class="math display">
+v=\frac{ds}{dt},\qquad a=\frac{dv}{dt}=\frac{d^2s}{dt^2}.
+</span></p>
+<p>Average speed uses total distance, while average velocity uses displacement:</p>
+<p><span class="math display">
+\text{average speed}=\frac{\text{total distance travelled}}{\text{time taken}},
+\qquad
+\text{average velocity}=\frac{\text{displacement}}{\text{time taken}}.
+</span></p>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Displacement-time graph</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/displacement-time-graph.webp" class="note-figure img-fluid figure-img" alt="Displacement-time graph features extracted from the Mechanics note"></p>
+<figcaption>Independently extracted image from Mechanics note page 2</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="displacement-time-and-velocity-time-graphs" class="level3">
+<h3 class="anchored" data-anchor-id="displacement-time-and-velocity-time-graphs">Displacement-time and velocity-time graphs</h3>
+<ul>
+<li>Gradient of a displacement-time graph gives velocity.</li>
+<li>Gradient of a velocity-time graph gives acceleration.</li>
+<li>The signed area under a velocity-time graph gives displacement.</li>
+<li>Total distance is obtained by adding the magnitudes of the areas, including regions below the time axis.</li>
+<li>A horizontal displacement-time graph means instantaneous rest; a horizontal velocity-time graph means constant velocity.</li>
+</ul>
+<div class="worked-example">
+<p><span class="we-tag">Note worked example · Displacement-time graph</span></p>
+<p>An athlete is training by jogging in a straight line. The displacement-time graph below shows the displacement of the athlete from her starting point throughout her motion.</p>
+<p>The note asks:</p>
+<ol type="a">
+<li><p>Calculate the velocity of the athlete during the first 2 seconds.</p></li>
+<li><p>Describe the motion of the athlete between the times of 2 seconds and 5 seconds.</p></li>
+<li><p>Calculate the velocity of the athlete at 10 seconds.</p></li>
+<li><p>Find the total distance travelled by the athlete during the 14 seconds.</p></li>
+</ol>
+<p>Use the gradient for (a) and (c), the horizontal section for (b), and add the forward and backward distances for (d).</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note worked example · Velocity-time graph</span></p>
+<p>The motion of a bird travelling in a straight line is tracked for 60 seconds. The velocity-time graph in the note asks:</p>
+<ol type="a">
+<li><p>Calculate the acceleration of the bird at 20 seconds.</p></li>
+<li><p>Calculate the distance travelled in the first 28 seconds.</p></li>
+<li><p>Calculate the displacement of the bird from its starting point after 60 seconds.</p></li>
+</ol>
+<p>The worked solution uses the gradient for (a), the area above the axis for the forward distance in (b), and signed areas above and below the axis for (c).</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Velocity-time graph</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/velocity-time-graph.webp" class="note-figure img-fluid figure-img" alt="Velocity-time graph features extracted from the Mechanics note"></p>
+<figcaption>Independently extracted image from Mechanics note page 6</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Drawing travel graphs</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/travel-graphs-displacement.webp" class="note-figure img-fluid figure-img" alt="Displacement-time graph drawing guidance extracted from the Mechanics note"></p>
+<figcaption>Independently extracted displacement-time graph image from Mechanics note page 9</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Signed areas on a velocity-time graph</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/travel-graphs-velocity.webp" class="note-figure img-fluid figure-img" alt="Velocity-time graph areas and directions extracted from the Mechanics note"></p>
+<figcaption>Independently extracted velocity-time graph image from Mechanics note page 9</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="differentiation-and-integration-with-respect-to-time" class="level3">
+<h3 class="anchored" data-anchor-id="differentiation-and-integration-with-respect-to-time">Differentiation and integration with respect to time</h3>
+<p>For a function of time,</p>
+<p><span class="math display">
+v=\frac{ds}{dt},\qquad a=\frac{dv}{dt},
+</span></p>
+<p>and therefore</p>
+<p><span class="math display">
+v=\int a\,dt,\qquad s=\int v\,dt.
+</span></p>
+<p>Each integration needs a constant of integration. Use phrases such as “starting from rest” (<span class="math inline">v=0</span> at the stated time) and “returns to its starting point” (<span class="math inline">s=0</span> at the stated time) to determine it.</p>
+<div class="worked-example">
+<p><span class="we-tag">Note worked example · Using calculus in 1D</span></p>
+<p>The velocity of a particle is modelled by</p>
+<p><span class="math display">
+v=t^3-4t^2+3t.
+</span></p>
+<ol type="a">
+<li><p>Find the acceleration of the particle in terms of <span class="math inline">t</span>.</p></li>
+<li><p>Find the displacement of the particle, from its starting position, after 3 seconds.</p></li>
+</ol>
+<p>The corresponding graph and solution are kept as a separate worked-example card; differentiate for (a), integrate for (b), and use <span class="math inline">s=0</span> at <span class="math inline">t=0</span>.</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Calculus links</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/calculus-kinematics.webp" class="note-figure img-fluid figure-img" alt="Differentiation and integration links between displacement, velocity and acceleration"></p>
+<figcaption>Independently extracted image from Mechanics note page 12</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="constant-acceleration" class="level3">
+<h3 class="anchored" data-anchor-id="constant-acceleration">Constant acceleration</h3>
+<p>For constant acceleration, with <span class="math inline">s</span> measured from the chosen starting point,</p>
+<p><span class="math display">
+v=u+at,
+</span> <span class="math display">
+v^2=u^2+2as,
+</span> <span class="math display">
+s=\frac12(u+v)t,
+</span> <span class="math display">
+s=ut+\frac12at^2,
+</span> <span class="math display">
+s=vt-\frac12at^2.
+</span></p>
+<p>Choose the equation after listing the known and unknown quantities. The formulae apply only on an interval where the acceleration is constant. For multi-stage motion, restart the variables or carry the final velocity and displacement into the next stage.</p>
+<div class="worked-example">
+<p><span class="we-tag">Note worked example · Deriving a constant-acceleration formula</span></p>
+<p>Use the constant-acceleration equations</p>
+<p><span class="math display">
+s=\frac12(u+v)t\qquad\text{and}\qquad v=u+at
+</span></p>
+<p>to show that</p>
+<p><span class="math display">
+v^2=u^2+2as.
+</span></p>
+<p>Substitute <span class="math inline">t=(v-u)/a</span> into the displacement equation and rearrange.</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · SUVAT derivation</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/suvat-derivation.webp" class="note-figure img-fluid figure-img" alt="Velocity-time graph derivation of constant-acceleration formulae"></p>
+<figcaption>Independently extracted SUVAT derivation image from Mechanics note page 16</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · SUVAT quantities</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/suvat-quantities.webp" class="note-figure img-fluid figure-img" alt="SUVAT quantities and constant-acceleration notation extracted from the Mechanics note"></p>
+<figcaption>Independently extracted image from Mechanics note page 19</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="vertical-motion-and-gravity" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-motion-and-gravity">Vertical motion and gravity</h3>
+<p>Take the chosen positive direction explicitly. If upwards is positive, then <span class="math inline">a=-g</span>; if downwards is positive, then <span class="math inline">a=g</span>. At maximum height, <span class="math inline">v=0</span> instantaneously. When a particle returns to its starting point, its displacement from that starting point is <span class="math inline">s=0</span>, not necessarily its velocity.</p>
+<div class="worked-example">
+<p><span class="we-tag">Note worked example · Vertical projection</span></p>
+<p>A toy rocket is projected vertically upwards from ground level with initial speed <span class="math inline">18\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol type="a">
+<li><p>Find the maximum height the toy rocket reaches.</p></li>
+<li><p>Find the time taken from the instant the toy rocket is projected to the instant it returns to the ground.</p></li>
+</ol>
+<p>Use upwards as positive, <span class="math inline">a=-10\,\mathrm{m\,s^{-2}}</span>, <span class="math inline">v=0</span> at maximum height, and <span class="math inline">s=0</span> when it returns to the starting point.</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Note knowledge image · Gravity motion</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/kinematics-straight-line/gravity-motion.webp" class="note-figure img-fluid figure-img" alt="Gravity and one-dimensional vertical motion extracted from the Mechanics note"></p>
+<figcaption>Independently extracted image from Mechanics note page 23</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="verified-paper-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-4-questions">2. Verified Paper 4 questions</h2>
+<p>Each card below keeps the complete selected question, including every sub-question and its original mark allocation. The wording is transcribed from the local question paper; it is not an invented practice question.</p>
+<div id="p4-kin-q01" class="question-card">
+<section id="question-1-970941mj24-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970941mj24-q1ab">Question 1 · 9709/41/M/J/24 Q1(a–b)</h3>
+<p>A car starts from rest and accelerates at <span class="math inline">2\,\mathrm{m\,s^{-2}}</span> for <span class="math inline">10\,\mathrm s</span>. It then travels at a constant speed for <span class="math inline">30\,\mathrm s</span>. The car then uniformly decelerates to rest over a period of <span class="math inline">20\,\mathrm s</span>.</p>
+<ol type="a">
+<li><p>Sketch a velocity-time graph for the motion of the car. <strong>[2]</strong></p></li>
+<li><p>Find the total distance travelled by the car. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>After 10 s the speed is</p>
+<p><span class="math display">
+V=0+2(10)=20\,\mathrm{m\,s^{-1}}.
+</span></p>
+<p>The graph consists of a triangle, a rectangle and a triangle. Hence</p>
+<p><span class="math display">
+s=\frac12(10)(20)+(30)(20)+\frac12(20)(20)
+=100+600+200.
+</span></p>
+<p>Therefore</p>
+<span class="math display">
+\boxed{s=900\,\mathrm m}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202406-Mathematics-P41-A-Level题库大全小程序.pdf, Q1, and matching 2024 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q02" class="question-card">
+<section id="question-2-970941mj24-q6ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970941mj24-q6ab">Question 2 · 9709/41/M/J/24 Q6(a–b)</h3>
+<p>A particle moves in a straight line, starting from a point <span class="math inline">O</span>. The velocity of the particle at time <span class="math inline">t\,\mathrm s</span> after leaving <span class="math inline">O</span> is <span class="math inline">v\,\mathrm{m\,s^{-1}}</span>. It is given that</p>
+<p><span class="math display">
+v=kt^{1/2}-2t-8,
+</span></p>
+<p>where <span class="math inline">k</span> is a positive constant. The maximum velocity of the particle is <span class="math inline">4.5\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol type="a">
+<li><p>Show that <span class="math inline">k=10</span>. <strong>[5]</strong></p></li>
+<li><ol type="i">
+<li>Verify that <span class="math inline">v=0</span> when <span class="math inline">t=1</span> and <span class="math inline">t=16</span>. <strong>[1]</strong></li>
+</ol></li>
+</ol>
+<ol start="2" type="i">
+<li>Find the distance travelled by the particle in the first <span class="math inline">16\,\mathrm s</span>. <strong>[5]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+a=\frac{dv}{dt}=\frac{k}{2\sqrt t}-2.
+</span></p>
+<p>At maximum velocity, <span class="math inline">a=0</span>, so <span class="math inline">\sqrt t=k/4</span>. Substitution into <span class="math inline">v=4.5</span> gives</p>
+<p><span class="math display">
+\frac{k^2}{8}-8=4.5\quad\Rightarrow\quad k=10.
+</span></p>
+<p>With <span class="math inline">k=10</span>,</p>
+<p><span class="math display">
+v=10\sqrt t-2t-8.
+</span></p>
+<p>Putting <span class="math inline">x=\sqrt t</span> gives <span class="math inline">2x^2-10x+8=0</span>, so <span class="math inline">x=1</span> or <span class="math inline">4</span>, hence <span class="math inline">t=1</span> or <span class="math inline">16</span>.</p>
+<p>An antiderivative is</p>
+<p><span class="math display">
+s=\frac{20}{3}t^{3/2}-t^2-8t.
+</span></p>
+<p>The velocity is negative on <span class="math inline">0&lt;t&lt;1</span> and positive on <span class="math inline">1&lt;t&lt;16</span>. Therefore</p>
+<span class="math display">
+\text{distance}=-s(1)+[s(16)-s(1)]
+=\frac{22}{3}+50
+=\boxed{57.3\,\mathrm m}\quad\text{(3 s.f.)}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202406-Mathematics-P41-A-Level题库大全小程序.pdf, Q6(a–b), and matching 2024 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q03" class="question-card">
+<section id="question-3-970941on24-q4ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970941on24-q4ac">Question 3 · 9709/41/O/N/24 Q4(a–c)</h3>
+<p>A bus travels between two stops, <span class="math inline">A</span> and <span class="math inline">B</span>. The bus starts from rest at <span class="math inline">A</span> and accelerates at a constant rate of <span class="math inline">a\,\mathrm{m\,s^{-2}}</span> until it reaches a speed of <span class="math inline">16\,\mathrm{m\,s^{-1}}</span>. It then travels at this constant speed before decelerating at a constant rate of <span class="math inline">0.75a\,\mathrm{m\,s^{-2}}</span>, coming to rest at <span class="math inline">B</span>. The total time for the journey is <span class="math inline">240\,\mathrm s</span>.</p>
+<ol type="a">
+<li><p>Sketch the velocity-time graph for the bus’s journey from <span class="math inline">A</span> to <span class="math inline">B</span>. <strong>[1]</strong></p></li>
+<li><p>Find an expression, in terms of <span class="math inline">a</span>, for the length of time that the bus is travelling with constant speed. <strong>[2]</strong></p></li>
+<li><p>Given that the distance from <span class="math inline">A</span> to <span class="math inline">B</span> is <span class="math inline">3000\,\mathrm m</span>, find the value of <span class="math inline">a</span>. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Time accelerating: <span class="math inline">16/a</span>. Time decelerating:</p>
+<p><span class="math display">
+\frac{16}{0.75a}=\frac{64}{3a}.
+</span></p>
+<p>Thus the constant-speed time is</p>
+<p><span class="math display">
+240-\frac{16}{a}-\frac{64}{3a}
+=\boxed{240-\frac{112}{3a}\ \mathrm s}.
+</span></p>
+<p>Using the area under the velocity-time graph,</p>
+<p><span class="math display">
+3000=\frac12(16)\frac{16}{a}+16\left(240-\frac{112}{3a}\right)+\frac12(16)\frac{64}{3a}.
+</span></p>
+<p>This simplifies to <span class="math inline">3000=3840-896/(3a)</span>, so</p>
+<span class="math display">
+\boxed{a=\frac{32}{9}=3.56\,\mathrm{m\,s^{-2}}}\quad\text{(3 s.f.).}
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202410-Mathematics-P41-A-Level题库大全小程序.pdf, Q4(a–c), and matching 2024 O/N/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q04" class="question-card">
+<section id="question-4-970942on24-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970942on24-q1ab">Question 4 · 9709/42/O/N/24 Q1(a–b)</h3>
+<p>The velocity of a particle moving in a straight line at time <span class="math inline">t</span> seconds after leaving a fixed point <span class="math inline">O</span> is <span class="math inline">v\,\mathrm{m\,s^{-1}}</span>. The diagram shows a velocity-time graph which models the motion of the particle from <span class="math inline">t=0</span> to <span class="math inline">t=T</span>. The graph consists of four straight line segments. The particle accelerates from rest to a speed of <span class="math inline">V\,\mathrm{m\,s^{-1}}</span> over a period of 4 s, and then decelerates at <span class="math inline">\frac53\,\mathrm{m\,s^{-2}}</span> to instantaneous rest over a period of 6 s. The particle then travels back towards <span class="math inline">O</span>, reaching a maximum speed of <span class="math inline">3\,\mathrm{m\,s^{-1}}</span> before coming to rest at time <span class="math inline">t=T</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/kinematics/2024-on-9709-42-q1-diagram-clean.svg" class="note-figure img-fluid figure-img" alt="Velocity-time graph for the complete Paper 4 question"></p>
+<figcaption>Independently extracted velocity-time diagram from 9709/42/O/N/24 Q1</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li><p>Find the value of <span class="math inline">V</span>. <strong>[2]</strong></p></li>
+<li><p>Given that the total distance travelled by the particle from <span class="math inline">t=0</span> to <span class="math inline">t=T</span> is <span class="math inline">68\,\mathrm m</span>, find the value of <span class="math inline">T</span>. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>From the second segment,</p>
+<p><span class="math display">
+V=\frac53(6)=10\,\mathrm{m\,s^{-1}}.
+</span></p>
+<p>The positive area is</p>
+<p><span class="math display">
+\frac12(4)(10)+\frac12(6)(10)=50.
+</span></p>
+<p>The remaining distance is below the axis and has magnitude <span class="math inline">68-50=18</span>:</p>
+<p><span class="math display">
+\frac12(T-10)(3)=18.
+</span></p>
+<p>Therefore</p>
+<span class="math display">
+\boxed{T=22\,\mathrm s}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202410-Mathematics-P42-A-Level题库大全小程序.pdf, Q1(a–b), and matching 2024 O/N/42 mark scheme. The graph is an independently extracted SVG, not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-kin-q05" class="question-card">
+<section id="question-5-970943on24-q6ad" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970943on24-q6ad">Question 5 · 9709/43/O/N/24 Q6(a–d)</h3>
+<p>A particle moves in a straight line. It starts from rest, at time <span class="math inline">t=0</span>, and accelerates at <span class="math inline">0.6t\,\mathrm{m\,s^{-2}}</span> for 4 s, reaching a speed of <span class="math inline">V\,\mathrm{m\,s^{-1}}</span>. The particle then travels at <span class="math inline">V\,\mathrm{m\,s^{-1}}</span> for 11 s, and finally slows down, with constant deceleration, stopping after a further 5 s.</p>
+<ol type="a">
+<li><p>Show that <span class="math inline">V=4.8</span>. <strong>[1]</strong></p></li>
+<li><p>Sketch a velocity-time graph for the motion. <strong>[3]</strong></p></li>
+<li><p>Find an expression, in terms of <span class="math inline">t</span>, for the velocity of the particle for <span class="math inline">15\le t\le20</span>. <strong>[2]</strong></p></li>
+<li><p>Find the total distance travelled by the particle. <strong>[4]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>For the first 4 s,</p>
+<p><span class="math display">
+V=\int_0^4 0.6t\,dt=0.3(4)^2=4.8.
+</span></p>
+<p>The final section has constant acceleration</p>
+<p><span class="math display">
+a=\frac{0-4.8}{5}=-0.96.
+</span></p>
+<p>Hence, for <span class="math inline">15\le t\le20</span>,</p>
+<p><span class="math display">
+v=4.8-0.96(t-15)=\boxed{19.2-0.96t}.
+</span></p>
+<p>The total distance is the area under the graph:</p>
+<span class="math display">
+s=\frac12(4)(4.8)+(11)(4.8)+\frac12(5)(4.8)
+=\boxed{74.4\,\mathrm m}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202410-Mathematics-P43-A-Level题库大全小程序.pdf, Q6(a–d), and matching 2024 O/N/43 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q06" class="question-card">
+<section id="question-6-970943on23-q6a" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970943on23-q6a">Question 6 · 9709/43/O/N/23 Q6(a)</h3>
+<p>A particle moves in a straight line. At time <span class="math inline">t\,\mathrm s</span>, the acceleration, <span class="math inline">a\,\mathrm{m\,s^{-2}}</span>, of the particle is given by</p>
+<p><span class="math display">
+a=36-6t.
+</span></p>
+<p>The velocity of the particle is <span class="math inline">27\,\mathrm{m\,s^{-1}}</span> when <span class="math inline">t=2</span>.</p>
+<ol type="a">
+<li>Find the values of <span class="math inline">t</span> when the particle is at instantaneous rest. <strong>[4]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Integrating,</p>
+<p><span class="math display">
+v=36t-3t^2+C.
+</span></p>
+<p>Using <span class="math inline">v=27</span> when <span class="math inline">t=2</span> gives <span class="math inline">C=-33</span>. Thus</p>
+<p><span class="math display">
+v=-3t^2+36t-33=-3(t-1)(t-11).
+</span></p>
+<p>Therefore the particle is at instantaneous rest when</p>
+<span class="math display">
+\boxed{t=1\,\mathrm s\text{ or }t=11\,\mathrm s}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_43.pdf, Q6(a), and matching 2023 O/N/43 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q07" class="question-card">
+<section id="question-7-970941mj23-q3" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970941mj23-q3">Question 7 · 9709/41/M/J/23 Q3</h3>
+<p>A particle moves in a straight line starting from rest. The displacement <span class="math inline">s\,\mathrm m</span> of the particle from a fixed point <span class="math inline">O</span> on the line at time <span class="math inline">t\,\mathrm s</span> is given by</p>
+<p><span class="math display">
+s=t^{5/2}-\frac{15}{4}t^{3/2}+6.
+</span></p>
+<p>Find the value of <span class="math inline">s</span> when the particle is again at rest. <strong>[4]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p><span class="math display">
+v=\frac{ds}{dt}=\frac52t^{3/2}-\frac{45}{8}t^{1/2}
+=\frac58\sqrt t(4t-9).
+</span></p>
+<p>Besides <span class="math inline">t=0</span>, the next time at rest is <span class="math inline">t=9/4</span>. Hence</p>
+<span class="math display">
+s=\left(\frac94\right)^{5/2}-\frac{15}{4}\left(\frac94\right)^{3/2}+6
+=\boxed{\frac{15}{16}\,\mathrm m}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_41.pdf, Q3, and matching 2023 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q08" class="question-card">
+<section id="question-8-970942mj22-q4ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970942mj22-q4ac">Question 8 · 9709/42/M/J/22 Q4(a–c)</h3>
+<p>A particle <span class="math inline">A</span>, moving along a straight horizontal track with constant speed <span class="math inline">8\,\mathrm{m\,s^{-1}}</span>, passes a fixed point <span class="math inline">O</span>. Four seconds later, another particle <span class="math inline">B</span> passes <span class="math inline">O</span>, moving along a parallel track in the same direction as <span class="math inline">A</span>. Particle <span class="math inline">B</span> has speed <span class="math inline">20\,\mathrm{m\,s^{-1}}</span> when it passes <span class="math inline">O</span> and has a constant deceleration of <span class="math inline">2\,\mathrm{m\,s^{-2}}</span>. <span class="math inline">B</span> comes to rest when it returns to <span class="math inline">O</span>.</p>
+<ol type="a">
+<li><p>Find expressions, in terms of <span class="math inline">t</span>, for the displacement from <span class="math inline">O</span> of each particle <span class="math inline">t</span> seconds after <span class="math inline">B</span> passes <span class="math inline">O</span>. <strong>[3]</strong></p></li>
+<li><p>Find the values of <span class="math inline">t</span> when the particles are the same distance from <span class="math inline">O</span>. <strong>[3]</strong></p></li>
+<li><p>On the given axes, sketch the displacement-time graphs for both particles, for values of <span class="math inline">t</span> from 0 to 20. <strong>[3]</strong></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/kinematics/2022-mj-9709-42-q4-axes-clean.svg" class="note-figure img-fluid figure-img" alt="Given displacement-time axes for Question 8(c)"></p>
+<figcaption>Independently extracted axes from 9709/42/M/J/22 Q4(c)</figcaption>
+</figure>
+</div>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>At <span class="math inline">t=0</span>, particle <span class="math inline">A</span> is already <span class="math inline">32\,\mathrm m</span> beyond <span class="math inline">O</span>, so</p>
+<p><span class="math display">
+s_A=32+8t.
+</span></p>
+<p>For <span class="math inline">B</span>,</p>
+<p><span class="math display">
+s_B=20t-t^2\qquad(0\le t\le20).
+</span></p>
+<p>For the relevant interval, both displacements are non-negative. Equating them gives</p>
+<p><span class="math display">
+32+8t=20t-t^2
+\quad\Rightarrow\quad t^2-12t+32=0.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+\boxed{t=4\,\mathrm s\text{ or }t=8\,\mathrm s}.
+</span></p>
+The sketch for (c) is the straight line <span class="math inline">s_A=32+8t</span> and the concave-down parabola <span class="math inline">s_B=20t-t^2</span>, both over <span class="math inline">0\le t\le20</span>.
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2022/2022/9709_s22_qp_42.pdf, Q4(a–c), and matching 2022 M/J/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q09" class="question-card">
+<section id="question-9-970941mj21-q4ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970941mj21-q4ab">Question 9 · 9709/41/M/J/21 Q4(a–b)</h3>
+<p>Two cyclists, Isabella and Maria, are having a race. They both travel along a straight road with constant acceleration, starting from rest at point <span class="math inline">A</span>.</p>
+<p>Isabella accelerates for 5 s at a constant rate <span class="math inline">a\,\mathrm{m\,s^{-2}}</span>. She then travels at the constant speed she has reached for 10 s, before decelerating to rest at a constant rate over a period of 5 s.</p>
+<p>Maria accelerates at a constant rate, reaching a speed of <span class="math inline">5\,\mathrm{m\,s^{-1}}</span> in a distance of <span class="math inline">27.5\,\mathrm m</span>. She then maintains this speed for a period of 10 s, before decelerating to rest at a constant rate over a period of 5 s.</p>
+<ol type="a">
+<li><p>Given that <span class="math inline">a=1.1</span>, find which cyclist travels further. <strong>[5]</strong></p></li>
+<li><p>Find the value of <span class="math inline">a</span> for which the two cyclists travel the same distance. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>For Isabella, the final speed is <span class="math inline">5a</span>. Her total distance is</p>
+<p><span class="math display">
+s_I=\frac12(5)(5a)+(10)(5a)+\frac12(5)(5a)=75a.
+</span></p>
+<p>When <span class="math inline">a=1.1</span>, <span class="math inline">s_I=82.5\,\mathrm m</span>.</p>
+<p>Maria travels <span class="math inline">27.5+10(5)+\frac12(5)(5)=90\,\mathrm m</span>, so Maria travels further.</p>
+<p>For equal distance,</p>
+<span class="math display">
+75a=90\quad\Rightarrow\quad\boxed{a=1.2\,\mathrm{m\,s^{-2}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_41.pdf, Q4(a–b), and matching 2021 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q10" class="question-card">
+<section id="question-10-970942mj20-q1ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970942mj20-q1ac">Question 10 · 9709/42/M/J/20 Q1(a–c)</h3>
+<p>A tram starts from rest and moves with uniform acceleration for 20 s. The tram then travels at a constant speed, <span class="math inline">V\,\mathrm{m\,s^{-1}}</span>, for 170 s before being brought to rest with a uniform deceleration of magnitude twice that of the acceleration. The total distance travelled by the tram is <span class="math inline">2.775\,\mathrm{km}</span>.</p>
+<ol type="a">
+<li><p>Sketch a velocity-time graph for the motion, stating the total time for which the tram is moving. <strong>[2]</strong></p></li>
+<li><p>Find <span class="math inline">V</span>. <strong>[2]</strong></p></li>
+<li><p>Find the magnitude of the acceleration. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>If the acceleration is <span class="math inline">a</span>, then <span class="math inline">V=20a</span>. The deceleration is <span class="math inline">2a</span>, so the final 0-to-<span class="math inline">V</span> time is <span class="math inline">V/(2a)=10</span> s. The total moving time is therefore</p>
+<p><span class="math display">
+\boxed{200\,\mathrm s}.
+</span></p>
+<p>The area under the velocity-time graph is</p>
+<p><span class="math display">
+2775=\frac12(20)V+170V+\frac12(10)V=185V.
+</span></p>
+<p>Thus <span class="math inline">V=15\,\mathrm{m\,s^{-1}}</span>, and</p>
+<span class="math display">
+\boxed{a=\frac{15}{20}=0.75\,\mathrm{m\,s^{-2}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-42.pdf, Q1(a–c), and matching 2020 M/J/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q11" class="question-card">
+<section id="question-11-970941on20-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970941on20-q4">Question 11 · 9709/41/O/N/20 Q4</h3>
+<p>A particle <span class="math inline">P</span> moves in a straight line. It starts from rest at a point <span class="math inline">O</span> on the line and at time <span class="math inline">t\,\mathrm s</span> after leaving <span class="math inline">O</span> it has acceleration <span class="math inline">a\,\mathrm{m\,s^{-2}}</span>, where</p>
+<p><span class="math display">
+a=6t-18.
+</span></p>
+<p>Find the distance <span class="math inline">P</span> moves before it comes to instantaneous rest. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Integrating the acceleration and using <span class="math inline">v=0</span> at <span class="math inline">t=0</span>,</p>
+<p><span class="math display">
+v=3t^2-18t=3t(t-6).
+</span></p>
+<p>The next time at instantaneous rest is <span class="math inline">t=6</span>. Integrating again,</p>
+<p><span class="math display">
+s=t^3-9t^2.
+</span></p>
+<p>At <span class="math inline">t=6</span>, <span class="math inline">s=216-324=-108\,\mathrm m</span>. The particle has moved in one direction throughout <span class="math inline">0&lt;t&lt;6</span>, so the distance is</p>
+<span class="math display">
+\boxed{108\,\mathrm m}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_41.pdf, Q4, and matching 2020 O/N/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-kin-q12" class="question-card">
+<section id="question-12-970943on20-q5ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-12-970943on20-q5ac">Question 12 · 9709/43/O/N/20 Q5(a–c)</h3>
+<p>A particle <span class="math inline">P</span> moves in a straight line. It starts at a point <span class="math inline">O</span> on the line and at time <span class="math inline">t\,\mathrm s</span> after leaving <span class="math inline">O</span> it has velocity <span class="math inline">v\,\mathrm{m\,s^{-1}}</span>, where</p>
+<p><span class="math display">
+v=4t^2-20t+21.
+</span></p>
+<ol type="a">
+<li><p>Find the values of <span class="math inline">t</span> for which <span class="math inline">P</span> is at instantaneous rest. <strong>[2]</strong></p></li>
+<li><p>Find the initial acceleration of <span class="math inline">P</span>. <strong>[2]</strong></p></li>
+<li><p>Find the minimum velocity of <span class="math inline">P</span>. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>Set <span class="math inline">v=0</span>:</li>
+</ol>
+<p><span class="math display">
+4t^2-20t+21=0
+\quad\Rightarrow\quad
+(2t-3)(2t-7)=0.
+</span></p>
+<p>Hence <span class="math inline">\boxed{t=1.5\,\mathrm s\text{ or }t=3.5\,\mathrm s}</span>.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+a=\frac{dv}{dt}=8t-20,
+</span></p>
+<p>so the initial acceleration is <span class="math inline">\boxed{-20\,\mathrm{m\,s^{-2}}}</span>.</p>
+<ol start="3" type="a">
+<li>The minimum velocity occurs when <span class="math inline">a=0</span>, so <span class="math inline">t=2.5</span>. Therefore</li>
+</ol>
+<span class="math display">
+v=4(2.5)^2-20(2.5)+21=\boxed{-4\,\mathrm{m\,s^{-1}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_43.pdf, Q5(a–c), and matching 2020 O/N/43 mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="quick-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="quick-checklist">3. Quick checklist</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">Did I choose a positive direction and keep the signs consistent?</label></li>
+<li><label><input type="checkbox">Is the question asking for distance or displacement?</label></li>
+<li><label><input type="checkbox">Is the graph displacement-time or velocity-time?</label></li>
+<li><label><input type="checkbox">Did I use gradient for velocity/acceleration and area for displacement?</label></li>
+<li><label><input type="checkbox">Is the acceleration constant before using a SUVAT equation?</label></li>
+<li><label><input type="checkbox">For vertical motion, did I use <span class="math inline">a=\pm g</span> and set <span class="math inline">v=0</span> at maximum height?</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-4/forces-and-equilibrium.html" class="pagination-link" aria-label="1. Forces and equilibrium">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Forces and equilibrium</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-4/momentum.html" class="pagination-link" aria-label="3. Momentum">
+        <span class="nav-page-text">3. Momentum</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 4 Mechanics, syllabus 4.4.">
+
+<title>4. Newton’s laws of motion – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-4/energy-work-and-power.html" rel="next">
+<link href="../paper-4/momentum.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/newtons-laws-of-motion.html">4. Newton’s laws of motion</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/kinematics-of-motion-in-a-straight-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Kinematics of motion in a straight line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/momentum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Momentum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/newtons-laws-of-motion.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4. Newton’s laws of motion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/energy-work-and-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Energy, work and power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 5 · Probability and Statistics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/representation-of-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 Representation of data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/permutations-and-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 Permutations and combinations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Probability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/discrete-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Discrete random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/normal-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 The normal distribution</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 6 · Probability and Statistics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/poisson-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 The Poisson distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/linear-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 Linear combinations of random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/continuous-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Continuous random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/sampling-and-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Sampling and estimation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/hypothesis-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 Hypothesis tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#forces-and-force-diagrams" id="toc-forces-and-force-diagrams" class="nav-link" data-scroll-target="#forces-and-force-diagrams">Forces and force diagrams</a></li>
+  <li><a href="#newtons-first-and-second-laws" id="toc-newtons-first-and-second-laws" class="nav-link" data-scroll-target="#newtons-first-and-second-laws">Newton’s first and second laws</a></li>
+  <li><a href="#newtons-third-law" id="toc-newtons-third-law" class="nav-link" data-scroll-target="#newtons-third-law">Newton’s third law</a></li>
+  <li><a href="#connected-particles" id="toc-connected-particles" class="nav-link" data-scroll-target="#connected-particles">Connected particles</a></li>
+  <li><a href="#vertical-motion-and-lifts" id="toc-vertical-motion-and-lifts" class="nav-link" data-scroll-target="#vertical-motion-and-lifts">Vertical motion and lifts</a></li>
+  <li><a href="#pulleys" id="toc-pulleys" class="nav-link" data-scroll-target="#pulleys">Pulleys</a></li>
+  <li><a href="#resolving-forces-and-friction" id="toc-resolving-forces-and-friction" class="nav-link" data-scroll-target="#resolving-forces-and-friction">Resolving forces and friction</a></li>
+  </ul></li>
+  <li><a href="#note-worked-examples" id="toc-note-worked-examples" class="nav-link" data-scroll-target="#note-worked-examples">2. Note worked examples</a>
+  <ul class="collapse">
+  <li><a href="#worked-example-1-force-diagram-on-a-rough-plane" id="toc-worked-example-1-force-diagram-on-a-rough-plane" class="nav-link" data-scroll-target="#worked-example-1-force-diagram-on-a-rough-plane">Worked example 1 · Force diagram on a rough plane</a></li>
+  <li><a href="#worked-example-2-equilibrium-in-one-dimension" id="toc-worked-example-2-equilibrium-in-one-dimension" class="nav-link" data-scroll-target="#worked-example-2-equilibrium-in-one-dimension">Worked example 2 · Equilibrium in one dimension</a></li>
+  <li><a href="#worked-example-3-resultant-force-and-acceleration" id="toc-worked-example-3-resultant-force-and-acceleration" class="nav-link" data-scroll-target="#worked-example-3-resultant-force-and-acceleration">Worked example 3 · Resultant force and acceleration</a></li>
+  <li><a href="#worked-example-4-connected-bodies-and-tow-bar" id="toc-worked-example-4-connected-bodies-and-tow-bar" class="nav-link" data-scroll-target="#worked-example-4-connected-bodies-and-tow-bar">Worked example 4 · Connected bodies and tow-bar</a></li>
+  <li><a href="#worked-example-5-the-lift-problem" id="toc-worked-example-5-the-lift-problem" class="nav-link" data-scroll-target="#worked-example-5-the-lift-problem">Worked example 5 · The lift problem</a></li>
+  <li><a href="#worked-example-6-pulley-system" id="toc-worked-example-6-pulley-system" class="nav-link" data-scroll-target="#worked-example-6-pulley-system">Worked example 6 · Pulley system</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-4-questions" id="toc-verified-paper-4-questions" class="nav-link" data-scroll-target="#verified-paper-4-questions">3. Verified Paper 4 questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970941mj24-q4" id="toc-question-1-970941mj24-q4" class="nav-link" data-scroll-target="#question-1-970941mj24-q4">Question 1 · 9709/41/M/J/24 Q4</a></li>
+  <li><a href="#question-2-970941mj20-q2ab" id="toc-question-2-970941mj20-q2ab" class="nav-link" data-scroll-target="#question-2-970941mj20-q2ab">Question 2 · 9709/41/M/J/20 Q2(a–b)</a></li>
+  <li><a href="#question-3-970941on20-q5ab" id="toc-question-3-970941on20-q5ab" class="nav-link" data-scroll-target="#question-3-970941on20-q5ab">Question 3 · 9709/41/O/N/20 Q5(a–b)</a></li>
+  <li><a href="#question-4-970942on21-q2ab" id="toc-question-4-970942on21-q2ab" class="nav-link" data-scroll-target="#question-4-970942on21-q2ab">Question 4 · 9709/42/O/N/21 Q2(a–b)</a></li>
+  <li><a href="#question-5-970942on22-q5ab" id="toc-question-5-970942on22-q5ab" class="nav-link" data-scroll-target="#question-5-970942on22-q5ab">Question 5 · 9709/42/O/N/22 Q5(a–b)</a></li>
+  <li><a href="#question-6-970942fm23-q4ac" id="toc-question-6-970942fm23-q4ac" class="nav-link" data-scroll-target="#question-6-970942fm23-q4ac">Question 6 · 9709/42/F/M/23 Q4(a–c)</a></li>
+  <li><a href="#question-7-970942fm21-q4ac" id="toc-question-7-970942fm21-q4ac" class="nav-link" data-scroll-target="#question-7-970942fm21-q4ac">Question 7 · 9709/42/F/M/21 Q4(a–c)</a></li>
+  </ul></li>
+  <li><a href="#final-checklist" id="toc-final-checklist" class="nav-link" data-scroll-target="#final-checklist">Final checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/newtons-laws-of-motion.html">4. Newton’s laws of motion</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">4. Newton’s laws of motion</h1>
+<p class="subtitle lead">F = ma · weight · connected particles · friction</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 4 Mechanics, syllabus 4.4.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 4.4，覆盖：</p>
+<ul>
+<li>use Newton’s laws of motion for a particle of constant mass moving under the action of constant forces, including friction;</li>
+<li>use the relation <span class="math inline">W=mg</span>;</li>
+<li>solve problems involving motion in a vertical plane and on an inclined plane with constant acceleration;</li>
+<li>solve problems involving connected particles, light inextensible strings, smooth pulleys and light rigid rods.</li>
+</ul>
+<p>题目部分只收录可由本地 Paper 4 原始 QP 与对应 mark scheme 核对的完整真题；不把 Note 的 worked example 改写成真题。</p>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">为每个 particle 画出完整 force diagram，并明确正方向</label></li>
+<li><label><input type="checkbox">用 <span class="math inline">F=ma</span>、<span class="math inline">W=mg</span> 和分力处理水平、竖直及斜面运动</label></li>
+<li><label><input type="checkbox">在 connected particles 中正确使用相同加速度、相同 tension 和系统方程</label></li>
+<li><label><input type="checkbox">区分 light inextensible string、smooth pulley、light rigid tow-bar 的模型含义</label></li>
+<li><label><input type="checkbox">判断 friction 的方向，并使用 <span class="math inline">F\leq\mu R</span> 与 limiting friction <span class="math inline">F=\mu R</span></label></li>
+</ul>
+</div>
+</section>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
+<section id="forces-and-force-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="forces-and-force-diagrams">Forces and force diagrams</h3>
+<p>常见力包括 weight、normal reaction、tension、thrust、friction 和 resistance。先把研究对象单独取出，再只画作用在它上的外力。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/force-diagrams-basic.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Basic force diagrams from the Mechanics Toolkit note.</figcaption>
+</figure>
+</div>
+<p>对于接触面上的 particle：</p>
+<p><span class="math display">
+W=mg,
+\qquad R\perp\text{ contact surface}.
+</span></p>
+<p>若物体在粗糙面上运动，friction 与相对运动（或将发生的相对运动）相反；若处于 limiting equilibrium，<span class="math inline">F=\mu R</span>，否则只知道 <span class="math inline">F\leq\mu R</span>。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/force-diagrams-incline.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Forces on a particle on an inclined plane.</figcaption>
+</figure>
+</div>
+</section>
+<section id="newtons-first-and-second-laws" class="level3">
+<h3 class="anchored" data-anchor-id="newtons-first-and-second-laws">Newton’s first and second laws</h3>
+<p>当 resultant force 为零时，particle 保持静止或以恒速直线运动。对质量恒定的 particle，沿选定方向：</p>
+<p><span class="math display">
+\sum F=ma.
+</span></p>
+<p>同一题中可以分别沿斜面、垂直斜面、水平或竖直方向列方程。若物体静止或匀速，<span class="math inline">a=0</span>，方程就变成 equilibrium 方程。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/newton-second-law.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Newton’s second law and component setup from the note.</figcaption>
+</figure>
+</div>
+</section>
+<section id="newtons-third-law" class="level3">
+<h3 class="anchored" data-anchor-id="newtons-third-law">Newton’s third law</h3>
+<p>作用力与反作用力：大小相等、方向相反、作用在不同物体上。因此不能把一对 third-law forces 同时放入同一个 particle 的 force diagram。</p>
+</section>
+<section id="connected-particles" class="level3">
+<h3 class="anchored" data-anchor-id="connected-particles">Connected particles</h3>
+<p>对于 light inextensible string：</p>
+<ul>
+<li>string 的质量忽略不计，因此同一根绳上的 tension 相同；</li>
+<li>inextensible 表示绳长不变，连接 particle 的 acceleration magnitudes 相同；</li>
+<li>string 只能提供 tension，不能提供 thrust。</li>
+</ul>
+<p>对于 light rigid tow-bar，杆可以传递 tension 或 thrust；连接物体仍有相同的 acceleration。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/connected-bodies.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Connected bodies and tow-bar modelling assumptions.</figcaption>
+</figure>
+</div>
+<p>先把所有连接物体作为一个 system，可以消去 internal tension；若要找 tension，再对其中一个 particle 单独列 <span class="math inline">F=ma</span>。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/connected-system.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>System equation and separate force diagrams.</figcaption>
+</figure>
+</div>
+</section>
+<section id="vertical-motion-and-lifts" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-motion-and-lifts">Vertical motion and lifts</h3>
+<p>竖直向上为正时，lift、load 或 cable 的方程必须保留符号。例如 lift 向上加速时：</p>
+<p><span class="math display">
+T-mg=ma.
+</span></p>
+<p>若 lift 向下加速，<span class="math inline">a</span> 在上述正方向下为负。load 的 normal reaction 是 load 所受的力；它不等于 load 的 weight，除非 load 没有竖直加速度。</p>
+</section>
+<section id="pulleys" class="level3">
+<h3 class="anchored" data-anchor-id="pulleys">Pulleys</h3>
+<p>在 light inextensible string over a smooth pulley 的模型中，绳两侧 tension 相同，两个 particle 的 acceleration magnitudes 相同。对每个 particle 分别画图，再按各自运动方向列方程。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/pulleys.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Pulley model from the note.</figcaption>
+</figure>
+</div>
+</section>
+<section id="resolving-forces-and-friction" class="level3">
+<h3 class="anchored" data-anchor-id="resolving-forces-and-friction">Resolving forces and friction</h3>
+<p>斜面角为 <span class="math inline">\theta</span> 时，weight 的分量为：</p>
+<p><span class="math display">
+mg\sin\theta\quad\text{parallel to the plane},
+\qquad
+mg\cos\theta\quad\text{perpendicular to the plane}.
+</span></p>
+<p>外力若与斜面夹角为 <span class="math inline">\alpha</span>，先将它分解到 parallel/perpendicular 两个方向，再用 perpendicular 方程求 <span class="math inline">R</span>，最后判断 friction：</p>
+<p><span class="math display">
+F\leq\mu R,
+\qquad
+F_{\max}=\mu R.
+</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/resolving-forces.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Resolving forces on horizontal and inclined planes.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="note-worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="note-worked-examples">2. Note worked examples</h2>
+<p>每个 worked example 单独成卡片，保留 Note 中的建模情境，并把关键方程和结果列出。</p>
+<section id="worked-example-1-force-diagram-on-a-rough-plane" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-1-force-diagram-on-a-rough-plane">Worked example 1 · Force diagram on a rough plane</h3>
+<p>A block has weight <span class="math inline">52\,\mathrm N</span> and is on a rough plane inclined at angle <span class="math inline">\theta</span> to the horizontal. It is connected by a light inextensible string, passing over a smooth pulley, to a particle of mass <span class="math inline">2\,\mathrm{kg}</span> which hangs freely. The particle is at rest. Add all the forces acting on the block and the particle, and state the possible directions of acceleration.</p>
+<p>For the block, include weight <span class="math inline">52\,\mathrm N</span>, the normal reaction, the tension and friction. For the hanging particle, include its weight <span class="math inline">2g\,\mathrm N</span> and the tension. The two possible directions are determined by which side would move down if the system were released; friction opposes that impending motion.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/force-diagram-worked-example.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Completed force diagram from the Note worked example.</figcaption>
+</figure>
+</div>
+</section>
+<section id="worked-example-2-equilibrium-in-one-dimension" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-2-equilibrium-in-one-dimension">Worked example 2 · Equilibrium in one dimension</h3>
+<p>A rectangular sign of mass <span class="math inline">(4x-8)\,\mathrm{kg}</span> is held in equilibrium by two light inextensible strings. The upward forces in the strings are <span class="math inline">(20x+9)\,\mathrm N</span> and <span class="math inline">(10x+11)\,\mathrm N</span>. Find <span class="math inline">x</span>, using <span class="math inline">g=10\,\mathrm{m\,s^{-2}}</span>.</p>
+<p>Since the sign is in equilibrium,</p>
+<p><span class="math display">
+(20x+9)+(10x+11)=(4x-8)\times10.
+</span></p>
+<p>Hence <span class="math inline">30x+20=40x-80</span>, so</p>
+<p><span class="math display">
+\boxed{x=10}.
+</span></p>
+</section>
+<section id="worked-example-3-resultant-force-and-acceleration" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-3-resultant-force-and-acceleration">Worked example 3 · Resultant force and acceleration</h3>
+<p>A train engine of mass <span class="math inline">5</span> tonnes is moving along a straight track with constant acceleration. In an eight second period, it covers a distance of <span class="math inline">250\,\mathrm m</span> at which point it has velocity <span class="math inline">35\,\mathrm{m\,s^{-1}}</span>. Find its acceleration, the resultant force, and the total resistance if the driving force is <span class="math inline">6250\,\mathrm N</span>.</p>
+<p>Using <span class="math inline">s=vt-\frac12at^2</span>,</p>
+<p><span class="math display">
+250=35(8)-\frac12a(8^2),
+</span></p>
+<p>so the Note’s worked calculation gives <span class="math inline">a=0.9375\,\mathrm{m\,s^{-2}}</span>. Therefore</p>
+<p><span class="math display">
+F_{\rm resultant}=5000(0.9375)=4687.5\,\mathrm N,
+</span></p>
+<p>and the resistance is</p>
+<p><span class="math display">
+6250-4687.5=\boxed{1562.5\,\mathrm N}.
+</span></p>
+</section>
+<section id="worked-example-4-connected-bodies-and-tow-bar" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-4-connected-bodies-and-tow-bar">Worked example 4 · Connected bodies and tow-bar</h3>
+<p>A small plane of mass <span class="math inline">1250\,\mathrm{kg}</span> tows a glider of mass <span class="math inline">300\,\mathrm{kg}</span>. The acceleration is <span class="math inline">1.5\,\mathrm{m\,s^{-2}}</span>; the resistances are <span class="math inline">580\,\mathrm N</span> on the plane and <span class="math inline">255\,\mathrm N</span> on the glider. The tow rope is light and inextensible. The Note result is an engine force of <span class="math inline">\boxed{3160\,\mathrm N}</span> and a tow-rope tension of <span class="math inline">\boxed{705\,\mathrm N}</span>.</p>
+<p>For the glider, <span class="math inline">T-255=300(1.5)</span>, giving <span class="math inline">T=705\,\mathrm N</span>. For the whole system, engine force minus total resistance equals <span class="math inline">(1250+300)(1.5)</span>, giving <span class="math inline">3160\,\mathrm N</span>.</p>
+</section>
+<section id="worked-example-5-the-lift-problem" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-5-the-lift-problem">Worked example 5 · The lift problem</h3>
+<p>A lift of mass <span class="math inline">800\,\mathrm{kg}</span> is moving vertically downwards with acceleration <span class="math inline">0.3\,\mathrm{m\,s^{-2}}</span>. A load of mass <span class="math inline">m\,\mathrm{kg}</span> lies on the floor of the lift. The reaction force exerted on the load by the lift is <span class="math inline">399\,\mathrm N</span>. Explain why the force <span class="math inline">800g\,\mathrm N</span> occurs, find <span class="math inline">m</span>, and find the cable tension <span class="math inline">T</span>.</p>
+<p>The <span class="math inline">800g</span> term is the weight of the lift. Taking upward as positive for the load,</p>
+<p><span class="math display">
+399-mg=m(-0.3),
+</span></p>
+<p>so <span class="math inline">m\approx44.1\,\mathrm{kg}</span>. For the lift and load together,</p>
+<p><span class="math display">
+T-800g-mg=-(800+m)(0.3),
+</span></p>
+<p>giving <span class="math inline">\boxed{T\approx8160\,\mathrm N}</span>.</p>
+</section>
+<section id="worked-example-6-pulley-system" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-6-pulley-system">Worked example 6 · Pulley system</h3>
+<p>A <span class="math inline">25\,\mathrm{kg}</span> block on a horizontal table is connected over a smooth pulley to a <span class="math inline">60\,\mathrm{kg}</span> hanging block by a light inextensible string. The system is released. Find the tension <span class="math inline">T</span> and the acceleration <span class="math inline">a</span>.</p>
+<p>For the <span class="math inline">25\,\mathrm{kg}</span> block, <span class="math inline">T=25a</span>. For the hanging block, <span class="math inline">60g-T=60a</span>. Hence</p>
+<p><span class="math display">
+60g=85a,
+\qquad a\approx7.06\,\mathrm{m\,s^{-2}},
+</span></p>
+<p>and</p>
+<p><span class="math display">
+\boxed{T\approx176\,\mathrm N}.
+</span></p>
+</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/newtons-laws/friction-worked-example.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Friction worked example from the Mechanics Toolkit note.</figcaption>
+</figure>
+</div>
+</section>
+<section id="verified-paper-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-4-questions">3. Verified Paper 4 questions</h2>
+<p>以下每张卡均保留完整题干、所有小问和原始分值；图像从对应 QP 原始 PDF 的题图区域独立提取，不使用整页截图。</p>
+<div id="p4-newton-q01" class="question-card">
+<section id="question-1-970941mj24-q4" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970941mj24-q4">Question 1 · 9709/41/M/J/24 Q4</h3>
+<p>A car of mass <span class="math inline">1700\,\mathrm{kg}</span> is pulling a trailer of mass <span class="math inline">300\,\mathrm{kg}</span> along a straight horizontal road. The car and trailer are connected by a light inextensible cable which is parallel to the road. There are constant resistances to motion of <span class="math inline">400\,\mathrm N</span> on the car and <span class="math inline">150\,\mathrm N</span> on the trailer. The power of the car’s engine is <span class="math inline">14\,000\,\mathrm W</span>.</p>
+<p>Find the acceleration of the car and the tension in the cable when the speed is <span class="math inline">20\,\mathrm{m\,s^{-1}}</span>. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The driving force at this instant is</p>
+<p><span class="math display">
+P=Fv\quad\Rightarrow\quad F=\frac{14000}{20}=700\,\mathrm N.
+</span></p>
+<p>For the car and trailer together,</p>
+<p><span class="math display">
+700-400-150=(1700+300)a,
+</span></p>
+<p>so <span class="math inline">a=0.075\,\mathrm{m\,s^{-2}}</span>. For the trailer,</p>
+<p><span class="math display">
+T-150=300(0.075),
+</span></p>
+<p>therefore</p>
+<span class="math display">
+\boxed{a=0.075\,\mathrm{m\,s^{-2}},\qquad T=172.5\,\mathrm N}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/A-Level-CAIE数学QP-202406-Mathematics-P41-A-Level题库大全小程序.pdf, Q4, with the corresponding 9709/41/M/J/24 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q02" class="question-card">
+<section id="question-2-970941mj20-q2ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970941mj20-q2ab">Question 2 · 9709/41/M/J/20 Q2(a–b)</h3>
+<p>A car of mass <span class="math inline">1800\,\mathrm{kg}</span> is towing a trailer of mass <span class="math inline">400\,\mathrm{kg}</span> along a straight horizontal road. The car and trailer are connected by a light rigid tow-bar. The car is accelerating at <span class="math inline">1.5\,\mathrm{m\,s^{-2}}</span>. There are constant resistance forces of <span class="math inline">250\,\mathrm N</span> on the car and <span class="math inline">100\,\mathrm N</span> on the trailer.</p>
+<ol type="a">
+<li><p>Find the tension in the tow-bar. <strong>[2]</strong></p></li>
+<li><p>Find the power of the engine of the car at the instant when the speed is <span class="math inline">20\,\mathrm{m\,s^{-1}}</span>. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>For the trailer,</li>
+</ol>
+<p><span class="math display">
+T-100=400(1.5),
+</span></p>
+<p>so <span class="math inline">\boxed{T=700\,\mathrm N}</span>.</p>
+<ol start="2" type="a">
+<li>Let <span class="math inline">E</span> be the engine force. For the car,</li>
+</ol>
+<p><span class="math display">
+E-700-250=1800(1.5),
+</span></p>
+<p>so <span class="math inline">E=3650\,\mathrm N</span>. Hence</p>
+<span class="math display">
+P=Ev=3650(20)=\boxed{73\,000\,\mathrm W}=\boxed{73.0\,\mathrm{kW}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/9709-s20-qp-41.pdf, Q2, with the corresponding 9709/41/M/J/20 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q03" class="question-card">
+<section id="question-3-970941on20-q5ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970941on20-q5ab">Question 3 · 9709/41/O/N/20 Q5(a–b)</h3>
+<p>Two particles of masses <span class="math inline">0.8\,\mathrm{kg}</span> and <span class="math inline">0.2\,\mathrm{kg}</span> are connected by a light inextensible string that passes over a fixed smooth pulley. The system is released from rest with both particles <span class="math inline">0.5\,\mathrm m</span> above a horizontal floor (see diagram). In the subsequent motion the <span class="math inline">0.2\,\mathrm{kg}</span> particle does not reach the pulley.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/extracted/paper4-newtons-laws-2020-on41-q5.svg" class="question-figure img-fluid figure-img"></p>
+<figcaption>Original QP diagram for 9709/41/O/N/20 Q5.</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li><p>Show that the magnitude of the acceleration of the particles is <span class="math inline">6\,\mathrm{m\,s^{-2}}</span> and find the tension in the string. <strong>[4]</strong></p></li>
+<li><p>When the <span class="math inline">0.8\,\mathrm{kg}</span> particle reaches the floor it comes to rest. Find the greatest height of the <span class="math inline">0.2\,\mathrm{kg}</span> particle above the floor. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>For the <span class="math inline">0.8\,\mathrm{kg}</span> particle, taking downward as positive,</li>
+</ol>
+<p><span class="math display">
+8-T=0.8a.
+</span></p>
+<p>For the <span class="math inline">0.2\,\mathrm{kg}</span> particle,</p>
+<p><span class="math display">
+T-2=0.2a.
+</span></p>
+<p>Adding gives <span class="math inline">6= a</span>, so <span class="math inline">a=6\,\mathrm{m\,s^{-2}}</span>. Then</p>
+<p><span class="math display">
+T=2+0.2(6)=\boxed{3.2\,\mathrm N}.
+</span></p>
+<ol start="2" type="a">
+<li>Before the heavier particle reaches the floor,</li>
+</ol>
+<p><span class="math display">
+v^2=u^2+2as=0+2(6)(0.5)=6.
+</span></p>
+<p>The lighter particle has risen <span class="math inline">0.5\,\mathrm m</span>, so its height is <span class="math inline">1.0\,\mathrm m</span>. After the heavier particle stops, the lighter particle rises further against gravity:</p>
+<p><span class="math display">
+0=v^2-2g\Delta h
+\quad\Rightarrow\quad
+\Delta h=\frac{6}{20}=0.3\,\mathrm m.
+</span></p>
+Greatest height <span class="math inline">=1.0+0.3=\boxed{1.3\,\mathrm m}</span>.
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/9709_w20_qp_41.pdf, Q5(a–b), with the corresponding 9709/41/O/N/20 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q04" class="question-card">
+<section id="question-4-970942on21-q2ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970942on21-q2ab">Question 4 · 9709/42/O/N/21 Q2(a–b)</h3>
+<p>A van of mass <span class="math inline">3600\,\mathrm{kg}</span> is towing a trailer of mass <span class="math inline">1200\,\mathrm{kg}</span> along a straight horizontal road using a light horizontal rope. There are resistance forces of <span class="math inline">700\,\mathrm N</span> on the van and <span class="math inline">300\,\mathrm N</span> on the trailer.</p>
+<ol type="a">
+<li>The driving force exerted by the van is <span class="math inline">2500\,\mathrm N</span>. Find the tension in the rope. <strong>[4]</strong></li>
+</ol>
+<p>The driving force is now removed and the van driver applies a braking force which acts only on the van. The resistance forces remain unchanged.</p>
+<ol start="2" type="a">
+<li>Find the least possible value of the braking force which will cause the rope to become slack. <strong>[2]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>For the system,</li>
+</ol>
+<p><span class="math display">
+2500-700-300=(3600+1200)a,
+</span></p>
+<p>so <span class="math inline">a=0.3125\,\mathrm{m\,s^{-2}}</span>. For the trailer,</p>
+<p><span class="math display">
+T-300=1200(0.3125),
+</span></p>
+<p>giving <span class="math inline">\boxed{T=675\,\mathrm N}</span>.</p>
+<ol start="2" type="a">
+<li>At the instant the rope is just slack, <span class="math inline">T=0</span>. The trailer then has</li>
+</ol>
+<p><span class="math display">
+a=\frac{-300}{1200}=-0.25\,\mathrm{m\,s^{-2}}.
+</span></p>
+<p>For the van, with braking force <span class="math inline">B</span>,</p>
+<p><span class="math display">
+-B-700=3600(-0.25),
+</span></p>
+so <span class="math inline">B=\boxed{200\,\mathrm N}</span>.
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/9709_w21_qp_42.pdf, Q2(a–b), with the corresponding 9709/42/O/N/21 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q05" class="question-card">
+<section id="question-5-970942on22-q5ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970942on22-q5ab">Question 5 · 9709/42/O/N/22 Q5(a–b)</h3>
+<p>A block A of mass <span class="math inline">80\,\mathrm{kg}</span> is connected by a light, inextensible rope to a block B of mass <span class="math inline">40\,\mathrm{kg}</span>. The rope joining the two blocks is taut and is parallel to a line of greatest slope of a plane which is inclined at an angle of <span class="math inline">20^\circ</span> to the horizontal. A force of magnitude <span class="math inline">500\,\mathrm N</span> inclined at an angle of <span class="math inline">15^\circ</span> above the same line of greatest slope acts on A (see diagram). The blocks move up the plane and there is a resistance force of <span class="math inline">50\,\mathrm N</span> on B, but no resistance force on A.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/extracted/paper4-newtons-laws-2022-on42-q5.svg" class="question-figure img-fluid figure-img"></p>
+<figcaption>Original QP diagram for 9709/42/O/N/22 Q5.</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li><p>Find the acceleration of the blocks and the tension in the rope. <strong>[5]</strong></p></li>
+<li><p>Find the time that it takes for the blocks to reach a speed of <span class="math inline">1.2\,\mathrm{m\,s^{-1}}</span> from rest. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Taking up the plane as positive, for the two blocks together,</p>
+<p><span class="math display">
+500\cos15^\circ-120\sin20^\circ-50=120a.
+</span></p>
+<p>Thus <span class="math inline">a\approx0.1878\,\mathrm{m\,s^{-2}}</span>. For block B,</p>
+<p><span class="math display">
+T-40g\sin20^\circ-50=40a,
+</span></p>
+<p>so <span class="math inline">T\approx\boxed{194\,\mathrm N}</span>. Therefore</p>
+<p><span class="math display">
+\boxed{a\approx0.188\,\mathrm{m\,s^{-2}}}.
+</span></p>
+<ol start="2" type="a">
+<li>Using <span class="math inline">v=u+at</span>,</li>
+</ol>
+<span class="math display">
+t=\frac{1.2}{0.1878}\approx\boxed{6.39\,\mathrm s}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2022/9709_w22_qp_42.pdf, Q5(a–b), with the corresponding 9709/42/O/N/22 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q06" class="question-card">
+<section id="question-6-970942fm23-q4ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970942fm23-q4ac">Question 6 · 9709/42/F/M/23 Q4(a–c)</h3>
+<p>A toy railway locomotive of mass <span class="math inline">0.8\,\mathrm{kg}</span> is towing a truck of mass <span class="math inline">0.4\,\mathrm{kg}</span> on a straight horizontal track at a constant speed of <span class="math inline">2\,\mathrm{m\,s^{-1}}</span>. There is a constant resistance force of magnitude <span class="math inline">0.2\,\mathrm N</span> on the locomotive, but no resistance force on the truck. There is a light rigid horizontal coupling connecting the locomotive and the truck.</p>
+<ol type="a">
+<li><p>State the tension in the coupling. <strong>[1]</strong></p></li>
+<li><p>Find the power produced by the locomotive’s engine. <strong>[1]</strong></p></li>
+</ol>
+<p>The power produced by the locomotive’s engine is now changed to <span class="math inline">1.2\,\mathrm W</span>.</p>
+<ol start="3" type="a">
+<li>Find the magnitude of the tension in the coupling at the instant that the locomotive begins to accelerate. <strong>[5]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li><p>The truck has no resistance and constant speed, so its resultant force is zero. Hence <span class="math inline">\boxed{T=0}</span>.</p></li>
+<li><p>The engine force balances the <span class="math inline">0.2\,\mathrm N</span> resistance, so</p></li>
+</ol>
+<p><span class="math display">
+P=Fv=0.2(2)=\boxed{0.4\,\mathrm W}.
+</span></p>
+<ol start="3" type="a">
+<li>At speed <span class="math inline">2\,\mathrm{m\,s^{-1}}</span>, the new engine force is</li>
+</ol>
+<p><span class="math display">
+F=\frac{1.2}{2}=0.6\,\mathrm N.
+</span></p>
+<p>For both particles,</p>
+<p><span class="math display">
+0.6-0.2=(0.8+0.4)a,
+</span></p>
+<p>so <span class="math inline">a=1/3\,\mathrm{m\,s^{-2}}</span>. For the truck,</p>
+<span class="math display">
+T=0.4\left(\frac13\right)=\boxed{0.133\,\mathrm N}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/9709_m23_qp_42.pdf, Q4(a–c), with the corresponding 9709/42/F/M/23 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-newton-q07" class="question-card">
+<section id="question-7-970942fm21-q4ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970942fm21-q4ac">Question 7 · 9709/42/F/M/21 Q4(a–c)</h3>
+<p>An elevator moves vertically, supported by a cable. The diagram shows a velocity-time graph which models the motion of the elevator. The graph consists of 7 straight line segments.</p>
+<p>The elevator accelerates upwards from rest to a speed of <span class="math inline">2\,\mathrm{m\,s^{-1}}</span> over a period of <span class="math inline">1.5\,\mathrm s</span> and then travels at this speed for <span class="math inline">4.5\,\mathrm s</span>, before decelerating to rest over a period of <span class="math inline">1\,\mathrm s</span>.</p>
+<p>The elevator then remains at rest for <span class="math inline">6\,\mathrm s</span>, before accelerating to a speed of <span class="math inline">V\,\mathrm{m\,s^{-1}}</span> downwards over a period of <span class="math inline">2\,\mathrm s</span>. The elevator travels at this speed for a period of <span class="math inline">5\,\mathrm s</span>, before decelerating to rest over a period of <span class="math inline">1.5\,\mathrm s</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/extracted/paper4-newtons-laws-2021-fm42-q4.svg" class="question-figure img-fluid figure-img"></p>
+<figcaption>Original QP velocity-time graph for 9709/42/F/M/21 Q4.</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li><p>Find the acceleration of the elevator during the first <span class="math inline">1.5\,\mathrm s</span>. <strong>[1]</strong></p></li>
+<li><p>Given that the elevator starts and finishes its journey on the ground floor, find <span class="math inline">V</span>. <strong>[2]</strong></p></li>
+<li><p>The combined weight of the elevator and passengers on its upward journey is <span class="math inline">1500\,\mathrm{kg}</span>. Assuming that there is no resistance to motion, find the tension in the elevator cable on its upward journey when the elevator is decelerating. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+a=\frac{2-0}{1.5}=\boxed{\frac43\,\mathrm{m\,s^{-2}}}.
+</span></p>
+<ol start="2" type="a">
+<li>The upward displacement is the positive area under the graph:</li>
+</ol>
+<p><span class="math display">
+\frac12(1.5)(2)+(4.5)(2)+\frac12(1)(2)=11.5.
+</span></p>
+<p>The downward displacement is</p>
+<p><span class="math display">
+\frac12(2)V+5V+\frac12(1.5)V=6.75V.
+</span></p>
+<p>Equating distances gives <span class="math inline">V=11.5/6.75=\boxed{46/27\approx1.70\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="3" type="a">
+<li>During upward deceleration, <span class="math inline">a=-2\,\mathrm{m\,s^{-2}}</span>. Taking upward as positive,</li>
+</ol>
+<p><span class="math display">
+T-1500(10)=1500(-2),
+</span></p>
+so <span class="math inline">\boxed{T=12\,000\,\mathrm N}</span>.
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/9709_m21_qp_42.pdf, Q4(a–c), with the corresponding 9709/42/F/M/21 mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="final-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="final-checklist">Final checklist</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提示
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Isolate each particle before writing equations.</li>
+<li>Choose a positive direction and keep every force signed.</li>
+<li>Use a system equation to remove internal tension, then a single-particle equation to recover it.</li>
+<li>For strings, check equal tension and equal acceleration magnitude; for tow-bars, remember thrust is possible.</li>
+<li>Check units, direction, and whether friction is static or limiting.</li>
+</ol>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-4/momentum.html" class="pagination-link" aria-label="3. Momentum">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3. Momentum</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-4/energy-work-and-power.html" class="pagination-link" aria-label="5. Energy, work and power">
+        <span class="nav-page-text">5. Energy, work and power</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
