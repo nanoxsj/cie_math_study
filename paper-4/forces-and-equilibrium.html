@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.4.">
+<meta name="description" content="CIE 9709 Paper 4 Mechanics, syllabus 4.1.">
 
-<title>2.4 Differentiation – CIE Mathematics 9709</title>
+<title>1. Forces and equilibrium – CIE Mathematics 9709</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../paper-2/integration.html" rel="next">
-<link href="../paper-2/trigonometry.html" rel="prev">
+<link href="../paper-3/complex-numbers.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -131,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-2/algebra.html">Paper 2 · Pure Mathematics 2</a></li><li class="breadcrumb-item"><a href="../paper-2/differentiation.html">2.4 Differentiation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">1. Forces and equilibrium</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
@@ -250,7 +249,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.4 Differentiation</span></a>
   </div>
 </li>
@@ -344,7 +343,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1. Forces and equilibrium</span></a>
   </div>
 </li>
@@ -360,46 +359,45 @@ window.Quarto = {
     <h2 id="toc-title">该页面内容</h2>
    
   <ul>
-  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link active" data-scroll-target="#core-knowledge">1. Core knowledge</a>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link" data-scroll-target="#core-knowledge">1. Core knowledge</a>
   <ul class="collapse">
-  <li><a href="#standard-derivatives-and-composites" id="toc-standard-derivatives-and-composites" class="nav-link" data-scroll-target="#standard-derivatives-and-composites">Standard derivatives and composites</a></li>
-  <li><a href="#product-rule-and-quotient-rule" id="toc-product-rule-and-quotient-rule" class="nav-link" data-scroll-target="#product-rule-and-quotient-rule">Product rule and quotient rule</a></li>
-  <li><a href="#tangents-normals-and-stationary-points" id="toc-tangents-normals-and-stationary-points" class="nav-link" data-scroll-target="#tangents-normals-and-stationary-points">Tangents, normals and stationary points</a></li>
-  <li><a href="#parametric-differentiation" id="toc-parametric-differentiation" class="nav-link" data-scroll-target="#parametric-differentiation">Parametric differentiation</a></li>
-  <li><a href="#complete-standard-derivative-table" id="toc-complete-standard-derivative-table" class="nav-link" data-scroll-target="#complete-standard-derivative-table">Complete standard derivative table</a></li>
-  <li><a href="#implicit-differentiation-and-applications" id="toc-implicit-differentiation-and-applications" class="nav-link" data-scroll-target="#implicit-differentiation-and-applications">Implicit differentiation and applications</a></li>
+  <li><a href="#force-diagram-and-standard-models" id="toc-force-diagram-and-standard-models" class="nav-link" data-scroll-target="#force-diagram-and-standard-models">Force diagram and standard models</a></li>
+  <li><a href="#components-and-resultants" id="toc-components-and-resultants" class="nav-link" data-scroll-target="#components-and-resultants">Components and resultants</a></li>
+  <li><a href="#friction-and-limiting-equilibrium" id="toc-friction-and-limiting-equilibrium" class="nav-link" data-scroll-target="#friction-and-limiting-equilibrium">Friction and limiting equilibrium</a></li>
+  <li><a href="#newtons-third-law" id="toc-newtons-third-law" class="nav-link" data-scroll-target="#newtons-third-law">Newton’s third law</a></li>
   </ul></li>
-  <li><a href="#verified-paper-2-past-paper-questions" id="toc-verified-paper-2-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</a>
+  <li><a href="#verified-paper-4-questions" id="toc-verified-paper-4-questions" class="nav-link" data-scroll-target="#verified-paper-4-questions">2. Verified Paper 4 questions</a>
   <ul class="collapse">
-  <li><a href="#question-1-970921mj20-q3" id="toc-question-1-970921mj20-q3" class="nav-link" data-scroll-target="#question-1-970921mj20-q3">Question 1 · 9709/21/M/J/20 Q3</a></li>
-  <li><a href="#question-2-970922mj20-q2" id="toc-question-2-970922mj20-q2" class="nav-link" data-scroll-target="#question-2-970922mj20-q2">Question 2 · 9709/22/M/J/20 Q2</a></li>
-  <li><a href="#question-3-970922fm21-q3" id="toc-question-3-970922fm21-q3" class="nav-link" data-scroll-target="#question-3-970922fm21-q3">Question 3 · 9709/22/F/M/21 Q3</a></li>
-  <li><a href="#question-4-970921mj21-q4ab" id="toc-question-4-970921mj21-q4ab" class="nav-link" data-scroll-target="#question-4-970921mj21-q4ab">Question 4 · 9709/21/M/J/21 Q4(a–b)</a></li>
-  <li><a href="#question-5-970922fm22-q2" id="toc-question-5-970922fm22-q2" class="nav-link" data-scroll-target="#question-5-970922fm22-q2">Question 5 · 9709/22/F/M/22 Q2</a></li>
-  <li><a href="#question-6-970921mj22-q4" id="toc-question-6-970921mj22-q4" class="nav-link" data-scroll-target="#question-6-970921mj22-q4">Question 6 · 9709/21/M/J/22 Q4</a></li>
-  <li><a href="#question-7-970922on21-q3" id="toc-question-7-970922on21-q3" class="nav-link" data-scroll-target="#question-7-970922on21-q3">Question 7 · 9709/22/O/N/21 Q3</a></li>
-  <li><a href="#question-8-970921on20-q7ac" id="toc-question-8-970921on20-q7ac" class="nav-link" data-scroll-target="#question-8-970921on20-q7ac">Question 8 · 9709/21/O/N/20 Q7(a–c)</a></li>
-  <li><a href="#question-9-970921on20-q8a" id="toc-question-9-970921on20-q8a" class="nav-link" data-scroll-target="#question-9-970921on20-q8a">Question 9 · 9709/21/O/N/20 Q8(a)</a></li>
-  <li><a href="#question-10-970922fm22-q7ab" id="toc-question-10-970922fm22-q7ab" class="nav-link" data-scroll-target="#question-10-970922fm22-q7ab">Question 10 · 9709/22/F/M/22 Q7(a–b)</a></li>
-  <li><a href="#question-11-970921mj24-q1" id="toc-question-11-970921mj24-q1" class="nav-link" data-scroll-target="#question-11-970921mj24-q1">Question 11 · 9709/21/M/J/24 Q1</a></li>
-  <li><a href="#question-12-970922mj24-q4" id="toc-question-12-970922mj24-q4" class="nav-link" data-scroll-target="#question-12-970922mj24-q4">Question 12 · 9709/22/M/J/24 Q4</a></li>
-  <li><a href="#question-13-970922on24-q3" id="toc-question-13-970922on24-q3" class="nav-link" data-scroll-target="#question-13-970922on24-q3">Question 13 · 9709/22/O/N/24 Q3</a></li>
+  <li><a href="#question-1-970941mj20-q1" id="toc-question-1-970941mj20-q1" class="nav-link" data-scroll-target="#question-1-970941mj20-q1">Question 1 · 9709/41/M/J/20 Q1</a></li>
+  <li><a href="#question-2-970941mj20-q4ab" id="toc-question-2-970941mj20-q4ab" class="nav-link" data-scroll-target="#question-2-970941mj20-q4ab">Question 2 · 9709/41/M/J/20 Q4(a–b)</a></li>
+  <li><a href="#question-3-970942mj20-q2" id="toc-question-3-970942mj20-q2" class="nav-link" data-scroll-target="#question-3-970942mj20-q2">Question 3 · 9709/42/M/J/20 Q2</a></li>
+  <li><a href="#question-4-970942mj20-q3" id="toc-question-4-970942mj20-q3" class="nav-link" data-scroll-target="#question-4-970942mj20-q3">Question 4 · 9709/42/M/J/20 Q3</a></li>
+  <li><a href="#question-5-970942on20-q3ab" id="toc-question-5-970942on20-q3ab" class="nav-link" data-scroll-target="#question-5-970942on20-q3ab">Question 5 · 9709/42/O/N/20 Q3(a–b)</a></li>
+  <li><a href="#question-6-970942on20-q3" id="toc-question-6-970942on20-q3" class="nav-link" data-scroll-target="#question-6-970942on20-q3">Question 6 · 9709/42/O/N/20 Q3</a></li>
+  <li><a href="#question-7-970941on21-q4ab" id="toc-question-7-970941on21-q4ab" class="nav-link" data-scroll-target="#question-7-970941on21-q4ab">Question 7 · 9709/41/O/N/21 Q4(a–b)</a></li>
+  <li><a href="#question-8-970941on23-q2" id="toc-question-8-970941on23-q2" class="nav-link" data-scroll-target="#question-8-970941on23-q2">Question 8 · 9709/41/O/N/23 Q2</a></li>
+  <li><a href="#question-9-970942fm23-q5a" id="toc-question-9-970942fm23-q5a" class="nav-link" data-scroll-target="#question-9-970942fm23-q5a">Question 9 · 9709/42/F/M/23 Q5(a)</a></li>
+  <li><a href="#question-10-970943on23-q3ac" id="toc-question-10-970943on23-q3ac" class="nav-link" data-scroll-target="#question-10-970943on23-q3ac">Question 10 · 9709/43/O/N/23 Q3(a–c)</a></li>
+  <li><a href="#question-11-970941mj24-q2ab" id="toc-question-11-970941mj24-q2ab" class="nav-link" data-scroll-target="#question-11-970941mj24-q2ab">Question 11 · 9709/41/M/J/24 Q2(a–b)</a></li>
+  <li><a href="#question-12-970943on23-q5ab" id="toc-question-12-970943on23-q5ab" class="nav-link" data-scroll-target="#question-12-970943on23-q5ab">Question 12 · 9709/43/O/N/23 Q5(a–b)</a></li>
   </ul></li>
+  <li><a href="#quick-checklist" id="toc-quick-checklist" class="nav-link" data-scroll-target="#quick-checklist">3. Quick checklist</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-2/algebra.html">Paper 2 · Pure Mathematics 2</a></li><li class="breadcrumb-item"><a href="../paper-2/differentiation.html">2.4 Differentiation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">1. Forces and equilibrium</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">2.4 Differentiation</h1>
-<p class="subtitle lead">Basic derivatives · product and quotient rules · tangents · implicit and parametric differentiation</p>
+<h1 class="title">1. Forces and equilibrium</h1>
+<p class="subtitle lead">Force diagrams · components · friction · equilibrium</p>
 </div>
 
 <div>
   <div class="description">
-    CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.4.
+    CIE 9709 Paper 4 Mechanics, syllabus 4.1.
   </div>
 </div>
 
@@ -426,775 +424,596 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>本页依据 9709 Mathematics 2026–2027 syllabus 2.4：使用 <span class="math inline">e^x</span>、<span class="math inline">\ln x</span>、<span class="math inline">\sin x</span>、<span class="math inline">\cos x</span>、<span class="math inline">\tan x</span> 的 derivatives，以及 constant multiples、sums、differences 和 composites；使用 product rule 与 quotient rule；求并使用 parametric 或 implicit function 的 first derivative，包括 tangent、normal 和 stationary-point problems。</p>
-<p>工作区没有独立的 Paper 2 note PDF，因此 worked examples 使用同一套 Differentiation note PDF 中已经独立提取的原始图片；每个例题单独成卡。真题全部来自本地 Paper 2 原始 PDF，题干只把 PDF 排版规范为 LaTeX，没有改写或编造题目。</p>
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 4.1，覆盖：</p>
+<ul>
+<li>identify the forces acting in a given situation，并画出 force diagram；</li>
+<li>理解 force 的 vector nature，求 components 和 resultants；</li>
+<li>particle in equilibrium 时，所有 force 的 vector sum 为 zero，等价于各方向分量和为 zero；</li>
+<li>将 contact force 分解为 normal component 与 frictional component；</li>
+<li>smooth contact 模型及其限制；</li>
+<li>limiting friction、limiting equilibrium、coefficient of friction，以及 <span class="math inline">F\le\mu R</span> 或 <span class="math inline">F=\mu R</span>；</li>
+<li>Newton’s third law。</li>
+</ul>
+<p>本页严格按考纲 4.1 组织；Newton’s laws 的动力学应用留在 Paper 4 后续章节。</p>
 </div>
 </div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">能为 particle 单独画出完整 force diagram</label></li>
+<li><label><input type="checkbox">能沿水平/竖直方向或斜面方向 resolve forces</label></li>
+<li><label><input type="checkbox">能用 <span class="math inline">\sum F_x=0</span>、<span class="math inline">\sum F_y=0</span> 判断和处理 equilibrium</label></li>
+<li><label><input type="checkbox">能区分 smooth contact、rough contact、normal reaction、friction 和 resistance</label></li>
+<li><label><input type="checkbox">能在 limiting equilibrium 中正确使用 <span class="math inline">F=\mu R</span></label></li>
+<li><label><input type="checkbox">能用 Newton’s third law 说明相互作用力的大小、方向和作用对象</label></li>
+</ul>
+</div>
+</section>
 <section id="core-knowledge" class="level2">
 <h2 class="anchored" data-anchor-id="core-knowledge">1. Core knowledge</h2>
-<section id="standard-derivatives-and-composites" class="level3 formula-panel">
-<h3 class="anchored" data-anchor-id="standard-derivatives-and-composites">Standard derivatives and composites</h3>
+<section id="force-diagram-and-standard-models" class="level3">
+<h3 class="anchored" data-anchor-id="force-diagram-and-standard-models">Force diagram and standard models</h3>
+<div class="formula-panel">
+<p>对 particle 逐一列出所有外力：</p>
 <p><span class="math display">
-\begin{aligned}
-\frac{d}{dx}(e^x)&amp;=e^x, &amp; \frac{d}{dx}(e^{ax+b})&amp;=ae^{ax+b},\\
-\frac{d}{dx}(\ln x)&amp;=\frac1x, &amp; \frac{d}{dx}[\ln(g(x))]&amp;=\frac{g'(x)}{g(x)},\\
-\frac{d}{dx}(\sin x)&amp;=\cos x, &amp; \frac{d}{dx}(\cos x)&amp;=-\sin x,\\
-\frac{d}{dx}(\tan x)&amp;=\sec^2x.
-\end{aligned}
+W=mg\quad\text{(weight, vertically downward)}.
 </span></p>
-<p>Chain rule 的核心是：先对 outer function 求导，再乘上 inner function 的 derivative。</p>
+<p>接触面产生 normal reaction <span class="math inline">R</span>，方向垂直于接触面。粗糙面还产生 friction <span class="math inline">F</span>，方向反对相对运动或相对运动趋势；光滑面不产生 friction。</p>
+<p>light string 的 tension 沿 string、方向 away from the particle；light rigid rod 可以提供 tension 或 thrust；smooth pulley 只改变 string 的方向，理想模型中 string 两侧 tension 相等。</p>
+<p>所有数值题取 <span class="math inline">g=10\,\mathrm{m\,s^{-2}}</span>，除非题目另有说明。</p>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Types of force</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/forces-equilibrium/worked-example-01.webp" class="note-figure img-fluid figure-img" alt="Independently extracted Mechanics Toolkit image showing weight, tension and thrust"></p>
+<figcaption>Mechanics Toolkit: types of force summary</figcaption>
+</figure>
+</div>
+</div>
+<div class="worked-example">
+<p><span class="we-tag">Worked example · Friction and normal reaction</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/forces-equilibrium/worked-example-02.webp" class="note-figure img-fluid figure-img" alt="Independently extracted Mechanics Toolkit image showing friction, normal reaction and other forces"></p>
+<figcaption>Mechanics Toolkit: friction and normal reaction</figcaption>
+</figure>
+</div>
+</div>
 </section>
+<section id="components-and-resultants" class="level3">
+<h3 class="anchored" data-anchor-id="components-and-resultants">Components and resultants</h3>
+<p>If a force <span class="math inline">F</span> makes angle <span class="math inline">\theta</span> with the positive horizontal direction, then</p>
+<p><span class="math display">
+F_x=F\cos\theta,\qquad F_y=F\sin\theta.
+</span></p>
+<p>For equilibrium, resolve in two convenient perpendicular directions:</p>
+<p><span class="math display">
+\sum F_x=0,\qquad \sum F_y=0.
+</span></p>
+<p>For a resultant with components <span class="math inline">X</span> and <span class="math inline">Y</span>,</p>
+<p><span class="math display">
+|\mathbf R|=\sqrt{X^2+Y^2},\qquad \tan\alpha=\frac{Y}{X},
+</span></p>
+<p>with the quadrant checked from the signs of <span class="math inline">X</span> and <span class="math inline">Y</span>.</p>
 <div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.5</span></p>
+<p><span class="we-tag">Worked example · Contact force components</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-01.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example combining exponential, trigonometric and logarithmic derivatives"></p>
-<figcaption>Basic derivative combination</figcaption>
+<p><img src="../assets/notes/forces-equilibrium/worked-example-03.webp" class="note-figure img-fluid figure-img" alt="Independently extracted Mechanics Toolkit image showing reaction, tension and driving force components"></p>
+<figcaption>Mechanics Toolkit: contact force components</figcaption>
 </figure>
 </div>
 </div>
-<section id="product-rule-and-quotient-rule" class="level3 formula-panel">
-<h3 class="anchored" data-anchor-id="product-rule-and-quotient-rule">Product rule and quotient rule</h3>
-<p>若 <span class="math inline">y=u(x)v(x)</span>，则</p>
-<p><span class="math display">
-\frac{dy}{dx}=u\frac{dv}{dx}+v\frac{du}{dx}.
-</span></p>
-<p>若 <span class="math inline">y=\dfrac{u(x)}{v(x)}</span>，则</p>
-<p><span class="math display">
-\frac{dy}{dx}=\frac{v\,du/dx-u\,dv/dx}{v^2}.
-</span></p>
-<p>能先 simplify 时先 simplify；否则清楚写出 numerator、denominator 和各自的 derivative。</p>
 </section>
+<section id="friction-and-limiting-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="friction-and-limiting-equilibrium">Friction and limiting equilibrium</h3>
+<p>For a rough contact,</p>
+<p><span class="math display">
+0\le F\le\mu R.
+</span></p>
+<p>At limiting equilibrium, the particle is just about to move and</p>
+<p><span class="math display">
+F=\mu R.
+</span></p>
+<p>On an inclined plane at angle <span class="math inline">\alpha</span>, if the applied force has no component perpendicular to the plane,</p>
+<p><span class="math display">
+R=mg\cos\alpha,qquad mg\sin\alpha\text{ acts down the line of greatest slope}.
+</span></p>
+<p>If a force <span class="math inline">P</span> is applied at angle <span class="math inline">\beta</span> above the plane, then its components are <span class="math inline">P\cos\beta</span> along the plane and <span class="math inline">P\sin\beta</span> away from the plane:</p>
+<p><span class="math display">
+R=mg\cos\alpha-P\sin\beta.
+</span></p>
 <div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.8</span></p>
+<p><span class="we-tag">Worked example · Modelling assumptions</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-02.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example applying the product rule"></p>
-<figcaption>Product rule practice</figcaption>
+<p><img src="../assets/notes/forces-equilibrium/worked-example-05.webp" class="note-figure img-fluid figure-img" alt="Independently extracted Mechanics Toolkit worked example about particle, light string, smooth pulley and smooth surface assumptions"></p>
+<figcaption>Mechanics Toolkit: modelling assumptions</figcaption>
 </figure>
 </div>
 </div>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.12</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-03.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example applying quotient and chain rules"></p>
-<figcaption>Quotient and chain rules</figcaption>
-</figure>
-</div>
-</div>
-<section id="tangents-normals-and-stationary-points" class="level3 formula-panel">
-<h3 class="anchored" data-anchor-id="tangents-normals-and-stationary-points">Tangents, normals and stationary points</h3>
-<p>在 <span class="math inline">(x_1,y_1)</span> 处，若 tangent gradient 是 <span class="math inline">m</span>，则</p>
-<p><span class="math display">
-y-y_1=m(x-x_1).
-</span></p>
-<p>若 tangent gradient 非零，normal gradient 是 <span class="math inline">-1/m</span>。Stationary point 满足</p>
-<p><span class="math display">
-\frac{dy}{dx}=0,
-</span></p>
-<p>但还必须确认该点在 curve 的 domain 内，并代回原函数求对应的 <span class="math inline">y</span>。</p>
 </section>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.17</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-04.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example using implicit differentiation to find a gradient"></p>
-<figcaption>Implicit differentiation gradient</figcaption>
-</figure>
-</div>
-</div>
-<section id="parametric-differentiation" class="level3 formula-panel">
-<h3 class="anchored" data-anchor-id="parametric-differentiation">Parametric differentiation</h3>
-<p>若 <span class="math inline">x=x(t)</span>、<span class="math inline">y=y(t)</span>，则</p>
-<p><span class="math display">
-\frac{dy}{dx}=\frac{dy/dt}{dx/dt},
-\qquad dx/dt\ne0.
-</span></p>
-<p>Parametric stationary point 要求 <span class="math inline">dy/dt=0</span> 且 <span class="math inline">dx/dt\ne0</span>；求 tangent 或 normal 时，先在同一个 <span class="math inline">t</span> 值上分别求 <span class="math inline">dx/dt</span> 和 <span class="math inline">dy/dt</span>。</p>
-</section>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.31</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-07.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example sketching a parametric curve and locating a turning point"></p>
-<figcaption>Parametric curve sketch</figcaption>
-</figure>
-</div>
-</div>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.35</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-08.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example finding the gradient of a parametric curve"></p>
-<figcaption>Parametric gradient</figcaption>
-</figure>
-</div>
-</div>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.36</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-09.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example finding tangent and normal equations from parametric equations"></p>
-<figcaption>Parametric tangent and normal</figcaption>
-</figure>
-</div>
-</div>
-<div class="worked-example">
-<p><span class="we-tag">Worked example · Differentiation note p.37</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/notes/differentiation/worked-example-10.webp" class="note-figure img-fluid figure-img" alt="Original extracted differentiation note worked example finding stationary points from parametric equations"></p>
-<figcaption>Parametric stationary points</figcaption>
-</figure>
-</div>
-</div>
-<section id="complete-standard-derivative-table" class="level3 formula-panel">
-<h3 class="anchored" data-anchor-id="complete-standard-derivative-table">Complete standard derivative table</h3>
-<p>除已有公式外，Note 中的 standard derivatives 还包括</p>
-<p><span class="math display">
-\frac{d}{dx}(a^x)=a^x\ln a\quad(a&gt;0),\qquad
-\frac{d}{dx}(\cot x)=-\operatorname{cosec}^2x,
-</span></p>
-<p><span class="math display">
-\frac{d}{dx}(\sec x)=\sec x\tan x,qquad
-\frac{d}{dx}(\operatorname{cosec}x)=-\operatorname{cosec}x\cot x.
-</span></p>
-<p>这些公式遇到 composite argument 时都要再乘上 inner derivative，例如</p>
-<p><span class="math display">\frac{d}{dx}\sec(ax+b)=a\sec(ax+b)\tan(ax+b).</span></p>
-</section>
-<section id="implicit-differentiation-and-applications" class="level3 study-card">
-<h3 class="anchored" data-anchor-id="implicit-differentiation-and-applications">Implicit differentiation and applications</h3>
-<p>若 <span class="math inline">x</span>、<span class="math inline">y</span> 混合在同一个 equation 中，把 <span class="math inline">y</span> 看成 <span class="math inline">x</span> 的 function；对含 <span class="math inline">y</span> 的 term differentiation 时使用 chain rule，例如</p>
-<p><span class="math display">\frac{d}{dx}(y^n)=ny^{n-1}\frac{dy}{dx}.</span></p>
-<p>整理出 <span class="math inline">dy/dx</span> 后，才能求指定点的 tangent 或 normal。若题目要求 turning point、maximum/minimum 或 rate，必须同时检查原 equation、domain 和题目给出的 interval。</p>
+<section id="newtons-third-law" class="level3">
+<h3 class="anchored" data-anchor-id="newtons-third-law">Newton’s third law</h3>
+<p>When two bodies interact, the force exerted by A on B and the force exerted by B on A are equal in magnitude and opposite in direction. They act on different bodies, so they must not be cancelled on one particle’s force diagram.</p>
 </section>
 </section>
-<section id="verified-paper-2-past-paper-questions" class="level2">
-<h2 class="anchored" data-anchor-id="verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</h2>
-<p>以下 10 组题均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题目没有因为数量不足而补造。表达式、区间和题目要求均保留原题信息。</p>
-<div id="p2-diff-q01" class="question-card">
-<section id="question-1-970921mj20-q3" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-970921mj20-q3">Question 1 · 9709/21/M/J/20 Q3</h3>
-<p>A curve has parametric equations</p>
-<p><span class="math display">
-x=e^t-2e^{-t},\qquad y=3e^{2t}+1.
-</span></p>
-<p>Find the equation of the tangent to the curve at the point for which <span class="math inline">t=0</span>. <strong>[5]</strong></p>
+<section id="verified-paper-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-4-questions">2. Verified Paper 4 questions</h2>
+<div id="p4-fe-q01" class="question-card">
+<section id="question-1-970941mj20-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970941mj20-q1">Question 1 · 9709/41/M/J/20 Q1</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2020-mj-9709-41-q1-diagram.svg" class="note-figure img-fluid figure-img" alt="Three coplanar forces acting at point A"></p>
+<figcaption>Independently extracted diagram from 9709/41/M/J/20 Q1</figcaption>
+</figure>
+</div>
+<p>Three coplanar forces of magnitudes <span class="math inline">100\,\mathrm N</span>, <span class="math inline">50\,\mathrm N</span> and <span class="math inline">50\,\mathrm N</span> act at a point <span class="math inline">A</span>, as shown in the diagram. The value of <span class="math inline">\cos\alpha</span> is <span class="math inline">\frac45</span>.</p>
+<p>Find the magnitude of the resultant of the three forces and state its direction. <strong>[3]</strong></p>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
-<p>Differentiate with respect to <span class="math inline">t</span>:</p>
+<p>The vertical components of the two <span class="math inline">50\,\mathrm N</span> forces cancel. Their horizontal resultant is</p>
 <p><span class="math display">
-\frac{dx}{dt}=e^t+2e^{-t},
-\qquad
-\frac{dy}{dt}=6e^{2t}.
+2(50\cos\alpha)=100\cdot\frac45=80\,\mathrm N
 </span></p>
-<p>At <span class="math inline">t=0</span>,</p>
+<p>to the right. Combining this with the <span class="math inline">100\,\mathrm N</span> force to the left gives</p>
 <p><span class="math display">
-x=1-2=-1,\qquad y=3+1=4,
+R=100-80=20\,\mathrm N.
+</span></p>
+<p>Therefore the resultant is</p>
+<span class="math display">
+\boxed{20\,\mathrm N\text{ to the left}}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q01"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-41.pdf, Q1, and matching 9709-s20-ms-41.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-fe-q02" class="question-card">
+<section id="question-2-970941mj20-q4ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970941mj20-q4ab">Question 2 · 9709/41/M/J/20 Q4(a–b)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2020-mj-9709-41-q4-diagram.svg" class="note-figure img-fluid figure-img" alt="Ring on a rough horizontal rod pulled by a force at 30 degrees"></p>
+<figcaption>Independently extracted diagram from 9709/41/M/J/20 Q4</figcaption>
+</figure>
+</div>
+<p>The diagram shows a ring of mass <span class="math inline">0.1\,\mathrm{kg}</span> threaded on a fixed horizontal rod. The rod is rough and the coefficient of friction is <span class="math inline">0.8</span>. A force of magnitude <span class="math inline">T\,\mathrm N</span> acts on the ring at <span class="math inline">30^\circ</span> to the rod, downwards in the vertical plane containing the rod. Initially the ring is at rest.</p>
+<ol type="a">
+<li><p>Find the greatest value of <span class="math inline">T</span> for which the ring remains at rest. <strong>[4]</strong></p></li>
+<li><p>Find the acceleration of the ring when <span class="math inline">T=3</span>. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>The vertical equilibrium gives</li>
+</ol>
+<p><span class="math display">
+R=1+T\sin30^\circ=1+\frac T2.
+</span></p>
+<p>At the greatest value, friction is limiting:</p>
+<p><span class="math display">
+T\cos30^\circ=0.8R=0.8\left(1+\frac T2\right).
+</span></p>
+<p>Hence</p>
+<p><span class="math display">
+T=\frac{0.8}{\cos30^\circ-0.4}=1.72\,\mathrm N\quad\text{(3 s.f.)}.
+</span></p>
+<ol start="2" type="a">
+<li>When <span class="math inline">T=3</span>,</li>
+</ol>
+<p><span class="math display">
+R=1+3\sin30^\circ=2.5,\qquad F=0.8R=2.
+</span></p>
+<p>The resultant horizontal force is <span class="math inline">3\cos30^\circ-2=0.598\,\mathrm N</span>. Therefore</p>
+<span class="math display">
+a=\frac{0.598}{0.1}=\boxed{5.98\,\mathrm{m\,s^{-2}}}.
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q02"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-41.pdf, Q4(a–b), and matching 9709-s20-ms-41.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-fe-q03" class="question-card">
+<section id="question-3-970942mj20-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970942mj20-q2">Question 3 · 9709/42/M/J/20 Q2</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2020-mj-9709-42-q2-diagram.svg" class="note-figure img-fluid figure-img" alt="Four coplanar forces in equilibrium"></p>
+<figcaption>Independently extracted diagram from 9709/42/M/J/20 Q2</figcaption>
+</figure>
+</div>
+<p>Coplanar forces of magnitudes <span class="math inline">20\,\mathrm N</span>, <span class="math inline">P\,\mathrm N</span>, <span class="math inline">3P\,\mathrm N</span> and <span class="math inline">4P\,\mathrm N</span> act at a point in the directions shown in the diagram. The system is in equilibrium.</p>
+<p>Find <span class="math inline">P</span> and <span class="math inline">\theta</span>. <strong>[6]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Resolving horizontally and vertically gives</p>
+<p><span class="math display">
+20\cos\theta=4P\cos30^\circ,
 </span></p>
 <p>and</p>
 <p><span class="math display">
-\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac6{1+2}=2.
+4P+3P\sin30^\circ-P\sin30^\circ=20\sin\theta.
 </span></p>
-<p>The tangent through <span class="math inline">(-1,4)</span> is therefore</p>
+<p>The second equation simplifies to <span class="math inline">5P=20\sin\theta</span>, so <span class="math inline">P=4\sin\theta</span>. Substitution in the first equation gives</p>
 <p><span class="math display">
-y-4=2(x+1),
-</span></p>
-<p>so</p>
-<span class="math display">
-\boxed{y=2x+6}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q01"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-21.pdf</code>, Q3, and matching mark scheme.
-</div>
-</section>
-</div>
-<div id="p2-diff-q02" class="question-card">
-<section id="question-2-970922mj20-q2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-970922mj20-q2">Question 2 · 9709/22/M/J/20 Q2</h3>
-<p>Find the exact coordinates of the stationary point on the curve with equation</p>
-<p><span class="math display">
-y=5xe^{\frac12x}.
-</span></p>
-<p><strong>[5]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Use the product rule:</p>
-<p><span class="math display">
-\frac{dy}{dx}=5e^{x/2}+5x\left(\frac12e^{x/2}\right)
-=5e^{x/2}\left(1+\frac{x}{2}\right).
-</span></p>
-<p>At a stationary point, <span class="math inline">dy/dx=0</span>. Since <span class="math inline">e^{x/2}\ne0</span>,</p>
-<p><span class="math display">
-1+\frac{x}{2}=0
-\quad\Longrightarrow\quad x=-2.
-</span></p>
-<p>Substitute into the curve:</p>
-<p><span class="math display">
-y=5(-2)e^{-1}=-\frac{10}{e}.
-</span></p>
-<p>Hence the exact coordinates are</p>
-<span class="math display">
-\boxed{\left(-2,-\frac{10}{e}\right)}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q02"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2020/2020/9709-s20-qp-22.pdf</code>, Q2, and matching mark scheme.
-</div>
-</section>
-</div>
-<div id="p2-diff-q03" class="question-card">
-<section id="question-3-970922fm21-q3" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-970922fm21-q3">Question 3 · 9709/22/F/M/21 Q3</h3>
-<p>The parametric equations of a curve are</p>
-<p><span class="math display">
-x=e^{2t}\cos4t,\qquad y=3\sin2t.
-</span></p>
-<p>Find the gradient of the curve at the point for which <span class="math inline">t=0</span>. <strong>[5]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Differentiate <span class="math inline">x</span> by the product rule:</p>
-<p><span class="math display">
-\frac{dx}{dt}=2e^{2t}\cos4t-4e^{2t}\sin4t.
-</span></p>
-<p>Also,</p>
-<p><span class="math display">
-\frac{dy}{dt}=6\cos2t.
-</span></p>
-<p>At <span class="math inline">t=0</span>,</p>
-<p><span class="math display">
-\frac{dx}{dt}=2,qquad \frac{dy}{dt}=6.
+\tan\theta=\frac5{4\sqrt3}.
 </span></p>
 <p>Therefore</p>
 <span class="math display">
-\boxed{\frac{dy}{dx}=\frac{6}{2}=3}.
+\boxed{\theta=35.8^\circ,\qquad P=2.34\,\mathrm N}\quad\text{(3 s.f.).}
 </span>
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q03"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q03"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2021/2021/9709_m21_qp_22.pdf</code>, Q3, and matching mark scheme.
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-42.pdf, Q2, and matching 9709-s20-ms-42.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
 </div>
 </section>
 </div>
-<div id="p2-diff-q04" class="question-card">
-<section id="question-4-970921mj21-q4ab" class="level3">
-<h3 class="anchored" data-anchor-id="question-4-970921mj21-q4ab">Question 4 · 9709/21/M/J/21 Q4(a–b)</h3>
-<p>A curve has parametric equations</p>
+<div id="p4-fe-q04" class="question-card">
+<section id="question-4-970942mj20-q3" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970942mj20-q3">Question 4 · 9709/42/M/J/20 Q3</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2020-mj-9709-42-q3-diagram.svg" class="note-figure img-fluid figure-img" alt="Particle on a rough plane with an angled force"></p>
+<figcaption>Independently extracted diagram from 9709/42/M/J/20 Q3</figcaption>
+</figure>
+</div>
+<p>A particle of mass <span class="math inline">2.5\,\mathrm{kg}</span> is held in equilibrium on a rough plane inclined at <span class="math inline">20^\circ</span> to the horizontal by a force of magnitude <span class="math inline">T\,\mathrm N</span> making an angle of <span class="math inline">60^\circ</span> with a line of greatest slope of the plane. The coefficient of friction between the particle and the plane is <span class="math inline">0.3</span>.</p>
+<p>Find the greatest and least possible values of <span class="math inline">T</span>. <strong>[8]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Resolve perpendicular to the plane:</p>
 <p><span class="math display">
-x=\ln(2t+6)-\ln t,\qquad y=t\ln t.
+R=25\cos20^\circ-T\sin60^\circ.
 </span></p>
+<p>For the greatest <span class="math inline">T</span>, friction acts down the plane:</p>
+<p><span class="math display">
+T\cos60^\circ=25\sin20^\circ+0.3R.
+</span></p>
+<p>This gives</p>
+<p><span class="math display">
+\boxed{T=20.5\,\mathrm N}\quad\text{(3 s.f.).}
+</span></p>
+<p>For the least <span class="math inline">T</span>, friction acts up the plane:</p>
+<p><span class="math display">
+T\cos60^\circ+0.3R=25\sin20^\circ,
+</span></p>
+<p>giving</p>
+<span class="math display">
+\boxed{T=6.26\,\mathrm N}\quad\text{(3 s.f.).}
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q04"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-42.pdf, Q3, and matching 9709-s20-ms-42.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-fe-q05" class="question-card">
+<section id="question-5-970942on20-q3ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970942on20-q3ab">Question 5 · 9709/42/O/N/20 Q3(a–b)</h3>
+<p>A string is attached to a block of mass <span class="math inline">4\,\mathrm{kg}</span> which rests in limiting equilibrium on a rough horizontal table. The string makes an angle of <span class="math inline">24^\circ</span> above the horizontal and the tension in the string is <span class="math inline">30\,\mathrm N</span>.</p>
 <ol type="a">
-<li><p>Find the value of <span class="math inline">t</span> at the point <span class="math inline">P</span> on the curve for which <span class="math inline">x=\ln4</span>.</p></li>
-<li><p>Find the exact gradient of the curve at <span class="math inline">P</span>. <strong>[3+5]</strong></p></li>
+<li><p>Draw a diagram showing all the forces acting on the block. <strong>[1]</strong></p></li>
+<li><p>Find the coefficient of friction between the block and the table. <strong>[5]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Combine the logarithms:</li>
+<li><p>The force diagram contains weight <span class="math inline">40\,\mathrm N</span> downward, reaction <span class="math inline">R</span> upward, tension <span class="math inline">30\,\mathrm N</span> at <span class="math inline">24^\circ</span> above the horizontal, and limiting friction opposing the horizontal component of the tension.</p></li>
+<li><p>Vertical equilibrium gives</p></li>
 </ol>
 <p><span class="math display">
-x=\ln\left(\frac{2t+6}{t}\right).
+R+30\sin24^\circ=40
+\Longrightarrow R=27.8\,\mathrm N.
 </span></p>
-<p>At <span class="math inline">P</span>,</p>
+<p>At limiting equilibrium,</p>
 <p><span class="math display">
-\ln\left(\frac{2t+6}{t}\right)=\ln4
-\quad\Longrightarrow\quad
-\frac{2t+6}{t}=4.
+\mu R=30\cos24^\circ.
 </span></p>
-<p>Thus <span class="math inline">2t+6=4t</span>, giving</p>
+<p>Therefore</p>
+<span class="math display">
+\boxed{\mu=\frac{30\cos24^\circ}{40-30\sin24^\circ}=0.985}\quad\text{(3 s.f.).}
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q05"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_43.pdf, Q3(a–b), and matching 9709_w20_ms_43.pdf.
+</div>
+</section>
+</div>
+<div id="p4-fe-q06" class="question-card">
+<section id="question-6-970942on20-q3" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970942on20-q3">Question 6 · 9709/42/O/N/20 Q3</h3>
+<p>A block of mass <span class="math inline">m\,\mathrm{kg}</span> is held in equilibrium below a horizontal ceiling by two strings. One string is inclined at <span class="math inline">45^\circ</span> to the horizontal and has tension <span class="math inline">T\,\mathrm N</span>. The other string is inclined at <span class="math inline">60^\circ</span> to the horizontal and has tension <span class="math inline">20\,\mathrm N</span>.</p>
+<p>Find <span class="math inline">T</span> and <span class="math inline">m</span>. <strong>[5]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Horizontal equilibrium gives</p>
 <p><span class="math display">
-\boxed{t=3}.
+T\cos45^\circ=20\cos60^\circ
+\Longrightarrow T=10\sqrt2\,\mathrm N.
 </span></p>
-<ol start="2" type="a">
-<li>Differentiate with respect to <span class="math inline">t</span>:</li>
-</ol>
+<p>Vertical equilibrium gives</p>
 <p><span class="math display">
-\frac{dx}{dt}=\frac2{2t+6}-\frac1t,
-\qquad
-\frac{dy}{dt}=\ln t+1.
-</span></p>
-<p>At <span class="math inline">t=3</span>,</p>
-<p><span class="math display">
-\frac{dx}{dt}=\frac16-\frac13=-\frac16,
-\qquad
-\frac{dy}{dt}=\ln3+1.
+T\sin45^\circ+20\sin60^\circ=10m.
 </span></p>
 <p>Hence</p>
 <span class="math display">
-\boxed{\frac{dy}{dx}=\frac{\ln3+1}{-1/6}=-6(\ln3+1)}.
+\boxed{T=14.1\,\mathrm N,\qquad m=2.73\,\mathrm{kg}}\quad\text{(3 s.f.).}
 </span>
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q04"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q06"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2021/2021/9709_s21_qp_21.pdf</code>, Q4(a–b), and matching mark scheme.
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_42.pdf, Q3, and matching 9709_w20_ms_42.pdf.
 </div>
 </section>
 </div>
-<div id="p2-diff-q05" class="question-card">
-<section id="question-5-970922fm22-q2" class="level3">
-<h3 class="anchored" data-anchor-id="question-5-970922fm22-q2">Question 5 · 9709/22/F/M/22 Q2</h3>
-<p>A curve has equation</p>
-<p><span class="math display">
-y=7+4\ln(2x+5).
-</span></p>
-<p>Find the equation of the tangent to the curve at the point <span class="math inline">(-2,7)</span>, giving your answer in the form <span class="math inline">y=mx+c</span>. <strong>[5]</strong></p>
+<div id="p4-fe-q07" class="question-card">
+<section id="question-7-970941on21-q4ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970941on21-q4ab">Question 7 · 9709/41/O/N/21 Q4(a–b)</h3>
+<p>A particle of mass <span class="math inline">12\,\mathrm{kg}</span> is stationary on a rough plane inclined at <span class="math inline">25^\circ</span> to the horizontal. A force of magnitude <span class="math inline">P\,\mathrm N</span> acting parallel to a line of greatest slope is used to prevent the particle sliding down the plane. The coefficient of friction is <span class="math inline">0.35</span>.</p>
+<ol type="a">
+<li><p>Draw a sketch showing the forces acting on the particle. <strong>[1]</strong></p></li>
+<li><p>Find the least possible value of <span class="math inline">P</span>. <strong>[5]</strong></p></li>
+</ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
-<p>Differentiate using the chain rule:</p>
+<ol type="a">
+<li><p>The force diagram has weight <span class="math inline">120\,\mathrm N</span> vertically downward, reaction <span class="math inline">R</span> perpendicular to the plane, <span class="math inline">P</span> up the plane, and friction up the plane at the limiting case for the least <span class="math inline">P</span>.</p></li>
+<li><p>Since <span class="math inline">P</span> has no perpendicular component,</p></li>
+</ol>
 <p><span class="math display">
-\frac{dy}{dx}=4\cdot\frac2{2x+5}=\frac8{2x+5}.
+R=120\cos25^\circ.
 </span></p>
-<p>At <span class="math inline">x=-2</span>,</p>
+<p>At the least value, friction is limiting and acts up the plane:</p>
 <p><span class="math display">
-m=\frac8{2(-2)+5}=8.
-</span></p>
-<p>The tangent through <span class="math inline">(-2,7)</span> is</p>
-<p><span class="math display">
-y-7=8(x+2).
+P+0.35R=120\sin25^\circ.
 </span></p>
 <p>Therefore</p>
 <span class="math display">
-\boxed{y=8x+23}.
+\boxed{P=120\sin25^\circ-0.35(120\cos25^\circ)=12.6\,\mathrm N}.
 </span>
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q05"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q07"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_22.pdf</code>, Q2, and matching mark scheme.
+<strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_41.pdf, Q4(a–b), and matching 9709_w21_ms_41.pdf.
 </div>
 </section>
 </div>
-<div id="p2-diff-q06" class="question-card">
-<section id="question-6-970921mj22-q4" class="level3">
-<h3 class="anchored" data-anchor-id="question-6-970921mj22-q4">Question 6 · 9709/21/M/J/22 Q4</h3>
-<p>A curve has equation</p>
-<p><span class="math display">
-x^2y+2y^3=48.
-</span></p>
-<p>Find the equation of the normal to the curve at the point <span class="math inline">(4,2)</span>, giving your answer in the form <span class="math inline">ax+by+c=0</span> where <span class="math inline">a</span>, <span class="math inline">b</span> and <span class="math inline">c</span> are integers. <strong>[7]</strong></p>
+<div id="p4-fe-q08" class="question-card">
+<section id="question-8-970941on23-q2" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970941on23-q2">Question 8 · 9709/41/O/N/23 Q2</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2023-on-9709-41-q2-diagram.svg" class="note-figure img-fluid figure-img" alt="Particle held in equilibrium by two strings at 35 and 40 degrees"></p>
+<figcaption>Independently extracted diagram from 9709/41/O/N/23 Q2</figcaption>
+</figure>
+</div>
+<p>A particle of mass <span class="math inline">2.4\,\mathrm{kg}</span> is held in equilibrium by two light inextensible strings, one attached to <span class="math inline">A</span> and the other to <span class="math inline">B</span>. The strings make angles of <span class="math inline">35^\circ</span> and <span class="math inline">40^\circ</span> with the horizontal.</p>
+<p>Find the tension in each string. <strong>[5]</strong></p>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
-<p>Differentiate implicitly:</p>
+<p>Let <span class="math inline">T_A</span> be the tension in the string at <span class="math inline">35^\circ</span> and <span class="math inline">T_B</span> the tension in the string at <span class="math inline">40^\circ</span>.</p>
 <p><span class="math display">
-\frac{d}{dx}(x^2y)+\frac{d}{dx}(2y^3)=0,
+T_A\cos35^\circ=T_B\cos40^\circ,
 </span></p>
-<p>so</p>
 <p><span class="math display">
-2xy+x^2\frac{dy}{dx}+6y^2\frac{dy}{dx}=0.
+T_A\sin35^\circ+T_B\sin40^\circ=24.
 </span></p>
-<p>Collect the terms containing <span class="math inline">dy/dx</span>:</p>
-<p><span class="math display">
-\frac{dy}{dx}=-\frac{2xy}{x^2+6y^2}.
-</span></p>
-<p>At <span class="math inline">(4,2)</span>,</p>
-<p><span class="math display">
-\frac{dy}{dx}=-\frac{2(4)(2)}{4^2+6(2^2)}
-=-\frac{16}{40}=-\frac25.
-</span></p>
-<p>Therefore the normal gradient is the negative reciprocal,</p>
-<p><span class="math display">
-m_{\text{normal}}=\frac52.
-</span></p>
-<p>The normal through <span class="math inline">(4,2)</span> is</p>
-<p><span class="math display">
-y-2=\frac52(x-4).
-</span></p>
-<p>Multiplying by <span class="math inline">2</span> and rearranging gives</p>
+<p>Solving these simultaneous equations gives</p>
 <span class="math display">
-\boxed{5x-2y-16=0}.
+\boxed{T_A=15.0\,\mathrm N,\qquad T_B=14.0\,\mathrm N}\quad\text{(3 s.f.).}
 </span>
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q06"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q08"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2022/2022/9709_s22_qp_21.pdf</code>, Q4, and matching mark scheme.
+<strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_41.pdf, Q2, and matching 9709_w23_ms_41.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
 </div>
 </section>
 </div>
-<div id="p2-diff-q07" class="question-card">
-<section id="question-7-970922on21-q3" class="level3">
-<h3 class="anchored" data-anchor-id="question-7-970922on21-q3">Question 7 · 9709/22/O/N/21 Q3</h3>
-<p>The curve with equation</p>
-<p><span class="math display">
-y=5x-2\tan2x
-</span></p>
-<p>has exactly one stationary point in the interval <span class="math inline">0\le x&lt;\frac14\pi</span>.</p>
-<p>Find the coordinates of this stationary point, giving each coordinate correct to 3 significant figures. <strong>[6]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Differentiate:</p>
-<p><span class="math display">
-\frac{dy}{dx}=5-4\sec^2 2x.
-</span></p>
-<p>At a stationary point,</p>
-<p><span class="math display">
-5-4\sec^2 2x=0
-\quad\Longrightarrow\quad
-\sec^2 2x=\frac54
-\quad\Longrightarrow\quad
-\cos^2 2x=\frac45.
-</span></p>
-<p>Because <span class="math inline">0\le x&lt;\pi/4</span>, we have <span class="math inline">0\le2x&lt;\pi/2</span> and <span class="math inline">\cos2x&gt;0</span>. Hence</p>
-<p><span class="math display">
-\cos2x=\frac2{\sqrt5},
-\qquad
-x=\frac12\cos^{-1}\left(\frac2{\sqrt5}\right)
-=0.231823\ldots.
-</span></p>
-<p>At this angle, <span class="math inline">\sin2x=1/\sqrt5</span>, so <span class="math inline">\tan2x=1/2</span>. Therefore</p>
-<p><span class="math display">
-y=5x-2\left(\frac12\right)=5x-1=0.159119\ldots.
-</span></p>
-<p>Thus, to 3 significant figures,</p>
-<span class="math display">
-\boxed{(x,y)=(0.232,\ 0.159)}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q07"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2021/2021/9709_w21_qp_22.pdf</code>, Q3, and matching mark scheme.
+<div id="p4-fe-q09" class="question-card">
+<section id="question-9-970942fm23-q5a" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970942fm23-q5a">Question 9 · 9709/42/F/M/23 Q5(a)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2023-fm-9709-42-q5-diagram.svg" class="note-figure img-fluid figure-img" alt="Block supported by two sloping struts and a vertical rope"></p>
+<figcaption>Original question diagram from 9709/42/F/M/23 Q5</figcaption>
+</figure>
 </div>
-</section>
-</div>
-<div id="p2-diff-q08" class="question-card">
-<section id="question-8-970921on20-q7ac" class="level3">
-<h3 class="anchored" data-anchor-id="question-8-970921on20-q7ac">Question 8 · 9709/21/O/N/20 Q7(a–c)</h3>
-<p>A curve is defined by the parametric equations</p>
-<p><span class="math display">
-x=3t-2\sin t,\qquad y=5t+4\cos t,
-</span></p>
-<p>where <span class="math inline">0\le t\le2\pi</span>. At each of the points <span class="math inline">P</span> and <span class="math inline">Q</span> on the curve, the gradient of the curve is <span class="math inline">\frac52</span>.</p>
+<p>The diagram shows a block <span class="math inline">D</span> of mass <span class="math inline">100\,\mathrm{kg}</span> supported by two sloping struts <span class="math inline">AD</span> and <span class="math inline">BD</span>, each attached at <span class="math inline">45^\circ</span> to fixed points on a horizontal floor. The block is also held in place by a vertical rope <span class="math inline">CD</span>. The tension in <span class="math inline">CD</span> is <span class="math inline">500\,\mathrm N</span> and the block rests in equilibrium.</p>
 <ol type="a">
-<li>Show that the values of <span class="math inline">t</span> at <span class="math inline">P</span> and <span class="math inline">Q</span> satisfy the equation</li>
+<li>Find the magnitude of the force in each of the struts <span class="math inline">AD</span> and <span class="math inline">BD</span>. <strong>[3]</strong></li>
 </ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>The weight is <span class="math inline">1000\,\mathrm N</span> downward and the rope provides <span class="math inline">500\,\mathrm N</span> upward, so the two struts provide a total upward component of <span class="math inline">500\,\mathrm N</span>.</p>
+<p>By symmetry, if the force in each strut is <span class="math inline">S</span>,</p>
 <p><span class="math display">
-10\cos t-8\sin t=5.
+2S\sin45^\circ=500.
 </span></p>
-<ol start="2" type="a">
-<li><p>Express <span class="math inline">10\cos t-8\sin t</span> in the form <span class="math inline">R\cos(t+\alpha)</span>, where <span class="math inline">R&gt;0</span> and <span class="math inline">0&lt;\alpha&lt;\frac12\pi</span>. Give the exact value of <span class="math inline">R</span> and the value of <span class="math inline">\alpha</span> correct to 3 significant figures.</p></li>
-<li><p>Hence find the values of <span class="math inline">t</span> at the points <span class="math inline">P</span> and <span class="math inline">Q</span>. <strong>[3+3+4]</strong></p></li>
+<p>Hence</p>
+<span class="math display">
+\boxed{S=353.6\,\mathrm N}\quad\text{(3 s.f.).}
+</span>
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q09"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_m23_qp_42.pdf, Q5(a), and matching 9709_m23_ms_42.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-fe-q10" class="question-card">
+<section id="question-10-970943on23-q3ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970943on23-q3ac">Question 10 · 9709/43/O/N/23 Q3(a–c)</h3>
+<p>A block of mass <span class="math inline">8\,\mathrm{kg}</span> slides down a rough plane inclined at <span class="math inline">30^\circ</span> to the horizontal, starting from rest. The coefficient of friction between the block and the plane is <span class="math inline">\mu</span>. The block accelerates uniformly down the plane at <span class="math inline">2.4\,\mathrm{m\,s^{-2}}</span>.</p>
+<ol type="a">
+<li><p>Draw a diagram showing the forces acting on the block. <strong>[1]</strong></p></li>
+<li><p>Find the value of <span class="math inline">\mu</span>. <strong>[4]</strong></p></li>
+<li><p>Find the speed of the block after it has moved <span class="math inline">3\,\mathrm m</span> down the plane. <strong>[1]</strong></p></li>
 </ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
 <ol type="a">
-<li>Differentiate:</li>
+<li><p>The forces are weight <span class="math inline">80\,\mathrm N</span> downwards, normal reaction perpendicular to the plane, and friction up the plane.</p></li>
+<li><p>Resolving down the plane,</p></li>
 </ol>
 <p><span class="math display">
-\frac{dx}{dt}=3-2\cos t,
-\qquad
-\frac{dy}{dt}=5-4\sin t.
-</span></p>
-<p>Use <span class="math inline">dy/dx=5/2</span>:</p>
-<p><span class="math display">
-\frac{5-4\sin t}{3-2\cos t}=\frac52.
-</span></p>
-<p>Cross-multiplication gives</p>
-<p><span class="math display">
-10-8\sin t=15-10\cos t
-\quad\Longrightarrow\quad
-\boxed{10\cos t-8\sin t=5}.
-</span></p>
-<ol start="2" type="a">
-<li>Let</li>
-</ol>
-<p><span class="math display">
-10\cos t-8\sin t=R\cos(t+\alpha)
-=R\cos t\cos\alpha-R\sin t\sin\alpha.
-</span></p>
-<p>Comparing coefficients,</p>
-<p><span class="math display">
-R\cos\alpha=10,\qquad R\sin\alpha=8.
+80\sin30^\circ-\mu(80\cos30^\circ)=8(2.4).
 </span></p>
 <p>Thus</p>
 <p><span class="math display">
-R=\sqrt{10^2+8^2}=\boxed{2\sqrt{41}},
+\mu=\frac{40-19.2}{80\cos30^\circ}=\boxed{0.300}\quad\text{(3 s.f.).}
 </span></p>
-<p>and</p>
-<p><span class="math display">
-\tan\alpha=\frac8{10}=\frac45
-\quad\Longrightarrow\quad
-\boxed{\alpha=0.675\text{ rad}}
-</span></p>
-<p>to 3 significant figures.</p>
 <ol start="3" type="a">
-<li>From (b),</li>
+<li>Using <span class="math inline">v^2=u^2+2as</span>,</li>
 </ol>
 <p><span class="math display">
-2\sqrt{41}\cos(t+\alpha)=5.
+v^2=2(2.4)(3)=14.4,
 </span></p>
-<p>Let <span class="math inline">\phi=\cos^{-1}\left(\dfrac5{2\sqrt{41}}\right)</span>. For <span class="math inline">0\le t\le2\pi</span>,</p>
-<p><span class="math display">
-t=\phi-\alpha=0.494952\ldots
-</span></p>
-<p>or</p>
-<p><span class="math display">
-t=2\pi-\phi-\alpha=4.438751\ldots.
-</span></p>
-<p>Hence</p>
-<span class="math display">
-\boxed{t=0.495\text{ or }4.44}.
-</span>
+so <span class="math inline">\boxed{v=3.79\,\mathrm{m\,s^{-1}}}</span>.
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q08"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q10"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_21.pdf</code>, Q7(a–c), and matching mark scheme.
+<strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_43.pdf, Q3(a–c), and matching 9709_w23_ms_43.pdf.
 </div>
 </section>
 </div>
-<div id="p2-diff-q09" class="question-card">
-<section id="question-9-970921on20-q8a" class="level3">
-<h3 class="anchored" data-anchor-id="question-9-970921on20-q8a">Question 9 · 9709/21/O/N/20 Q8(a)</h3>
-<p>A curve has equation <span class="math inline">y=f(x)</span> where</p>
-<p><span class="math display">
-f(x)=\frac{4x^3+8x-4}{2x-1}.
-</span></p>
-<p>Find an expression for <span class="math inline">dy/dx</span> and hence find the coordinates of each of the stationary points of the curve <span class="math inline">y=f(x)</span>. <strong>[5]</strong></p>
+<div id="p4-fe-q11" class="question-card">
+<section id="question-11-970941mj24-q2ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970941mj24-q2ab">Question 11 · 9709/41/M/J/24 Q2(a–b)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2024-mj-9709-41-q2-diagram.svg" class="note-figure img-fluid figure-img" alt="Two forces at a point with a resultant condition"></p>
+<figcaption>Independently extracted diagram from 9709/41/M/J/24 Q2</figcaption>
+</figure>
+</div>
+<p>Two forces of magnitudes <span class="math inline">20\,\mathrm N</span> and <span class="math inline">F\,\mathrm N</span> act at a point <span class="math inline">P</span> in the directions shown in the diagram.</p>
+<ol type="a">
+<li><p>Given that the resultant force has no component in the <span class="math inline">y</span>-direction, calculate <span class="math inline">F</span>. <strong>[2]</strong></p></li>
+<li><p>Given instead that <span class="math inline">F=10</span>, find the magnitude and direction of the resultant force. <strong>[5]</strong></p></li>
+</ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
 </summary>
-<p>Use the quotient rule:</p>
+<ol type="a">
+<li>The <span class="math inline">20\,\mathrm N</span> force has downward component <span class="math inline">20\sin60^\circ</span>, while the other force has upward component <span class="math inline">F</span>. Therefore</li>
+</ol>
 <p><span class="math display">
-\frac{dy}{dx}
-=\frac{(2x-1)(12x^2+8)-2(4x^3+8x-4)}{(2x-1)^2}.
+F=20\sin60^\circ=\boxed{10\sqrt3\,\mathrm N}.
 </span></p>
-<p>Simplify the numerator:</p>
+<ol start="2" type="a">
+<li>When <span class="math inline">F=10</span>, the components of the resultant are</li>
+</ol>
 <p><span class="math display">
-\begin{aligned}
-&amp;(2x-1)(12x^2+8)-2(4x^3+8x-4)\\
-&amp;=16x^3-12x^2
-=4x^2(4x-3).
-\end{aligned}
+R_x=20\cos60^\circ=10,\qquad R_y=10-20\sin60^\circ=10-10\sqrt3.
+</span></p>
+<p>Hence</p>
+<p><span class="math display">
+|R|=\sqrt{10^2+(10-10\sqrt3)^2}=\boxed{10.7\,\mathrm N}.
+</span></p>
+<p>The direction is below the positive <span class="math inline">x</span>-axis, with</p>
+<p><span class="math display">
+\tan\phi=\frac{10\sqrt3-10}{10}=\sqrt3-1,
+</span></p>
+so <span class="math inline">\boxed{\phi=36.2^\circ\text{ below the positive }x\text{-axis}}</span>.
+</details>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q11"> Completed</label>
+<div class="source-line">
+<strong>Source:</strong> <code>PastPaper/2024/2024/A-Level-CAIE数学QP-202406-Mathematics-P41-A-Level题库大全小程序.pdf</code>, Q2(a–b), and matching mark scheme. The diagram is an independently extracted SVG; it is not a screenshot.
+</div>
+</section>
+</div>
+<div id="p4-fe-q12" class="question-card">
+<section id="question-12-970943on23-q5ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-12-970943on23-q5ab">Question 12 · 9709/43/O/N/23 Q5(a–b)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/questions/paper-4/forces-equilibrium/2023-on-9709-43-q5-diagram.svg" class="note-figure img-fluid figure-img" alt="Particle of weight 80 N held by a string and a horizontal force"></p>
+<figcaption>Original question diagram from 9709/43/O/N/23 Q5</figcaption>
+</figure>
+</div>
+<p>A light string <span class="math inline">AB</span> is fixed at <span class="math inline">A</span> and has a particle of weight <span class="math inline">80\,\mathrm N</span> attached at <span class="math inline">B</span>. A horizontal force of magnitude <span class="math inline">P\,\mathrm N</span> is applied at <span class="math inline">B</span> so that the string makes an angle <span class="math inline">\theta</span> with the vertical.</p>
+<ol type="a">
+<li><p>It is given that <span class="math inline">P=32</span> and the system is in equilibrium. Find the tension in the string and the value of <span class="math inline">\theta</span>. <strong>[4]</strong></p></li>
+<li><p>It is given instead that the tension in the string is <span class="math inline">120\,\mathrm N</span> and that the particle still has weight <span class="math inline">80\,\mathrm N</span>. Find <span class="math inline">P</span> and <span class="math inline">\theta</span>. <strong>[4]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+T\cos\theta=80,\qquad T\sin\theta=32.
 </span></p>
 <p>Therefore</p>
 <p><span class="math display">
-\frac{dy}{dx}=\frac{4x^2(4x-3)}{(2x-1)^2}.
-</span></p>
-<p>For stationary points, set the numerator equal to zero:</p>
-<p><span class="math display">
-x=0\quad\text{or}\quad x=\frac34.
-</span></p>
-<p>Substitution into the original curve gives</p>
-<p><span class="math display">
-f(0)=4,
-\qquad
-f\left(\frac34\right)=\frac{59}{8}.
-</span></p>
-<p>Thus the stationary points are</p>
-<span class="math display">
-\boxed{(0,4)\text{ and }\left(\frac34,\frac{59}{8}\right)}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q09"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2020/2020/9709_w20_qp_21.pdf</code>, Q8(a), and matching mark scheme.
-</div>
-</section>
-</div>
-<div id="p2-diff-q10" class="question-card">
-<section id="question-10-970922fm22-q7ab" class="level3">
-<h3 class="anchored" data-anchor-id="question-10-970922fm22-q7ab">Question 10 · 9709/22/F/M/22 Q7(a–b)</h3>
-<p>A curve has equation</p>
-<p><span class="math display">
-e^{2x}y-e^y=100.
-</span></p>
-<ol type="a">
-<li>Show that</li>
-</ol>
-<p><span class="math display">
-\frac{dy}{dx}=\frac{2e^{2x}y}{e^y-e^{2x}}.
+\boxed{T=16\sqrt{29}=86.1\,\mathrm N,\qquad \theta=21.8^\circ}.
 </span></p>
 <ol start="2" type="a">
-<li>Show that the curve has no stationary points. <strong>[3+2]</strong></li>
-</ol>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<ol type="a">
-<li>Differentiate implicitly:</li>
+<li></li>
 </ol>
 <p><span class="math display">
-\frac{d}{dx}(e^{2x}y)-\frac{d}{dx}(e^y)=0.
-</span></p>
-<p>Using the product rule and chain rule,</p>
-<p><span class="math display">
-e^{2x}\left(2y+\frac{dy}{dx}\right)-e^y\frac{dy}{dx}=0.
-</span></p>
-<p>Rearrange:</p>
-<p><span class="math display">
-2e^{2x}y+e^{2x}\frac{dy}{dx}-e^y\frac{dy}{dx}=0,
+P^2+80^2=120^2,
 </span></p>
 <p>so</p>
 <p><span class="math display">
-\frac{dy}{dx}(e^y-e^{2x})=2e^{2x}y.
+\boxed{P=40\sqrt5=89.4\,\mathrm N}.
 </span></p>
-<p>Therefore</p>
-<p><span class="math display">
-\boxed{\frac{dy}{dx}=\frac{2e^{2x}y}{e^y-e^{2x}}}.
-</span></p>
-<ol start="2" type="a">
-<li>A stationary point would require <span class="math inline">dy/dx=0</span>. The denominator cannot make the derivative zero, so the numerator would have to be zero:</li>
-</ol>
-<p><span class="math display">
-2e^{2x}y=0.
-</span></p>
-<p>Since <span class="math inline">e^{2x}&gt;0</span>, this would require <span class="math inline">y=0</span>. But substituting <span class="math inline">y=0</span> into the original curve gives</p>
-<p><span class="math display">
-e^{2x}(0)-e^0=-1\ne100.
-</span></p>
-<p>Thus <span class="math inline">y</span> cannot be zero on the curve, and the curve has</p>
+<p>Also <span class="math inline">\cos\theta=80/120=2/3</span>, giving</p>
 <span class="math display">
-\boxed{\text{no stationary points}}.
+\boxed{\theta=48.2^\circ}.
 </span>
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q10"> Completed</label>
+<label class="done-toggle"><input type="checkbox" data-progress="p4-fe-q12"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_22.pdf</code>, Q7(a–b), and matching mark scheme.
+<strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_43.pdf, Q5(a–b), and matching 9709_w23_ms_43.pdf. The diagram is an independently extracted SVG; it is not a screenshot.
 </div>
 </section>
 </div>
-<div id="p2-diff-q11" class="question-card">
-<section id="question-11-970921mj24-q1" class="level3">
-<h3 class="anchored" data-anchor-id="question-11-970921mj24-q1">Question 11 · 9709/21/M/J/24 Q1</h3>
-<p>A curve has equation</p>
-<p><span class="math display">
-y=2\tan x-5\sin x
-</span></p>
-<p>for <span class="math inline">0\le x&lt;\frac12\pi</span>.</p>
-<p>Find the <span class="math inline">x</span>-coordinate of the stationary point of the curve. Give your answer correct to 3 significant figures. <strong>[3]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Differentiate:</p>
-<p><span class="math display">
-\frac{dy}{dx}=2\sec^2x-5\cos x.
-</span></p>
-<p>At the stationary point,</p>
-<p><span class="math display">
-2\sec^2x-5\cos x=0
-\quad\Longrightarrow\quad
-\frac2{\cos^2x}=5\cos x.
-</span></p>
-<p>Thus <span class="math inline">\cos^3x=2/5</span>. On the given interval <span class="math inline">\cos x&gt;0</span>, so</p>
-<p><span class="math display">
-x=\cos^{-1}\left(\left(\frac25\right)^{1/3}\right)
-=0.742461\ldots.
-</span></p>
-<p>Therefore</p>
-<span class="math display">
-\boxed{x=0.742}\qquad\text{(3 s.f.)}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q11"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202406-mathematics-p21.pdf</code>, Q1, and matching mark scheme.
-</div>
 </section>
-</div>
-<div id="p2-diff-q12" class="question-card">
-<section id="question-12-970922mj24-q4" class="level3">
-<h3 class="anchored" data-anchor-id="question-12-970922mj24-q4">Question 12 · 9709/22/M/J/24 Q4</h3>
-<p>A curve is defined by the parametric equations</p>
-<p><span class="math display">
-x=4\cos^2t,\qquad y=\sqrt3\sin2t,
-</span></p>
-<p>for values of <span class="math inline">t</span> such that <span class="math inline">0&lt;t&lt;\frac12\pi</span>.</p>
-<p>Find the equation of the normal to the curve at the point for which <span class="math inline">t=\frac16\pi</span>. Give your answer in the form <span class="math inline">ax+by+c=0</span> where <span class="math inline">a</span>, <span class="math inline">b</span> and <span class="math inline">c</span> are integers. <strong>[7]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Differentiate with respect to <span class="math inline">t</span>:</p>
-<p><span class="math display">
-\frac{dx}{dt}=-8\cos t\sin t=-4\sin2t,
-\qquad
-\frac{dy}{dt}=2\sqrt3\cos2t.
-</span></p>
-<p>At <span class="math inline">t=\pi/6</span>,</p>
-<p><span class="math display">
-x=4\cos^2\frac\pi6=3,
-\qquad
-y=\sqrt3\sin\frac\pi3=\frac32.
-</span></p>
-<p>Also,</p>
-<p><span class="math display">
-\frac{dy}{dx}=\frac{2\sqrt3\cos(\pi/3)}{-4\sin(\pi/3)}=-\frac12.
-</span></p>
-<p>Therefore the normal gradient is <span class="math inline">2</span>. The normal through <span class="math inline">(3,3/2)</span> is</p>
-<p><span class="math display">
-y-\frac32=2(x-3).
-</span></p>
-<p>Multiplying by <span class="math inline">2</span> and rearranging gives</p>
-<span class="math display">
-\boxed{4x-2y-9=0}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q12"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202406-mathematics-p22.pdf</code>, Q4, and matching mark scheme.
-</div>
-</section>
-</div>
-<div id="p2-diff-q13" class="question-card">
-<section id="question-13-970922on24-q3" class="level3">
-<h3 class="anchored" data-anchor-id="question-13-970922on24-q3">Question 13 · 9709/22/O/N/24 Q3</h3>
-<p>A curve has equation</p>
-<p><span class="math display">
-6e^{-x}y^2+e^{2x}-12y+7=0.
-</span></p>
-<p>Find the gradient of the curve at the point <span class="math inline">(\ln3,2)</span>. <strong>[6]</strong></p>
-<details class="answer-panel">
-<summary>
-Show detailed mark scheme answer
-</summary>
-<p>Differentiate implicitly. For the first term use the product rule:</p>
-<p><span class="math display">
-\frac{d}{dx}(6e^{-x}y^2)=-6e^{-x}y^2+12e^{-x}y\frac{dy}{dx}.
-</span></p>
-<p>Thus</p>
-<p><span class="math display">
--6e^{-x}y^2+12e^{-x}y\frac{dy}{dx}+2e^{2x}-12\frac{dy}{dx}=0.
-</span></p>
-<p>Collect the derivative terms:</p>
-<p><span class="math display">
-\frac{dy}{dx}(12e^{-x}y-12)=6e^{-x}y^2-2e^{2x}.
-</span></p>
-<p>At <span class="math inline">x=\ln3</span> and <span class="math inline">y=2</span>,</p>
-<p><span class="math display">
-e^{-x}=\frac13,\qquad e^{2x}=9.
-</span></p>
-<p>Therefore</p>
-<span class="math display">
-\frac{dy}{dx}=\frac{6(1/3)(2^2)-2(9)}{12(1/3)(2)-12}
-=\frac{8-18}{8-12}
-=\boxed{\frac52}.
-</span>
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q13"> Completed</label>
-<div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2024/2024/qp-202410-mathematics-p22.pdf</code>, Q3, and matching mark scheme.
-</div>
-</section>
+<section id="quick-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="quick-checklist">3. Quick checklist</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">Force diagram contains every force and no force belonging to another particle</label></li>
+<li><label><input type="checkbox">Smooth contact means no friction; rough contact requires a friction direction</label></li>
+<li><label><input type="checkbox">In limiting equilibrium use <span class="math inline">F=\mu R</span>, not <span class="math inline">F=\mu mg</span> automatically</label></li>
+<li><label><input type="checkbox">Resolve perpendicular to the plane before using <span class="math inline">F=\mu R</span></label></li>
+<li><label><input type="checkbox">Check the sign and quadrant of a resultant direction</label></li>
+<li><label><input type="checkbox">Newton’s third-law forces act on different bodies</label></li>
+</ul>
 </div>
 
 
@@ -1613,14 +1432,11 @@ document.querySelectorAll('.done-toggle input').forEach((box) => {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../paper-2/trigonometry.html" class="pagination-link" aria-label="2.3 Trigonometry">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.3 Trigonometry</span>
+      <a href="../paper-3/complex-numbers.html" class="pagination-link" aria-label="9. Complex numbers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">9. Complex numbers</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../paper-2/integration.html" class="pagination-link" aria-label="2.5 Integration">
-        <span class="nav-page-text">2.5 Integration</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

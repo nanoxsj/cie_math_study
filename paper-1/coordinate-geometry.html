@@ -333,6 +333,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -349,6 +366,8 @@ window.Quarto = {
   <li><a href="#circles" id="toc-circles" class="nav-link" data-scroll-target="#circles">Circles</a></li>
   <li><a href="#intersections-and-tangency" id="toc-intersections-and-tangency" class="nav-link" data-scroll-target="#intersections-and-tangency">Intersections and tangency</a></li>
   <li><a href="#perpendicular-bisector-and-circle-geometry" id="toc-perpendicular-bisector-and-circle-geometry" class="nav-link" data-scroll-target="#perpendicular-bisector-and-circle-geometry">Perpendicular bisector and circle geometry</a></li>
+  <li><a href="#coordinate-formula-toolkit" id="toc-coordinate-formula-toolkit" class="nav-link" data-scroll-target="#coordinate-formula-toolkit">Coordinate formula toolkit</a></li>
+  <li><a href="#circle-methods" id="toc-circle-methods" class="nav-link" data-scroll-target="#circle-methods">Circle methods</a></li>
   </ul></li>
   <li><a href="#verified-paper-1-past-paper-questions" id="toc-verified-paper-1-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-1-past-paper-questions">2. Verified Paper 1 past-paper questions</a>
   <ul class="collapse">
@@ -361,7 +380,7 @@ window.Quarto = {
   <li><a href="#question-7-970912on21-q6" id="toc-question-7-970912on21-q6" class="nav-link" data-scroll-target="#question-7-970912on21-q6">Question 7 · 9709/12/O/N/21 Q6</a></li>
   <li><a href="#question-8-970911on21-q7ab" id="toc-question-8-970911on21-q7ab" class="nav-link" data-scroll-target="#question-8-970911on21-q7ab">Question 8 · 9709/11/O/N/21 Q7(a–b)</a></li>
   <li><a href="#question-9-970912fm22-q6ab" id="toc-question-9-970912fm22-q6ab" class="nav-link" data-scroll-target="#question-9-970912fm22-q6ab">Question 9 · 9709/12/F/M/22 Q6(a–b)</a></li>
-  <li><a href="#question-10-970912fm22-q8a" id="toc-question-10-970912fm22-q8a" class="nav-link" data-scroll-target="#question-10-970912fm22-q8a">Question 10 · 9709/12/F/M/22 Q8(a)</a></li>
+  <li><a href="#question-10-970912fm22-q8ab" id="toc-question-10-970912fm22-q8ab" class="nav-link" data-scroll-target="#question-10-970912fm22-q8ab">Question 10 · 9709/12/F/M/22 Q8(a–b)</a></li>
   <li><a href="#question-11-970911mj22-q9ab" id="toc-question-11-970911mj22-q9ab" class="nav-link" data-scroll-target="#question-11-970911mj22-q9ab">Question 11 · 9709/11/M/J/22 Q9(a–b)</a></li>
   <li><a href="#question-12-970911on22-q11ac" id="toc-question-12-970911on22-q11ac" class="nav-link" data-scroll-target="#question-12-970911on22-q11ac">Question 12 · 9709/11/O/N/22 Q11(a–c)</a></li>
   <li><a href="#question-13-970912fm23-q5" id="toc-question-13-970912fm23-q5" class="nav-link" data-scroll-target="#question-13-970912fm23-q5">Question 13 · 9709/12/F/M/23 Q5</a></li>
@@ -471,6 +490,26 @@ d=\frac{|a x_C+b y_C+c|}{\sqrt{a^2+b^2}}.
 <li>写出经过 (M) 的直线。</li>
 </ol>
 <p>圆的 diameter 的 midpoint 是 centre；若 <span class="math inline">AB</span> 是 diameter，则 centre 是 <span class="math inline">AB</span> 的 midpoint，radius 是 <span class="math inline">AB/2</span>。</p>
+</section>
+<section id="coordinate-formula-toolkit" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="coordinate-formula-toolkit">Coordinate formula toolkit</h3>
+<p>两点 <span class="math inline">A(x_1,y_1)</span>、<span class="math inline">B(x_2,y_2)</span> 之间的 distance 与 midpoint 为</p>
+<p><span class="math display">
+AB=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2},qquad
+M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right).
+</span></p>
+<p>直线可以写成 <span class="math inline">y=mx+c</span>、<span class="math inline">y-y_1=m(x-x_1)</span> 或 <span class="math inline">ax+by+c=0</span>。Vertical line 必须写成 <span class="math inline">x=k</span>；parallel lines 有相同 gradient，perpendicular lines 满足 <span class="math inline">m_1m_2=-1</span>。</p>
+</section>
+<section id="circle-methods" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="circle-methods">Circle methods</h3>
+<p>标准圆方程</p>
+<p><span class="math display">
+(x-a)^2+(y-b)^2=r^2
+</span></p>
+<p>的 centre 是 <span class="math inline">(a,b)</span>，radius 是 <span class="math inline">r</span>。一般式</p>
+<p><span class="math display">x^2+y^2+2fx+2gy+c=0</span></p>
+<p>要分别对 <span class="math inline">x</span>、<span class="math inline">y</span> completing the square。若直线与圆相交，把直线代入圆方程；two intersections、tangent 和 no intersection 分别对应 quadratic 的 <span class="math inline">\Delta&gt;0</span>、<span class="math inline">\Delta=0</span> 和 <span class="math inline">\Delta&lt;0</span>。</p>
+<p>圆上点的 tangent perpendicular to the radius。求 tangent 时可先求 radius gradient，再取 negative reciprocal；也可以使用 centre 到直线的 perpendicular distance 等于 <span class="math inline">r</span>。</p>
 </section>
 </section>
 <section id="verified-paper-1-past-paper-questions" class="level2">
@@ -833,8 +872,8 @@ r=\frac{|3(-1)-2-20|}{\sqrt{3^2+(-1)^2}}=\frac{25}{\sqrt{10}}.
 </section>
 </div>
 <div id="p1-cg-q10" class="question-card">
-<section id="question-10-970912fm22-q8a" class="level3">
-<h3 class="anchored" data-anchor-id="question-10-970912fm22-q8a">Question 10 · 9709/12/F/M/22 Q8(a)</h3>
+<section id="question-10-970912fm22-q8ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-970912fm22-q8ab">Question 10 · 9709/12/F/M/22 Q8(a–b)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../assets/questions/paper-1/past-paper/2022-fm-9709-12-q8-diagram.svg" class="note-figure img-fluid figure-img" alt="Original extracted diagram of a circle and horizontal chord for 2022 February March Paper 1 Question 8"></p>
@@ -856,12 +895,26 @@ Show detailed mark scheme answer
 (x_B-2)^2+2^2=8\Longrightarrow (x_B-2)^2=4.
 </span></p>
 <p>The point other than <span class="math inline">A</span> has <span class="math inline">x_B=4</span>, so</p>
-<span class="math display">\boxed{A=(0,2),\quad B=(4,2)}.
+<p><span class="math display">\boxed{A=(0,2),\quad B=(4,2)}.
+</span></p>
+<ol start="2" type="a">
+<li>The shaded segment is between the circle and the chord <span class="math inline">AB</span>, and is rotated about the <span class="math inline">x</span>-axis. Since the circle is</li>
+</ol>
+<p><span class="math display">
+y^2=8-(x-2)^2,
+</span></p>
+<p>the volume is</p>
+<span class="math display">
+\begin{aligned}
+V&amp;=\pi\int_0^4\left(8-(x-2)^2-2^2\right)dx\\
+&amp;=\pi\int_0^4\left(4-(x-2)^2\right)dx
+=\boxed{\frac{32\pi}{3}}.
+\end{aligned}
 </span>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q10"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_12.pdf</code>, Q8(a), and matching <code>9709_m22_ms_12.pdf</code>. The diagram is an independently extracted, annotation-cleaned SVG from the original PDF.
+<strong>Source:</strong> <code>PastPaper/2022/2022/9709_m22_qp_12.pdf</code>, Q8(a–b), and matching <code>9709_m22_ms_12.pdf</code>. The diagram is an independently extracted, annotation-cleaned SVG from the original PDF.
 </div>
 </section>
 </div>

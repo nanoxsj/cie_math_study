@@ -333,6 +333,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -347,6 +364,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#logarithm-laws-and-domain" id="toc-logarithm-laws-and-domain" class="nav-link" data-scroll-target="#logarithm-laws-and-domain">Logarithm laws and domain</a></li>
   <li><a href="#exponential-equations-and-linearisation" id="toc-exponential-equations-and-linearisation" class="nav-link" data-scroll-target="#exponential-equations-and-linearisation">Exponential equations and linearisation</a></li>
+  <li><a href="#definitions-graphs-and-change-of-base" id="toc-definitions-graphs-and-change-of-base" class="nav-link" data-scroll-target="#definitions-graphs-and-change-of-base">Definitions, graphs and change of base</a></li>
+  <li><a href="#solving-exponential-and-logarithmic-equations" id="toc-solving-exponential-and-logarithmic-equations" class="nav-link" data-scroll-target="#solving-exponential-and-logarithmic-equations">Solving exponential and logarithmic equations</a></li>
+  <li><a href="#linearised-models" id="toc-linearised-models" class="nav-link" data-scroll-target="#linearised-models">Linearised models</a></li>
   </ul></li>
   <li><a href="#verified-paper-2-past-paper-questions" id="toc-verified-paper-2-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</a>
   <ul class="collapse">
@@ -358,12 +378,9 @@ window.Quarto = {
   <li><a href="#question-6-970921on20-q1" id="toc-question-6-970921on20-q1" class="nav-link" data-scroll-target="#question-6-970921on20-q1">Question 6 · 9709/21/O/N/20 Q1</a></li>
   <li><a href="#question-7-970922on20-q2" id="toc-question-7-970922on20-q2" class="nav-link" data-scroll-target="#question-7-970922on20-q2">Question 7 · 9709/22/O/N/20 Q2</a></li>
   <li><a href="#question-8-970921on22-q2" id="toc-question-8-970921on22-q2" class="nav-link" data-scroll-target="#question-8-970921on22-q2">Question 8 · 9709/21/O/N/22 Q2</a></li>
-  </ul></li>
-  <li><a href="#additional-verified-paper-2-questions" id="toc-additional-verified-paper-2-questions" class="nav-link" data-scroll-target="#additional-verified-paper-2-questions">3. Additional verified Paper 2 questions</a>
-  <ul class="collapse">
   <li><a href="#question-9-970922mj24-q2" id="toc-question-9-970922mj24-q2" class="nav-link" data-scroll-target="#question-9-970922mj24-q2">Question 9 · 9709/22/M/J/24 Q2</a></li>
   <li><a href="#question-10-970921on24-q1ab" id="toc-question-10-970921on24-q1ab" class="nav-link" data-scroll-target="#question-10-970921on24-q1ab">Question 10 · 9709/21/O/N/24 Q1(a–b)</a></li>
-  <li><a href="#question-11-970921on21-q4a" id="toc-question-11-970921on21-q4a" class="nav-link" data-scroll-target="#question-11-970921on21-q4a">Question 11 · 9709/21/O/N/21 Q4(a)</a></li>
+  <li><a href="#question-11-970921on21-q4ab" id="toc-question-11-970921on21-q4ab" class="nav-link" data-scroll-target="#question-11-970921on21-q4ab">Question 11 · 9709/21/O/N/21 Q4(a–b)</a></li>
   </ul></li>
   <li><a href="#exam-checklist" id="toc-exam-checklist" class="nav-link" data-scroll-target="#exam-checklist">Exam checklist</a></li>
   </ul>
@@ -481,6 +498,25 @@ f(x)\ln a=\ln b.
 </figure>
 </div>
 </div>
+<section id="definitions-graphs-and-change-of-base" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="definitions-graphs-and-change-of-base">Definitions, graphs and change of base</h3>
+<p>对 <span class="math inline">a&gt;0</span> 且 <span class="math inline">a\ne1</span>，</p>
+<p><span class="math display">a^y=x\Longleftrightarrow y=\log_a x,</span></p>
+<p>所以 logarithm 的 argument 必须满足 <span class="math inline">x&gt;0</span>。常用换底公式为</p>
+<p><span class="math display">\log_a x=\frac{\ln x}{\ln a}.</span></p>
+<p><span class="math inline">y=a^x</span> 的 graph 经过 <span class="math inline">(0,1)</span>，horizontal asymptote 是 <span class="math inline">y=0</span>；当 <span class="math inline">a&gt;1</span> 时 increasing，当 <span class="math inline">0&lt;a&lt;1</span> 时 decreasing。<span class="math inline">y=\ln x</span> 是它在交换 <span class="math inline">x,y</span> 后的 inverse graph，vertical asymptote 是 <span class="math inline">x=0</span>。</p>
+</section>
+<section id="solving-exponential-and-logarithmic-equations" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="solving-exponential-and-logarithmic-equations">Solving exponential and logarithmic equations</h3>
+<p>优先把两边写成相同 base；若不能，取 natural logarithm。使用 logarithm laws 合并前，必须确认每一个 argument 都是 positive。若令 <span class="math inline">u=a^x</span> 或 <span class="math inline">u=e^x</span> 把方程化成 quadratic，解出 <span class="math inline">u</span> 后要保留 <span class="math inline">u&gt;0</span> 的限制，再回代求 <span class="math inline">x</span>。</p>
+<p>含有 <span class="math inline">ln(f(x))</span> 的方程最后要检查 <span class="math inline">f(x)&gt;0</span>；平方、指数化或乘以 variable 产生的 extraneous roots 必须代回原方程。</p>
+</section>
+<section id="linearised-models" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="linearised-models">Linearised models</h3>
+<p>若模型为 <span class="math inline">y=ka^{x}</span>，则</p>
+<p><span class="math display">\ln y=\ln k+x\ln a.</span></p>
+<p>在 graph of <span class="math inline">\ln y</span> against <span class="math inline">x</span> 中，gradient 是 <span class="math inline">\ln a</span>、intercept 是 <span class="math inline">\ln k</span>；若模型为 <span class="math inline">y=kx^n</span>，在 graph of <span class="math inline">\ln y</span> against <span class="math inline">\ln x</span> 中 gradient 是 <span class="math inline">n</span>、intercept 是 <span class="math inline">\ln k</span>。读出 intercept 后要取 exponential 才能得到 <span class="math inline">k</span>。</p>
+</section>
 </section>
 <section id="verified-paper-2-past-paper-questions" class="level2">
 <h2 class="anchored" data-anchor-id="verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</h2>
@@ -763,10 +799,6 @@ x=\frac{\ln(14/5)}{2+\ln5}\approx\boxed{0.285}.
 </div>
 </section>
 </div>
-</section>
-<section id="additional-verified-paper-2-questions" class="level2">
-<h2 class="anchored" data-anchor-id="additional-verified-paper-2-questions">3. Additional verified Paper 2 questions</h2>
-<p>以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。</p>
 <div id="p2-log-q10" class="question-card">
 <section id="question-9-970922mj24-q2" class="level3">
 <h3 class="anchored" data-anchor-id="question-9-970922mj24-q2">Question 9 · 9709/22/M/J/24 Q2</h3>
@@ -858,8 +890,8 @@ m=\frac{3.80-0.95}{3.3-0.4}=\frac{2.85}{2.9}.
 </section>
 </div>
 <div id="p2-log-q09" class="question-card">
-<section id="question-11-970921on21-q4a" class="level3">
-<h3 class="anchored" data-anchor-id="question-11-970921on21-q4a">Question 11 · 9709/21/O/N/21 Q4(a)</h3>
+<section id="question-11-970921on21-q4ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-11-970921on21-q4ab">Question 11 · 9709/21/O/N/21 Q4(a–b)</h3>
 <p>The curve with equation</p>
 <p><span class="math display">
 y=xe^{2x}+5e^{-x}
@@ -872,6 +904,9 @@ y=xe^{2x}+5e^{-x}
 x=\frac13\ln5-\frac13\ln(1+2x).
 </span></p>
 <p><strong>[5]</strong></p>
+<ol start="2" type="a">
+<li>Use an iterative formula, based on the equation in part (a), to find the <span class="math inline">x</span>-coordinate of <span class="math inline">M</span> correct to 3 significant figures. Use an initial value of <span class="math inline">0.35</span> and give the result of each iteration to 5 significant figures. <strong>[3]</strong></li>
+</ol>
 <details class="answer-panel">
 <summary>
 Show detailed mark scheme answer
@@ -889,13 +924,36 @@ e^{3x}(1+2x)=5.
 3x+\ln(1+2x)=\ln5,
 </span></p>
 <p>which rearranges to</p>
-<span class="math display">
+<p><span class="math display">
 \boxed{x=\frac13\ln5-\frac13\ln(1+2x)}.
+</span></p>
+<ol start="2" type="a">
+<li>Use</li>
+</ol>
+<p><span class="math display">
+x_{n+1}=\frac13\ln5-\frac13\ln(1+2x_n),
+\qquad x_1=0.35.
+</span></p>
+<p>The iterations are</p>
+<p><span class="math display">
+\begin{array}{c|c}
+n&amp;x_n\\\hline
+1&amp;0.35000\\
+2&amp;0.28579\\
+3&amp;0.29635\\
+4&amp;0.29455\\
+5&amp;0.29485\\
+6&amp;0.29480
+\end{array}
+</span></p>
+<p>Hence the required coordinate is</p>
+<span class="math display">
+\boxed{x=0.295}\qquad\text{(3 s.f.)}.
 </span>
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-log-q09"> Completed</label>
 <div class="source-line">
-<strong>Source:</strong> <code>PastPaper/2021/2021/9709_w21_qp_21.pdf</code>, Q4(a), and matching mark scheme.
+<strong>Source:</strong> <code>PastPaper/2021/2021/9709_w21_qp_21.pdf</code>, Q4(a–b), and matching mark scheme.
 </div>
 </section>
 </div>

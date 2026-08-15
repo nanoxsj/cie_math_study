@@ -333,6 +333,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -350,6 +367,9 @@ window.Quarto = {
   <li><a href="#compound-angle-and-double-angle-formulae" id="toc-compound-angle-and-double-angle-formulae" class="nav-link" data-scroll-target="#compound-angle-and-double-angle-formulae">Compound-angle and double-angle formulae</a></li>
   <li><a href="#r-form" id="toc-r-form" class="nav-link" data-scroll-target="#r-form"><span class="math inline">R</span>-form</a></li>
   <li><a href="#solving-strategy" id="toc-solving-strategy" class="nav-link" data-scroll-target="#solving-strategy">Solving strategy</a></li>
+  <li><a href="#exact-values-and-angle-restrictions" id="toc-exact-values-and-angle-restrictions" class="nav-link" data-scroll-target="#exact-values-and-angle-restrictions">Exact values and angle restrictions</a></li>
+  <li><a href="#double-angle-rearrangements" id="toc-double-angle-rearrangements" class="nav-link" data-scroll-target="#double-angle-rearrangements">Double-angle rearrangements</a></li>
+  <li><a href="#compound-angles-and-r-form-checks" id="toc-compound-angles-and-r-form-checks" class="nav-link" data-scroll-target="#compound-angles-and-r-form-checks">Compound angles and <span class="math inline">R</span>-form checks</a></li>
   </ul></li>
   <li><a href="#verified-paper-2-past-paper-questions" id="toc-verified-paper-2-past-paper-questions" class="nav-link" data-scroll-target="#verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</a>
   <ul class="collapse">
@@ -363,9 +383,6 @@ window.Quarto = {
   <li><a href="#question-8-970921on21-q7" id="toc-question-8-970921on21-q7" class="nav-link" data-scroll-target="#question-8-970921on21-q7">Question 8 · 9709/21/O/N/21 Q7</a></li>
   <li><a href="#question-9-970922on22-q1" id="toc-question-9-970922on22-q1" class="nav-link" data-scroll-target="#question-9-970922on22-q1">Question 9 · 9709/22/O/N/22 Q1</a></li>
   <li><a href="#question-10-970922mj22-q8" id="toc-question-10-970922mj22-q8" class="nav-link" data-scroll-target="#question-10-970922mj22-q8">Question 10 · 9709/22/M/J/22 Q8</a></li>
-  </ul></li>
-  <li><a href="#paper-2-additions" id="toc-paper-2-additions" class="nav-link" data-scroll-target="#paper-2-additions">3. 2024 Paper 2 additions</a>
-  <ul class="collapse">
   <li><a href="#question-11-970922on24-q7ab" id="toc-question-11-970922on24-q7ab" class="nav-link" data-scroll-target="#question-11-970922on24-q7ab">Question 11 · 9709/22/O/N/24 Q7(a–b)</a></li>
   </ul></li>
   </ul>
@@ -547,6 +564,32 @@ R=\sqrt{a^2+b^2},\qquad R\cos\alpha=a,\qquad R\sin\alpha=b.
 </figure>
 </div>
 </div>
+<section id="exact-values-and-angle-restrictions" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="exact-values-and-angle-restrictions">Exact values and angle restrictions</h3>
+<p>要熟悉 <span class="math inline">0</span>、<span class="math inline">\pi/6</span>、<span class="math inline">\pi/4</span>、<span class="math inline">\pi/3</span>、<span class="math inline">\pi/2</span> 的 exact values，并根据 quadrant 判断 signs。对于 reciprocal functions，必须同时排除</p>
+<p><span class="math display">
+\cos\theta=0\quad\text{for }\tan\theta,\sec\theta,
+\qquad
+\sin\theta=0\quad\text{for }\cot\theta,\operatorname{cosec}\theta.
+</span></p>
+<p>题目给出 restricted interval 时，先求 reference angle，再按周期和 quadrant 列出所有解；不能只保留 inverse calculator 的 principal value。</p>
+</section>
+<section id="double-angle-rearrangements" class="level3 formula-panel">
+<h3 class="anchored" data-anchor-id="double-angle-rearrangements">Double-angle rearrangements</h3>
+<p>根据目标形式选择 double-angle identity：</p>
+<p><span class="math display">
+\cos2A=1-2\sin^2A=2\cos^2A-1,qquad
+\sin^2A=\frac{1-\cos2A}{2},qquad
+\cos^2A=\frac{1+\cos2A}{2}.
+</span></p>
+<p>若 equation 可化成关于 <span class="math inline">\sin A</span>、<span class="math inline">\cos A</span> 或 <span class="math inline">\tan A</span> 的 quadratic，先令该 ratio 为 <span class="math inline">u</span>，解完后检查 <span class="math inline">u\in[-1,1]</span>（对 sine/cosine）以及原方程的 excluded values。</p>
+</section>
+<section id="compound-angles-and-r-form-checks" class="level3 study-card">
+<h3 class="anchored" data-anchor-id="compound-angles-and-r-form-checks">Compound angles and <span class="math inline">R</span>-form checks</h3>
+<p>使用 compound-angle formula 时先展开，再比较 <span class="math inline">\sin\theta</span> 与 <span class="math inline">\cos\theta</span> 的 coefficients。对</p>
+<p><span class="math display">a\sin\theta+b\cos\theta=R\sin(\theta+\alpha),</span></p>
+<p>必须满足 <span class="math inline">R=\sqrt{a^2+b^2}</span>，并由 <span class="math inline">R\cos\alpha=a</span>、<span class="math inline">R\sin\alpha=b</span> 确定正确 quadrant。最后可用 maximum/minimum range <span class="math inline">[-R,R]</span> 检查 equation 是否有解。</p>
+</section>
 </section>
 <section id="verified-paper-2-past-paper-questions" class="level2">
 <h2 class="anchored" data-anchor-id="verified-paper-2-past-paper-questions">2. Verified Paper 2 past-paper questions</h2>
@@ -1019,10 +1062,6 @@ R=\sqrt{11^2+(5\sqrt3)^2}=14,
 </div>
 </section>
 </div>
-</section>
-<section id="paper-2-additions" class="level2">
-<h2 class="anchored" data-anchor-id="paper-2-additions">3. 2024 Paper 2 additions</h2>
-<p>以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。</p>
 <div id="p2-trig-q11" class="question-card">
 <section id="question-11-970922on24-q7ab" class="level3">
 <h3 class="anchored" data-anchor-id="question-11-970922on24-q7ab">Question 11 · 9709/22/O/N/24 Q7(a–b)</h3>
