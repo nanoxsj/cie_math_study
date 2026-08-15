@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CIE 9709 Paper 4 Mechanics, syllabus 4.3.">
+
+<title>3. Momentum – CIE Mathematics 9709</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../paper-4/newtons-laws-of-motion.html" rel="next">
+<link href="../paper-4/kinematics-of-motion-in-a-straight-line.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a2a938b4dd5711f7a799c87bd16ba44c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/momentum.html">3. Momentum</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIE Mathematics 9709</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">学习首页</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 1 · Pure Mathematics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/quadratics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Quadratics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/coordinate-geometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Coordinate geometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/circular-measure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Circular measure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-1/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.8 Integration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 2 · Pure Mathematics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-2/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Numerical solution of equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 3 · Pure Mathematics 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/algebra-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Algebra - Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/logarithmic-and-exponential-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Logarithmic and exponential functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/trigonometry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Trigonometry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/numerical-solution-of-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Numerical solution of equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Differential equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-3/complex-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 4 · Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/forces-and-equilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Forces and equilibrium</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/kinematics-of-motion-in-a-straight-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Kinematics of motion in a straight line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/momentum.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3. Momentum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/newtons-laws-of-motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Newton’s laws of motion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-4/energy-work-and-power.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Energy, work and power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 5 · Probability and Statistics 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/representation-of-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 Representation of data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/permutations-and-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 Permutations and combinations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Probability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/discrete-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Discrete random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-5/normal-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 The normal distribution</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Paper 6 · Probability and Statistics 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/poisson-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 The Poisson distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/linear-combinations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 Linear combinations of random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/continuous-random-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Continuous random variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/sampling-and-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Sampling and estimation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../paper-6/hypothesis-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 Hypothesis tests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#note-knowledge-points" id="toc-note-knowledge-points" class="nav-link" data-scroll-target="#note-knowledge-points">1. Note knowledge points</a>
+  <ul class="collapse">
+  <li><a href="#momentum-and-its-vector-nature" id="toc-momentum-and-its-vector-nature" class="nav-link" data-scroll-target="#momentum-and-its-vector-nature">Momentum and its vector nature</a></li>
+  <li><a href="#direct-collisions" id="toc-direct-collisions" class="nav-link" data-scroll-target="#direct-collisions">Direct collisions</a></li>
+  <li><a href="#conservation-of-momentum" id="toc-conservation-of-momentum" class="nav-link" data-scroll-target="#conservation-of-momentum">Conservation of momentum</a></li>
+  <li><a href="#multiple-collisions" id="toc-multiple-collisions" class="nav-link" data-scroll-target="#multiple-collisions">Multiple collisions</a></li>
+  </ul></li>
+  <li><a href="#note-worked-examples" id="toc-note-worked-examples" class="nav-link" data-scroll-target="#note-worked-examples">2. Note worked examples</a>
+  <ul class="collapse">
+  <li><a href="#worked-example-1-basic-momentum" id="toc-worked-example-1-basic-momentum" class="nav-link" data-scroll-target="#worked-example-1-basic-momentum">Worked example 1 · Basic momentum</a></li>
+  <li><a href="#worked-example-2-direct-collision" id="toc-worked-example-2-direct-collision" class="nav-link" data-scroll-target="#worked-example-2-direct-collision">Worked example 2 · Direct collision</a></li>
+  <li><a href="#worked-example-3-multiple-collisions" id="toc-worked-example-3-multiple-collisions" class="nav-link" data-scroll-target="#worked-example-3-multiple-collisions">Worked example 3 · Multiple collisions</a></li>
+  </ul></li>
+  <li><a href="#core-knowledge" id="toc-core-knowledge" class="nav-link" data-scroll-target="#core-knowledge">3. Core knowledge</a>
+  <ul class="collapse">
+  <li><a href="#linear-momentum-and-its-vector-nature" id="toc-linear-momentum-and-its-vector-nature" class="nav-link" data-scroll-target="#linear-momentum-and-its-vector-nature">Linear momentum and its vector nature</a></li>
+  <li><a href="#conservation-of-momentum-1" id="toc-conservation-of-momentum-1" class="nav-link" data-scroll-target="#conservation-of-momentum-1">Conservation of momentum</a></li>
+  <li><a href="#direct-impact-and-coalescence" id="toc-direct-impact-and-coalescence" class="nav-link" data-scroll-target="#direct-impact-and-coalescence">Direct impact and coalescence</a></li>
+  <li><a href="#kinetic-energy-and-loss-in-a-collision" id="toc-kinetic-energy-and-loss-in-a-collision" class="nav-link" data-scroll-target="#kinetic-energy-and-loss-in-a-collision">Kinetic energy and loss in a collision</a></li>
+  <li><a href="#a-reliable-collision-method" id="toc-a-reliable-collision-method" class="nav-link" data-scroll-target="#a-reliable-collision-method">A reliable collision method</a></li>
+  </ul></li>
+  <li><a href="#verified-paper-4-questions" id="toc-verified-paper-4-questions" class="nav-link" data-scroll-target="#verified-paper-4-questions">4. Verified Paper 4 questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-970943mj24-q1" id="toc-question-1-970943mj24-q1" class="nav-link" data-scroll-target="#question-1-970943mj24-q1">Question 1 · 9709/43/M/J/24 Q1</a></li>
+  <li><a href="#question-2-970942mj24-q6ab" id="toc-question-2-970942mj24-q6ab" class="nav-link" data-scroll-target="#question-2-970942mj24-q6ab">Question 2 · 9709/42/M/J/24 Q6(a–b)</a></li>
+  <li><a href="#question-3-970941mj23-q1ab" id="toc-question-3-970941mj23-q1ab" class="nav-link" data-scroll-target="#question-3-970941mj23-q1ab">Question 3 · 9709/41/M/J/23 Q1(a–b)</a></li>
+  <li><a href="#question-4-970942mj23-q2ab" id="toc-question-4-970942mj23-q2ab" class="nav-link" data-scroll-target="#question-4-970942mj23-q2ab">Question 4 · 9709/42/M/J/23 Q2(a–b)</a></li>
+  <li><a href="#question-5-970942on22-q6ac" id="toc-question-5-970942on22-q6ac" class="nav-link" data-scroll-target="#question-5-970942on22-q6ac">Question 5 · 9709/42/O/N/22 Q6(a–c)</a></li>
+  <li><a href="#question-6-970941mj21-q3ab" id="toc-question-6-970941mj21-q3ab" class="nav-link" data-scroll-target="#question-6-970941mj21-q3ab">Question 6 · 9709/41/M/J/21 Q3(a–b)</a></li>
+  <li><a href="#question-7-970942mj20-q4ac" id="toc-question-7-970942mj20-q4ac" class="nav-link" data-scroll-target="#question-7-970942mj20-q4ac">Question 7 · 9709/42/M/J/20 Q4(a–c)</a></li>
+  <li><a href="#question-8-970942on20-q1ab" id="toc-question-8-970942on20-q1ab" class="nav-link" data-scroll-target="#question-8-970942on20-q1ab">Question 8 · 9709/42/O/N/20 Q1(a–b)</a></li>
+  <li><a href="#question-9-970941mj20-q1ab" id="toc-question-9-970941mj20-q1ab" class="nav-link" data-scroll-target="#question-9-970941mj20-q1ab">Question 9 · 9709/41/M/J/20 Q1(a–b)</a></li>
+  </ul></li>
+  <li><a href="#quick-checklist" id="toc-quick-checklist" class="nav-link" data-scroll-target="#quick-checklist">5. Quick checklist</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../paper-4/forces-and-equilibrium.html">Paper 4 · Mechanics</a></li><li class="breadcrumb-item"><a href="../paper-4/momentum.html">3. Momentum</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">3. Momentum</h1>
+<p class="subtitle lead">Linear momentum · conservation · direct impact · coalescence</p>
+</div>
+
+<div>
+  <div class="description">
+    CIE 9709 Paper 4 Mechanics, syllabus 4.3.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">重要</span>本节考纲要求
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本页依据 9709 Mathematics 2026–2027 syllabus 4.3，覆盖：</p>
+<ul>
+<li>use the definition of linear momentum and show understanding of its vector nature；</li>
+<li>use conservation of linear momentum to solve one-dimensional direct-impact problems；</li>
+<li>direct impact of two bodies where the bodies coalesce on impact。</li>
+</ul>
+<p>本考纲明确说明：只讨论一维运动；不要求 impulse 或 coefficient of restitution。</p>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">能用 <span class="math inline">p=mv</span> 定义 linear momentum，并正确处理方向和正负号</label></li>
+<li><label><input type="checkbox">能在碰撞前后写出同一正方向下的 momentum equation</label></li>
+<li><label><input type="checkbox">能处理 coalescence、反弹、连续碰撞和多个粒子</label></li>
+<li><label><input type="checkbox">能把 momentum conservation 与 kinematics 结合，求碰撞时间、位置和后续运动</label></li>
+<li><label><input type="checkbox">能计算 collision 前后的 kinetic energy，并求 loss of kinetic energy</label></li>
+</ul>
+</div>
+</section>
+<section id="note-knowledge-points" class="level2">
+<h2 class="anchored" data-anchor-id="note-knowledge-points">1. Note knowledge points</h2>
+<section id="momentum-and-its-vector-nature" class="level3">
+<h3 class="anchored" data-anchor-id="momentum-and-its-vector-nature">Momentum and its vector nature</h3>
+<p>动量定义为质量与速度的乘积：</p>
+<p><span class="math display">
+p=mv.
+</span></p>
+<p>Momentum 是 vector quantity，方向与 velocity 相同；选定正方向后，反方向的 velocity 和 momentum 都写成负值。SI unit 为 <span class="math inline">\mathrm{kg\,m\,s^{-1}}</span>，也可写成 <span class="math inline">\mathrm{N\,s}</span>。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/momentum/momentum-illustration.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Momentum direction and impact illustration from the Note.</figcaption>
+</figure>
+</div>
+<p>接触的两个物体之间的 interaction 遵守 Newton’s third law：两物体受到大小相等、方向相反的力。在没有外力的系统中，一个物体 momentum 的改变与另一个物体 momentum 的改变大小相等、方向相反。</p>
+</section>
+<section id="direct-collisions" class="level3">
+<h3 class="anchored" data-anchor-id="direct-collisions">Direct collisions</h3>
+<p>Direct collision 指两个物体沿同一直线运动并发生碰撞。碰撞前可以有一个物体静止、同向运动或相向运动；碰撞后可以有一个或两个物体静止、改变方向、同向运动，或 coalesce 成一个物体。Explosion 是相反过程：一个物体分成沿同一直线运动的两个物体。</p>
+</section>
+<section id="conservation-of-momentum" class="level3">
+<h3 class="anchored" data-anchor-id="conservation-of-momentum">Conservation of momentum</h3>
+<p>如果研究系统没有外部 resultant force，碰撞前后的总动量相等：</p>
+<p><span class="math display">
+m_1u_1+m_2u_2=m_1v_1+m_2v_2.
+</span></p>
+<p>解题时先选择 positive direction，再画 before/after diagram；未知方向可以先假设，若算出的 velocity 为负，就说明真实方向相反。若两个物体 coalesce，碰撞后速度相同：</p>
+<p><span class="math display">
+m_1u_1+m_2u_2=(m_1+m_2)v.
+</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/notes/momentum/momentum-conservation.webp" class="note-figure img-fluid figure-img"></p>
+<figcaption>Conservation-of-momentum diagram from the Note.</figcaption>
+</figure>
+</div>
+</section>
+<section id="multiple-collisions" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-collisions">Multiple collisions</h3>
+<p>多次碰撞必须逐次处理：第一次碰撞的 after-velocity 是下一次碰撞的 before-velocity。碰撞后检查物体的相对速度和位置，判断是否还会发生 second collision；如果撞墙，也要先把撞墙后的速度方向反转，再检查它是否追上其他物体。</p>
+</section>
+</section>
+<section id="note-worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="note-worked-examples">2. Note worked examples</h2>
+<p>每个 Note worked example 单独成卡片，并保留其原始情境。</p>
+<section id="worked-example-1-basic-momentum" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-1-basic-momentum">Worked example 1 · Basic momentum</h3>
+<p>A dog of mass <span class="math inline">15\,\mathrm{kg}</span> is running with speed <span class="math inline">6\,\mathrm{m\,s^{-1}}</span>. Find the momentum of the dog.</p>
+<p><span class="math display">
+p=mv=15\times6=\boxed{90\,\mathrm{kg\,m\,s^{-1}}}.
+</span></p>
+</section>
+<section id="worked-example-2-direct-collision" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-2-direct-collision">Worked example 2 · Direct collision</h3>
+<p>Two particles <span class="math inline">P</span> and <span class="math inline">Q</span>, with masses <span class="math inline">3\,\mathrm{kg}</span> and <span class="math inline">5\,\mathrm{kg}</span> respectively, are travelling in opposite directions towards each other along the same straight line on a smooth horizontal table. Immediately before the collision the speeds of <span class="math inline">P</span> and <span class="math inline">Q</span> are <span class="math inline">4\,\mathrm{m\,s^{-1}}</span> and <span class="math inline">2\,\mathrm{m\,s^{-1}}</span> respectively. Immediately after the collision the direction of motion of <span class="math inline">P</span> is reversed and its speed is <span class="math inline">1\,\mathrm{m\,s^{-1}}</span>. Find the speed and direction of motion of $Q immediately after the collision.</p>
+<p>Take the initial direction of <span class="math inline">P</span> as positive. Then</p>
+<p><span class="math display">
+3(4)+5(-2)=3(-1)+5v,
+</span></p>
+<p>so <span class="math inline">v=1\,\mathrm{m\,s^{-1}}</span>. Therefore <span class="math inline">Q</span> continues in its original direction with speed <span class="math inline">\boxed{1\,\mathrm{m\,s^{-1}}}</span>.</p>
+</section>
+<section id="worked-example-3-multiple-collisions" class="level3 worked-example">
+<h3 class="anchored" data-anchor-id="worked-example-3-multiple-collisions">Worked example 3 · Multiple collisions</h3>
+<p>Three uniform balls <span class="math inline">A</span>, <span class="math inline">B</span> and <span class="math inline">C</span> of equal radius, and masses <span class="math inline">0.1\,\mathrm{kg}</span>, <span class="math inline">0.2\,\mathrm{kg}</span> and <span class="math inline">0.3\,\mathrm{kg}</span> respectively, can move along the same straight line on a smooth horizontal table, with <span class="math inline">B</span> in the middle of <span class="math inline">A</span> and <span class="math inline">C</span>. <span class="math inline">A</span> and <span class="math inline">B</span> are projected towards each other in opposite directions with speeds <span class="math inline">10\,\mathrm{m\,s^{-1}}</span> and <span class="math inline">2\,\mathrm{m\,s^{-1}}</span> respectively while <span class="math inline">C</span> is at rest. <span class="math inline">A</span> and <span class="math inline">B</span> collide directly, which does not change the direction of motion of <span class="math inline">A</span>, and subsequently <span class="math inline">A</span> moves with speed <span class="math inline">1\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol type="a">
+<li>The first collision gives</li>
+</ol>
+<p><span class="math display">
+0.1(10)+0.2(-2)=0.1(1)+0.2v_B,
+</span></p>
+<p>so <span class="math inline">\boxed{v_B=2.5\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="2" type="a">
+<li>At the subsequent <span class="math inline">B</span>–<span class="math inline">C</span> collision, if <span class="math inline">C</span> leaves with speed <span class="math inline">1.5\,\mathrm{m\,s^{-1}}</span>,</li>
+</ol>
+<p><span class="math display">
+0.2(2.5)+0.3(0)=0.2u_B+0.3(1.5),
+</span></p>
+<p>giving <span class="math inline">u_B=0.25\,\mathrm{m\,s^{-1}}</span>. After the <span class="math inline">B</span>–<span class="math inline">C</span> collision, <span class="math inline">A</span> is behind <span class="math inline">B</span> but moving faster, so <span class="math inline">A</span> catches <span class="math inline">B</span> and there will be another collision between them.</p>
+</section>
+</section>
+<section id="core-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="core-knowledge">3. Core knowledge</h2>
+<section id="linear-momentum-and-its-vector-nature" class="level3">
+<h3 class="anchored" data-anchor-id="linear-momentum-and-its-vector-nature">Linear momentum and its vector nature</h3>
+<p>For a particle of mass <span class="math inline">m</span> moving with velocity <span class="math inline">v</span>,</p>
+<p><span class="math display">
+p=mv.
+</span></p>
+<p>Momentum is a vector quantity. Choose one direction as positive and use signed velocities throughout. A particle moving in the opposite direction has negative momentum.</p>
+<p>The SI unit is</p>
+<p><span class="math display">
+\mathrm{kg\,m\,s^{-1}}.
+</span></p>
+</section>
+<section id="conservation-of-momentum-1" class="level3">
+<h3 class="anchored" data-anchor-id="conservation-of-momentum-1">Conservation of momentum</h3>
+<p>For a closed system with no external resultant force in the direction of motion,</p>
+<p><span class="math display">
+\text{total momentum before impact}
+=
+\text{total momentum after impact}.
+</span></p>
+<p>For two particles moving on one line,</p>
+<p><span class="math display">
+m_1u_1+m_2u_2=m_1v_1+m_2v_2.
+</span></p>
+<p>Use the velocities as signed quantities; do not replace them by speeds until the direction has been established.</p>
+</section>
+<section id="direct-impact-and-coalescence" class="level3">
+<h3 class="anchored" data-anchor-id="direct-impact-and-coalescence">Direct impact and coalescence</h3>
+<p>If two particles coalesce on impact, they have one common velocity <span class="math inline">v</span> immediately afterwards:</p>
+<p><span class="math display">
+m_1u_1+m_2u_2=(m_1+m_2)v.
+</span></p>
+<p>For a chain of collisions, apply conservation of momentum separately to each collision, carrying the resulting velocity into the next stage.</p>
+</section>
+<section id="kinetic-energy-and-loss-in-a-collision" class="level3">
+<h3 class="anchored" data-anchor-id="kinetic-energy-and-loss-in-a-collision">Kinetic energy and loss in a collision</h3>
+<p>Momentum is conserved, but kinetic energy generally is not. The kinetic energy is</p>
+<p><span class="math display">
+E_k=\frac12mv^2.
+</span></p>
+<p>The loss of kinetic energy is</p>
+<p><span class="math display">
+\text{loss}=E_{k,\,\text{before}}-E_{k,\,\text{after}}.
+</span></p>
+<p>It is not necessary to assume conservation of kinetic energy unless the question explicitly gives that condition.</p>
+</section>
+<section id="a-reliable-collision-method" class="level3">
+<h3 class="anchored" data-anchor-id="a-reliable-collision-method">A reliable collision method</h3>
+<ol type="1">
+<li>Draw or describe the direction of motion before and after impact.</li>
+<li>Choose one positive direction.</li>
+<li>Write every momentum with its sign.</li>
+<li>Apply conservation of momentum to the relevant system.</li>
+<li>Use kinematics separately if the question asks for a later collision or a collision time.</li>
+<li>Check that the final direction agrees with the wording of the question.</li>
+</ol>
+</section>
+</section>
+<section id="verified-paper-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="verified-paper-4-questions">4. Verified Paper 4 questions</h2>
+<p>Each card keeps the complete selected question, including all sub-questions and the original mark allocation. The wording is transcribed from the local question papers; it is not an invented practice question.</p>
+<div id="p4-mom-q01" class="question-card">
+<section id="question-1-970943mj24-q1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-970943mj24-q1">Question 1 · 9709/43/M/J/24 Q1</h3>
+<p>Two particles <span class="math inline">P</span> and <span class="math inline">Q</span> of masses <span class="math inline">0.2\,\mathrm{kg}</span> and <span class="math inline">0.5\,\mathrm{kg}</span> respectively are at rest on a smooth horizontal plane. Particle <span class="math inline">P</span> is projected with a speed <span class="math inline">6\,\mathrm{m\,s^{-1}}</span> directly towards <span class="math inline">Q</span>. After <span class="math inline">P</span> and <span class="math inline">Q</span> collide, <span class="math inline">P</span> moves with a speed of <span class="math inline">1\,\mathrm{m\,s^{-1}}</span>.</p>
+<p>Find the two possible speeds of <span class="math inline">Q</span> after the collision. <strong>[3]</strong></p>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Take the original direction of <span class="math inline">P</span> as positive. Initial momentum is</p>
+<p><span class="math display">
+0.2(6)=1.2.
+</span></p>
+<p>If <span class="math inline">P</span> continues in the original direction,</p>
+<p><span class="math display">
+1.2=0.2(1)+0.5v_Q
+\quad\Rightarrow\quad v_Q=2.0.
+</span></p>
+<p>If <span class="math inline">P</span> reverses direction,</p>
+<p><span class="math display">
+1.2=0.2(-1)+0.5v_Q
+\quad\Rightarrow\quad v_Q=2.8.
+</span></p>
+<p>Therefore the two possible speeds are</p>
+<span class="math display">
+\boxed{2.0\,\mathrm{m\,s^{-1}}\text{ and }2.8\,\mathrm{m\,s^{-1}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202406-Mathematics-P43-A-Level题库大全小程序.pdf, Q1, and matching 2024 M/J/43 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q02" class="question-card">
+<section id="question-2-970942mj24-q6ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-970942mj24-q6ab">Question 2 · 9709/42/M/J/24 Q6(a–b)</h3>
+<p>Three particles <span class="math inline">A</span>, <span class="math inline">B</span> and <span class="math inline">C</span> of masses <span class="math inline">5\,\mathrm{kg}</span>, <span class="math inline">1\,\mathrm{kg}</span> and <span class="math inline">2\,\mathrm{kg}</span> respectively lie at rest in that order on a straight smooth horizontal track <span class="math inline">XYZ</span>. Initially <span class="math inline">A</span> is at <span class="math inline">X</span>, <span class="math inline">B</span> is at <span class="math inline">Y</span> and <span class="math inline">C</span> is at <span class="math inline">Z</span>. Particle <span class="math inline">A</span> is projected towards <span class="math inline">B</span> with a speed of <span class="math inline">6\,\mathrm{m\,s^{-1}}</span> and at the same instant <span class="math inline">C</span> is projected towards <span class="math inline">B</span> with a speed of <span class="math inline">v\,\mathrm{m\,s^{-1}}</span>. In the subsequent motion, <span class="math inline">A</span> collides and coalesces with <span class="math inline">B</span> to form particle <span class="math inline">D</span>. Particle <span class="math inline">D</span> then collides and coalesces with <span class="math inline">C</span> to form particle <span class="math inline">E</span> and <span class="math inline">E</span> moves towards <span class="math inline">Z</span>.</p>
+<ol type="a">
+<li><p>Show that after the second collision the speed of <span class="math inline">E</span> is <span class="math inline">\frac{15-v}{4}\,\mathrm{m\,s^{-1}}</span>. <strong>[3]</strong></p></li>
+<li><p>The total loss of kinetic energy of the system due to the two collisions is <span class="math inline">63\,\mathrm J</span>. Use the result from (a) to show that <span class="math inline">v=3</span>. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>After the first collision, <span class="math inline">A</span> and <span class="math inline">B</span> coalesce. Their common velocity is</p>
+<p><span class="math display">
+u_D=\frac{5(6)+1(0)}{5+1}=5\,\mathrm{m\,s^{-1}}
+</span></p>
+<p>in the direction towards <span class="math inline">Z</span>. Particle <span class="math inline">C</span> has velocity <span class="math inline">-v</span> in this direction. Thus after the second collision,</p>
+<p><span class="math display">
+8u_E=6(5)+2(-v)=30-2v,
+</span></p>
+<p>so</p>
+<p><span class="math display">
+u_E=\boxed{\frac{15-v}{4}}.
+</span></p>
+<p>The initial kinetic energy is</p>
+<p><span class="math display">
+\frac12(5)(6^2)+\frac12(2)v^2=90+v^2.
+</span></p>
+<p>The final kinetic energy is</p>
+<p><span class="math display">
+\frac12(8)\left(\frac{15-v}{4}\right)^2=\frac{(15-v)^2}{4}.
+</span></p>
+<p>Therefore</p>
+<p><span class="math display">
+90+v^2-\frac{(15-v)^2}{4}=63.
+</span></p>
+<p>This gives <span class="math inline">v^2+10v-39=0</span>. Since <span class="math inline">v&gt;0</span>,</p>
+<span class="math display">
+\boxed{v=3\,\mathrm{m\,s^{-1}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2024/2024/A-Level-CAIE数学QP-202406-Mathematics-P42-A-Level题库大全小程序.pdf, Q6(a–b), and matching 2024 M/J/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q03" class="question-card">
+<section id="question-3-970941mj23-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-970941mj23-q1ab">Question 3 · 9709/41/M/J/23 Q1(a–b)</h3>
+<p>Two particles <span class="math inline">P</span> and <span class="math inline">Q</span>, of masses <span class="math inline">m\,\mathrm{kg}</span> and <span class="math inline">0.3\,\mathrm{kg}</span> respectively, are at rest on a smooth horizontal plane. <span class="math inline">P</span> is projected at a speed of <span class="math inline">5\,\mathrm{m\,s^{-1}}</span> directly towards <span class="math inline">Q</span>. After <span class="math inline">P</span> and <span class="math inline">Q</span> collide, <span class="math inline">P</span> moves with a speed of <span class="math inline">2\,\mathrm{m\,s^{-1}}</span> in the same direction as it was originally moving.</p>
+<ol type="a">
+<li>Find, in terms of <span class="math inline">m</span>, the speed of <span class="math inline">Q</span> after the collision. <strong>[2]</strong></li>
+</ol>
+<p>After this collision, <span class="math inline">Q</span> moves directly towards a third particle <span class="math inline">R</span>, of mass <span class="math inline">0.6\,\mathrm{kg}</span>, which is at rest on the plane. <span class="math inline">Q</span> is brought to rest in the collision with <span class="math inline">R</span>, and <span class="math inline">R</span> begins to move with a speed of <span class="math inline">1.5\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol start="2" type="a">
+<li>Find the value of <span class="math inline">m</span>. <strong>[2]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>Conservation of momentum in the first collision gives</li>
+</ol>
+<p><span class="math display">
+5m=2m+0.3v_Q,
+</span></p>
+<p>so</p>
+<p><span class="math display">
+v_Q=\boxed{10m\,\mathrm{m\,s^{-1}}}.
+</span></p>
+<ol start="2" type="a">
+<li>In the second collision, <span class="math inline">Q</span> stops and <span class="math inline">R</span> moves at <span class="math inline">1.5\,\mathrm{m\,s^{-1}}</span>:</li>
+</ol>
+<p><span class="math display">
+0.3(10m)=0.6(1.5).
+</span></p>
+<p>Hence</p>
+<span class="math display">
+\boxed{m=0.3\,\mathrm{kg}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_41.pdf, Q1(a–b), and matching 2023 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q04" class="question-card">
+<section id="question-4-970942mj23-q2ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-970942mj23-q2ab">Question 4 · 9709/42/M/J/23 Q2(a–b)</h3>
+<p>Two particles <span class="math inline">A</span> and <span class="math inline">B</span>, of masses <span class="math inline">3.2\,\mathrm{kg}</span> and <span class="math inline">2.4\,\mathrm{kg}</span> respectively, lie on a smooth horizontal table. <span class="math inline">A</span> moves towards <span class="math inline">B</span> with a speed of <span class="math inline">v\,\mathrm{m\,s^{-1}}</span> and collides with <span class="math inline">B</span>, which is moving towards <span class="math inline">A</span> with a speed of <span class="math inline">6\,\mathrm{m\,s^{-1}}</span>. In the collision the two particles come to rest.</p>
+<ol type="a">
+<li><p>Find the value of <span class="math inline">v</span>. <strong>[2]</strong></p></li>
+<li><p>Find the loss of kinetic energy of the system due to the collision. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<p>Take the direction of <span class="math inline">A</span> as positive. Since both particles come to rest,</p>
+<p><span class="math display">
+3.2v-2.4(6)=0,
+</span></p>
+<p>so</p>
+<p><span class="math display">
+\boxed{v=4.5\,\mathrm{m\,s^{-1}}}.
+</span></p>
+<p>The final kinetic energy is zero. Therefore the loss is</p>
+<span class="math display">
+\frac12(3.2)(4.5^2)+\frac12(2.4)(6^2)
+=32.4+43.2
+=\boxed{75.6\,\mathrm J}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2023/2023/9709_s23_qp_42.pdf, Q2(a–b), and matching 2023 M/J/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q05" class="question-card">
+<section id="question-5-970942on22-q6ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-970942on22-q6ac">Question 5 · 9709/42/O/N/22 Q6(a–c)</h3>
+<p>Three particles <span class="math inline">A</span>, <span class="math inline">B</span> and <span class="math inline">C</span> of masses <span class="math inline">0.3\,\mathrm{kg}</span>, <span class="math inline">0.4\,\mathrm{kg}</span> and <span class="math inline">m\,\mathrm{kg}</span> respectively lie at rest in a straight line on a smooth horizontal plane. The distance between <span class="math inline">B</span> and <span class="math inline">C</span> is <span class="math inline">2.1\,\mathrm m</span>. <span class="math inline">A</span> is projected directly towards <span class="math inline">B</span> with speed <span class="math inline">2\,\mathrm{m\,s^{-1}}</span>. After <span class="math inline">A</span> collides with <span class="math inline">B</span> the speed of <span class="math inline">A</span> is reduced to <span class="math inline">0.6\,\mathrm{m\,s^{-1}}</span>, still moving in the same direction.</p>
+<ol type="a">
+<li>Show that the speed of <span class="math inline">B</span> after the collision is <span class="math inline">1.05\,\mathrm{m\,s^{-1}}</span>. <strong>[2]</strong></li>
+</ol>
+<p>After the collision between <span class="math inline">A</span> and <span class="math inline">B</span>, <span class="math inline">B</span> moves directly towards <span class="math inline">C</span>. Particle <span class="math inline">B</span> now collides with <span class="math inline">C</span>. After this collision, the two particles coalesce and have a combined speed of <span class="math inline">0.5\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol start="2" type="a">
+<li><p>Find <span class="math inline">m</span>. <strong>[2]</strong></p></li>
+<li><p>Find the time that it takes, from the instant when <span class="math inline">B</span> and <span class="math inline">C</span> collide, until <span class="math inline">A</span> collides with the combined particle. <strong>[5]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+0.3(2)=0.3(0.6)+0.4v_B,
+</span></p>
+<p>so <span class="math inline">v_B=\boxed{1.05\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+0.4(1.05)=(0.4+m)(0.5),
+</span></p>
+<p>so <span class="math inline">\boxed{m=0.44\,\mathrm{kg}}</span>.</p>
+<ol start="3" type="a">
+<li><span class="math inline">B</span> reaches <span class="math inline">C</span> after</li>
+</ol>
+<p><span class="math display">
+\frac{2.1}{1.05}=2\,\mathrm s.
+</span></p>
+<p>In those 2 s, <span class="math inline">A</span> travels <span class="math inline">0.6(2)=1.2\,\mathrm m</span>. At the instant of the second collision, <span class="math inline">A</span> is therefore <span class="math inline">1.2\,\mathrm m</span> behind the combined particle. The combined particle travels at <span class="math inline">0.5\,\mathrm{m\,s^{-1}}</span>, while <span class="math inline">A</span> travels at <span class="math inline">0.6\,\mathrm{m\,s^{-1}}</span>. Hence</p>
+<span class="math display">
+t=\frac{1.2}{0.6-0.5}=\boxed{12\,\mathrm s}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_42.pdf, Q6(a–c), and matching 2022 O/N/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q06" class="question-card">
+<section id="question-6-970941mj21-q3ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-970941mj21-q3ab">Question 6 · 9709/41/M/J/21 Q3(a–b)</h3>
+<p>Three particles <span class="math inline">P</span>, <span class="math inline">Q</span> and <span class="math inline">R</span>, of masses <span class="math inline">0.1\,\mathrm{kg}</span>, <span class="math inline">0.2\,\mathrm{kg}</span> and <span class="math inline">0.5\,\mathrm{kg}</span> respectively, are at rest in a straight line on a smooth horizontal plane. Particle <span class="math inline">P</span> is projected towards <span class="math inline">Q</span> at a speed of <span class="math inline">5\,\mathrm{m\,s^{-1}}</span>. After <span class="math inline">P</span> and <span class="math inline">Q</span> collide, <span class="math inline">P</span> rebounds with speed <span class="math inline">1\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol type="a">
+<li>Find the speed of <span class="math inline">Q</span> immediately after the collision with <span class="math inline">P</span>. <strong>[3]</strong></li>
+</ol>
+<p><span class="math inline">Q</span> now collides with <span class="math inline">R</span>. Immediately after the collision with <span class="math inline">Q</span>, <span class="math inline">R</span> begins to move with speed <span class="math inline">V\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol start="2" type="a">
+<li>Given that there is no subsequent collision between <span class="math inline">P</span> and <span class="math inline">Q</span>, find the greatest possible value of <span class="math inline">V</span>. <strong>[3]</strong></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>Take the direction of the initial motion of <span class="math inline">P</span> as positive:</li>
+</ol>
+<p><span class="math display">
+0.1(5)=0.1(-1)+0.2v_Q.
+</span></p>
+<p>Therefore <span class="math inline">v_Q=\boxed{3\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="2" type="a">
+<li>After the second collision, let the velocity of <span class="math inline">Q</span> be <span class="math inline">w</span>. Conservation of momentum for <span class="math inline">Q</span> and <span class="math inline">R</span> gives</li>
+</ol>
+<p><span class="math display">
+0.2(3)=0.2w+0.5V,
+</span></p>
+<p>so <span class="math inline">w=3-2.5V</span>. For there to be no subsequent collision with <span class="math inline">P</span>, <span class="math inline">Q</span> must not move backwards towards <span class="math inline">P</span>, so <span class="math inline">w\ge0</span>. Hence</p>
+<p><span class="math display">
+3-2.5V\ge0
+\quad\Rightarrow\quad
+\boxed{V\le1.2\,\mathrm{m\,s^{-1}}}.
+</span></p>
+The greatest possible value is <span class="math inline">\boxed{1.2\,\mathrm{m\,s^{-1}}}</span>.
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2021/2021/9709_s21_qp_41.pdf, Q3(a–b), and matching 2021 M/J/41 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q07" class="question-card">
+<section id="question-7-970942mj20-q4ac" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-970942mj20-q4ac">Question 7 · 9709/42/M/J/20 Q4(a–c)</h3>
+<p>Small smooth spheres <span class="math inline">A</span> and <span class="math inline">B</span>, of equal radii and of masses <span class="math inline">4\,\mathrm{kg}</span> and <span class="math inline">2\,\mathrm{kg}</span> respectively, lie on a smooth horizontal plane. Initially <span class="math inline">B</span> is at rest and <span class="math inline">A</span> is moving towards <span class="math inline">B</span> with speed <span class="math inline">10\,\mathrm{m\,s^{-1}}</span>. After the spheres collide <span class="math inline">A</span> continues to move in the same direction but with half the speed of <span class="math inline">B</span>.</p>
+<ol type="a">
+<li>Find the speed of <span class="math inline">B</span> after the collision. <strong>[2]</strong></li>
+</ol>
+<p>A third small smooth sphere <span class="math inline">C</span>, of mass <span class="math inline">1\,\mathrm{kg}</span> and with the same radius as <span class="math inline">A</span> and <span class="math inline">B</span>, is at rest on the plane. <span class="math inline">B</span> now collides directly with <span class="math inline">C</span>. After this collision <span class="math inline">B</span> continues to move in the same direction but with one third the speed of <span class="math inline">C</span>.</p>
+<ol start="2" type="a">
+<li><p>Show that there is another collision between <span class="math inline">A</span> and <span class="math inline">B</span>. <strong>[3]</strong></p></li>
+<li><p><span class="math inline">A</span> and <span class="math inline">B</span> coalesce during this collision. Find the total loss of kinetic energy in the system due to the three collisions. <strong>[5]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li>Let the speed of <span class="math inline">A</span> be <span class="math inline">x</span> and that of <span class="math inline">B</span> be <span class="math inline">2x</span> after the first collision:</li>
+</ol>
+<p><span class="math display">
+4(10)=4x+2(2x),
+</span></p>
+<p>so <span class="math inline">x=5</span> and <span class="math inline">v_B=\boxed{10\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="2" type="a">
+<li>Let the speeds of <span class="math inline">B</span> and <span class="math inline">C</span> after the second collision be <span class="math inline">y</span> and <span class="math inline">3y</span>:</li>
+</ol>
+<p><span class="math display">
+2(10)=2y+1(3y),
+</span></p>
+<p>giving <span class="math inline">y=4</span>. Thus after the second collision <span class="math inline">A</span> has speed <span class="math inline">5</span> and <span class="math inline">B</span> has speed <span class="math inline">4</span> in the same direction. Since <span class="math inline">A</span> is behind <span class="math inline">B</span> and is now faster, another collision occurs.</p>
+<ol start="3" type="a">
+<li>Initial kinetic energy is <span class="math inline">200\,\mathrm J</span>. After the first collision it is</li>
+</ol>
+<p><span class="math display">
+\frac12(4)(5^2)+\frac12(2)(10^2)=150\,\mathrm J.
+</span></p>
+<p>After the second collision it is</p>
+<p><span class="math display">
+\frac12(4)(5^2)+\frac12(2)(4^2)+\frac12(1)(12^2)=138\,\mathrm J.
+</span></p>
+<p>Before the third collision the momentum of <span class="math inline">A</span> and <span class="math inline">B</span> is <span class="math inline">4(5)+2(4)=28</span>. Their common speed after coalescing is <span class="math inline">28/6=14/3</span>, so final kinetic energy is <span class="math inline">196/3\,\mathrm J</span>. Total loss:</p>
+<span class="math display">
+200-\frac{196}{3}=\boxed{134.7\,\mathrm J}\quad\text{(3 s.f.)}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-42.pdf, Q4(a–c), and matching 2020 M/J/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q08" class="question-card">
+<section id="question-8-970942on20-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-970942on20-q1ab">Question 8 · 9709/42/O/N/20 Q1(a–b)</h3>
+<p>Two particles <span class="math inline">P</span> and <span class="math inline">Q</span>, of masses <span class="math inline">0.2\,\mathrm{kg}</span> and <span class="math inline">0.5\,\mathrm{kg}</span> respectively, are at rest on a smooth horizontal plane. <span class="math inline">P</span> is projected towards <span class="math inline">Q</span> with speed <span class="math inline">2\,\mathrm{m\,s^{-1}}</span>.</p>
+<ol type="a">
+<li><p>Write down the momentum of <span class="math inline">P</span>. <strong>[1]</strong></p></li>
+<li><p>After the collision <span class="math inline">P</span> continues to move in the same direction with speed <span class="math inline">0.3\,\mathrm{m\,s^{-1}}</span>. Find the speed of <span class="math inline">Q</span> after the collision. <strong>[2]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+p=mv=0.2(2)=\boxed{0.4\,\mathrm{kg\,m\,s^{-1}}}.
+</span></p>
+<ol start="2" type="a">
+<li>Conservation of momentum gives</li>
+</ol>
+<p><span class="math display">
+0.4=0.2(0.3)+0.5v_Q.
+</span></p>
+<p>Hence</p>
+<span class="math display">
+\boxed{v_Q=0.68\,\mathrm{m\,s^{-1}}}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_42.pdf, Q1(a–b), and matching 2020 O/N/42 mark scheme.
+</div>
+</section>
+</div>
+<div id="p4-mom-q09" class="question-card">
+<section id="question-9-970941mj20-q1ab" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-970941mj20-q1ab">Question 9 · 9709/41/M/J/20 Q1(a–b)</h3>
+<p>A particle <span class="math inline">B</span> of mass <span class="math inline">5\,\mathrm{kg}</span> is at rest on a smooth horizontal table. A particle <span class="math inline">A</span> of mass <span class="math inline">2.5\,\mathrm{kg}</span> moves on the table with a speed of <span class="math inline">6\,\mathrm{m\,s^{-1}}</span> and collides directly with <span class="math inline">B</span>. In the collision the two particles coalesce.</p>
+<ol type="a">
+<li><p>Find the speed of the combined particle after the collision. <strong>[2]</strong></p></li>
+<li><p>Find the loss of kinetic energy of the system due to the collision. <strong>[3]</strong></p></li>
+</ol>
+<details class="answer-panel">
+<summary>
+Show detailed mark scheme answer
+</summary>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">
+2.5(6)=(2.5+5)v,
+</span></p>
+<p>so <span class="math inline">\boxed{v=2\,\mathrm{m\,s^{-1}}}</span>.</p>
+<ol start="2" type="a">
+<li>Initial kinetic energy is <span class="math inline">\frac12(2.5)(6^2)=45\,\mathrm J</span>. Final kinetic energy is <span class="math inline">\frac12(7.5)(2^2)=15\,\mathrm J</span>. Therefore</li>
+</ol>
+<span class="math display">
+\boxed{\text{loss}=30\,\mathrm J}.
+</span>
+</details>
+<div class="source-line">
+<strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_41.pdf, Q1(a–b), and matching 2020 O/N/41 mark scheme.
+</div>
+</section>
+</div>
+</section>
+<section id="quick-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="quick-checklist">5. Quick checklist</h2>
+<div class="study-card">
+<ul class="task-list">
+<li><label><input type="checkbox">Did I choose and state a positive direction?</label></li>
+<li><label><input type="checkbox">Did I use signed velocities rather than unsigned speeds in the momentum equation?</label></li>
+<li><label><input type="checkbox">If particles coalesce, did I give them one common final velocity?</label></li>
+<li><label><input type="checkbox">For several collisions, did I solve them in chronological order?</label></li>
+<li><label><input type="checkbox">Did I calculate kinetic-energy loss from before minus after, rather than assume energy is conserved?</label></li>
+<li><label><input type="checkbox">Did I keep momentum and kinetic energy as separate ideas?</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.querySelectorAll('.done-toggle input').forEach((box) => {
+  const key = box.dataset.progress;
+  if (key && localStorage.getItem('cie-9709-' + key) === '1') box.checked = true;
+  box.addEventListener('change', () => {
+    if (key) localStorage.setItem('cie-9709-' + key, box.checked ? '1' : '0');
+    box.closest('.question-card, .worked-example')?.classList.toggle('is-complete', box.checked);
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../paper-4/kinematics-of-motion-in-a-straight-line.html" class="pagination-link" aria-label="2. Kinematics of motion in a straight line">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Kinematics of motion in a straight line</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../paper-4/newtons-laws-of-motion.html" class="pagination-link" aria-label="4. Newton’s laws of motion">
+        <span class="nav-page-text">4. Newton’s laws of motion</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -47,6 +47,48 @@ $$V=\pi\int_a^b y^2\,dx,$$
 $$V=\pi\int (x_{\rm outer}^2-x_{\rm inner}^2)\,dy.$$
 :::
 
+::: {.formula-panel}
+### Integration techniques and checks
+
+Indefinite integral 的结果必须加 constant $C$；遇到 negative power $n=-1$ 时要单独使用
+
+$$\int\frac1x\,dx=\ln|x|+C.$$
+
+对 $(ax+b)^n$，可用 substitution $u=ax+b$，并保留 $du=a\,dx$ 的 factor。积分后可以通过 differentiation 检查答案，尤其要检查 chain factor 是否遗漏。
+
+Definite integral 不需要另加 $C$：先找 antiderivative $F(x)$，再计算 $F(b)-F(a)$。若区间跨过 $x$-axis，要先找 intersections，再把 signed integral 拆开并取面积的正值。
+:::
+
+::: {.study-card}
+### Area between curves and volumes of revolution
+
+面积的基本形式为
+
+$$A=\int_a^b(\text{upper curve}-\text{lower curve})\,dx,$$
+
+或在按 $y$ 积分时使用 right minus left。若绕 $x$-axis 旋转，washers/discs 使用
+
+$$V=\pi\int_a^b(R^2-r^2)\,dx,$$
+
+绕 $y$-axis 且使用 $x$ 积分时，shell method 可写成
+
+$$V=2\pi\int_a^b x\,y\,dx.$$
+
+做 volume 题前先找交点并确定 outer/inner radius；题目若给出 $x=g(y)$，则改用 $dy$ 的 washer expression。
+:::
+
+::: {.formula-panel}
+### Improper integrals
+
+若 endpoint 是 infinity 或 integrand 在 endpoint 不定义，要先写成 limit，例如
+
+$$
+\int_a^\infty f(x)\,dx=\lim_{b\to\infty}\int_a^b f(x)\,dx.
+$$
+
+只有 limit 收敛到 finite value 时 improper integral 才 convergent；否则 divergent。计算时保留 limit，不能直接把 infinity 当作普通代入值。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-int-q01}
@@ -123,9 +165,13 @@ $$\boxed{y=-\frac{8}{3(3x+2)}+6}.$$
 :::
 
 ::: {.question-card #p1-int-q04}
-### Question 4 · 9709/12/O/N/22 Q8(a)
+### Question 4 · 9709/12/O/N/22 Q8(a–c)
 
 The equation of a curve is such that $\dfrac{dy}{dx}=3x^{1/2}-3x^{-1/2}$. The curve passes through the point $(3,5)$. Find the equation of the curve. **[4]**
+
+(b) Find the $x$-coordinate of the stationary point. **[2]**
+
+(c) State the set of values of $x$ for which $y$ is increasing. **[1]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -139,9 +185,24 @@ $$5=2(3)^{3/2}-6(3)^{1/2}+c=6\sqrt3-6\sqrt3+c,$$
 so $c=5$. Therefore
 
 $$\boxed{y=2x^{3/2}-6x^{1/2}+5}.$$
+
+(b) At a stationary point,
+
+$$
+3\sqrt{x}-\frac3{\sqrt{x}}=0
+\Longrightarrow x=1.
+$$
+
+(c) For the domain $x>0$,
+
+$$
+3\sqrt{x}-\frac3{\sqrt{x}}>0\Longleftrightarrow x>1.
+$$
+
+Thus $y$ is increasing for $\boxed{x>1}$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-int-q04"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_12.pdf, Q8(a), and matching 9709_w22_ms_12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_w22_qp_12.pdf, Q8(a–c), and matching 9709_w22_ms_12.pdf.</div>
 :::
 
 ::: {.question-card #p1-int-q05}
@@ -236,11 +297,13 @@ $$A=\left(\frac49\cdot16^{3/2}-8\right)-\frac49\cdot4^{3/2}
 :::
 
 ::: {.question-card #p1-int-q07}
-### Question 7 · 9709/12/M/J/20 Q8(a)
+### Question 7 · 9709/12/M/J/20 Q8(a–b)
 
 ![Question 7 diagram from Pic/1.8](../assets/questions/paper1-integration/Q7.png){.note-figure fig-alt="Question 7 diagram"}
 
 The diagram shows part of the curve $y=\dfrac6x$. The points $(1,6)$ and $(3,2)$ lie on the curve. The shaded region is bounded by the curve and the lines $y=2$ and $x=1$. Find the volume generated when the shaded region is rotated through $360^\circ$ about the $y$-axis. **[5]**
+
+(b) The tangent to the curve at a point $X$ is parallel to the line $y+2x=0$. Show that $X$ lies on the line $y=2x$. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -251,9 +314,21 @@ $$V=\pi\int_2^6\left[\left(\frac6y\right)^2-1^2\right]\,dy.$$
 $$V=\pi\left[-\frac{36}{y}-y\right]_2^6
 =\pi\left[(-6-6)-(-18-2)\right]
 =\boxed{8\pi}.$$
+
+(b) Since $y=6/x$, the gradient is $dy/dx=-6/x^2$. A tangent parallel to $y+2x=0$ has gradient $-2$, so
+
+$$
+-\frac6{x^2}=-2\Longrightarrow x^2=3.
+$$
+
+On the relevant part of the curve $x=\sqrt3$, and hence $y=6/\sqrt3=2\sqrt3$. Therefore $X=(\sqrt3,2\sqrt3)$, which satisfies
+
+$$
+\boxed{y=2x}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-int-q07"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q8(a), and matching 9709-s20-ms-12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q8(a–b), and matching 9709-s20-ms-12.pdf.</div>
 :::
 
 ::: {.question-card #p1-int-q08}
@@ -366,39 +441,6 @@ $$V=\pi\int_1^2(3x-2)^{-3}\,dx
 =\boxed{\frac{5\pi}{32}}.$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-int-q10"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(a–b), and matching 9709_w21_ms_11.pdf.</div>
-:::
-
-::: {.question-card #p1-int-q11}
-### Question 11 · 9709/11/O/N/21 Q10(a–b)
-
-![Question 11 diagram from Pic/1.8](../assets/questions/paper1-integration/Q11.png){.note-figure fig-alt="Question 11 diagram"}
-
-The curve has equation $y=\dfrac{1}{(3x-2)^{3/2}}$.
-
-(a) Find $\displaystyle\int_1^\infty\dfrac{1}{(3x-2)^{3/2}}\,dx$. **[4]**
-
-(b) The shaded region is bounded by the curve, the $x$-axis and the lines $x=1$ and $x=2$. The shaded region is rotated through $360^\circ$ about the $x$-axis. Find the volume of revolution. **[4]**
-
-<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
-
-The answer to (a) is
-
-$$\int_1^\infty\frac{dx}{(3x-2)^{3/2}}
-=\left[-\frac{2}{3\sqrt{3x-2}}\right]_1^\infty
-=\frac23.$$
-
-For (b), since $y^2=(3x-2)^{-3}$,
-
-$$V=\pi\int_1^2(3x-2)^{-3}\,dx.$$
-
-Integrate:
-
-$$V=\pi\left[-\frac{1}{6}(3x-2)^{-2}\right]_1^2
-=\pi\left(-\frac1{96}+\frac16\right)
-=\boxed{\frac{5\pi}{32}}.$$
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p1-int-q11"> Completed</label>
 <div class="source-line"><strong>Source:</strong> PastPaper/2021/2021/9709_w21_qp_11.pdf, Q10(a–b), and matching 9709_w21_ms_11.pdf.</div>
 :::
 

@@ -99,6 +99,31 @@ $$
 若 $f$ 在区间内 concave down，chords 位于 curve 下方，trapezium rule 给出 under-estimate；若 concave up，则给出 over-estimate。
 :::
 
+::: {.formula-panel}
+### Further standard integrals
+
+Note 中还包括
+
+$$
+\int\tan x\,dx=\ln|\sec x|+C,qquad
+\int\frac{f'(x)}{f(x)}\,dx=\ln|f(x)|+C.
+$$
+
+遇到 $\tan(ax+b)$ 或 $f'(ax+b)/(f(ax+b))$ 时，先识别 reverse chain rule 并除以 inner coefficient。若出现 $\sin^2x$ 或 $\cos^2x$，先用 double-angle identities 化成可直接积分的形式。
+:::
+
+::: {.study-card}
+### Definite integrals and numerical estimates
+
+定积分代入上下限时先计算完整 antiderivative，再做 upper minus lower；不要把 indefinite constant $C$ 带入最终结果。若题目要求 trapezium rule，$[a,b]$ 分成 $n$ 等份、$h=(b-a)/n$，则
+
+$$
+\int_a^b f(x)\,dx\approx\frac h2\left[y_0+y_n+2\sum_{r=1}^{n-1}y_r\right].
+$$
+
+Concave down 时 trapezium rule 通常是 under-estimate，concave up 时通常是 over-estimate；若题目问 area，要根据图像决定 signed integral 是否需要拆分。
+:::
+
 ## 2. Verified Paper 2 past-paper questions
 
 以下 5 组题均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题目没有因为数量不足而补造。
@@ -159,9 +184,25 @@ $$
 :::
 
 ::: {.question-card #p2-int-q02}
-### Question 2 · 9709/22/M/J/20 Q8(c)
+### Question 2 · 9709/22/M/J/20 Q8(a–c)
 
-Find the exact value of
+(a) Show that
+
+$$
+3\sin2\theta\cot\theta=6\cos^2\theta.
+$$
+
+**[2]**
+
+(b) Solve the equation
+
+$$
+3\sin2\theta\cot\theta=5
+$$
+
+for $0<\theta<\pi$. **[3]**
+
+(c) Find the exact value of
 
 $$
 \int_{\frac14\pi}^{\frac12\pi}3\sin x\cot\frac12x\,dx.
@@ -170,6 +211,32 @@ $$
 **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a)
+
+Using $\sin2\theta=2\sin\theta\cos\theta$,
+
+$$
+3\sin2\theta\cot\theta
+=3(2\sin\theta\cos\theta)\frac{\cos\theta}{\sin\theta}
+=\boxed{6\cos^2\theta}.
+$$
+
+(b) By part (a),
+
+$$
+6\cos^2\theta=5
+\Longrightarrow\cos^2\theta=\frac56.
+$$
+
+For $0<\theta<\pi$, this gives
+
+$$
+\boxed{\theta=\cos^{-1}\sqrt{\frac56}\quad\text{or}\quad
+\theta=\pi-\cos^{-1}\sqrt{\frac56}}.
+$$
+
+(c)
 
 Use $\sin x=2\sin(x/2)\cos(x/2)$:
 
@@ -197,7 +264,7 @@ $$
 $$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-int-q02"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2020/2020/9709-s20-qp-22.pdf`, Q8(c), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2020/2020/9709-s20-qp-22.pdf`, Q8(a–c), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-int-q03}
@@ -243,12 +310,8 @@ $$
 <div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_22.pdf`, Q4(a–b), and matching mark scheme.</div>
 :::
 
-## 3. 2024 Paper 2 additions
-
-以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。
-
 ::: {.question-card #p2-int-q04}
-### Question 4 · 9709/22/M/J/24 Q5(b)
+### Question 4 · 9709/22/M/J/24 Q5(a–b)
 
 The polynomial $p(x)$ is defined by
 
@@ -256,7 +319,9 @@ $$
 p(x)=9x^3+18x^2+5x+4.
 $$
 
-Find the value of
+(a) Find the quotient when $p(x)$ is divided by $(3x+2)$, and show that the remainder is $6$. **[3]**
+
+(b) Find the value of
 
 $$
 \int_0^2\frac{p(x)}{3x+2}\,dx,
@@ -265,6 +330,16 @@ $$
 giving your answer in the form $a+\ln b$ where $a$ and $b$ are integers. **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) Polynomial division gives
+
+$$
+p(x)=(3x+2)(3x^2+4x-1)+6.
+$$
+
+Thus the quotient is $3x^2+4x-1$ and the remainder is $6$.
+
+(b)
 
 From polynomial division,
 
@@ -291,7 +366,7 @@ $$
 $$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-int-q04"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q5(b), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q5(a–b), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-int-q05}
@@ -362,4 +437,3 @@ $$
 <label class="done-toggle"><input type="checkbox" data-progress="p2-int-q05"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p21.pdf`, Q7(a–b), and matching mark scheme.</div>
 :::
-

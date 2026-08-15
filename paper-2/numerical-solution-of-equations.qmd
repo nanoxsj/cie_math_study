@@ -9,7 +9,7 @@ description: "CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.6."
 
 本页依据 9709 Mathematics 2026–2027 syllabus 2.6：通过 graphical considerations 或 sign change 定位 root；理解 convergent sequence of approximations；由 equation 推出给定的 fixed-point iteration $x_{n+1}=F(x_n)$，并用 iteration 求 root 到指定 accuracy。考纲不要求 convergence condition 的理论证明，但要知道 iteration 可能 fail to converge。
 
-工作区没有独立的 Paper 2 note PDF，因此 worked examples 使用同一套 Numerical Methods note PDF 中已经独立提取的相关原始图片；每个例题单独成卡。真题全部来自本地 Paper 2 原始 PDF，题干只把 PDF 排版规范为 LaTeX，没有改写或编造题目。
+知识点依据 Note/P2 的 Numerical Methods PDF；worked examples 使用工作区中已经独立提取的相关原始图片，每个例题单独成卡。真题全部来自本地 Paper 2 原始 PDF，题干只把 PDF 排版规范为 LaTeX，没有改写或编造题目。
 :::
 
 ## 1. Core knowledge
@@ -102,6 +102,22 @@ $$
 ![Numerical methods convergence](../assets/notes/numerical-methods/worked-example-08.webp){.note-figure fig-alt="Original extracted numerical methods note worked example showing convergence"}
 :::
 
+::: {.formula-panel}
+### Choosing and checking an iteration
+
+同一个 equation 往往可以 rearrange 成不同的 $x=F(x)$。应选择题目指定的 formula，或选择在目标区间内数值变化较稳定的形式；不同 rearrangement 可能收敛到不同 roots，也可能 diverge。
+
+若 $x_n\to\alpha$，则 $\alpha=F(\alpha)$，但这只是必要条件。实际做题要观察 consecutive iterates 是否稳定，并结合 sign change、graph 或题目给出的 root interval 确认 root。
+:::
+
+::: {.study-card}
+### Accuracy and reporting
+
+如果答案要 correct to $k$ significant figures，至少保留多一至两位 guard figures 进行后续 iteration。可以在 consecutive iterates 四舍五入后相同，或两次结果的差小于所需 rounding tolerance 时停止；最后只对最终答案按题目要求取舍入。
+
+若题目要求显示每一步 iteration，表格应列出 $n$、$x_n$ 和指定的 decimal places/significant figures，并保持同一格式。
+:::
+
 ## 2. Verified Paper 2 past-paper questions
 
 以下 5 组题均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题目没有因为数量不足而补造。
@@ -169,7 +185,7 @@ $$
 :::
 
 ::: {.question-card #p2-num-q02}
-### Question 2 · 9709/21/M/J/22 Q5(b–d)
+### Question 2 · 9709/21/M/J/22 Q5(a–d)
 
 The equation
 
@@ -178,6 +194,8 @@ $$
 $$
 
 has exactly two roots.
+
+(a) By sketching the graphs of $y=|5-2x|$ and $y=3\ln x$ on the same diagram, show that the equation has exactly two roots. **[3]**
 
 (b) Show that the value of the larger root satisfies the equation
 
@@ -190,6 +208,8 @@ $$
 (d) Use an iterative formula, based on the equation in part (b), to find the value of the larger root correct to 3 significant figures. Give the result of each iteration to 5 significant figures. **[1+2+3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
+
+(a) The logarithm requires $x>0$. The graph of $y=|5-2x|$ is V-shaped, with vertex $(2.5,0)$; $y=3\ln x$ is increasing and concave down. The two branches of the V give one intersection for $0<x<2.5$ and one for $x>2.5$, so there are exactly two roots.
 
 (b) The larger root is greater than $2.5$, so $|5-2x|=2x-5$. Hence
 
@@ -236,7 +256,7 @@ $$
 $$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-num-q02"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_21.pdf`, Q5(b–d), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_21.pdf`, Q5(a–d), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-num-q03}
@@ -319,7 +339,7 @@ $$
 :::
 
 ::: {.question-card #p2-num-q04}
-### Question 4 · 9709/22/M/J/24 Q6(b–d)
+### Question 4 · 9709/22/M/J/24 Q6(a–d)
 
 The curve with equation
 
@@ -330,6 +350,8 @@ $$
 has a maximum point $M$.
 
 ![Independently extracted vector diagram from 9709/22/M/J/24 Q6](../assets/questions/paper-2/past-paper/2024-mj-9709-22-q6-diagram.svg){.note-figure fig-alt="Independently extracted vector diagram showing the curve and maximum point M"}
+
+(a) Find an expression for $\dfrac{dy}{dx}$. **[2]**
 
 (b) Show that the $x$-coordinate of $M$ satisfies the equation
 
@@ -343,16 +365,24 @@ $$
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
+(a) Using the quotient rule,
+
+$$
+\frac{dy}{dx}
+=\frac{\dfrac{2(x+3)}{2x+1}-\ln(2x+1)}{(x+3)^2}
+=\boxed{\frac{\dfrac{2(x+3)}{2x+1}-\ln(2x+1)}{(x+3)^2}}.
+$$
+
 (b) Differentiating by the quotient rule gives
 
 $$
-\frac{dy}{dx}=\frac{\dfrac{x+3}{2x+1}-\ln(2x+1)}{(x+3)^2}.
+\frac{dy}{dx}=\frac{\dfrac{2(x+3)}{2x+1}-\ln(2x+1)}{(x+3)^2}.
 $$
 
 At the maximum point, $dy/dx=0$, so
 
 $$
-\frac{x+3}{2x+1}=\ln(2x+1).
+\frac{2(x+3)}{2x+1}=\ln(2x+1).
 $$
 
 Rearranging gives
@@ -396,7 +426,7 @@ $$
 $$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-num-q04"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q6(b–d), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q6(a–d), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-num-q05}

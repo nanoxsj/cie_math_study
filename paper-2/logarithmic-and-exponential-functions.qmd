@@ -76,6 +76,38 @@ $$
 ![Linearisation worked example](../assets/notes/logarithmic-exponential/worked-example-53.webp){.note-figure fig-alt="Original extracted logarithmic note worked example on linearisation"}
 :::
 
+::: {.formula-panel}
+### Definitions, graphs and change of base
+
+对 $a>0$ 且 $a\ne1$，
+
+$$a^y=x\Longleftrightarrow y=\log_a x,$$
+
+所以 logarithm 的 argument 必须满足 $x>0$。常用换底公式为
+
+$$\log_a x=\frac{\ln x}{\ln a}.$$
+
+$y=a^x$ 的 graph 经过 $(0,1)$，horizontal asymptote 是 $y=0$；当 $a>1$ 时 increasing，当 $0<a<1$ 时 decreasing。$y=\ln x$ 是它在交换 $x,y$ 后的 inverse graph，vertical asymptote 是 $x=0$。
+:::
+
+::: {.study-card}
+### Solving exponential and logarithmic equations
+
+优先把两边写成相同 base；若不能，取 natural logarithm。使用 logarithm laws 合并前，必须确认每一个 argument 都是 positive。若令 $u=a^x$ 或 $u=e^x$ 把方程化成 quadratic，解出 $u$ 后要保留 $u>0$ 的限制，再回代求 $x$。
+
+含有 $ln(f(x))$ 的方程最后要检查 $f(x)>0$；平方、指数化或乘以 variable 产生的 extraneous roots 必须代回原方程。
+:::
+
+::: {.formula-panel}
+### Linearised models
+
+若模型为 $y=ka^{x}$，则
+
+$$\ln y=\ln k+x\ln a.$$
+
+在 graph of $\ln y$ against $x$ 中，gradient 是 $\ln a$、intercept 是 $\ln k$；若模型为 $y=kx^n$，在 graph of $\ln y$ against $\ln x$ 中 gradient 是 $n$、intercept 是 $\ln k$。读出 intercept 后要取 exponential 才能得到 $k$。
+:::
+
 ## 2. Verified Paper 2 past-paper questions
 
 以下题目均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题干只把 PDF 排版规范为 LaTeX，没有改写或编造题目。
@@ -380,10 +412,6 @@ $$
 <div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_w22_qp_21.pdf`, Q2, and matching mark scheme.</div>
 :::
 
-## 3. Additional verified Paper 2 questions
-
-以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。
-
 ::: {.question-card #p2-log-q10}
 ### Question 9 · 9709/22/M/J/24 Q2
 
@@ -487,7 +515,7 @@ $$
 :::
 
 ::: {.question-card #p2-log-q09}
-### Question 11 · 9709/21/O/N/21 Q4(a)
+### Question 11 · 9709/21/O/N/21 Q4(a–b)
 
 The curve with equation
 
@@ -504,6 +532,8 @@ x=\frac13\ln5-\frac13\ln(1+2x).
 $$
 
 **[5]**
+
+(b) Use an iterative formula, based on the equation in part (a), to find the $x$-coordinate of $M$ correct to 3 significant figures. Use an initial value of $0.35$ and give the result of each iteration to 5 significant figures. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -530,9 +560,36 @@ which rearranges to
 $$
 \boxed{x=\frac13\ln5-\frac13\ln(1+2x)}.
 $$
+
+(b) Use
+
+$$
+x_{n+1}=\frac13\ln5-\frac13\ln(1+2x_n),
+\qquad x_1=0.35.
+$$
+
+The iterations are
+
+$$
+\begin{array}{c|c}
+n&x_n\\\hline
+1&0.35000\\
+2&0.28579\\
+3&0.29635\\
+4&0.29455\\
+5&0.29485\\
+6&0.29480
+\end{array}
+$$
+
+Hence the required coordinate is
+
+$$
+\boxed{x=0.295}\qquad\text{(3 s.f.)}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-log-q09"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2021/2021/9709_w21_qp_21.pdf`, Q4(a), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2021/2021/9709_w21_qp_21.pdf`, Q4(a–b), and matching mark scheme.</div>
 :::
 
 ## Exam checklist

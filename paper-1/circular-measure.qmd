@@ -65,6 +65,32 @@ $$A_{\triangle}=\frac12ab\sin C.$$
 5. 最后检查边界：perimeter 只加边界，area 只加或减区域；题目要求 exact 时不要过早取小数。
 :::
 
+::: {.formula-panel}
+### Circular measure toolkit
+
+弧长与扇形面积只在 angle 用 radians 时直接使用：
+
+$$
+s=r\theta,qquad A_{\text{sector}}=\frac12r^2\theta.
+$$
+
+若 angle 以 degrees 给出，先用 $\theta_{\rm rad}=\pi\theta_{\rm deg}/180$ 转换。半径为 $r$、圆心角为 $\theta$ 的 chord length 是
+
+$$c=2r\sin\frac{\theta}{2},$$
+
+而由两条半径和夹角组成的 triangle area 是
+
+$$A_{\triangle}=\frac12r^2\sin\theta.$$
+
+因此 minor segment area 是 sector area 减 triangle area；major segment 通常用整个圆面积减去相应 minor segment。Composite perimeter 要只加外边界上的 arcs 和 straight lengths。
+:::
+
+::: {.study-card}
+### Sector and segment problem workflow
+
+先画出 radii、chord、perpendicular 和 symmetry line。对等腰三角形可用 perpendicular bisector 把问题拆成 right triangle，再使用 $\sin$、$\cos$ 或 Pythagoras。面积题要区分 sector、triangle、segment 和 annular sector，最后保留 exact form，除非题目要求 decimal answer。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-cm-q01}
@@ -125,13 +151,17 @@ $$\boxed{\text{perimeter}=12+12+4\pi=24+4\pi}.$$
 :::
 
 ::: {.question-card #p1-cm-q03}
-### Question 3 · 9709/12/O/N/20 Q8
+### Question 3 · 9709/12/O/N/20 Q8(a–b)
+
+![Original extracted diagram for Question 3](../assets/questions/paper-1/past-paper/2020-on-9709-12-q8.svg){.note-figure fig-alt="Original extracted triangle and sector diagram for 2020 October November Paper 1 Question 8"}
 
 ![Original extracted diagram for Question 3](../assets/questions/paper-1/past-paper/2020-on-9709-12-q8.svg){.note-figure fig-alt="Original extracted isosceles triangle and sector diagram for 2020 October November Paper 1 Question 8"}
 
 In the diagram, $ABC$ is an isosceles triangle with $AB=BC=r$ cm and angle $BAC=\theta$ radians. The point $D$ lies on $AC$ and $ABD$ is a sector of a circle with centre $A$.
 
 (a) Express the area of the shaded region in terms of $r$ and $\theta$. **[3]**
+
+(b) In the case where $r=10$ and $\theta=0.6$, find the perimeter of the shaded region. **[4]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -146,17 +176,27 @@ $$A_{ABD}=\frac12r^2\theta.$$
 Thus
 
 $$\boxed{A_{\text{shaded}}=\frac12r^2(\sin2\theta-\theta)}.$$
+
+(b) Here $AC=2r\cos\theta=20\cos0.6$, so $CD=AC-AD=20\cos0.6-10$. The sector arc $BD$ has length $10(0.6)=6$. Hence
+
+$$
+\boxed{P=10+(20\cos0.6-10)+6=22.5\text{ cm (3 s.f.)}}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cm-q03"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_12.pdf, Q8(a), and matching 9709_w20_ms_12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_12.pdf, Q8(a–b), and matching 9709_w20_ms_12.pdf.</div>
 :::
 
 ::: {.question-card #p1-cm-q04}
-### Question 4 · 9709/13/O/N/20 Q9
+### Question 4 · 9709/13/O/N/20 Q9(a–c)
 
 In the diagram, arc $AB$ is part of a circle with centre $O$ and radius $8$ cm. Arc $BC$ is part of a circle with centre $A$ and radius $12$ cm, where $AOC$ is a straight line.
 
 (a) Find angle $BAO$ in radians. **[2]**
+
+(b) Find the area of the shaded region. **[4]**
+
+(c) Find the perimeter of the shaded region. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -167,9 +207,25 @@ $$\cos\angle BAO=\frac{12^2+8^2-8^2}{2(12)(8)}=\frac34.$$
 Therefore
 
 $$\boxed{\angle BAO=\cos^{-1}\frac34=0.723\text{ rad (3 s.f.)}}.$$
+
+Let $\alpha=\cos^{-1}(3/4)$. The shaded area is the sector $ABC$ of radius $12$ minus triangle $AOB$:
+
+$$
+\begin{aligned}
+A&=\frac12(12)^2\alpha-\frac12(8)^2\sin(\pi-2\alpha)\\
+&=72\alpha-32\sin2\alpha\\
+&=\boxed{20.3\text{ cm}^2\text{ (3 s.f.)}}.
+\end{aligned}
+$$
+
+The perimeter is $BO+OC+$ arc $BC=8+4+12\alpha$, so
+
+$$
+\boxed{P=20.7\text{ cm (3 s.f.)}}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cm-q04"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_13.pdf, Q9(a), and matching 9709_w20_ms_13.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709_w20_qp_13.pdf, Q9(a–c), and matching 9709_w20_ms_13.pdf.</div>
 :::
 
 ::: {.question-card #p1-cm-q05}
@@ -369,11 +425,13 @@ $$\boxed{A_{BPC}=11.4\text{ cm}^2}.$$
 :::
 
 ::: {.question-card #p1-cm-q11}
-### Question 11 · 9709/13/M/J/22 Q9
+### Question 11 · 9709/13/M/J/22 Q9(a–b)
 
 The diagram shows triangle $ABC$ with $AB=BC=6$ cm and angle $ABC=1.8$ radians. The arc $CD$ is part of a circle with centre $A$ and $ABD$ is a straight line.
 
 (a) Find the perimeter of the shaded region. **[5]**
+
+(b) Find the area of the shaded region. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -388,9 +446,18 @@ $$\angle CAD=\frac{\pi-1.8}{2}=0.6708\text{ rad}.$$
 Thus arc $CD$ has length $9.40(0.6708)=6.306\ldots$. Since $AD=AC$ and $AB=6$, $BD=9.40-6=3.40$. Hence
 
 $$\boxed{\text{perimeter}=6+3.40+6.306\ldots=15.7\text{ cm}}.$$
+
+(b) Let $r=AC=12\sin0.9$ and $\beta=(\pi-1.8)/2$. The shaded region is the sector $ACD$ minus triangle $ABC$:
+
+$$
+\begin{aligned}
+A&=\frac12r^2\beta-\frac12(6)(6)\sin1.8\\
+&=\boxed{12.1\text{ cm}^2\text{ (3 s.f.)}}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cm-q11"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_s22_qp_13.pdf, Q9(a), and matching 9709_s22_ms_13.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_s22_qp_13.pdf, Q9(a–b), and matching 9709_s22_ms_13.pdf.</div>
 :::
 
 ::: {.question-card #p1-cm-q12}

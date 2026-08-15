@@ -45,6 +45,50 @@ $$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}.$$
 做 rates 题时先在指定点求 $dy/dx$，再代入已知 rate；单位要跟题目保持一致。
 :::
 
+::: {.formula-panel}
+### Differentiation from first principles
+
+Derivative 的定义是
+
+$$
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+$$
+
+它表示 graph 在该点的 instantaneous gradient。对 composite power function，令 $u=ax+b$ 或 $u=f(x)$，则
+
+$$
+\frac{d}{dx}(ax+b)^n=an(ax+b)^{n-1},\qquad
+\frac{d}{dx}[f(x)]^n=n[f(x)]^{n-1}f'(x).
+$$
+
+遇到 fractional powers，先写成 index form，再使用 power rule 和 chain rule。
+:::
+
+::: {.study-card}
+### Increasing, decreasing and stationary points
+
+在指定 domain 内，$dy/dx>0$ 表示 curve increasing，$dy/dx<0$ 表示 decreasing。Stationary point 由
+
+$$\frac{dy}{dx}=0$$
+
+得到；再代回原方程求 coordinates。用 second derivative：$d^2y/dx^2>0$ 为 local minimum，$d^2y/dx^2<0$ 为 local maximum；若 second derivative 等于 0，则必须进一步检查 gradient sign 或其他信息。
+
+在 tangent/normal 题中，先求 tangent gradient $m=dy/dx$，再使用 normal gradient $-1/m$；vertical tangent 或 horizontal tangent 时要单独处理。
+:::
+
+::: {.formula-panel}
+### Connected rates of change
+
+若变量都随时间变化，使用
+
+$$
+\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt},\qquad
+\frac{dV}{dt}=\frac{dV}{dr}\frac{dr}{dt}.
+$$
+
+先写出变量之间的 geometric relationship，再对时间 $t$ differentiation，最后只在同一个指定时刻代入数值，并检查 rate 的 units。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-diff-q01}
@@ -210,9 +254,11 @@ $$\boxed{\frac{dx}{dt}=\frac12\text{ units per second}}.$$
 :::
 
 ::: {.question-card #p1-diff-q07}
-### Question 7 · 9709/12/F/M/22 Q11(a)
+### Question 7 · 9709/12/F/M/22 Q11(a–b)
 
 A curve has equation $y=\frac{k}{3x-k}+3x$, where $k$ is a constant. Find, in terms of $k$, the values of $x$ at which there is a stationary point. **[4]**
+
+(b) The function $f$ has a stationary value at $x=a$ and is defined by $f(x)=4(3x-4)^{-1}+3x$ for $x\ge\frac32$. Find the value of $a$ and determine the nature of the stationary value. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -227,9 +273,21 @@ Thus
 
 $$3x-k=\pm\sqrt{k}
 \Longrightarrow\boxed{x=\frac{k+\sqrt{k}}3\text{ or }x=\frac{k-\sqrt{k}}3}.$$
+
+(b) Here $k=4$, so the possible stationary $x$-values are $2/3$ and $2$. The domain $x\ge3/2$ selects $a=2$. Also
+
+$$
+f''(x)=\frac{72}{(3x-4)^3},
+$$
+
+so $f''(2)>0$. Therefore
+
+$$
+\boxed{a=2\text{ and the stationary value is a minimum}.}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q07"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_m22_qp_12.pdf, Q11(a), and matching 9709_m22_ms_12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2022/2022/9709_m22_qp_12.pdf, Q11(a–b), and matching 9709_m22_ms_12.pdf.</div>
 :::
 
 ::: {.question-card #p1-diff-q08}
@@ -288,9 +346,17 @@ $$\boxed{y=2\sqrt{x}-2x+3}.$$
 :::
 
 ::: {.question-card #p1-diff-q10}
-### Question 10 · 9709/11/O/N/23 Q10(a)
+### Question 10 · 9709/11/O/N/23 Q10(a–d)
 
-A curve has a stationary point at $(2,-10)$ and $\frac{d^2y}{dx^2}=6x$. Find $dy/dx$. **[3]**
+A curve has a stationary point at $(2,-10)$ and $\frac{d^2y}{dx^2}=6x$.
+
+(a) Find $dy/dx$. **[3]**
+
+(b) Find the equation of the curve. **[3]**
+
+(c) Find the coordinates of the other stationary point and determine its nature. **[3]**
+
+(d) Find the equation of the tangent to the curve at the point where it crosses the $y$-axis. **[2]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -305,42 +371,31 @@ $$0=3(2)^2+C\Longrightarrow C=-12.$$
 Therefore
 
 $$\boxed{\frac{dy}{dx}=3x^2-12}.$$
-</details>
-<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q10"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_11.pdf, Q10(a), and matching 9709_w23_ms_11.pdf.</div>
-:::
 
-::: {.question-card #p1-diff-q11}
-### Question 11 · 9709/11/O/N/23 Q10(c)
-
-Using the same curve as Question 10, find the coordinates of the other stationary point and determine its nature. **[3]**
-
-<details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
-
-From Question 10,
-
-$$3x^2-12=0\Longrightarrow x=\pm2.$$
-
-The given point is $(2,-10)$. Integrate:
+(b) Integrating,
 
 $$y=x^3-12x+C.$$
 
-Substitution of $(2,-10)$ gives $C=6$. At $x=-2$,
+Using $(2,-10)$ gives $C=6$, so $\boxed{y=x^3-12x+6}$.
 
-$$y=-8+24+6=22.$$
-
-Since $d^2y/dx^2=6x$, it is negative at $x=-2$, so the point is a maximum:
+(c) Stationary points satisfy $3x^2-12=0$, so $x=\pm2$. At $x=-2$, $y=22$. Since $d^2y/dx^2=6x<0$ there,
 
 $$\boxed{(-2,22)\text{, a maximum point}}.$$
+
+(d) At the $y$-axis, $(x,y)=(0,6)$ and the gradient is $-12$. Hence the tangent is
+
+$$\boxed{y=-12x+6}.$$
 </details>
-<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q11"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_11.pdf, Q10(c), and matching 9709_w23_ms_11.pdf.</div>
+<label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q10"> Completed</label>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_11.pdf, Q10(a–d), and matching 9709_w23_ms_11.pdf.</div>
 :::
 
 ::: {.question-card #p1-diff-q12}
-### Question 12 · 9709/12/M/J/24 Q6(a)
+### Question 11 · 9709/12/M/J/24 Q6(a–b)
 
 The curve is $y=2x-8x^{1/2}$. It has a minimum point $A$ and intersects the positive $x$-axis at $B$. Find the coordinates of $A$ and $B$. **[4]**
+
+(b) Find the area of the shaded region between the curve and the line $y=\frac{2x-32}{3}$. **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -357,9 +412,18 @@ $$2x-8\sqrt{x}=0\Longrightarrow\sqrt{x}(2\sqrt{x}-8)=0,$$
 giving $x=16$. Therefore
 
 $$\boxed{A=(4,-8),\qquad B=(16,0)}.$$
+
+(b) The curve and line meet at $x=4$ and $x=16$. Between them the curve is above the line, so
+
+$$
+\begin{aligned}
+\text{area}&=\int_4^{16}\left[2x-8\sqrt{x}-\frac{2x-32}{3}\right]dx\\
+&=\boxed{\frac{32}{3}}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q12"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q6(a), and matching ms-202406-mathematics-p12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202406-mathematics-p12.pdf, Q6(a–b), and matching ms-202406-mathematics-p12.pdf.</div>
 :::
 
 ::: {.question-card #p1-diff-q13}
@@ -421,9 +485,13 @@ $$\boxed{a=54,\qquad b=27}.$$
 :::
 
 ::: {.question-card #p1-diff-q15}
-### Question 15 · 9709/11/O/N/24 Q5(a)
+### Question 15 · 9709/11/O/N/24 Q5(a–b)
 
-The derivative of a curve is $\frac{dy}{dx}=4x-3\sqrt{x}+1$. Find the $x$-coordinate where the gradient is $11/2$. **[3]**
+The derivative of a curve is $\frac{dy}{dx}=4x-3\sqrt{x}+1$.
+
+(a) Find the $x$-coordinate of the point on the curve at which the gradient is $11/2$. **[3]**
+
+(b) Given that the curve passes through $(4,11)$, find the equation of the curve. **[4]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -438,9 +506,19 @@ $$8u^2-6u-9=0=(4u+3)(2u-3).$$
 Since $u\ge0$, $u=3/2$. Hence
 
 $$\boxed{x=\left(\frac32\right)^2=\frac94}.$$
+
+(b) Integrating,
+
+$$
+y=2x^2-2x^{3/2}+x+C.
+$$
+
+Using $(4,11)$ gives $C=-9$, so
+
+$$\boxed{y=2x^2-2x^{3/2}+x-9}.$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-diff-q15"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q5(a), and matching ms-202410-mathematics-p11.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p11.pdf, Q5(a–b), and matching ms-202410-mathematics-p11.pdf.</div>
 :::
 
 ::: {.question-card #p1-diff-q16}

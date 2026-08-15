@@ -54,6 +54,32 @@ $$S_\infty=\frac a{1-r}.$$
 三个连续 numbers 为 GP 的等价条件是 $b^2=ac$。处理题目时保留正负 root，最后根据 positive terms、convergence 或题目条件筛选。
 :::
 
+::: {.study-card}
+### Binomial general term and coefficients
+
+当 $n$ 是 non-negative integer 时，binomial expansion 的 general term 是
+
+$$
+T_{r+1}=\binom nr a^{n-r}b^r,qquad r=0,1,\ldots,n.
+$$
+
+求指定项或 coefficient 时先确定 $r$，再把各因素的 powers 相乘；若多个 expansion 相乘，要收集总次数相同的 terms。含有小参数 $x$ 的题目要按题目要求保留到指定 power，不能把无关高次项混入。
+:::
+
+::: {.study-card}
+### AP, GP and recurrence checks
+
+AP 的相邻 terms 差相等：$u_{n+1}-u_n=d$；GP 的相邻 terms 比相等：$u_{n+1}/u_n=r$。也可以使用 recurrence form
+
+$$u_{n+1}=u_n+d\quad\text{或}\quad u_{n+1}=ru_n.$$
+
+有限 GP 的 sum 也可写为
+
+$$S_n=\frac{a(r^n-1)}{r-1},\qquad r\ne1.$$
+
+只有 $|r|<1$ 时 $S_\infty$ 存在；若 $r$ 为 negative，terms 会交替变号，但 convergence condition 仍是 $|r|<1$。涉及两个 AP/GP 的题目应分别写 nth term 或 sum equation，再联立求未知量。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-series-q01}
@@ -407,18 +433,38 @@ $$\boxed{S_{77}-G_{10}=27.5}.$$
 :::
 
 ::: {.question-card #p1-series-q16}
-### Question 16 · 9709/12/O/N/24 Q2(a)
+### Question 16 · 9709/12/O/N/24 Q2(a–b)
 
 The first term of an AP is $-20$ and the common difference is $5$. Find the sum of the first 20 terms. **[2]**
+
+(b) It is given that the sum of the first $2k$ terms is 10 times the sum of the first $k$ terms. Find the value of $k$. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
 $$S_{20}=\frac{20}{2}\bigl(2(-20)+19(5)\bigr)
 =10(55)
 =\boxed{550}.$$
+
+(b) For this AP,
+
+$$
+S_n=\frac n2\left[-40+5(n-1)\right]=\frac52n(n-9).
+$$
+
+Hence
+
+$$
+\frac52(2k)(2k-9)=10\cdot\frac52k(k-9).
+$$
+
+Since $k>0$, cancellation gives $2k-9=5k-45$, so
+
+$$
+\boxed{k=12}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-series-q16"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q2(a), and matching ms-202410-mathematics-p12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2024/2024/qp-202410-mathematics-p12.pdf, Q2(a–b), and matching ms-202410-mathematics-p12.pdf.</div>
 :::
 
 ::: {.question-card #p1-series-q17}

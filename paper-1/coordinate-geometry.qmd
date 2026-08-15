@@ -85,6 +85,37 @@ $$
 圆的 diameter 的 midpoint 是 centre；若 $AB$ 是 diameter，则 centre 是 $AB$ 的 midpoint，radius 是 $AB/2$。
 :::
 
+::: {.formula-panel}
+### Coordinate formula toolkit
+
+两点 $A(x_1,y_1)$、$B(x_2,y_2)$ 之间的 distance 与 midpoint 为
+
+$$
+AB=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2},qquad
+M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right).
+$$
+
+直线可以写成 $y=mx+c$、$y-y_1=m(x-x_1)$ 或 $ax+by+c=0$。Vertical line 必须写成 $x=k$；parallel lines 有相同 gradient，perpendicular lines 满足 $m_1m_2=-1$。
+:::
+
+::: {.study-card}
+### Circle methods
+
+标准圆方程
+
+$$
+(x-a)^2+(y-b)^2=r^2
+$$
+
+的 centre 是 $(a,b)$，radius 是 $r$。一般式
+
+$$x^2+y^2+2fx+2gy+c=0$$
+
+要分别对 $x$、$y$ completing the square。若直线与圆相交，把直线代入圆方程；two intersections、tangent 和 no intersection 分别对应 quadratic 的 $\Delta>0$、$\Delta=0$ 和 $\Delta<0$。
+
+圆上点的 tangent perpendicular to the radius。求 tangent 时可先求 radius gradient，再取 negative reciprocal；也可以使用 centre 到直线的 perpendicular distance 等于 $r$。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-cg-q01}
@@ -469,7 +500,7 @@ $$
 :::
 
 ::: {.question-card #p1-cg-q10}
-### Question 10 · 9709/12/F/M/22 Q8(a)
+### Question 10 · 9709/12/F/M/22 Q8(a–b)
 
 ![Original extracted diagram for Question 10](../assets/questions/paper-1/past-paper/2022-fm-9709-12-q8-diagram.svg){.note-figure fig-alt="Original extracted diagram of a circle and horizontal chord for 2022 February March Paper 1 Question 8"}
 
@@ -493,9 +524,25 @@ The point other than $A$ has $x_B=4$, so
 
 $$\boxed{A=(0,2),\quad B=(4,2)}.
 $$
+
+(b) The shaded segment is between the circle and the chord $AB$, and is rotated about the $x$-axis. Since the circle is
+
+$$
+y^2=8-(x-2)^2,
+$$
+
+the volume is
+
+$$
+\begin{aligned}
+V&=\pi\int_0^4\left(8-(x-2)^2-2^2\right)dx\\
+&=\pi\int_0^4\left(4-(x-2)^2\right)dx
+=\boxed{\frac{32\pi}{3}}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-cg-q10"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_m22_qp_12.pdf`, Q8(a), and matching `9709_m22_ms_12.pdf`. The diagram is an independently extracted, annotation-cleaned SVG from the original PDF.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_m22_qp_12.pdf`, Q8(a–b), and matching `9709_m22_ms_12.pdf`. The diagram is an independently extracted, annotation-cleaned SVG from the original PDF.</div>
 :::
 
 ::: {.question-card #p1-cg-q11}

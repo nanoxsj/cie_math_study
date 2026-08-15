@@ -79,6 +79,46 @@ Quadratic equation 可以 factorise、complete the square 或使用 quadratic fo
 若方程在 $x^3$、$x^2$、$(2x-3)^2$ 等整体中呈二次形式，令该整体为 $u$，先解 $u$ 的 quadratic，再回代并检查原变量的定义域。
 :::
 
+::: {.formula-panel}
+### Graph features and roots
+
+对
+
+$$y=ax^2+bx+c,qquad a\ne0,$$
+
+$a>0$ 时抛物线开口向上，$a<0$ 时开口向下；$c$ 是 $y$-intercept。完成平方后
+
+$$y=a(x-p)^2+q$$
+
+的 vertex 是 $(p,q)$，axis of symmetry 是 $x=p$。与 $x$-axis 的交点由 $ax^2+bx+c=0$ 给出。
+
+Quadratic formula 为
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
+
+所以 discriminant 的符号决定 real roots 的数量：$\Delta>0$ 为两个 distinct roots，$\Delta=0$ 为 repeated root，$\Delta<0$ 没有 real roots。
+:::
+
+::: {.study-card}
+### Parameter conditions and transformations
+
+题目要求“对所有参数值有两个交点”时，先把两条曲线相等并整理成 quadratic，再证明 $\Delta>0$；要求 tangent 时使用 $\Delta=0$。解 inequality 时先求 roots，再根据 $a$ 的正负画 sign intervals。
+
+若把 $y=f(x)$ 变换，坐标和方程的对应关系为：
+
+$$
+y=f(x)+q\Rightarrow (x,y)\mapsto(x,y+q),qquad
+y=f(x-p)\Rightarrow (x,y)\mapsto(x+p,y),
+$$
+
+$$
+y=af(x)\Rightarrow (x,y)\mapsto(x,ay),qquad
+y=f(bx)\Rightarrow (x,y)\mapsto\left(\frac{x}{b},y\right).
+$$
+
+多个 transformation 必须按题目给出的顺序应用。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-quad-q01}
@@ -713,7 +753,7 @@ $$\boxed{\text{range of }f=(-\infty,19]}.$$
 :::
 
 ::: {.question-card #p1-quad-q19}
-### Question 19 · 9709/11/O/N/24 Q11(a)
+### Question 19 · 9709/11/O/N/24 Q11(a–b)
 
 The function (f) is defined by
 
@@ -735,13 +775,27 @@ $$
 Thus $a=\frac{15}{2}$, $b=2$, $c=\frac32$. The maximum value is $\frac{15}{2}$, and the quadratic decreases without bound, so
 
 $$\boxed{\text{range of }f=(-\infty,\tfrac{15}{2}]}.$$
+
+(b) Reflecting in the $x$-axis gives
+
+$$
+y=2\left(x-\frac32\right)^2-\frac{15}{2},
+$$
+
+whose minimum is at $(3/2,-15/2)$. Translating upwards by $15/2$ gives
+
+$$
+\boxed{h(x)=2\left(x-\frac32\right)^2},
+$$
+
+with minimum point at the origin.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q19"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202410-mathematics-p11.pdf`, Q11(a), and matching `ms-202410-mathematics-p11.pdf`.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202410-mathematics-p11.pdf`, Q11(a–b), and matching `ms-202410-mathematics-p11.pdf`.</div>
 :::
 
 ::: {.question-card #p1-quad-q20}
-### Question 20 · 9709/12/O/N/24 Q7(a)
+### Question 20 · 9709/12/O/N/24 Q7(a–b)
 
 By expressing $-2x^2+8x+11$ in the form $-a(x-b)^2+c$, where $a$, $b$ and $c$ are positive integers, find the coordinates of the vertex of the graph with equation $y=-2x^2+8x+11$. **[3]**
 
@@ -758,9 +812,26 @@ $$
 Thus $a=2$, $b=2$, $c=19$. Since the coefficient of the square is negative, the graph has a maximum (its vertex) at
 
 $$\boxed{(2,19)}.$$
+
+(b) The intersections with the line satisfy
+
+$$
+-2x^2+8x+11=8x+9
+\Longrightarrow x=\pm1.
+$$
+
+Between these points the parabola is above the line, so the shaded area is
+
+$$
+\begin{aligned}
+A&=\int_{-1}^{1}\left[(-2x^2+8x+11)-(8x+9)\right]dx\\
+&=\int_{-1}^{1}(2-2x^2)\,dx
+=\boxed{\frac83}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-quad-q20"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202410-mathematics-p12.pdf`, Q7(a), and matching `ms-202410-mathematics-p12.pdf`.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202410-mathematics-p12.pdf`, Q7(a–b), and matching `ms-202410-mathematics-p12.pdf`.</div>
 :::
 
 ## 3. Quick checklist

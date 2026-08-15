@@ -42,6 +42,46 @@ $$\sin x=a\Rightarrow x=\alpha,\pi-\alpha;\quad\cos x=a\Rightarrow x=\alpha,2\pi
 $$\text{amplitude}=|a|,\qquad\text{period}=\frac{2\pi}{|b|},\qquad\text{midline }y=c.$$
 :::
 
+::: {.study-card}
+### Ratios, exact values and identities
+
+在 right triangle 中
+
+$$
+\sin\theta=\frac{\text{opposite}}{\text{hypotenuse}},\qquad
+\cos\theta=\frac{\text{adjacent}}{\text{hypotenuse}},\qquad
+\tan\theta=\frac{\text{opposite}}{\text{adjacent}}=\frac{\sin\theta}{\cos\theta}.
+$$
+
+除 $30^\circ$、$45^\circ$、$60^\circ$ 外，要熟悉相关的 negative-angle、supplementary-angle 和 quadrant signs。基本恒等式为
+
+$$\sin^2\theta+\cos^2\theta=1,$$
+
+并可由此得到 $1+\tan^2\theta=\sec^2\theta$（在使用 sec notation 的题目中）。证明 identity 时通常先把所有 terms 写成 $\sin$、$\cos$，再统一分母或使用 $\sin^2+\cos^2=1$。
+:::
+
+::: {.formula-panel}
+### Solving trigonometric equations
+
+先 isolate 一个 trig ratio，再求 principal angle。对 $0\le\theta\le2\pi$：
+
+$$
+\sin\theta=a\Rightarrow\theta=\alpha,\pi-\alpha;\quad
+\cos\theta=a\Rightarrow\theta=\alpha,2\pi-\alpha;\quad
+\tan\theta=a\Rightarrow\theta=\alpha,\pi+\alpha.
+$$
+
+若方程含有 $\sin^2\theta$、$\cos^2\theta$ 或同时含 $\sin\theta,\cos\theta$，可先用 identity 或乘以 $\sin\theta$ / $\cos\theta$ 化成 quadratic；factorise 后必须检查每个 root 是否在 $[-1,1]$ 以及是否满足原方程的 denominator restrictions。
+:::
+
+::: {.study-card}
+### Graph features and inverse trig
+
+对 $y=a\sin(bx)+c$、$y=a\cos(bx)+c$，$|a|$ 是 amplitude，$2\pi/|b|$ 是 period，$y=c$ 是 midline；$a<0$ 会产生 reflection in the $x$-axis。Tangent graph 的 period 是 $\pi$，并有 vertical asymptotes。
+
+$\sin^{-1}$、$\cos^{-1}$、$\tan^{-1}$ 表示 inverse functions 的 principal values，不是 reciprocal。最后答案必须统一成题目要求的 degrees 或 radians，并列出指定 interval 内的全部 solutions。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-trig-q01}
@@ -83,11 +123,21 @@ $$\boxed{\theta=\sin^{-1}\frac13=19.5^\circ\text{ (3 s.f.)}}.$$
 :::
 
 ::: {.question-card #p1-trig-q03}
-### Question 3 · 9709/12/M/J/20 Q9(a)
+### Question 3 · 9709/12/M/J/20 Q9(a–c)
 
 $$f(x)=2-3\sin2x,\qquad g(x)=-2f(x),\qquad0\le x\le\pi.$$
 
 State the ranges of $f$ and $g$. **[3]**
+
+(b) Sketch, on the given diagram, the graph of $y=g(x)$.
+
+(c) Describe fully a sequence of transformations that maps the curve $y=f(x)$ on to $y=h(x)$, where
+
+$$
+h(x)=g(x+\pi),\qquad -\pi\le x\le0.
+$$
+
+**[2+3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -98,9 +148,19 @@ $$\boxed{-1\le f(x)\le5}.$$
 Multiplying the range by $-2$ reverses the endpoints:
 
 $$\boxed{-10\le g(x)\le2}.$$
+
+(b) Since $g=-2f$, the graph has the same $x$-coordinates as $f$, with all $y$-coordinates multiplied by $-2$. It passes through $(0,-4)$, $(\pi/4,2)$, $(3\pi/4,-10)$ and $(\pi,-4)$.
+
+(c) Since $f(x+\pi)=f(x)$,
+
+$$
+h(x)=-2f(x+\pi).
+$$
+
+Thus translate the graph $\pi$ units to the left, reflect it in the $x$-axis, and stretch it parallel to the $y$-axis by scale factor $2$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q03"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q9(a), and matching 9709-s20-ms-12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2020/2020/9709-s20-qp-12.pdf, Q9(a–c), and matching 9709-s20-ms-12.pdf.</div>
 :::
 
 ::: {.question-card #p1-trig-q04}
@@ -245,9 +305,11 @@ $$\boxed{\theta=0\text{ and }\frac{\pi}{2}}.$$
 :::
 
 ::: {.question-card #p1-trig-q11}
-### Question 11 · 9709/12/O/N/23 Q5(a)
+### Question 11 · 9709/12/O/N/23 Q5(a–b)
 
 The first, second and third terms of a geometric progression are $\sin\theta$, $\cos\theta$ and $2-\sin\theta$, where $\theta$ radians is acute. Find $\theta$. **[3]**
+
+(b) Using this value of $\theta$, find the sum of the first 10 terms of the progression. Give the answer in the form $\dfrac{b}{\sqrt{c}-1}$, where $b$ and $c$ are integers to be found. **[3]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -258,9 +320,23 @@ $$1-\sin^2\theta=2\sin\theta-\sin^2\theta\Longrightarrow\sin\theta=\frac12.$$
 Acuteness selects
 
 $$\boxed{\theta=\frac{\pi}{6}}.$$
+
+(b) The common ratio is
+
+$$
+r=\frac{\cos(\pi/6)}{\sin(\pi/6)}=\sqrt3.
+$$
+
+Therefore
+
+$$
+S_{10}=\frac{\frac12\left((\sqrt3)^{10}-1\right)}{\sqrt3-1}
+=\boxed{\frac{121}{\sqrt3-1}},
+$$
+so $b=121$ and $c=3$.
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p1-trig-q11"> Completed</label>
-<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_12.pdf, Q5(a), and matching 9709_w23_ms_12.pdf.</div>
+<div class="source-line"><strong>Source:</strong> PastPaper/2023/2023/9709_w23_qp_12.pdf, Q5(a–b), and matching 9709_w23_ms_12.pdf.</div>
 :::
 
 ::: {.question-card #p1-trig-q12}

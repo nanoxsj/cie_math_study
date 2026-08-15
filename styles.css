@@ -18,6 +18,22 @@ body:has(.home-hero) #quarto-document-content { max-width: 1320px; padding: 2rem
 .home-action { display: inline-block; padding: .68rem 1rem; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; color: #fff; font-weight: 700; text-decoration: none; }
 .home-action.primary { border-color: #fff; background: #fff; color: #17417d; }
 .course-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1.2rem; }
+.paper-section { margin: 2.25rem 0; padding: 1.15rem clamp(.8rem, 2vw, 1.5rem) 1.35rem; border: 1px solid; border-radius: 24px; box-shadow: 0 12px 30px rgba(30,64,175,.07); }
+.paper-section > h2 { margin: .2rem 0 1.2rem; padding-bottom: .75rem; border-bottom: 1px solid currentColor; font-size: clamp(1.45rem, 2.2vw, 2rem); }
+.paper-section .course-grid { gap: 1rem; }
+.paper-section .topic-card { margin: 0; background: rgba(255,255,255,.82); box-shadow: 0 6px 18px rgba(30,64,175,.08); }
+.paper-one { border-color: #bfdbfe; background: linear-gradient(135deg, #eff6ff, #f8fbff 68%, #eef2ff); color: #1e3a8a; }
+.paper-two { border-color: #c4b5fd; background: linear-gradient(135deg, #f5f3ff, #faf8ff 68%, #eef2ff); color: #4c1d95; }
+.paper-three { border-color: #99f6e4; background: linear-gradient(135deg, #ecfeff, #f0fdfa 68%, #eff6ff); color: #0f766e; }
+.paper-four { border-color: #fed7aa; background: linear-gradient(135deg, #fff7ed, #fffbeb 68%, #fef2f2); color: #9a3412; }
+.paper-five { border-color: #a7f3d0; background: linear-gradient(135deg, #ecfdf5, #f0fdf4 68%, #eff6ff); color: #065f46; }
+.paper-six { border-color: #fbcfe8; background: linear-gradient(135deg, #fdf2f8, #fff7ed 68%, #fff1f2); color: #9d174d; }
+.paper-one .topic-card { border-left-color: #2563eb; }
+.paper-two .topic-card { border-left-color: #7c3aed; }
+.paper-three .topic-card { border-left-color: #0891b2; }
+.paper-four .topic-card { border-left-color: #ea580c; }
+.paper-five .topic-card { border-left-color: #059669; }
+.paper-six .topic-card { border-left-color: #db2777; }
 .topic-card, .question-card, .formula-panel, .study-card, .worked-example { margin: 1rem 0 1.4rem; padding: 1.15rem 1.25rem; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(30,64,175,.06); }
 .topic-card { border-left: 5px solid #d97706; }
 .question-card { scroll-margin-top: 5rem; }
