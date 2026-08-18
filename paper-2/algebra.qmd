@@ -13,7 +13,7 @@ description: "CIE 9709 Paper 2 Pure Mathematics 2, syllabus 2.1."
 - 将次数不超过 4 的 polynomial 除以 linear 或 quadratic polynomial，并识别 quotient 与 remainder；
 - 使用 factor theorem 和 remainder theorem，包括因式 $ax+b$。
 
-工作区中没有独立的 Paper 2 Algebra note PDF，因此知识点图片复用同一套 Algebra note PDF 中的相关原始 worked examples；不把 Paper 3 的 partial fractions、binomial expansion 题目混入本页。
+知识点依据 Note/P2 的 Algebra - Functions PDF；相关 worked examples 使用工作区中已独立提取的原始 Note 图片，不把 Paper 3 的 partial fractions、binomial expansion 题目混入本页。
 :::
 
 ## 1. Core knowledge
@@ -86,6 +86,36 @@ $$
 <span class="we-tag">Worked example · shared Algebra note p.20</span>
 
 ![Algebra remainder theorem worked example](../assets/notes/algebra-functions/worked-example-20.webp){.note-figure fig-alt="Original extracted Algebra note worked example on the remainder theorem"}
+:::
+
+::: {.formula-panel}
+### Modulus graphs and equations
+
+对 $y=|ax+b|$，先找 turning point $(-b/a,0)$，再根据线性式在两侧的正负写出两条 straight-line branches。解
+
+$$|f(x)|=|g(x)|$$
+
+时必须分别考虑
+
+$$f(x)=g(x)\quad\text{或}\quad f(x)=-g(x),$$
+
+然后把候选值代回原方程检查。解 modulus inequality 时可以用 graph comparison，也可以在两边非负时平方；平方后仍要检查 domain 和端点是否包含。
+:::
+
+::: {.study-card}
+### Linear factors and remainders
+
+若除式是 $ax-b$，先写成 $a(x-b/a)$。因此
+
+$$
+ax-b\text{ is a factor of }f(x)\Longleftrightarrow f\left(\frac ba\right)=0,
+$$
+
+而除以 $ax-b$ 的 remainder 是 $f(b/a)$。Polynomial division 的结果必须满足
+
+$$f(x)=d(x)q(x)+r(x),qquad\deg r<\deg d,$$
+
+最后展开右侧复核，尤其注意 quadratic divisor 对应的 remainder 至多是 linear。
 :::
 
 ## 2. Verified Paper 2 past-paper questions
@@ -304,7 +334,7 @@ $$
 :::
 
 ::: {.question-card #p2-alg-q07}
-### Question 7 · 9709/22/O/N/20 Q7(a)
+### Question 7 · 9709/22/O/N/20 Q7(a–c)
 
 A curve has equation $y=f(x)$ where
 
@@ -316,6 +346,16 @@ As shown in the diagram, the curve crosses the $x$-axis at the points $A$ and $B
 
 (a) Use the factor theorem to show that $(x-3)$ is a factor of $f(x)$. **[2]**
 
+(b) By first finding the quotient when $f(x)$ is divided by $(x-3)$, show that
+
+$$
+a=-\sqrt{\frac5{2-a}}.
+$$
+
+**[5]**
+
+(c) Use an iterative formula, based on the equation in part (b), to find the value of $a$ correct to 3 significant figures. Give the result of each iteration to 5 significant figures. **[3]**
+
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
 $$
@@ -323,9 +363,55 @@ f(3)=3^4-5(3^3)+6(3^2)+5(3)-15=81-135+54+15-15=0.
 $$
 
 By the factor theorem, $\boxed{(x-3)\text{ is a factor of }f(x)}$.
+
+For the quotient, polynomial division gives
+
+$$
+f(x)=(x-3)(x^3-2x^2+5).
+$$
+
+Since $A=(a,0)$ is the negative intercept shown in the diagram,
+
+$$
+a^3-2a^2+5=0
+\Longrightarrow a^2(2-a)=5.
+$$
+
+As $a<0$, take the negative square-root branch:
+
+$$
+\boxed{a=-\sqrt{\frac5{2-a}}}.
+$$
+
+An iteration based on this equation is
+
+$$
+a_{n+1}=-\sqrt{\frac5{2-a_n}}.
+$$
+
+Starting, for example, with $a_1=-2$ gives
+
+$$
+\begin{array}{c|c}
+n&a_n\\\hline
+1&-2.0000\\
+2&-1.3363\\
+3&-1.4930\\
+4&-1.4517\\
+5&-1.4619\\
+6&-1.4594\\
+7&-1.4600
+\end{array}
+$$
+
+Therefore
+
+$$
+\boxed{a=-1.46}\qquad\text{(3 s.f.)}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-alg-q07"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2020/2020/9709_w20_qp_22.pdf`, Q7(a), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2020/2020/9709_w20_qp_22.pdf`, Q7(a–c), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-alg-q08}
@@ -584,7 +670,7 @@ $$
 :::
 
 ::: {.question-card #p2-alg-q15}
-### Question 15 · 9709/21/O/N/22 Q6(a)
+### Question 15 · 9709/21/O/N/22 Q6(a–b)
 
 The polynomial $p(x)$ is defined by
 
@@ -593,6 +679,14 @@ p(x)=12x^3-9x^2+8x-4.
 $$
 
 (a) Find the quotient when $p(x)$ is divided by $(4x-3)$ and show that the remainder is 2. **[3]**
+
+(b) Hence find
+
+$$
+\int_{2}^{12}\left(\frac{p(x)}{4x-3}-3x^2\right)dx,
+$$
+
+giving your answer in the form $a+\ln b$. **[6]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -605,9 +699,27 @@ Thus
 $$
 \boxed{\text{quotient}=3x^2+2,\qquad \text{remainder}=2}.
 $$
+
+From the division result,
+
+$$
+p(x)=(4x-3)(3x^2+2)+2.
+$$
+
+Therefore
+
+$$
+\begin{aligned}
+\int_{2}^{12}\left(\frac{p(x)}{4x-3}-3x^2\right)dx
+&=\int_{2}^{12}\left(2+\frac2{4x-3}\right)dx\\
+&=\left[2x+\frac12\ln(4x-3)\right]_{2}^{12}\\
+&=20+\frac12\ln\frac{45}{5}\\
+&=\boxed{20+\ln3}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-alg-q15"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_w22_qp_21.pdf`, Q6(a), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_w22_qp_21.pdf`, Q6(a–b), and matching mark scheme.</div>
 :::
 
 ::: {.question-card #p2-alg-q16}
@@ -657,7 +769,7 @@ $$
 :::
 
 ::: {.question-card #p2-alg-q17}
-### Question 17 · 9709/21/M/J/22 Q7(a)
+### Question 17 · 9709/21/M/J/22 Q7(a–b)
 
 The polynomial $p(x)$ is defined by
 
@@ -668,6 +780,14 @@ $$
 where $a$ is an integer.
 
 (a) Find, in terms of $x$ and $a$, the quotient when $p(x)$ is divided by $(x+2)$, and show that the remainder is 4. **[3]**
+
+(b) It is given that
+
+$$
+\int_{-1}^{1}\frac{p(x)}{x+2}\,dx=\frac{22}{3}+\ln b,
+$$
+
+where $b$ is an integer. Find the values of $a$ and $b$. **[6]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -682,14 +802,32 @@ Therefore
 $$
 \boxed{\text{quotient}=2x^2+x+a-2,\qquad \text{remainder}=4}.
 $$
+
+Thus
+
+$$
+\frac{p(x)}{x+2}=2x^2+x+a-2+\frac4{x+2}.
+$$
+
+Therefore
+
+$$
+\begin{aligned}
+\int_{-1}^{1}\frac{p(x)}{x+2}\,dx
+&=\left[\frac23x^3+\frac12x^2+(a-2)x+4\ln(x+2)\right]_{-1}^{1}\\
+&=2a-\frac83+4\ln3.
+\end{aligned}
+$$
+
+Comparing with $\frac{22}{3}+\ln b$ gives $a=5$ and $\ln b=4\ln3=\ln81$. Hence
+
+$$
+\boxed{a=5,\qquad b=81}.
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-alg-q17"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_21.pdf`, Q7(a), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_21.pdf`, Q7(a–b), and matching mark scheme.</div>
 :::
-
-## 3. 2024 Paper 2 additions
-
-以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。
 
 ::: {.question-card #p2-algebra-q18}
 ### Question 18 · 9709/22/M/J/24 Q1
@@ -733,7 +871,7 @@ $$
 :::
 
 ::: {.question-card #p2-algebra-q19}
-### Question 19 · 9709/22/M/J/24 Q5(a)
+### Question 19 · 9709/22/M/J/24 Q5(a–b)
 
 The polynomial $p(x)$ is defined by
 
@@ -742,6 +880,14 @@ p(x)=9x^3+18x^2+5x+4.
 $$
 
 Find the quotient when $p(x)$ is divided by $(3x+2)$, and show that the remainder is $6$. **[3]**
+
+(b) Find the value of
+
+$$
+\int_0^2\frac{p(x)}{3x+2}\,dx,
+$$
+
+giving your answer in the form $a+\ln b$, where $a$ and $b$ are integers. **[5]**
 
 <details class="answer-panel"><summary>Show detailed mark scheme answer</summary>
 
@@ -762,9 +908,25 @@ and adding $6$ gives the original polynomial. Hence
 $$
 \boxed{\text{quotient}=3x^2+4x-1,\qquad \text{remainder}=6}.
 $$
+Thus
+
+$$
+\frac{p(x)}{3x+2}=3x^2+4x-1+\frac6{3x+2}.
+$$
+
+Therefore
+
+$$
+\begin{aligned}
+\int_0^2\frac{p(x)}{3x+2}\,dx
+&=\left[x^3+2x^2-x+2\ln(3x+2)\right]_0^2\\
+&=14+2\ln4\\
+&=\boxed{14+\ln16}.
+\end{aligned}
+$$
 </details>
 <label class="done-toggle"><input type="checkbox" data-progress="p2-algebra-q19"> Completed</label>
-<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q5(a), and matching mark scheme.</div>
+<div class="source-line"><strong>Source:</strong> `PastPaper/2024/2024/qp-202406-mathematics-p22.pdf`, Q5(a–b), and matching mark scheme.</div>
 :::
 
 ## Exam checklist

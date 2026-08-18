@@ -12,9 +12,11 @@ body-class: home-page
 
 :::
 
+::: {.paper-section .paper-one}
+
 ## Paper 1 · Pure Mathematics 1
 
-::: {.course-grid}
+::: {.course-grid .paper-one-grid}
 
 ::: {.topic-card}
 ### [1.1 Quadratics](paper-1/quadratics.qmd)
@@ -85,9 +87,13 @@ body-class: home-page
 
 :::
 
+:::
+
+::: {.paper-section .paper-two}
+
 ## Paper 2 · Pure Mathematics 2
 
-::: {.course-grid}
+::: {.course-grid .paper-two-grid}
 ::: {.topic-card}
 ### [2.1 Algebra](paper-2/algebra.qmd)
 
@@ -134,6 +140,10 @@ body-class: home-page
 :::
 
 :::
+
+:::
+
+::: {.paper-section .paper-three}
 
 ## Paper 3 · Pure Mathematics 3
 
@@ -212,6 +222,163 @@ body-class: home-page
 - Cartesian form, conjugates, modulus and argument
 - Polar form, square roots and polynomial roots
 - Argand diagrams and complex-number loci
+:::
+
+:::
+
+:::
+
+::: {.paper-section .paper-four}
+
+## Paper 4 · Mechanics
+
+::: {.course-grid .paper-four-grid}
+
+::: {.topic-card}
+### [1. Forces and equilibrium](paper-4/forces-and-equilibrium.qmd)
+
+- Force diagrams and standard particle models
+- Components, resultants and equilibrium
+- Smooth and rough contact
+- Limiting friction and coefficient of friction
+:::
+
+::: {.topic-card}
+### [2. Kinematics of motion in a straight line](paper-4/kinematics-of-motion-in-a-straight-line.qmd)
+
+- Displacement-time and velocity-time graphs
+- Differentiation and integration with respect to time
+- Constant acceleration and SUVAT
+- Vertical motion and gravity
+:::
+
+::: {.topic-card}
+### [3. Momentum](paper-4/momentum.qmd)
+
+- Linear momentum and its vector nature
+- Conservation of momentum
+- Direct impact and coalescence
+- Kinetic-energy loss in collisions
+:::
+
+::: {.topic-card}
+### [4. Newton’s laws of motion](paper-4/newtons-laws-of-motion.qmd)
+
+- Newton’s laws, weight and $F=ma$
+- Connected particles, strings, pulleys and tow-bars
+- Vertical motion, inclined planes and friction
+:::
+
+::: {.topic-card}
+### [5. Energy, work and power](paper-4/energy-work-and-power.qmd)
+
+- Work, kinetic energy and gravitational potential energy
+- Conservation of energy and work–energy principle
+- Power, resistance and maximum speed
+:::
+
+:::
+
+:::
+
+::: {.paper-section .paper-five}
+
+## Paper 5 · Probability and Statistics 1
+
+::: {.course-grid .paper-five-grid}
+
+::: {.topic-card}
+### [5.1 Representation of data](paper-5/representation-of-data.qmd)
+
+- Statistical measures and coding
+- Stem-and-leaf and box-and-whisker plots
+- Histograms and cumulative frequency graphs
+- Comparing distributions and skewness
+:::
+
+::: {.topic-card}
+### [5.2 Permutations and combinations](paper-5/permutations-and-combinations.qmd)
+
+- Factorials and repeated objects
+- Permutations, combinations and restrictions
+- Verified Paper 5 questions with detailed mark-scheme answers
+:::
+
+::: {.topic-card}
+### [5.3 Probability](paper-5/probability.qmd)
+
+- Sample spaces, events and probability rules
+- Independent, mutually exclusive and conditional events
+- Tree diagrams, Venn diagrams and two-way tables
+:::
+
+::: {.topic-card}
+### [5.4 Discrete random variables](paper-5/discrete-random-variables.qmd)
+
+- Probability distributions, expectation and variance
+- Binomial and geometric distributions
+- Verified Paper 5 questions with detailed mark-scheme answers
+:::
+
+::: {.topic-card}
+### [5.5 The normal distribution](paper-5/normal-distribution.qmd)
+
+- Standardisation and the standard normal table
+- Inverse normal problems and finding $\mu$, $\sigma$
+- Normal approximation to the binomial distribution and continuity correction
+:::
+
+:::
+
+:::
+
+::: {.paper-section .paper-six}
+
+## Paper 6 · Probability and Statistics 2
+
+::: {.course-grid .paper-six-grid}
+
+::: {.topic-card}
+### [6.1 The Poisson distribution](paper-6/poisson-distribution.qmd)
+
+- Poisson probabilities, mean and variance
+- Model conditions and changing the time interval
+- Poisson approximations to binomial distributions
+- Normal approximation to Poisson with continuity correction
+:::
+
+::: {.topic-card}
+### [6.2 Linear combinations of random variables](paper-6/linear-combinations.qmd)
+
+- Expectation and variance of $aX+b$ and $aX+bY$
+- Independent normal and Poisson combinations
+- Standardising linear combinations to find probabilities
+:::
+
+::: {.topic-card}
+### [6.3 Continuous random variables](paper-6/continuous-random-variables.qmd)
+
+- Probability density functions and area probabilities
+- Mean, variance, median and percentiles
+- Continuous uniform distribution
+:::
+
+::: {.topic-card}
+### [6.4 Sampling and estimation](paper-6/sampling-and-estimation.qmd)
+
+- Sampling methods, bias and sampling frames
+- Unbiased estimates and the distribution of sample means
+- Confidence intervals for means and proportions
+:::
+
+::: {.topic-card}
+### [6.5 Hypothesis tests](paper-6/hypothesis-tests.qmd)
+
+- Binomial, Poisson and normal mean tests
+- Critical regions, significance levels and p-values
+- Type I and Type II errors
+:::
+
 :::
 
 :::

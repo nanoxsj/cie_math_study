@@ -126,6 +126,36 @@ Parametric stationary point 要求 $dy/dt=0$ 且 $dx/dt\ne0$；求 tangent 或 n
 ![Parametric stationary points](../assets/notes/differentiation/worked-example-10.webp){.note-figure fig-alt="Original extracted differentiation note worked example finding stationary points from parametric equations"}
 :::
 
+::: {.formula-panel}
+### Complete standard derivative table
+
+除已有公式外，Note 中的 standard derivatives 还包括
+
+$$
+\frac{d}{dx}(a^x)=a^x\ln a\quad(a>0),\qquad
+\frac{d}{dx}(\cot x)=-\operatorname{cosec}^2x,
+$$
+
+$$
+\frac{d}{dx}(\sec x)=\sec x\tan x,qquad
+\frac{d}{dx}(\operatorname{cosec}x)=-\operatorname{cosec}x\cot x.
+$$
+
+这些公式遇到 composite argument 时都要再乘上 inner derivative，例如
+
+$$\frac{d}{dx}\sec(ax+b)=a\sec(ax+b)\tan(ax+b).$$
+:::
+
+::: {.study-card}
+### Implicit differentiation and applications
+
+若 $x$、$y$ 混合在同一个 equation 中，把 $y$ 看成 $x$ 的 function；对含 $y$ 的 term differentiation 时使用 chain rule，例如
+
+$$\frac{d}{dx}(y^n)=ny^{n-1}\frac{dy}{dx}.$$
+
+整理出 $dy/dx$ 后，才能求指定点的 tangent 或 normal。若题目要求 turning point、maximum/minimum 或 rate，必须同时检查原 equation、domain 和题目给出的 interval。
+:::
+
 ## 2. Verified Paper 2 past-paper questions
 
 以下 10 组题均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题目没有因为数量不足而补造。表达式、区间和题目要求均保留原题信息。
@@ -713,10 +743,6 @@ $$
 <label class="done-toggle"><input type="checkbox" data-progress="p2-diff-q10"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_m22_qp_22.pdf`, Q7(a–b), and matching mark scheme.</div>
 :::
-
-## 3. 2024 Paper 2 additions
-
-以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。
 
 ::: {.question-card #p2-diff-q11}
 ### Question 11 · 9709/21/M/J/24 Q1

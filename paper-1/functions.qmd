@@ -92,6 +92,45 @@ $$
 若题目给出多个 transformation，必须按照题目指定顺序逐步代入；特别要注意 horizontal transformation 作用在 (x) 的输入上，方向与直觉容易相反。
 :::
 
+::: {.formula-panel}
+### Function notation and restrictions
+
+函数可以写成 mapping $f:A\to B$，其中 $A$ 是 domain，$B$ 是 codomain，实际出现的输出集合是 range。必须同时检查：分母不能为零、偶次根号内必须非负，以及题目额外给出的 domain restriction。
+
+对 composite functions：
+
+$$
+(fg)(x)=f(g(x)),qquad (gf)(x)=g(f(x)).
+$$
+
+要使 $f(g(x))$ 有意义，$g(x)$ 必须落在 $f$ 的 domain；不能只看代数式是否能够形式上代入。求 composite 的 range 时也要保留 inner function 的限制。
+:::
+
+::: {.study-card}
+### Reciprocal, proportional and inverse functions
+
+常见 reciprocal graphs 包括
+
+$$y=\frac1x,qquad y=\frac1{x^2},$$
+
+要标出 asymptotes、domain 和 range。若 $y\propto x^n$，则 $y=kx^n$；若 $y\propto 1/x^n$，则 $y=kx^{-n}$。由已知点代入求比例常数 $k$，再使用题目给出的 domain 判断 branch。
+
+只有 one-one function 才能在其 restricted domain 上拥有 inverse function。求 inverse 时交换 $x,y$ 后解 $y$，最后把原函数的 range 写成 inverse 的 domain。
+:::
+
+::: {.formula-panel}
+### Transformation checklist
+
+除平移和伸缩外，还要注意
+
+$$
+y=-f(x)\Rightarrow\text{reflection in the }x\text{-axis},qquad
+y=f(-x)\Rightarrow\text{reflection in the }y\text{-axis}.
+$$
+
+若输入变成 $f(bx)$，水平 scale factor 是 $1/b$；若输出乘以 $a$，vertical scale factor 是 $a$。在同一题中先写出每一步的新方程，再合并，避免把 horizontal translation 的方向写反。
+:::
+
 ## 2. Verified Paper 1 past-paper questions
 
 ::: {.question-card #p1-fn-q01}

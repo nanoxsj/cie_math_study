@@ -138,6 +138,44 @@ For $R\cos(\theta-\alpha)$ instead, use $R\cos\alpha=a$ and $R\sin\alpha=b$ when
 ![Repeated double-angle identity](../assets/notes/trigonometry/worked-example-08.webp){.note-figure fig-alt="Original extracted trigonometry note worked example applying the double-angle formula twice"}
 :::
 
+::: {.study-card}
+### Exact values and angle restrictions
+
+要熟悉 $0$、$\pi/6$、$\pi/4$、$\pi/3$、$\pi/2$ 的 exact values，并根据 quadrant 判断 signs。对于 reciprocal functions，必须同时排除
+
+$$
+\cos\theta=0\quad\text{for }\tan\theta,\sec\theta,
+\qquad
+\sin\theta=0\quad\text{for }\cot\theta,\operatorname{cosec}\theta.
+$$
+
+题目给出 restricted interval 时，先求 reference angle，再按周期和 quadrant 列出所有解；不能只保留 inverse calculator 的 principal value。
+:::
+
+::: {.formula-panel}
+### Double-angle rearrangements
+
+根据目标形式选择 double-angle identity：
+
+$$
+\cos2A=1-2\sin^2A=2\cos^2A-1,qquad
+\sin^2A=\frac{1-\cos2A}{2},qquad
+\cos^2A=\frac{1+\cos2A}{2}.
+$$
+
+若 equation 可化成关于 $\sin A$、$\cos A$ 或 $\tan A$ 的 quadratic，先令该 ratio 为 $u$，解完后检查 $u\in[-1,1]$（对 sine/cosine）以及原方程的 excluded values。
+:::
+
+::: {.study-card}
+### Compound angles and $R$-form checks
+
+使用 compound-angle formula 时先展开，再比较 $\sin\theta$ 与 $\cos\theta$ 的 coefficients。对
+
+$$a\sin\theta+b\cos\theta=R\sin(\theta+\alpha),$$
+
+必须满足 $R=\sqrt{a^2+b^2}$，并由 $R\cos\alpha=a$、$R\sin\alpha=b$ 确定正确 quadrant。最后可用 maximum/minimum range $[-R,R]$ 检查 equation 是否有解。
+:::
+
 ## 2. Verified Paper 2 past-paper questions
 
 以下题目均已在本地 Paper 2 原始 PDF 及对应 mark scheme 中核对；题目没有因为数量不足而补造。表达式中的角度单位、区间和分数均保留原题信息。
@@ -661,10 +699,6 @@ $$
 <label class="done-toggle"><input type="checkbox" data-progress="p2-trig-q10"> Completed</label>
 <div class="source-line"><strong>Source:</strong> `PastPaper/2022/2022/9709_s22_qp_22.pdf`, Q8, and matching mark scheme.</div>
 :::
-
-## 3. 2024 Paper 2 additions
-
-以下题目来自新增的 2024 Paper 2 原始 PDF，并已与对应 mark scheme 核对。
 
 ::: {.question-card #p2-trig-q11}
 ### Question 11 · 9709/22/O/N/24 Q7(a–b)

@@ -26,6 +26,21 @@ project:
     - paper-3/vectors.qmd
     - paper-3/differential-equations.qmd
     - paper-3/complex-numbers.qmd
+    - paper-4/forces-and-equilibrium.qmd
+    - paper-4/kinematics-of-motion-in-a-straight-line.qmd
+    - paper-4/momentum.qmd
+    - paper-4/newtons-laws-of-motion.qmd
+    - paper-4/energy-work-and-power.qmd
+    - paper-5/representation-of-data.qmd
+    - paper-5/permutations-and-combinations.qmd
+    - paper-5/probability.qmd
+    - paper-5/discrete-random-variables.qmd
+    - paper-5/normal-distribution.qmd
+    - paper-6/poisson-distribution.qmd
+    - paper-6/linear-combinations.qmd
+    - paper-6/continuous-random-variables.qmd
+    - paper-6/sampling-and-estimation.qmd
+    - paper-6/hypothesis-tests.qmd
 
 website:
   title: "CIE Mathematics 9709"
@@ -88,6 +103,42 @@ website:
             text: "8. Differential equations"
           - href: paper-3/complex-numbers.qmd
             text: "9. Complex numbers"
+      - section: "Paper 4 · Mechanics"
+        contents:
+          - href: paper-4/forces-and-equilibrium.qmd
+            text: "1. Forces and equilibrium"
+          - href: paper-4/kinematics-of-motion-in-a-straight-line.qmd
+            text: "2. Kinematics of motion in a straight line"
+          - href: paper-4/momentum.qmd
+            text: "3. Momentum"
+          - href: paper-4/newtons-laws-of-motion.qmd
+            text: "4. Newton’s laws of motion"
+          - href: paper-4/energy-work-and-power.qmd
+            text: "5. Energy, work and power"
+      - section: "Paper 5 · Probability and Statistics 1"
+        contents:
+          - href: paper-5/representation-of-data.qmd
+            text: "5.1 Representation of data"
+          - href: paper-5/permutations-and-combinations.qmd
+            text: "5.2 Permutations and combinations"
+          - href: paper-5/probability.qmd
+            text: "5.3 Probability"
+          - href: paper-5/discrete-random-variables.qmd
+            text: "5.4 Discrete random variables"
+          - href: paper-5/normal-distribution.qmd
+            text: "5.5 The normal distribution"
+      - section: "Paper 6 · Probability and Statistics 2"
+        contents:
+          - href: paper-6/poisson-distribution.qmd
+            text: "6.1 The Poisson distribution"
+          - href: paper-6/linear-combinations.qmd
+            text: "6.2 Linear combinations of random variables"
+          - href: paper-6/continuous-random-variables.qmd
+            text: "6.3 Continuous random variables"
+          - href: paper-6/sampling-and-estimation.qmd
+            text: "6.4 Sampling and estimation"
+          - href: paper-6/hypothesis-tests.qmd
+            text: "6.5 Hypothesis tests"
 
 format:
   html:
